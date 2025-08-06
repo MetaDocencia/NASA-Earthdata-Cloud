@@ -39,7 +39,7 @@ life_cycle: ''
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://example.com/template-source/lesson-example'
+source: 'https://metadocencia.github.io/NASA-Earthdata-Cloud'
 
 # Default branch of your lesson
 branch: 'main'
@@ -84,7 +84,7 @@ instructors:
 
 # Learner Profiles
 profiles: 
-
+- learner-profiles.Rmd
 # Customisation ---------------------------------------------
 #
 # This space below is where custom yaml items (e.g. pinning

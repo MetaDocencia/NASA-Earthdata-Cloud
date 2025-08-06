@@ -38,8 +38,6 @@ Llevamos adelante nuestra propuesta a partir de una serie de proyectos que se en
 - **Formación:** Enseñamos y aprendemos en forma virtual y presencial. Nuestras clases son activas, con un enfoque pedagógico basado en evidencia.
 - **Comunidad:** Conectamos, intercambiamos y aprendemos con otras personas y organizaciones.
 
-![esquema circular que presenta los tres pilares de MetaDocencia: Contextualización, Formación y Comunidad.](fig/pilares_ES.jpg)
-
 Si les interesa saber más sobre nosotros, pueden entrar a [nuestra web](https://www.metadocencia.org). También pueden suscribirte a nuestro [Newsletter](https://www.metadocencia.org/suscripcion/) y recibir todas las novedades.
 
 ### Docentes de este taller
@@ -73,9 +71,12 @@ comunidad amigable y respetuosa, y aunque en algunas ocasiones fallaremos, nuest
 
 ## Código Abierto - Ciencia Abierta - Educación Abierta
 
-Creemos muy firmemente que las personas aprenden mejor cuando aprenden juntas, por eso todos estos materiales están disponibles gratuitamente bajo la licencia Creative Commons - Attribution - ShareAlike license. Te alentamos a que los compartas, adaptes y reuses, siempre que incluyas un enlace a la fuente original y distribuyas tu propio material bajo la misma licencia para ayudar a otras personas.
+Creemos muy firmemente que las personas aprenden mejor cuando aprenden juntas, por eso todos estos materiales están disponibles gratuitamente bajo la licencia Creative Commons - Attribution 4.0. Te alentamos a que los compartas, adaptes y reuses, siempre que incluyas un enlace a la fuente original y distribuyas tu propio material bajo la misma licencia para ayudar a otras personas.
 
-![licencia CC BY-SA 4.0.](fig/by-sa.png)
+[![CC BY 4.0][cc-by-shield]](https://creativecommons.org/licenses/by/4.0/legalcode.es)
+{Image: atribucion creative commons}
+
+[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
 
 
 ---

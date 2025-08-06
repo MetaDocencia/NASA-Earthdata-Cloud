@@ -32,6 +32,6 @@ Todos los objetos cuya temperatura está por encima del cero absoluto emiten rad
 
 La REM se organiza en lo que se conoce como el **espectro electromagnético**, que abarca desde ondas de radio de baja frecuencia hasta rayos gamma de alta energía. Sin embargo, los sensores remotos capturan solo ciertas regiones del espectro (por ejemplo, el visible, el infrarrojo y las microondas), dependiendo del tipo de aplicación.
 
-![](../assets/includes/REM.svg)
+![](../../assets/includes/REM.svg)
 
 Comprender cómo interactúa la REM con distintos tipos de superficies —agua, vegetación, suelo, construcciones— es esencial para poder interpretar correctamente las imágenes y datos satelitales.

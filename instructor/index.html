@@ -257,72 +257,164 @@
       <hr></nav><main id="main-content" class="main-content"><h1 class="schedule-heading">Resumen y agenda</h1>
       
 <div class="section level1">
-<h1 id="template-de-lecciones-reproducibles-de-metadocencia">Template de lecciones reproducibles de MetaDocencia<a class="anchor" aria-label="anchor" href="#template-de-lecciones-reproducibles-de-metadocencia"></a></h1>
-<p>Este repositorio es un <strong>template oficial de
-MetaDocencia</strong> para crear cursos y lecciones reproducibles
-utilizando <a href="https://carpentries.github.io/sandpaper/" class="external-link">Carpentries
-Workbench</a>, adaptado con nuestra configuración y estilo.</p>
-<blockquote>
-<p>Puedes usar <a href="https://github.com/MetaDocencia/metadocencia-workbench-template" class="external-link">este
-repositorio</a> como punto de partida, directamente desde GitHub, sin
-necesidad de herramientas locales.</p>
-</blockquote>
-<hr><div class="section level2">
-<h2 id="cómo-comenzar-una-lección-nueva">🚀 ¿Cómo comenzar una lección nueva?<a class="anchor" aria-label="anchor" href="#c%C3%B3mo-comenzar-una-lecci%C3%B3n-nueva"></a></h2>
+<h1 id="introducción-al-uso-de-datos-nasa-earthdata-cloud-para-el-monitoreo-de-cambios-y-disturbios-ambientales">Introducción al uso de datos Nasa Earthdata cloud para el monitoreo
+de cambios y disturbios ambientales<a class="anchor" aria-label="anchor" href="#introducci%C3%B3n-al-uso-de-datos-nasa-earthdata-cloud-para-el-monitoreo-de-cambios-y-disturbios-ambientales"></a></h1>
+<p>Les damos la bienvenida al curso <strong>“Introducción al uso de
+datos Nasa Earthdata cloud para el monitoreo de cambios y disturbios
+ambientales”</strong>, una adaptación del curso <a href="https://github.com/ScienceCore/climaterisk/tree/main" class="external-link">«NASA TOPS-T
+Reproducibly Analyzing Wildfire, Drought, and Flood Risk with NASA
+Earthdata Cloud»</a> desarrollado por <a href="https://2i2c.org/" class="external-link">2i2c</a> y <a href="https://www.metadocencia.org/" class="external-link">MetaDocencia</a>.</p>
+<p>En este taller, se explorara cómo utilizar los datos satelitales de
+la plataforma Earthdata Cloud de la NASA, específicamente los productos
+OPERA, para el monitoreo de cambios y disturbios ambientales. Se toma
+como caso de estudio los cambios en la cobertura vegetal en la región de
+Maranhão, Brasil, con el objetivo de identificar patrones de
+deforestación a través de Jupyter Notebooks con código en Python para
+trabajar de manera reproducible con los datos.</p>
+<div class="section level2">
+<h2 id="cuál-va-a-ser-el-recorrido">Cuál va a ser el recorrido<a class="anchor" aria-label="anchor" href="#cu%C3%A1l-va-a-ser-el-recorrido"></a></h2>
+<p>Este curso está organizado en tres grandes bloques:</p>
+<ol style="list-style-type: decimal"><li>
+<strong>Fundamentos de teledetección.</strong> ¿Qué es? ¿Cómo
+funcionan los sistemas satelitales? ¿Qué es un raster? ¿Qué es un
+vector? ¿Qué son los sistemas de coordenadas? Esta parte nos va a dar la
+base conceptual para todo lo que viene después.</li>
+<li>
+<strong>Productos OPERA de NASA.</strong> Vamos a explicar qué son,
+cómo se generan, qué algoritmos se usan. También haremos un ejercicio
+práctico de descarga y visualización de estos productos en QGIS.</li>
+<li>
+<strong>Caso de estudio de deforestación en Maranhão, región del
+Amazonia.</strong> Para todo esto, vamos a trabajar en el hub de 2i2c,
+un entorno en la nube que es accesible desde el navegador, y que nos
+permite correr código, trabajar con notebooks, cargar datos y compartir
+resultados sin necesidad de instalar nada en sus computadoras. En el hub
+vamos a usar una notebook para trabajar con productos de la NASA vía
+STAC y usando python. Vamos a discutir el caso de estudio, reflexionar
+sobre las fortalezas y limitaciones de los productos y sus usos
+potenciales para la gestión ambiental.</li>
+</ol></div>
+<div class="section level2">
+<h2 id="nos-presentamos">Nos presentamos<a class="anchor" aria-label="anchor" href="#nos-presentamos"></a></h2>
 <div class="section level3">
-<h3 id="crear-un-nuevo-repositorio">1. Crear un nuevo repositorio<a class="anchor" aria-label="anchor" href="#crear-un-nuevo-repositorio"></a></h3>
-<p>Generamos una copia accediendo directamente a: <a href="https://github.com/MetaDocencia/metadocencia-workbench-template/generate" class="external-link uri">https://github.com/MetaDocencia/metadocencia-workbench-template/generate</a></p>
-<p>Asignamos un nombre a tu nuevo repositorio (por ejemplo,
-<code>leccion-mi-tema</code>) y Seleccionamos <strong>Create
-repository</strong>.</p>
-<hr></div>
+<h3 id="metadocencia">MetaDocencia<a class="anchor" aria-label="anchor" href="#metadocencia"></a></h3>
+<p>MetaDocencia es una organización sin fines de lucro donde trabajamos
+para que la producción, la comunicación y la aplicación de saberes
+científicos y técnicos sean globalmente equitativos.</p>
+<p>Construimos capacidades científicas y técnicas en forma responsable y
+con mirada local, a través de la co-creación de redes, espacios de
+aprendizaje y recursos accesibles para comunidades hispanohablantes.</p>
+<p>Trabajamos desde América Latina consolidando a la región en el mapa
+global de la investigación. Nos proponemos facilitar la conexión de
+profesionales en ciencia y técnica, promoviendo el intercambio de
+conocimientos y la colaboración.</p>
+<div class="section level4">
+<h4 id="nuestros-pilares-de-trabajo">Nuestros pilares de trabajo<a class="anchor" aria-label="anchor" href="#nuestros-pilares-de-trabajo"></a></h4>
+<p>Llevamos adelante nuestra propuesta a partir de una serie de
+proyectos que se enmarcan en tres pilares de trabajo que están
+interconectados y forman un círculo virtuoso: Contextualización,
+Formación y Comunidad.</p>
+<ul><li>
+<strong>Contextualización:</strong> Adaptamos materiales, textos y
+recursos al español y al inglés.</li>
+<li>
+<strong>Formación:</strong> Enseñamos y aprendemos en forma virtual
+y presencial. Nuestras clases son activas, con un enfoque pedagógico
+basado en evidencia.</li>
+<li>
+<strong>Comunidad:</strong> Conectamos, intercambiamos y aprendemos
+con otras personas y organizaciones.</li>
+</ul><figure><img src="../fig/pilares_ES.jpg" alt="esquema circular que presenta los tres pilares de MetaDocencia: Contextualización, Formación y Comunidad." class="figure mx-auto d-block"><div class="figcaption">esquema circular que presenta los tres pilares
+de MetaDocencia: Contextualización, Formación y Comunidad.</div>
+</figure><p>Si les interesa saber más sobre nosotros, pueden entrar a <a href="https://www.metadocencia.org" class="external-link">nuestra web</a>. También pueden
+suscribirte a nuestro <a href="https://www.metadocencia.org/suscripcion/" class="external-link">Newsletter</a> y
+recibir todas las novedades.</p>
+</div>
+</div>
 <div class="section level3">
-<h3 id="editar-la-lección-desde-github">2. Editar la lección desde GitHub<a class="anchor" aria-label="anchor" href="#editar-la-lecci%C3%B3n-desde-github"></a></h3>
-<p>Una vez creado el repositorio, podemos comenzar a editarlo
-directamente desde la interfaz web:</p>
-<ul><li>Los episodios están en la carpeta <code>episodes/</code> (cada
-archivo <code>.md</code> es una sección de la lección).</li>
-<li>La página principal está en <code>index.md</code>.</li>
-<li>La configuración general está en <code>config.yaml</code>.</li>
-</ul><p>Con el botón de ✏️ <strong>editar</strong> en cada archivo podemos
-modificarlo, y luego seleccionamos <strong>Commit changes</strong> para
-guardar.</p>
-<blockquote>
-<p>No es necesario saber usar RStudio ni línea de comandos.</p>
-</blockquote>
-<hr></div>
+<h3 id="docentes-de-este-taller">Docentes de este taller<a class="anchor" aria-label="anchor" href="#docentes-de-este-taller"></a></h3>
+<ul><li>
+<strong><a href="https://github.com/ebgonzal" class="external-link">Eliana
+Gonzalez:</a></strong> Licenciada en Ciencias Ambientales por la UBA y
+Doctora en Ciencias Aplicadas y de la Ingeniería por la UNSAM. Se
+especializa en análisis de datos geoespaciales, y desde hace más de 10
+años trabaja en temas vinculados a teledetección para la evaluación de
+impactos de actividades antrópicas, como cambios en el uso del suelo, y
+en la enseñanza de los mismos.</li>
+<li>
+<strong><a href="">Maira Gayol:</a></strong> Licenciada en Ciencias
+Ambientales y Doctora en Ciencias Aplicadas y de la Ingeniería. Es
+investigadora y docente de posgrado, se especializa en el análisis de
+datos geoespaciales,y el uso de la teledetección para el monitoreo y
+estudio de la ecología de humedales.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="equipo-de-metadocencia">Equipo de MetaDocencia<a class="anchor" aria-label="anchor" href="#equipo-de-metadocencia"></a></h3>
+<ul><li><p><strong><a href="https://www.metadocencia.org/authors/npalopoli/" class="external-link">Nicolás
+Palopoli</a></strong> Co-Director Ejecutivo y Chair del Consejo Asesor.
+Desde 2008 realiza tareas docentes de grado, posgrado y extensión, en
+modalidad presencial y virtual, tanto en UNQ como en otras instituciones
+educativas y para comunidades de práctica. Instructor y entrenador de
+instructores en The Carpentries.</p></li>
+<li><p><strong><a href="https://www.metadocencia.org/authors/lacion/" class="external-link">Laura
+Ación</a></strong> Co-Directora Ejecutiva. Investigadora adjunta del
+CONICET en la Universidad de Buenos Aires, donde dirige el
+Co-Laboratorio de Uso Responsable de Datos. Tiene más de dos décadas de
+experiencia ofreciendo servicios de consultoría y enseñanza.</p></li>
+<li><p><strong><a href="https://www.metadocencia.org/authors/jformoso/" class="external-link">Jesica
+Formoso</a></strong> Coordinadora del área de Medición de Impacto de
+MetaDocencia. Psicóloga cognitiva y Doctora por la Universidad de Buenos
+Aires e investigadora asistente de CONICET. Se dedica a la docencia y la
+investigación, destacándose como organizadora del capítulo de Buenos
+Aires de R-Ladies. Instructora certificada de RStudio y The
+Carpentries.</p></li>
+<li><p><strong><a href="https://www.metadocencia.org/authors/pazmiguez/" class="external-link">Paz
+Miguez</a></strong> Coordinadora de áreas Institucional y Formación.
+Licenciada en Ciencia Política, con una Maestría en Política Educativa y
+un Profesorado en Docencia Superior. Más de 15 años de experiencia, en
+el diseño, gestión y monitoreo de programas educativos.</p></li>
+<li><p><strong><a href="https://www.metadocencia.org/authors/jbuede/" class="external-link">Julián
+Buede</a></strong> Equipo de Comunicación. Se especializa en formatos
+para contenidos audiovisuales educativos, especialmente en el ámbito de
+tutoriales y clases asincrónicas, con el objetivo de desarrollar formas
+creativas de presentar información.</p></li>
+<li><p><strong><a href="https://www.metadocencia.org/authors/irenevazano/" class="external-link">Irene
+Vazano</a></strong> Coordinadora del área de Infraestructura. Licenciada
+en Bibliotecología en la UCSE-DABA. Con experiencia de trabajo en
+bibliotecas académicas y como profesional independiente en diversos
+proyectos digitales, desempeñando roles de administración y garantizando
+la calidad de accesibilidad.</p></li>
+</ul></div>
 </div>
 <div class="section level2">
-<h2 id="publicación-del-sitio-en-github-pages">🌐 Publicación del sitio en GitHub Pages<a class="anchor" aria-label="anchor" href="#publicaci%C3%B3n-del-sitio-en-github-pages"></a></h2>
-<p>Para habilitar la publicación automática del sitio web de la lección
-desde GitHub Pages:</p>
-<ol style="list-style-type: decimal"><li>Desde el repositorio, seleccionamos <strong>Settings &gt;
-Pages</strong>.</li>
-<li>En la sección <strong>“Source”</strong>, configuramos:
-<ul><li>
-<strong>Branch</strong>: <code>gh-pages</code>
-</li>
-<li>
-<strong>Carpeta</strong>: <code>/ (root)</code>
-</li>
-</ul></li>
-<li>Seleccionamos <strong>“Save”</strong>.</li>
-</ol><div class="section level3">
-<h3 id="verificación-de-la-publicación">Verificación de la publicación<a class="anchor" aria-label="anchor" href="#verificaci%C3%B3n-de-la-publicaci%C3%B3n"></a></h3>
-<ol style="list-style-type: decimal"><li>Editamos cualquier archivo de la lección desde GitHub (por ejemplo,
-un episodio).</li>
-<li>GitHub ejecutará automáticamente el flujo de publicación.</li>
-<li>Podemos ver el progreso en la pestaña <strong>Actions</strong> del
-repositorio.</li>
-<li>Una vez finalizado el proceso, el sitio estará disponible en:</li>
-</ol><pre><code>https://&lt;usuario-o-organización&gt;.github.io/&lt;nombre-del-repo&gt;/</code></pre>
-<p>Por ejemplo:<br><a href="https://metadocencia.github.io/leccion-ejemplo/" class="external-link uri">https://metadocencia.github.io/leccion-ejemplo/</a></p>
-<hr></div>
+<h2 id="antes-de-empezar">Antes de empezar<a class="anchor" aria-label="anchor" href="#antes-de-empezar"></a></h2>
+<div class="section level3">
+<h3 id="pautas-de-convivencia">Pautas de convivencia<a class="anchor" aria-label="anchor" href="#pautas-de-convivencia"></a></h3>
+<p>Estas son nuestras <a href="https://doi.org/10.5281/zenodo.12534195" class="external-link">pautas de
+convivencia</a>. Nos ayudan a fomentar un ambiente abierto, seguro y
+amigable y garantizar la participación de todas las personas en nuestras
+actividades y espacios virtuales.</p>
+<p>Alentamos a la comunidad a apropiarse y a participar de estas pautas
+para que representen a todas las personas. Nos comprometemos a construir
+una comunidad amigable y respetuosa, y aunque en algunas ocasiones
+fallaremos, nuestro objetivo es que todas las personas reciban un trato
+justo, inclusivo y lo más equitativo posible.</p>
 </div>
+</div>
+<div class="section level2">
+<h2 id="código-abierto---ciencia-abierta---educación-abierta">Código Abierto - Ciencia Abierta - Educación Abierta<a class="anchor" aria-label="anchor" href="#c%C3%B3digo-abierto---ciencia-abierta---educaci%C3%B3n-abierta"></a></h2>
+<p>Creemos muy firmemente que las personas aprenden mejor cuando
+aprenden juntas, por eso todos estos materiales están disponibles
+gratuitamente bajo la licencia Creative Commons - Attribution -
+ShareAlike license. Te alentamos a que los compartas, adaptes y reuses,
+siempre que incluyas un enlace a la fuente original y distribuyas tu
+propio material bajo la misma licencia para ayudar a otras personas.</p>
+<figure><img src="../fig/by-sa.png" alt="licencia CC BY-SA 4.0." class="figure mx-auto d-block"><div class="figcaption">licencia CC BY-SA 4.0.</div>
+</figure><hr></div>
 <div class="section level2">
 <h2 id="contacto">📬 Contacto<a class="anchor" aria-label="anchor" href="#contacto"></a></h2>
 <p>¿Tienes dudas? Escríbenos a:<br>
-📧 <a href="mailto:infraestructura@metadocencia.org" class="email">infraestructura@metadocencia.org</a></p>
+📧 <a href="mailto:formacion@metadocencia.org" class="email">formacion@metadocencia.org</a></p>
 <p>Puedes encontrar más materiales y recursos en:<br>
 🌐 <a href="https://www.metadocencia.org" class="external-link uri">https://www.metadocencia.org</a></p>
 <!--

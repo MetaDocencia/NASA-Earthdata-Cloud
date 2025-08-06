@@ -1,8 +1,49 @@
 # Introducción al uso de datos Nasa Earthdata cloud para el monitoreo de cambios y disturbios ambientales
 
-Esta formación es una adaptación al español de los materiales desarrollados por [2i2c](https://2i2c.org/) y [MetaDocencia](https://www.metadocencia.org/) para enseñar a usar los productos de la plataforma [NASA Earthdata Cloud](https://www.earthdata.nasa.gov/) para evaluar riesgo de incendios, sequías e inundaciones. Pueden encontrar los materiales originales aquí: [https://github.com/ScienceCore/climaterisk](https://github.com/ScienceCore/climaterisk)
+![](banner.jpg)
 
-## Versión adaptada por
+En este taller, se explorara cómo utilizar los datos satelitales de la plataforma Earthdata Cloud de la NASA, específicamente los productos OPERA, para el monitoreo de cambios y disturbios ambientales. Se toma como caso de estudio los cambios en la cobertura vegetal en la región de Maranhão, Brasil, con el objetivo de identificar patrones de deforestación a través de Jupyter Notebooks con código en Python para trabajar de manera reproducible con los datos. El taller se organiza en tres modulos:
+
+1. Fundamentos de teledetección.
+2. Utilización de preoductos OPERA de la NASA y plataforma NASA Earthdata.
+3. Caso de estudio: Deforestación en Maranhão.
+
+## Motivación para participar:
+
+Entender los cambios en la superficie terrestre y sus consecuencias es crucial para la gestión sostenible de los recursos naturales. En este contexto, los productos OPERA de la NASA ofrecen una poderosa herramienta para monitorear modificaciones en la vegetación, las precipitaciones, las aguas superficiales y el uso del suelo. A través de este taller, MetaDocencia busca capacitar a los participantes para que puedan analizar estos cambios de manera reproducible, a través de Jupyter Notebooks con código en Python, con el fin de aplicar los resultados en la toma de decisiones informadas para estudios ambientales y planificación territorial.
+
+## Objetivos de aprendizaje:
+
+Quienes completen esta formación podrán:
+
+- Acceder y visualizar los datos terrestres, disponibles a través de la plataforma Earthdata Cloud de la NASA, de una zona de interés específica.
+- Tener una primera aproximación al uso de los nuevos productos satelitales de NASA OPERA dist alert para la evaluación de disturbios en la cobertura vegetal y el análisis de alertas ambientales. 
+- Aplicar herramientas de código abierto para el análisis geoespacial utilizando flujos de trabajo reproducibles.  
+
+## ¿Para quién está pensado el taller?
+
+Este curso está dirigido a profesionales que deseen aprender a utilizar productos derivados de imágenes satelitales para el análisis de problemáticas ambientales, como la detección de deforestación y el monitoreo de cambios en la cobertura del suelo. Es necesario contar con conocimientos básicos de programación en algún de programación para seguir los contenidos, ya que el análisis de los datos se realiza utilzando Python mediante Jupyter Notebooks.
+
+Puedes encontrár más información de potenciales participantes en la sección [**perfiles de participantes**](https://github.com/MetaDocencia/NASA-Earthdata-Cloud/blob/main/profiles/learner-profiles.md).
+
+## ¿Qué **no** incluye esta formación?
+
+- Fundamentos de programación en python.
+- Desarrollo extensivo de librerías de Python utilizadas a lo largo del tutorial.
+- Técnicas de modelado geoespacial o análisis predictivo.
+- Teoría avanzada de conceptos relacionados con los datos geoespaciales.
+
+## Duración: 3 horas
+
+
+## Agradecimientos
+
+Esta formación es una adaptación al español de los materiales desarrollados por [2i2c](https://2i2c.org/) y [MetaDocencia](https://www.metadocencia.org/) para enseñar a usar los productos de la plataforma [NASA Earthdata Cloud](https://www.earthdata.nasa.gov/) para evaluar riesgo de incendios, sequías e inundaciones. Pueden encontrar los materiales originales aquí: [https://github.com/ScienceCore/climaterisk](https://github.com/ScienceCore/climaterisk). 
+
+El desarrollo de esta formación fue posible gracias al Grant NNH22ZDA001N-TOPST otorgado por NASA TOPS [https://zenodo.org/records/8250979](https://zenodo.org/records/8250979) y gracias al Grant otorgado por la Chan Zuckerberg Initiative [https://zenodo.org/records/7386373](https://zenodo.org/records/7386373).
+
+
+## Versión adaptada por:
 
 - [Nicolás Palopoli](https://github.com/NPalopoli)
 - [Jesica Formoso](https://github.com/JFormoso)
@@ -11,6 +52,9 @@ Esta formación es una adaptación al español de los materiales desarrollados p
 - [Patricia Loto](https://github.com/PatriLoto)
 - [Mariela Rajngewerc](https://github.com/marielaraj)
 
+## ¡Sirvete sin culpa!
+
+¿Te vienen bien cualquiera de nuestros contenidos? ¡Sírvete sin culpa! Nuestros materiales están disponibles en forma gratuita bajo [licencia CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Es decir, puedes reusar o editar cualquier material que aparece encima de estas líneas, lo único que pedimos a cambio es que incluyas una referencia a esta página web o la referencia del material cuando el material tenga una forma explícita de referenciarlo. Para más información, por favor escríbenos a formacion@metadocencia.org.
 
 ## Cómo contribuir
 
@@ -19,7 +63,7 @@ Puedes seguir las instrucciones de como [contribuir](./CONTRIBUTING.md)
 ## 📬 Contacto
 
 ¿Tienes dudas? Escríbenos a:  
-📧 infraestructura@metadocencia.org
+📧 formacion@metadocencia.org
 
 Puedes encontrar más materiales y recursos en:  
 🌐 https://www.metadocencia.org

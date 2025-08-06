@@ -2,12 +2,6 @@
 
 Esta formación es una adaptación al español de los materiales desarrollados por [2i2c](https://2i2c.org/) y [MetaDocencia](https://www.metadocencia.org/) para enseñar a usar los productos de la plataforma [NASA Earthdata Cloud](https://www.earthdata.nasa.gov/) para evaluar riesgo de incendios, sequías e inundaciones. 
 
-Fue creada a partir del **template oficial de MetaDocencia** para crear cursos y lecciones reproducibles utilizando [Carpentries Workbench](https://carpentries.github.io/sandpaper/), adaptado con nuestra configuración y estilo.
-
-> Puedes usar [este repositorio](https://github.com/MetaDocencia/metadocencia-workbench-template) como punto de partida, directamente desde GitHub, sin necesidad de herramientas locales.
-
----
-
 ## Versión adaptada por
 
 - [Nicolás Palopoli](https://github.com/NPalopoli)
@@ -32,13 +26,71 @@ Puedes encontrar más materiales y recursos en:
 
 ---
 
+# Plantilla de Lecciones Reproducibles de MetaDocencia
+
+Este repositorio es una **plantilla oficial de MetaDocencia** para crear lecciones reproducibles usando el [Carpentries Workbench](https://carpentries.github.io/sandpaper/), adaptada con nuestra configuración y estilo personalizado.
+
+> Usá este repositorio como punto de partida para tus propias lecciones, directamente desde GitHub — no necesitás herramientas locales.
+
+## 🚀 Cómo comenzar una nueva lección
+
+### 1. Crear un nuevo repositorio
+
+Ingresá directamente a:
+https://github.com/MetaDocencia/metadocencia-workbench-template/generate
+
+Elegí un nombre para tu nuevo repositorio (por ejemplo, `leccion-mi-tema`) y hacé clic en **Create repository**.
+
+### 2. Editar tu lección desde GitHub
+
+Una vez creado tu repositorio, podés editar todo directamente desde la interfaz web:
+
+1. Los episodios de la lección están en la carpeta `episodes/` (cada archivo `.md` es una sección).
+2. La página de inicio es `index.md`.
+3. La configuración general está en `config.yaml`.
+
+Usá el botón ✏️ **edit** en cada archivo para hacer cambios, y luego seleccioná **Commit changes** para guardar.
+
+No necesitás RStudio ni herramientas de línea de comandos.
+
+## Publicar el sitio con GitHub Pages
+
+Para habilitar la publicación automática del sitio web de la lección con GitHub Pages, seguí estos pasos:
+
+1. Desde el repositorio, hacé clic en **Settings > Pages**.
+2. En la sección **"Source"**, configurá:
+   - **Branch:** `gh-pages`
+   - **Folder:** `/ (root)`
+3. Hacé clic en **“Save”**.
+
+### Verificar la publicación
+
+1. Editá cualquier archivo del repositorio de la lección (por ejemplo, un episodio).
+2. GitHub activará automáticamente el flujo de publicación.
+3. Podés seguir el proceso en la pestaña Actions.
+4. Una vez que el flujo termine, el sitio estará disponible en:
+
+``` 
+https://<tu-usuario-o-organización>.github.io/<nombre-del-repositorio>/
+``` 
+Ejemplo:
+https://metadocencia.github.io/lesson-example/
+
+## 📬 Contacto
+¿Tenés preguntas o sugerencias? Escribinos a:
+📧 infraestructura@metadocencia.org
+
+## Explorá más de nuestros recursos:
+🌐 https://www.metadocencia.org
+
+---
+
 # MetaDocencia Reproducible Lesson Template
 
-This repository is an **official MetaDocencia template** to create reproducible lessons using the [Carpentries Workbench](https://carpentries.github.io/sandpaper/), adapted with our custom configuration and style.
+This repository was created using an **official MetaDocencia template** to create reproducible lessons using the [Carpentries Workbench](https://carpentries.github.io/sandpaper/), adapted with our custom configuration and style.
 
 > Use this repository as a starting point for your own lessons, directly from GitHub — no local tools needed.
 
----
 
 ## 🚀 How to start a new lesson
 
@@ -49,7 +101,6 @@ https://github.com/MetaDocencia/metadocencia-workbench-template/generate
 
 Choose a name for your new repository (e.g., `lesson-my-topic`) and click **Create repository**.
 
----
 
 ### 2. Edit your lesson via GitHub
 
@@ -63,7 +114,6 @@ Use the ✏️ **edit** button in each file to make changes, then select **Commi
 
 > No need for RStudio or command line tools.
 
----
 
 ## Publishing the Site on GitHub Pages
 
@@ -89,7 +139,6 @@ https://<your-user-or-org>.github.io/<repository-name>/
 Example:  
 https://metadocencia.github.io/lesson-example/
 
----
 
 ## 📬 Contact
 

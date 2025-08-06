@@ -1,0 +1,25 @@
+{
+  "title": "MetaDocencia Workbench Template",
+  "upload_type": "lesson",
+  "description": "Template adaptado de The Carpentries Workbench",
+  "creators": [
+    {
+      "name": "MetaDocencia",
+      "affiliation": "MetaDocencia"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "version": "v0.9-test",
+  "keywords": [
+    "plantilla",
+    "cursos"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/MetaDocencia/FIXME",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Instrucciones para citar la lección, agradecimientos, etc."
+}

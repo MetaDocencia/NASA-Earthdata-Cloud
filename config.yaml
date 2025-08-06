@@ -83,7 +83,7 @@ learners:
 instructors: 
 
 # Learner Profiles
-profiles: profiles/learner-profiles.md
+profiles: learner-profiles.md
 
 # Customisation ---------------------------------------------
 #

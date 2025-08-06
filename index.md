@@ -74,7 +74,6 @@ comunidad amigable y respetuosa, y aunque en algunas ocasiones fallaremos, nuest
 Creemos muy firmemente que las personas aprenden mejor cuando aprenden juntas, por eso todos estos materiales están disponibles gratuitamente bajo la licencia Creative Commons - Attribution 4.0. Te alentamos a que los compartas, adaptes y reuses, siempre que incluyas un enlace a la fuente original y distribuyas tu propio material bajo la misma licencia para ayudar a otras personas.
 
 [![CC BY 4.0][cc-by-shield]](https://creativecommons.org/licenses/by/4.0/legalcode.es)
-{Image: atribucion creative commons}
 
 [cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
 

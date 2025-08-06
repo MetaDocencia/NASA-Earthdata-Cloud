@@ -1,6 +1,6 @@
 ---
-title: 'Introducción'
-teaching: 10
+title: 'Fundamentos de teledetección'
+teaching: 50
 exercises: 2
 ---
 
@@ -83,7 +83,7 @@ pie(
 ```
 
 <div class="figure" style="text-align: center">
-<img src="fig/introduction-rendered-pyramid-1.png" alt="ilusión de gráfico circular de una pirámide"  />
+<img src="fig/fundamentos-rendered-pyramid-1.png" alt="ilusión de gráfico circular de una pirámide"  />
 <p class="caption">El sol sale cada mañana</p>
 </div>
 

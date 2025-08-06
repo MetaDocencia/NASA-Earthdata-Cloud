@@ -8,5 +8,5 @@
 "instructors/instructor-notes.md" "a48b029e7de14365e02fd5629f270505" "site/built/instructor-notes.md" "2025-08-06"
 "learners/reference.md" "66fe564b1a66765aa0345018bde17684" "site/built/reference.md" "2025-08-06"
 "learners/setup.md" "0441a85eea840a2f29592e1b2869474c" "site/built/setup.md" "2025-08-06"
-"profiles/learner-profiles.md" "daaa4a5112b57bfd9271c9be033943c2" "site/built/learner-profiles.md" "2025-08-06"
+"profiles/learner-profiles.md" "3c987d386ad312cb9c56e0ab07dc271a" "site/built/learner-profiles.md" "2025-08-06"
 "renv/profiles/lesson-requirements/renv.lock" "4186ca15aed4a0f71f301cbe36060024" "site/built/renv.lock" "2025-08-06"

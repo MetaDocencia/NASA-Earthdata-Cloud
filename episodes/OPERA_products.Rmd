@@ -1,4 +1,4 @@
---
+---
 title: 'NASA Earthdata Cloud y productos OPERA'
 teaching: 50
 exercises: 2

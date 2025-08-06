@@ -10,7 +10,13 @@
     <loc>https://template-source.github.io/lesson-example/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://template-source.github.io/lesson-example/aio.html</loc>
+  </url>
+  <url>
     <loc>https://template-source.github.io/lesson-example/assets/includes/footer.html</loc>
+  </url>
+  <url>
+    <loc>https://template-source.github.io/lesson-example/images.html</loc>
   </url>
   <url>
     <loc>https://template-source.github.io/lesson-example/index.html</loc>
@@ -25,10 +31,22 @@
     <loc>https://template-source.github.io/lesson-example/instructor/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://template-source.github.io/lesson-example/instructor/aio.html</loc>
+  </url>
+  <url>
+    <loc>https://template-source.github.io/lesson-example/instructor/images.html</loc>
+  </url>
+  <url>
     <loc>https://template-source.github.io/lesson-example/instructor/index.html</loc>
   </url>
   <url>
+    <loc>https://template-source.github.io/lesson-example/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
     <loc>https://template-source.github.io/lesson-example/instructor/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://template-source.github.io/lesson-example/instructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://template-source.github.io/lesson-example/instructor/profiles.html</loc>
@@ -37,7 +55,13 @@
     <loc>https://template-source.github.io/lesson-example/instructor/reference.html</loc>
   </url>
   <url>
+    <loc>https://template-source.github.io/lesson-example/instructor-notes.html</loc>
+  </url>
+  <url>
     <loc>https://template-source.github.io/lesson-example/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://template-source.github.io/lesson-example/key-points.html</loc>
   </url>
   <url>
     <loc>https://template-source.github.io/lesson-example/profiles.html</loc>

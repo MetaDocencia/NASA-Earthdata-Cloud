@@ -2,47 +2,8 @@
 title: Preparación
 ---
 
-MODIFICAR: Las instrucciones previas al curso viven en esta sección en el archivo 'learners/setup.md'. Especificar las herramientas y data sets que tus participantes necesitan instalar previo al curso o lección.
+## Credenciales NASA Earthdata Cloud
 
-## Data Sets
+Para poder participar de las actividades prácticas, vas a necesitar crear tu cuenta en el sistema de [NASA Earthdata](https://urs.earthdata.nasa.gov/). Podés seguir este tutorial paso a paso para hacerlo: [http://tiny.cc/credenciales_NASA](http://tiny.cc/credenciales_NASA).
 
-<!--
-MODIFICAR: loa datos que van a usarse como materiales, deben alojarse en `episodes/data` y usar un enlace relativo ( [archivo zip de datos](data/lesson-data.zip) ) para mencionarlo.
--->
-Descargamos el [archivo zip de datos](https://example.com/FIXME) y lo descomprimimos localmente 
-
-## Preparación del software
-
-::::::::::::::::::::::::::::::::::::::: discussion
-
-### Detalles
-
-La configuración para diferentes sistemas puede presentarse en menús desplegables mediante una etiqueta `solution`. Estas se integrarán a este bloque de discusión, por lo que aquí podés ofrecer una descripción general del software utilizado en esta lección y completar la información específica para cada sistema operativo (y, si es necesario, agregar más opciones, como la configuración en línea) en los bloques de soluciones.
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::: solution
-
-### Windows
-
-Usar PuTTY
-
-:::::::::::::::::::::::::
-
-:::::::::::::::: solution
-
-### MacOS
-
-Usar Terminal.app
-
-:::::::::::::::::::::::::
-
-
-:::::::::::::::: solution
-
-### Linux
-
-Usar Terminal
-
-:::::::::::::::::::::::::
-
+Recordá guardar tus **credenciales (usuario y contraseña) y tenerlas a mano durante el taller**, ya que las vas a necesitar para acceder a los datos desde la nube.

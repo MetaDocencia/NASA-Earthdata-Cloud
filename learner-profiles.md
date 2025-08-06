@@ -2,13 +2,13 @@
 title: Perfiles de participantes
 ---
 
-# 👥 Personas Aprendices del Curso
+# 👥 Perfil de potenciales participantes del curso
 
 Este documento presenta perfiles ficticios que representan a personas que podrían participar en el curso **"Introducción al uso de datos NASA Earthdata Cloud para el monitoreo de cambios y disturbios ambientales"**. Estos perfiles nos ayudan a diseñar una experiencia de aprendizaje más alineada con las necesidades reales de quienes se capacitan.
 
 ---
 
-## 👩‍🔬 Persona Aprendiz 1: Sofía
+## 👩‍🔬 Participante 1: Sofía
 
 **Nombre:** Sofía  
 **Edad:** 27 años  
@@ -64,7 +64,7 @@ Sofía completa el curso y aplica lo aprendido para detectar cambios de vegetaci
 
 ---
 
-## 🧭 Persona Aprendiz 2: Martín
+## 👩‍💼 Participante 2: Martín
 
 **Nombre:** Martín  
 **Edad:** 35 años  
@@ -95,7 +95,7 @@ Martín trabaja en políticas públicas relacionadas con distribución de agua y
 
 ---
 
-## 💧 Persona Aprendiz 3: Marcia
+## 👨‍🏫 Participante 3: Marcia
 
 **Nombre:** Marcia  
 **Edad:** 30 años  

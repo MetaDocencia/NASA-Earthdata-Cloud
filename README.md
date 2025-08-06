@@ -1,6 +1,6 @@
 # Introducción al uso de datos Nasa Earthdata cloud para el monitoreo de cambios y disturbios ambientales
 
-Esta formación es una adaptación al español de los materiales desarrollados por [2i2c](https://2i2c.org/) y [MetaDocencia](https://www.metadocencia.org/) para enseñar a usar los productos de la plataforma [NASA Earthdata Cloud](https://www.earthdata.nasa.gov/) para evaluar riesgo de incendios, sequías e inundaciones. 
+Esta formación es una adaptación al español de los materiales desarrollados por [2i2c](https://2i2c.org/) y [MetaDocencia](https://www.metadocencia.org/) para enseñar a usar los productos de la plataforma [NASA Earthdata Cloud](https://www.earthdata.nasa.gov/) para evaluar riesgo de incendios, sequías e inundaciones. Pueden encontrar los materiales originales aquí: [https://github.com/ScienceCore/climaterisk](https://github.com/ScienceCore/climaterisk)
 
 ## Versión adaptada por
 

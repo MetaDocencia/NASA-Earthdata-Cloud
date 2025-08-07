@@ -75,7 +75,7 @@ episodes:
 - sistemas_de_coordenadas.Rmd
 - datos_geoespaciales.Rmd
 - OPERA_products.Rmd
-- caso_estudio.Rmd
+- caso_estudio.md
 
 
 # Information for Learners

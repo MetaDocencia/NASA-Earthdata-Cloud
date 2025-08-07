@@ -20,7 +20,7 @@ exercises: 2
   
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-### 🛰️ Sensores remotos y plataformas satelitales
+## 🛰️ Sensores remotos y plataformas satelitales
 
 Los **sensores remotos** son instrumentos diseñados para captar la energía electromagnética reflejada o emitida por la superficie terrestre. Pueden estar montados en distintas **plataformas**, como satélites, drones, aviones o incluso globos.
 
@@ -31,17 +31,19 @@ Existen dos grandes tipos de sensores:
 
 Los sensores se encuentran a bordo de plataformas satelitales como **Landsat**, **Sentinel**, **MODIS** o **SAOCOM**, cada una con características distintas en términos de frecuencia de observación, área cubierta y resolución.
 
-### ¿Qué es una imagen satelital?
 
-Una imagen satelital es una **representación digital** de una porción de la superficie terrestre, generada a partir de la información registrada por los sensores. No es una fotografía convencional: es una **matriz de valores numéricos**, donde cada celda o **píxel** representa la intensidad de energía reflejada o emitida desde una unidad mínima de superficie.
-
-## Plataformas: ¿Dónde están los sensores?
+### Plataformas: ¿Dónde están los sensores?
 
 Los sensores pueden estar montados en:
 
 - **Satélites de órbita polar** (ej. Landsat, Sentinel): cubren la Tierra en franjas, ideal para monitoreo global.
 - **Satélites geoestacionarios:** se ubican sobre un punto fijo, útiles para observar fenómenos atmosféricos.
 - **Drones y aviones:** brindan imágenes de alta resolución a escala local.
+
+## ¿Qué es una imagen satelital?
+
+Una imagen satelital es una **representación digital** de una porción de la superficie terrestre, generada a partir de la información registrada por los sensores. No es una fotografía convencional: es una **matriz de valores numéricos**, donde cada celda o **píxel** representa la intensidad de energía reflejada o emitida desde una unidad mínima de superficie.
+
 
 #### Tipos de imágenes:
 

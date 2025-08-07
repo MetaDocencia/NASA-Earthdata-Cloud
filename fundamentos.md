@@ -18,13 +18,14 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-### ¿Qué es la teledetección?
+## ¿Qué es la teledetección?
 
 La **teledetección** es el proceso mediante el cual se obtiene información sobre un objeto, una superficie o un fenómeno **sin necesidad de estar en contacto directo con él**. En el contexto del análisis ambiental, esto se logra a través del uso de sensores montados en plataformas como satélites, drones o aviones, que capturan datos sobre la Tierra desde una distancia considerable.
 
 A diferencia de otros métodos de observación directa, la teledetección permite recopilar datos **de forma remota, frecuente y sistemática**, lo cual la convierte en una herramienta fundamental para estudiar el planeta en diferentes escalas espaciales y temporales. Esto es especialmente valioso en regiones de difícil acceso o para observar procesos que ocurren a gran escala, como la deforestación o las inundaciones.
 
-### ¿Qué es la radiación electromagnética y por qué es clave?
+
+## ¿Qué es la radiación electromagnética y por qué es clave?
 
 La **radiación electromagnética (REM)** es el **medio fundamental a través del cual los sensores remotos obtienen información del entorno**. Esta radiación consiste en la propagación de campos eléctricos y magnéticos que transportan energía a través del espacio.
 

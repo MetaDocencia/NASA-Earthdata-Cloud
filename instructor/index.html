@@ -533,10 +533,66 @@ este tutorial paso a paso para hacerlo: <a href="http://tiny.cc/credenciales_NAS
 <p>Recordá guardar tus <strong>credenciales (usuario y contraseña) y
 tenerlas a mano durante el taller</strong>, ya que las vas a necesitar
 para acceder a los datos desde la nube.</p>
-<!--
+</section><section><h2 class="section-heading" id="uso-del-hub-de-2i2c">Uso del Hub de 2i2c<a class="anchor" aria-label="anchor" href="#uso-del-hub-de-2i2c"></a></h2>
+<hr class="half-width"><p>El hub de 2i2c es una plataforma basada en <a href="https://jupyter.org/hub" class="external-link">JupyterHub</a>, diseñada para ofrecer
+entornos de computación reproducibles en la nube. Permite a personas
+usuarias trabajar con herramientas como Jupyter Notebooks, RStudio o VS
+Code, sin necesidad de instalar software localmente.</p>
+<p>Cada hub es personalizado para una comunidad específica, con acceso
+controlado y preconfigurado con los paquetes, librerías y datos
+necesarios para trabajar.</p>
+<p>Este entorno facilita la enseñanza y el aprendizaje de ciencia de
+datos, programación y teledetección sin barreras técnicas, promoviendo
+prácticas reproducibles y abiertas.</p>
+<p>Aquí encontrarás las instrucciones para iniciar sesión en la nube con
+la plataforma proporcionada por 2i2c para este tutorial.</p>
+<p><strong>Importante:</strong> No podrás completar este paso hasta el
+día que inicie el tutorial (ese día recibirás la contraseña).</p>
+<div class="section level3">
+<h3 id="iniciar-sesión-en-el-hub">Iniciar sesión en el hub<a class="anchor" aria-label="anchor" href="#iniciar-sesi%C3%B3n-en-el-hub"></a></h3>
+<p>Para iniciar sesión en el JupyterHub proporcionado por 2i2c:</p>
+<ol style="list-style-type: decimal"><li>Navega hasta el Hub de 2i2c: Tu navegador web debe apuntar a <a href="https://climaterisk.opensci.2i2c.cloud" class="external-link">este enlace</a>.</li>
+<li>Inicia sesión con tus credenciales:
+<ul><li>
+<strong>Nombre de usuario:</strong> Puedes elegir cualquier nombre
+de usuario que desees. Sugerimos que utilices tu nombre de usuario de
+GitHub para evitar conflictos.</li>
+<li>
+<strong>Contraseña:</strong> Recibirás la contraseña el día que
+inicie el tutorial.</li>
+</ul></li>
+</ol><figure><img src="../fig/2i2c_login.png" class="figure mx-auto d-block"></figure><p>El proceso de inicio de sesión puede tardar unos minutos,
+especialmente si es necesario crear un nuevo espacio de trabajo virtual
+solo para ti.</p>
+<p>Al iniciar sesión en <a href="https://climaterisk.opensci.2i2c.cloud" class="external-link uri">https://climaterisk.opensci.2i2c.cloud</a> se clonará
+automáticamente un repositorio para trabajar. Si el inicio de sesión es
+exitoso, verás la siguiente pantalla y estarás listo para empezar a
+trabajar.</p>
+<figure><img src="../fig/hub_startup.png" class="figure mx-auto d-block"></figure><ol start="3" style="list-style-type: decimal"><li>Ejecuta todas las celdas de la notebook
+<code>startup.ipynb</code>.</li>
+</ol><figure><img src="../fig/hub_startup2.png" class="figure mx-auto d-block"></figure><p>Esto generará todas las notebooks que necesitas para poder seguir el
+tutorial. Puede tardar unos segundos, ¡así que paciencia! Si aparece un
+aviso de que la notebook está ocupada, es normal.</p>
+<ol start="4" style="list-style-type: decimal"><li>Vincula tu usuario de hub con tus credenciales de NASA Earthdata.
+Para eso debes acceder a la notebook
+02_Configuración_y_Verificacion_del_Entorno y ejecutar todas las
+celdas.</li>
+</ol><p>book └── es └── ipynb └── 00_Introduccion_Configuracion └──
+02_Configuración_y_Verificación_del_Entorno.md</p>
+<ol start="5" style="list-style-type: decimal"><li><p>Te preguntará si quieres proceder a sobree escribir el archivo
+.netrc. Confirma que sí ingresando <code>Y</code> y presionando
+<code>enter</code>.</p></li>
+<li><p>Ingresa tus credenciales de NASA Earthdata (usuario y
+contraseña). Si todo funcionó correctamente, se te indicará que el
+archivo .netrc con tus credenciales se configuró correctamente.</p></li>
+<li><p>Finalmente, ingresa a la notebook sobre la que estaremos
+trabajando:</p></li>
+</ol><p>book └── es └── ipynb └── 05_Casos_de_Estudio └──
+05_Deforestacion_en_Maranhão.md <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- -->
+ --></p>
+</div>
 </section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Capítulo Siguiente"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link float-end" href="../instructor/fundamentos.html">Siguiente<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>

@@ -108,11 +108,11 @@
   Introducción al uso de datos Nasa Earthdata cloud
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 25%" class="percentage">
-    25%
+<aside class="col-md-12 lesson-progress"><div style="width: 19%" class="percentage">
+    19%
   </div>
   <div class="progress metadocencia">
-    <div class="progress-bar metadocencia" role="progressbar" style="width: 25%" aria-valuenow="25" aria-label="Progreso de la lección" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar metadocencia" role="progressbar" style="width: 19%" aria-valuenow="19" aria-label="Progreso de la lección" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -215,7 +215,8 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#plataformas-d%C3%B3nde-est%C3%A1n-los-sensores">Plataformas: ¿Dónde están los sensores?</a></li>
+        <ul><li><a href="#sensores-remotos-y-plataformas-satelitales">🛰️ Sensores remotos y plataformas satelitales</a></li>
+<li><a href="#qu%C3%A9-es-una-imagen-satelital">¿Qué es una imagen satelital?</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -225,7 +226,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="OPERA_products.html">3. NASA Earthdata Cloud y productos OPERA</a>
+        <a href="sistemas_de_coordenadas.html">3. Sistemas de coordenadas</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -234,7 +235,25 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="caso_estudio.html">4. Caso de estudio</a>
+        <a href="datos_geoespaciales.html">4. Modelos de datos geoespaciales</a>
+    </div><!--/div.accordion-header-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="OPERA_products.html">5. NASA Earthdata Cloud y productos OPERA</a>
+    </div><!--/div.accordion-header-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="caso_estudio.html">6. Caso de estudio</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -283,7 +302,7 @@
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Capítulo previo y siguiente"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="fundamentos.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previo</a>
-        <a class="chapter-link float-end" href="OPERA_products.html">Siguiente<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="sistemas_de_coordenadas.html">Siguiente<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -291,8 +310,8 @@
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previo: Fundamentos de
         </a>
-        <a class="chapter-link float-end" href="OPERA_products.html" rel="next">
-          Siguiente: NASA Earthdata Cloud...
+        <a class="chapter-link float-end" href="sistemas_de_coordenadas.html" rel="next">
+          Siguiente: Sistemas de...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -342,9 +361,8 @@ multiespectrales e hiperespectrales.</li>
 </div>
 </div>
 </div>
-<div class="section level3">
-<h3 id="sensores-remotos-y-plataformas-satelitales">🛰️ Sensores remotos y plataformas satelitales<a class="anchor" aria-label="anchor" href="#sensores-remotos-y-plataformas-satelitales"></a></h3>
-<p>Los <strong>sensores remotos</strong> son instrumentos diseñados para
+<section><h2 class="section-heading" id="sensores-remotos-y-plataformas-satelitales">🛰️ Sensores remotos y plataformas satelitales<a class="anchor" aria-label="anchor" href="#sensores-remotos-y-plataformas-satelitales"></a></h2>
+<hr class="half-width"><p>Los <strong>sensores remotos</strong> son instrumentos diseñados para
 captar la energía electromagnética reflejada o emitida por la superficie
 terrestre. Pueden estar montados en distintas
 <strong>plataformas</strong>, como satélites, drones, aviones o incluso
@@ -363,18 +381,9 @@ señal. Ejemplos: radar, LiDAR, altímetros láser.</li>
 <strong>MODIS</strong> o <strong>SAOCOM</strong>, cada una con
 características distintas en términos de frecuencia de observación, área
 cubierta y resolución.</p>
-</div>
 <div class="section level3">
-<h3 id="qué-es-una-imagen-satelital">¿Qué es una imagen satelital?<a class="anchor" aria-label="anchor" href="#qu%C3%A9-es-una-imagen-satelital"></a></h3>
-<p>Una imagen satelital es una <strong>representación digital</strong>
-de una porción de la superficie terrestre, generada a partir de la
-información registrada por los sensores. No es una fotografía
-convencional: es una <strong>matriz de valores numéricos</strong>, donde
-cada celda o <strong>píxel</strong> representa la intensidad de energía
-reflejada o emitida desde una unidad mínima de superficie.</p>
-</div>
-<section><h2 class="section-heading" id="plataformas-dónde-están-los-sensores">Plataformas: ¿Dónde están los sensores?<a class="anchor" aria-label="anchor" href="#plataformas-d%C3%B3nde-est%C3%A1n-los-sensores"></a></h2>
-<hr class="half-width"><p>Los sensores pueden estar montados en:</p>
+<h3 id="plataformas-dónde-están-los-sensores">Plataformas: ¿Dónde están los sensores?<a class="anchor" aria-label="anchor" href="#plataformas-d%C3%B3nde-est%C3%A1n-los-sensores"></a></h3>
+<p>Los sensores pueden estar montados en:</p>
 <ul><li>
 <strong>Satélites de órbita polar</strong> (ej. Landsat, Sentinel):
 cubren la Tierra en franjas, ideal para monitoreo global.</li>
@@ -384,7 +393,15 @@ punto fijo, útiles para observar fenómenos atmosféricos.</li>
 <li>
 <strong>Drones y aviones:</strong> brindan imágenes de alta
 resolución a escala local.</li>
-</ul><div class="section level4">
+</ul></div>
+</section><section><h2 class="section-heading" id="qué-es-una-imagen-satelital">¿Qué es una imagen satelital?<a class="anchor" aria-label="anchor" href="#qu%C3%A9-es-una-imagen-satelital"></a></h2>
+<hr class="half-width"><p>Una imagen satelital es una <strong>representación digital</strong>
+de una porción de la superficie terrestre, generada a partir de la
+información registrada por los sensores. No es una fotografía
+convencional: es una <strong>matriz de valores numéricos</strong>, donde
+cada celda o <strong>píxel</strong> representa la intensidad de energía
+reflejada o emitida desde una unidad mínima de superficie.</p>
+<div class="section level4">
 <h4 id="tipos-de-imágenes">Tipos de imágenes:<a class="anchor" aria-label="anchor" href="#tipos-de-im%C3%A1genes"></a></h4>
 <ul><li>
 <strong>Monoespectral</strong>: captura una sola banda (por ejemplo,
@@ -441,22 +458,11 @@ por cada unidad de superficie.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Mostrar la solución </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ol start="3" style="list-style-type: decimal"><li>Una matriz de valores numéricos que representan la energía reflejada
 por cada unidad de superficie.</li>
-</ol></div>
-</div>
-</div>
-</div>
-<div id="callout1" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<div class="callout-inner">
-<h3 class="callout-title">Aviso</h3>
-<div class="callout-content">
-<p>Una imagen satelital no es simplemente una fotografía, sino una
+</ol><p>Una imagen satelital no es simplemente una fotografía, sino una
 representación digital de datos captados por sensores remotos montados
 en satélites u otras plataformas. Cada imagen está compuesta por una
 matriz de píxeles, donde cada píxel contiene un valor numérico que
@@ -477,6 +483,7 @@ urbanización.</p>
 </div>
 </div>
 </div>
+</div>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
@@ -485,7 +492,7 @@ any links that you are not going to use.
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Capítulo previo y siguiente"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="fundamentos.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previo</a>
-        <a class="chapter-link float-end" href="OPERA_products.html">Siguiente<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="sistemas_de_coordenadas.html">Siguiente<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -493,8 +500,8 @@ any links that you are not going to use.
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previo: Fundamentos de
         </a>
-        <a class="chapter-link float-end" href="OPERA_products.html" rel="next">
-          Siguiente: NASA Earthdata Cloud...
+        <a class="chapter-link float-end" href="sistemas_de_coordenadas.html" rel="next">
+          Siguiente: Sistemas de...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>

@@ -258,7 +258,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="OPERA_products.html">3. NASA Earthdata Cloud y productos OPERA</a>
+        <a href="sistemas_de_coordenadas.html">3. Sistemas de coordenadas</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -270,7 +270,31 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="caso_estudio.html">4. Caso de estudio</a>
+        <a href="datos_geoespaciales.html">4. Modelos de datos geoespaciales</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="OPERA_products.html">5. NASA Earthdata Cloud y productos OPERA</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush7">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading7">
+        <a href="caso_estudio.html">6. Caso de estudio</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -337,7 +361,90 @@
 <hr class="half-width">
 <h3 id="fundamentos-figure-1">Figura 1</h3>
 <figure><img src="fig/REM.svg" class="figure mx-auto d-block"></figure><hr></section><section id="sensores"><h2 class="section-heading"><a href="sensores.html">Sensores, plataformas y tipos de imágenes</a></h2>
-<hr class="half-width"></section><section id="OPERA_products"><h2 class="section-heading"><a href="OPERA_products.html">NASA Earthdata Cloud y productos OPERA</a></h2>
+<hr class="half-width"></section><section id="sistemas_de_coordenadas"><h2 class="section-heading"><a href="sistemas_de_coordenadas.html">Sistemas de coordenadas</a></h2>
+<hr class="half-width">
+<h3 id="sistemas_de_coordenadas-figure-1">Figura 1</h3>
+<figure><img src="fig/geographic_crs.png" class="figure mx-auto d-block"></figure><hr>
+<h3 id="sistemas_de_coordenadas-figure-2">Figura 2</h3>
+<figure><img src="fig/utm_zones.png" class="figure mx-auto d-block"></figure><hr>
+<h3 id="sistemas_de_coordenadas-figure-3">Figura 3</h3>
+<figure><img src="fig/mgrs_tiles.png" class="figure mx-auto d-block"></figure><hr></section><section id="datos_geoespaciales"><h2 class="section-heading"><a href="datos_geoespaciales.html">Modelos de datos geoespaciales</a></h2>
+<hr class="half-width">
+<h3 id="datos_geoespaciales-figure-1">Figura 1</h3>
+<figure><img src="fig/raster_neon.png" class="figure mx-auto d-block"></figure><hr>
+<h3 id="datos_geoespaciales-figure-2">Figura 2</h3>
+<figure><img src="http://ioam.github.io/topographica/_images/matrix_coords_hidensity.png" class="figure mx-auto d-block"></figure><hr>
+<h3 id="datos_geoespaciales-figure-3">Figura 3</h3>
+<p><img src="http://ioam.github.io/topographica/_images/matrix_coords.png" class="figure"><img src="http://ioam.github.io/topographica/_images/sheet_coords_-0.2_0.4.png" class="figure"></p>
+<hr>
+<h3 id="datos_geoespaciales-figure-4">Figura 4</h3>
+<div class="section level3">
+<h3 id="cómo-comprender-los-datos-vectoriales">Cómo comprender los datos vectoriales<a class="anchor" aria-label="anchor" href="#c%C3%B3mo-comprender-los-datos-vectoriales"></a>
+</h3>
+<p>Los <em>datos vectoriales</em> consisten en secuencias ordenadas de
+<em>vértices</em>, es decir, pares de números de la forma <span class="math inline">\((x,y)\)</span>. Las coordenadas continuas de cada
+vértice se asocian a una ubicación espacial física en algún <a href="https://es.wikipedia.org/wiki/Sistema_de_referencia_de_coordenadas" class="external-link">Sistema
+de Referencia de Coordenadas (SRC)</a> (en inglés, <em>Coordinate
+Reference System, CRS</em>) proyectado.</p>
+<ul>
+<li>
+<strong>Puntos</strong>: Los vértices aislados representan funciones
+discretas de dimensión cero (por ejemplo, árboles, faroles, etc.).</li>
+<li>
+<strong>Líneas</strong> o <strong>polilíneas</strong>: Cualquier
+secuencia ordenada de por lo menos dos vértices constituye una polilínea
+que puede visualizarse trazando líneas rectas entre vértices adyacentes.
+Las líneas o polilíneas son adecuadas para representar características
+unidimensionales como carreteras, caminos y ríos.</li>
+<li>
+<strong>Polígonos</strong>: Cualquier secuencia ordenada de por lo
+menos tres vértices en la que el primero y el último coinciden
+constituye un polígono (es decir, una forma cerrada). Los polígonos son
+adecuados para representar regiones bidimensionales como un lago o el
+límite de un bosque.</li>
+</ul>
+<p>Un conjunto único de datos vectoriales georreferenciados con un CRS
+en particular generalmente contiene cualquier número de puntos, líneas o
+polígonos.</p>
+<figure><img src="fig/points-lines-polygons-vector-data-types.png" class="figure mx-auto d-block"></figure><p style="text-align: center;">
+Esta imagen muestra los tres tipos de datos vectoriales: puntos, líneas
+y polígonos. Fuente: <em>National Ecological Observatory Network</em>
+(NEON).
+</p>
+<img src="fig/points.png" class="figure"><p style="text-align: center;">
+Vista aérea de un paisaje y su representación vectorial con puntos.<br>
+Fuente: <em>Sistemas de Información Geográfica</em> por Victor Olaya.
+</p>
+<img src="fig/lines.png" class="figure"><p style="text-align: center;">
+Vista aérea de un río y su representación vectorial con líneas.<br>
+Fuente: <em>Sistemas de Información Geográfica</em> por Victor Olaya.
+</p>
+<img src="fig/polygon.png" class="figure"><p style="text-align: center;">
+Vista aérea de un lago y su representación vectorial como polígono.<br>
+Fuente: <em>Sistemas de Información Geográfica</em> por Victor Olaya.
+</p>
+<p>Como ocurre con los datos ráster, generalmente las representaciones
+de datos vectoriales van acompañadas de metadatos para almacenar
+diversos atributos asociados al conjunto de datos. Los datos vectoriales
+usualmente se especifican con un nivel de precisión superior a la
+resolución que permiten la mayoría de las cuadrículas ráster. Además,
+las características geográficas representadas como datos vectoriales
+permiten efectuar cálculos que los datos ráster no permiten. Por
+ejemplo, es posible determinar diversas relaciones geométricas o
+topológicas:</p>
+<ul>
+<li>¿Un punto se encuentra dentro de los límites de una región
+geográfica?</li>
+<li>¿Dos carreteras se intersecan?</li>
+<li>¿Cuál es el punto más cercano de una carretera a otra región?</li>
+</ul>
+<p>Otras magnitudes geométricas, como la longitud de un río o la
+superficie de un lago, se obtienen aplicando técnicas de geometría
+computacional a representaciones de datos vectoriales.</p>
+</div>
+<hr>
+<h3 id="datos_geoespaciales-figure-5">Figura 5</h3>
+<figure><img src="fig/points-lines-polygons-vector-data-types.png" class="figure mx-auto d-block"></figure><hr></section><section id="OPERA_products"><h2 class="section-heading"><a href="OPERA_products.html">NASA Earthdata Cloud y productos OPERA</a></h2>
 <hr class="half-width">
 <h3 id="OPERA_products-figure-1">Figura 1</h3>
 <p aria-hidden="true">Imagen 1 de 1: ‘ilusión de gráfico circular de una pirámide’</p>

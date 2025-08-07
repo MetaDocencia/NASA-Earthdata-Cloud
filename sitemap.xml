@@ -22,6 +22,9 @@
     <loc>https://NASA-Earthdata-Cloud.github.io/NA/caso_estudio.html</loc>
   </url>
   <url>
+    <loc>https://NASA-Earthdata-Cloud.github.io/NA/datos_geoespaciales.html</loc>
+  </url>
+  <url>
     <loc>https://NASA-Earthdata-Cloud.github.io/NA/fundamentos.html</loc>
   </url>
   <url>
@@ -47,6 +50,9 @@
   </url>
   <url>
     <loc>https://NASA-Earthdata-Cloud.github.io/NA/instructor/caso_estudio.html</loc>
+  </url>
+  <url>
+    <loc>https://NASA-Earthdata-Cloud.github.io/NA/instructor/datos_geoespaciales.html</loc>
   </url>
   <url>
     <loc>https://NASA-Earthdata-Cloud.github.io/NA/instructor/fundamentos.html</loc>
@@ -76,6 +82,9 @@
     <loc>https://NASA-Earthdata-Cloud.github.io/NA/instructor/sensores.html</loc>
   </url>
   <url>
+    <loc>https://NASA-Earthdata-Cloud.github.io/NA/instructor/sistemas_de_coordenadas.html</loc>
+  </url>
+  <url>
     <loc>https://NASA-Earthdata-Cloud.github.io/NA/instructor-notes.html</loc>
   </url>
   <url>
@@ -92,5 +101,8 @@
   </url>
   <url>
     <loc>https://NASA-Earthdata-Cloud.github.io/NA/sensores.html</loc>
+  </url>
+  <url>
+    <loc>https://NASA-Earthdata-Cloud.github.io/NA/sistemas_de_coordenadas.html</loc>
   </url>
 </urlset>

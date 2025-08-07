@@ -73,6 +73,9 @@
     <loc>https://NASA-Earthdata-Cloud.github.io/NA/instructor/reference.html</loc>
   </url>
   <url>
+    <loc>https://NASA-Earthdata-Cloud.github.io/NA/instructor/sensores.html</loc>
+  </url>
+  <url>
     <loc>https://NASA-Earthdata-Cloud.github.io/NA/instructor-notes.html</loc>
   </url>
   <url>
@@ -86,5 +89,8 @@
   </url>
   <url>
     <loc>https://NASA-Earthdata-Cloud.github.io/NA/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://NASA-Earthdata-Cloud.github.io/NA/sensores.html</loc>
   </url>
 </urlset>

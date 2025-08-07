@@ -246,7 +246,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="OPERA_products.html">2. NASA Earthdata Cloud y productos OPERA</a>
+        <a href="sensores.html">2. Sensores, plataformas y tipos de imágenes</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -258,7 +258,19 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="caso_estudio.html">3. Caso de estudio</a>
+        <a href="OPERA_products.html">3. NASA Earthdata Cloud y productos OPERA</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush5">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading5">
+        <a href="caso_estudio.html">4. Caso de estudio</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -323,7 +335,7 @@
         
 <section id="aio-fundamentos"><p>Content from <a href="fundamentos.html">Fundamentos de teledetección</a></p>
 <hr>
-<p>Última actualización: 2025-08-06 |
+<p>Última actualización: 2025-08-07 |
 
         <a href="https://metadocencia.github.io/NASA-Earthdata-Cloud/edit/main/episodes/fundamentos.Rmd" class="external-link">Mejora esta página <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -396,16 +408,161 @@ frecuencia hasta rayos gamma de alta energía. Sin embargo, los sensores
 remotos capturan solo ciertas regiones del espectro (por ejemplo, el
 visible, el infrarrojo y las microondas), dependiendo del tipo de
 aplicación.</p>
-<figure><img src="../assets/includes/REM.svg" class="figure mx-auto d-block"></figure><p>Comprender cómo interactúa la REM con distintos tipos de superficies
+<figure><img src="assets/includes/REM.svg" class="figure mx-auto d-block"></figure><p>Comprender cómo interactúa la REM con distintos tipos de superficies
 —agua, vegetación, suelo, construcciones— es esencial para poder
 interpretar correctamente las imágenes y datos satelitales.</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</div></section><section id="aio-OPERA_products"><p>Content from <a href="OPERA_products.html">NASA Earthdata Cloud y productos OPERA</a></p>
+</div></section><section id="aio-sensores"><p>Content from <a href="sensores.html">Sensores, plataformas y tipos de imágenes</a></p>
 <hr>
-<p>Última actualización: 2025-08-06 |
+<p>Última actualización: 2025-08-07 |
+
+        <a href="https://metadocencia.github.io/NASA-Earthdata-Cloud/edit/main/episodes/sensores.Rmd" class="external-link">Mejora esta página <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Mostrar todas las soluciones " data-collapse="Cerrar todas las soluciones "> Mostrar todas las soluciones <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Hoja de ruta</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Preguntas</h3>
+<ul>
+<li>¿Qué tipos de sensores y plataformas satelitales existen y cómo
+funcionan?<br>
+</li>
+<li>¿Qué diferencias existen entre imágenes monoespectrales y
+multiespectrales?<br>
+</li>
+<li>¿Qué significan las resoluciones espacial, temporal, espectral y
+radiométrica?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objetivos</h3>
+<ul>
+<li>Reconocer los tipos principales de sensores remotos (activos y
+pasivos) y las plataformas que los transportan (como los satélites
+Landsat y Sentinel).<br>
+</li>
+<li>Identificar las características técnicas clave de los sensores:
+resolución espacial, temporal, espectral y radiométrica.<br>
+</li>
+<li>Distinguir entre imágenes satelitales monoespectrales,
+multiespectrales e hiperespectrales.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="sensores-remotos-y-plataformas-satelitales">🛰️ Sensores remotos y plataformas satelitales<a class="anchor" aria-label="anchor" href="#sensores-remotos-y-plataformas-satelitales"></a>
+</h3>
+<p>Los <strong>sensores remotos</strong> son instrumentos diseñados para
+captar la energía electromagnética reflejada o emitida por la superficie
+terrestre. Pueden estar montados en distintas
+<strong>plataformas</strong>, como satélites, drones, aviones o incluso
+globos.</p>
+<p>Existen dos grandes tipos de sensores:</p>
+<ul>
+<li>
+<strong>Sensores pasivos</strong>: dependen de una fuente de energía
+externa (como el Sol) y miden la radiación reflejada o emitida por la
+superficie terrestre. Ejemplos: Landsat OLI, Sentinel-2 MSI.</li>
+<li>
+<strong>Sensores activos</strong>: generan su propia fuente de
+energía (por ejemplo, un pulso de microondas) y miden el rebote de esa
+señal. Ejemplos: radar, LiDAR, altímetros láser.</li>
+</ul>
+<p>Los sensores se encuentran a bordo de plataformas satelitales como
+<strong>Landsat</strong>, <strong>Sentinel</strong>,
+<strong>MODIS</strong> o <strong>SAOCOM</strong>, cada una con
+características distintas en términos de frecuencia de observación, área
+cubierta y resolución.</p>
+</div>
+<div class="section level3">
+<h3 id="qué-es-una-imagen-satelital">¿Qué es una imagen satelital?<a class="anchor" aria-label="anchor" href="#qu%C3%A9-es-una-imagen-satelital"></a>
+</h3>
+<p>Una imagen satelital es una <strong>representación digital</strong>
+de una porción de la superficie terrestre, generada a partir de la
+información registrada por los sensores. No es una fotografía
+convencional: es una <strong>matriz de valores numéricos</strong>, donde
+cada celda o <strong>píxel</strong> representa la intensidad de energía
+reflejada o emitida desde una unidad mínima de superficie.</p>
+</div>
+<section><h2 class="section-heading" id="plataformas-dónde-están-los-sensores">Plataformas: ¿Dónde están los sensores?<a class="anchor" aria-label="anchor" href="#plataformas-d%C3%B3nde-est%C3%A1n-los-sensores"></a>
+</h2>
+<hr class="half-width">
+<p>Los sensores pueden estar montados en:</p>
+<ul>
+<li>
+<strong>Satélites de órbita polar</strong> (ej. Landsat, Sentinel):
+cubren la Tierra en franjas, ideal para monitoreo global.</li>
+<li>
+<strong>Satélites geoestacionarios:</strong> se ubican sobre un
+punto fijo, útiles para observar fenómenos atmosféricos.</li>
+<li>
+<strong>Drones y aviones:</strong> brindan imágenes de alta
+resolución a escala local.</li>
+</ul>
+<div class="section level4">
+<h4 id="tipos-de-imágenes">Tipos de imágenes:<a class="anchor" aria-label="anchor" href="#tipos-de-im%C3%A1genes"></a>
+</h4>
+<ul>
+<li>
+<strong>Monoespectral</strong>: captura una sola banda (por ejemplo,
+solo el rojo).</li>
+<li>
+<strong>Multiespectral</strong>: combina varias bandas
+(habitualmente entre 3 y 10), como el visible y el infrarrojo
+cercano.</li>
+<li>
+<strong>Hiperespectral</strong>: contiene cientos de bandas muy
+estrechas, permitiendo una mayor precisión para distinguir materiales o
+tipos de cobertura.</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="resoluciones-qué-nivel-de-detalle-tienen-los-sensores">Resoluciones: ¿qué nivel de detalle tienen los sensores?<a class="anchor" aria-label="anchor" href="#resoluciones-qu%C3%A9-nivel-de-detalle-tienen-los-sensores"></a>
+</h3>
+<p>Los sensores remotos se caracterizan por distintas
+<strong>resoluciones</strong>, que determinan el tipo de información que
+pueden captar:</p>
+<ul>
+<li>
+<strong>Resolución espacial</strong>: tamaño del píxel en el terreno
+(por ejemplo, 10 m, 30 m). Cuanto menor es el valor, mayor el nivel de
+detalle.</li>
+<li>
+<strong>Resolución temporal</strong>: frecuencia con la que un
+sensor observa la misma zona. Ejemplo: Sentinel-2 revisita cada 5
+días.</li>
+<li>
+<strong>Resolución espectral</strong>: cantidad y ancho de las
+bandas espectrales que captura un sensor.</li>
+<li>
+<strong>Resolución radiométrica</strong>: capacidad de un sensor
+para distinguir diferencias en la intensidad de la radiación (medida en
+bits, como 8 bits = 256 niveles).</li>
+</ul>
+<p>Comprender estas características permite seleccionar el producto
+adecuado según el objetivo del análisis.</p>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</div>
+</section></section><section id="aio-OPERA_products"><p>Content from <a href="OPERA_products.html">NASA Earthdata Cloud y productos OPERA</a></p>
+<hr>
+<p>Última actualización: 2025-08-07 |
 
         <a href="https://metadocencia.github.io/NASA-Earthdata-Cloud/edit/main/episodes/OPERA_products.Rmd" class="external-link">Mejora esta página <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -488,7 +645,7 @@ reforzar los objetivos.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Salida </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">SALIDA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -515,7 +672,7 @@ reforzar los objetivos.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Mostrar la solución </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Es posible gregar una línea con al menos tres dos puntos y la
 etiqueta <code>solution</code>.</p>
@@ -583,7 +740,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-caso_estudio"><p>Content from <a href="caso_estudio.html">Caso de estudio</a></p>
 <hr>
-<p>Última actualización: 2025-08-06 |
+<p>Última actualización: 2025-08-07 |
 
         <a href="https://metadocencia.github.io/NASA-Earthdata-Cloud/edit/main/episodes/caso_estudio.Rmd" class="external-link">Mejora esta página <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">

@@ -83,6 +83,6 @@ Estos valores numéricos no son colores en sí mismos, sino medidas cuantitativa
 Por eso decimos que una imagen satelital es, en esencia, un conjunto de datos científicos que describe el estado físico de la superficie terrestre (como la vegetación, el agua, el suelo o las construcciones) en función de cómo interactúa con la radiación solar.
 Este tipo de información es clave para monitorear cambios ambientales, realizar mapas temáticos y detectar fenómenos como deforestación, incendios, inundaciones o urbanización.
 
-
+:::::::::::::::::::::::::::::::::
 
 

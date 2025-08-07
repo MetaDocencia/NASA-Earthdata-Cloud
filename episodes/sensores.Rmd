@@ -1,5 +1,5 @@
 ---
-title: 'Sensores, plataformas y tipos de im'
+title: 'Sensores, plataformas y tipos de imágenes'
 teaching: 50
 exercises: 2
 ---

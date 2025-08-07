@@ -208,6 +208,9 @@
       <div class="accordion-body">
         <ul><li><a href="#qu%C3%A9-es-la-teledetecci%C3%B3n">¿Qué es la teledetección?</a></li>
 <li><a href="#qu%C3%A9-es-la-radiaci%C3%B3n-electromagn%C3%A9tica-y-por-qu%C3%A9-es-clave">¿Qué es la radiación electromagnética y por qué es clave?</a></li>
+<li><a href="#qu%C3%A9-es-una-imagen-satelital">¿Qué es una imagen satelital?</a></li>
+<li><a href="#sat%C3%A9lites-y-sensores">🛰️ Satélites y sensores</a></li>
+<li><a href="#sensores-remotos">Sensores remotos</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -217,7 +220,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="sensores.html">2. Sensores, plataformas y tipos de imágenes</a>
+        <a href="sistemas_de_coordenadas.html">2. Sistemas de coordenadas</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -226,7 +229,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="sistemas_de_coordenadas.html">3. Sistemas de coordenadas</a>
+        <a href="datos_geoespaciales.html">3. Modelos de datos geoespaciales</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -235,7 +238,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="datos_geoespaciales.html">4. Modelos de datos geoespaciales</a>
+        <a href="OPERA_products.html">4. NASA Earthdata Cloud y productos OPERA</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -244,16 +247,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="OPERA_products.html">5. NASA Earthdata Cloud y productos OPERA</a>
-    </div><!--/div.accordion-header-->
-
-  </div><!--/div.accordion-item-->
-</div><!--/div.accordion-flush-->
-
-<div class="accordion accordion-flush" id="accordionFlush7">
-  <div class="accordion-item">
-    <div class="accordion-header" id="flush-heading7">
-        <a href="caso_estudio.html">6. Caso de estudio</a>
+        <a href="caso_estudio.html">5. Caso de estudio</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -302,7 +296,7 @@
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Capítulo previo y siguiente"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previo</a>
-        <a class="chapter-link float-end" href="../instructor/sensores.html">Siguiente<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/sistemas_de_coordenadas.html">Siguiente<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -310,8 +304,8 @@
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Inicio
         </a>
-        <a class="chapter-link float-end" href="../instructor/sensores.html" rel="next">
-          Siguiente: Sensores,...
+        <a class="chapter-link float-end" href="../instructor/sistemas_de_coordenadas.html" rel="next">
+          Siguiente: Sistemas de...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -323,7 +317,7 @@
 
 
 
-        <p>Tiempo estimado: <i aria-hidden="true" data-feather="clock"></i> 52 minutos</p>
+        <p>Tiempo estimado: <i aria-hidden="true" data-feather="clock"></i> 41 minutos</p>
 
         <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Mostrar todas las soluciones " data-collapse="Cerrar todas las soluciones "> Mostrar todas las soluciones <i aria-hidden="true" data-feather="plus"></i></button>
@@ -342,6 +336,8 @@
 observación?</li>
 <li>¿Qué es la radiación electromagnética y por qué es clave en la
 teledetección?</li>
+<li>¿Qué es una imagen satelital y cómo se interpretan sus
+componentes?</li>
 </ul></div>
 </div>
 </div>
@@ -349,10 +345,12 @@ teledetección?</li>
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objetivos</h3>
-<ul><li>Definir qué es la teledetección y explicar su importancia en el
-análisis ambiental.</li>
-<li>Describir el rol de la radiación electromagnética y del espectro
-electromagnético en la adquisición de datos satelitales.</li>
+<ul><li>Definir qué es la teledetección y explicar su relevancia para el
+estudio ambiental.</li>
+<li>Comprender el rol de la radiación electromagnética y el espectro
+electromagnético en la obtención de datos satelitales.</li>
+<li>Identificar los componentes básicos de una imagen satelital y cómo
+se estructuran los datos en píxeles y bandas.</li>
 </ul></div>
 </div>
 </div>
@@ -385,21 +383,209 @@ superficie terrestre, y los sensores de teledetección registran esas
 variaciones.</p>
 <p>La REM se organiza en lo que se conoce como el <strong>espectro
 electromagnético</strong>, que abarca desde ondas de radio de baja
-frecuencia hasta rayos gamma de alta energía. Sin embargo, los sensores
-remotos capturan solo ciertas regiones del espectro (por ejemplo, el
-visible, el infrarrojo y las microondas), dependiendo del tipo de
-aplicación.</p>
+frecuencia hasta rayos gamma de alta energía.</p>
+<p>Los satélites llevan instrumentos o sensores que miden la radiación
+electromagnética reflejada o emitida por fuentes tanto terrestres como
+atmosféricas. Con instrumentos calibrados, los científicos pueden medir
+la altura, la temperatura, el contenido de humedad (y más) para casi
+todos los atributos de la atmósfera, hidrosfera, litosfera y la biosfera
+de la Tierra. Sin embargo, los sensores remotos capturan solo ciertas
+regiones del espectro (por ejemplo, el visible, el infrarrojo y las
+microondas), dependiendo del tipo de aplicación.</p>
 <figure><img src="../fig/REM.svg" class="figure mx-auto d-block"></figure><p>Comprender cómo interactúa la REM con distintos tipos de superficies
 —agua, vegetación, suelo, construcciones— es esencial para poder
 interpretar correctamente las imágenes y datos satelitales.</p>
+</section><section><h2 class="section-heading" id="qué-es-una-imagen-satelital">¿Qué es una imagen satelital?<a class="anchor" aria-label="anchor" href="#qu%C3%A9-es-una-imagen-satelital"></a></h2>
+<hr class="half-width"><p>Una <strong>imagen satelital</strong> es una representación digital
+de una porción de la superficie terrestre, generada a partir de la
+información registrada por sensores remotos.</p>
+<figure><img src="../fig/imagen.png" class="figure mx-auto d-block"></figure><p>Estos sensores capturan datos en <strong>ciertas longitudes de onda
+del espectro electromagnético (EEM)</strong>. Por eso, cada imagen
+corresponde a una <strong>banda espectral</strong>, y cada píxel de la
+imagen contiene un <strong>valor numérico</strong> que representa la
+<strong>intensidad de la energía reflejada</strong> por una unidad
+mínima de superficie en esa banda específica.</p>
+<p>Los datos se organizan en una <strong>matriz bidimensional</strong>
+de filas × columnas, donde cada celda representa un píxel. Ese valor de
+píxel indica la <strong>reflectancia promedio</strong> registrada por el
+sensor en esa porción del terreno.</p>
+<p>Cuando se visualiza una imagen de una sola banda, esta suele
+representarse en <strong>escala de grises</strong>:</p>
+<ul><li>
+<strong>Blanco:</strong> indica <strong>alta reflectancia</strong>
+(mayor energía reflejada).</li>
+<li>
+<strong>Negro:</strong> indica <strong>baja reflectancia</strong>
+(menor energía reflejada).</li>
+</ul><p>Este gradiente continuo permite distinguir diferencias en la
+respuesta espectral de los distintos objetos o superficies.</p>
+<div class="section level3">
+<h3 id="tipos-de-imágenes-satelitales">Tipos de imágenes satelitales<a class="anchor" aria-label="anchor" href="#tipos-de-im%C3%A1genes-satelitales"></a></h3>
+<p>Dependiendo de cuántas bandas espectrales se capturan y cómo se
+combinan, las imágenes pueden clasificarse en:</p>
+<ul><li>
+<strong>Monoespectral:</strong> contiene datos de una sola banda
+(por ejemplo, solo la banda del rojo). Se visualiza generalmente en
+escala de grises.</li>
+<li>
+<strong>Multiespectral:</strong> combina varias bandas
+(habitualmente entre 3 y 10), como las del espectro visible (rojo,
+verde, azul) y el infrarrojo cercano. Permiten generar composiciones de
+color para distintos análisis (por ejemplo, vegetación, agua, suelo
+desnudo).</li>
+<li>
+<strong>Hiperespectral:</strong> contiene decenas o cientos de
+bandas muy estrechas del espectro, lo que permite una mayor precisión en
+la identificación de materiales, tipos de cobertura o condiciones
+ambientales.</li>
+</ul><figure><img src="../fig/imagen_multiespectral.png" alt="Imagen multiespectral" class="figure mx-auto d-block"><div class="figcaption">Imagen multiespectral</div>
+</figure></div>
+</section><section><h2 class="section-heading" id="satélites-y-sensores">🛰️ Satélites y sensores<a class="anchor" aria-label="anchor" href="#sat%C3%A9lites-y-sensores"></a></h2>
+<hr class="half-width"><p>Los <strong>satélites</strong> transportan a bordo <strong>sensores
+remotos</strong>, que son los instrumentos encargados de captar la
+energía electromagnética reflejada o emitida por la superficie
+terrestre. Al conjunto de sensores más la plataforma satelital que los
+contiene se lo denomina <strong>sistema satelital</strong>.</p>
+<p>Actualmente, se estima que hay alrededor de <strong>12.000 satélites
+activos</strong> orbitando nuestro planeta (Jonathan’s Space Pages,
+2025), muchos de ellos utilizados para observación de la Tierra.</p>
+</section><section><h2 class="section-heading" id="sensores-remotos">Sensores remotos<a class="anchor" aria-label="anchor" href="#sensores-remotos"></a></h2>
+<hr class="half-width"><p>Los sensores pueden estar montados en diferentes
+<strong>plataformas</strong>, como satélites, drones, aviones o globos.
+Según el tipo de energía que utilizan, se clasifican en:</p>
+<ul><li>
+<strong>Sensores pasivos</strong>: miden la energía radiante natural
+reflejada o emitida por la Tierra. Por ejemplo, los sensores ópticos que
+utilizan la luz solar como fuente.</li>
+<li>
+<strong>Sensores activos</strong>: emiten su propia señal (como
+radar o láser) y miden el rebote de esa señal. Funcionan incluso de
+noche o con nubosidad. Ejemplos: Sentinel-1 (radar), GPM GMI
+(microondas), Landsat OLI/TIRS (infrarrojo térmico).</li>
+</ul><figure><img src="../sensores.jpg" alt="Sensores pasivos y activos" class="figure mx-auto d-block"><div class="figcaption">Sensores pasivos y activos</div>
+</figure><div class="section level3">
+<h3 id="tipos-de-plataformas">Tipos de plataformas<a class="anchor" aria-label="anchor" href="#tipos-de-plataformas"></a></h3>
+<p>Según el tipo de órbita o el medio en que se transportan, las
+plataformas pueden ser:</p>
+<ul><li>
+<strong>Satélites de órbita polar o heliosincrónica</strong>:
+observan toda la superficie terrestre en franjas, pasando por cada punto
+a la misma hora solar local.<br>
+Ejemplos: <strong>Landsat</strong>, <strong>Sentinel-2</strong>,
+<strong>MODIS</strong>.</li>
+<li>
+<strong>Satélites geoestacionarios (geosincrónicos)</strong>: se
+ubican a unos 36.000 km de altura y permanecen sobre el mismo punto del
+planeta. Son ideales para monitoreo meteorológico en tiempo real.</li>
+<li>
+<strong>Drones y aviones</strong>: operan a escala local y permiten
+obtener imágenes de alta resolución espacial, útiles para estudios
+detallados.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="qué-mide-un-sensor-remoto">¿Qué mide un sensor remoto?<a class="anchor" aria-label="anchor" href="#qu%C3%A9-mide-un-sensor-remoto"></a></h3>
+<p>Cada sensor capta la energía reflejada en determinadas longitudes de
+onda del espectro electromagnético, organizando los datos en forma de
+<strong>matriz de píxeles</strong> (filas × columnas). Cada píxel
+representa una unidad mínima de superficie (por ejemplo, 10 × 10 m) y
+contiene un valor numérico que indica la reflectancia promedio en una
+determinada banda espectral.</p>
+</div>
+<div class="section level3">
+<h3 id="características-técnicas-resoluciones">Características técnicas: resoluciones<a class="anchor" aria-label="anchor" href="#caracter%C3%ADsticas-t%C3%A9cnicas-resoluciones"></a></h3>
+<p>Las imágenes satelitales presentan diferentes
+<strong>resoluciones</strong>, que determinan su nivel de detalle y
+periodicidad. Estas dependen en parte del sensor, del satélite o de
+ambos:</p>
+<table class="table"><colgroup><col width="20%"><col width="48%"><col width="31%"></colgroup><thead><tr class="header"><th>Tipo de resolución</th>
+<th>Qué mide</th>
+<th>Ejemplo</th>
+</tr></thead><tbody><tr class="odd"><td>Espacial</td>
+<td>Tamaño del píxel en el terreno</td>
+<td>10 m (Sentinel-2), 30 m (Landsat-8)</td>
+</tr><tr class="even"><td>Temporal</td>
+<td>Frecuencia de observación de la misma zona</td>
+<td>Cada 5 días (Sentinel-2)</td>
+</tr><tr class="odd"><td>Espectral</td>
+<td>Número y ancho de las bandas espectrales captadas</td>
+<td>13 bandas (Sentinel-2)</td>
+</tr><tr class="even"><td>Radiométrica</td>
+<td>Capacidad para discriminar diferencias de intensidad</td>
+<td>8 bits (256 niveles) o más</td>
+</tr></tbody></table></div>
+<div class="section level3">
+<h3 id="ancho-de-barrido-y-resolución-espacial">Ancho de barrido y resolución espacial<a class="anchor" aria-label="anchor" href="#ancho-de-barrido-y-resoluci%C3%B3n-espacial"></a></h3>
+<ul><li>
+<strong>Ancho de la franja de barrido</strong>: es el ancho máximo
+de la superficie observada por el sensor. Depende del ángulo de
+observación.</li>
+<li>
+<strong>Resolución espacial</strong>: es el tamaño de cada píxel.
+Determina el nivel de detalle.</li>
+</ul><figure><img src="../fig/barrido.png" alt="Ancho del barrido y resolución espacial" class="figure mx-auto d-block"><div class="figcaption">Ancho del barrido y resolución espacial</div>
+</figure><p>Estas características están inversamente relacionadas: cuanto mayor
+la resolución espacial (píxeles más pequeños), menor el ancho de barrido
+(área cubierta en una pasada).</p>
+<p>📌 <em>Ejemplo</em>: Sentinel-2 tiene una resolución espacial de 10 m
+y cubre un ancho de barrido de 290 km. SAOCOM, en cambio, tiene
+resolución de hasta 10 m pero menor cobertura por pasada.</p>
+<div id="ejercicio-1---responde-a-la-encuesta" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Desafío</span>
+<div id="ejercicio-1---responde-a-la-encuesta" class="callout-inner">
+<h3 class="callout-title">Ejercicio 1 - Responde a la encuesta</h3>
+<div class="callout-content">
+<p>Q: ¿Qué es una imagen satelital?</p>
+<ol style="list-style-type: decimal"><li>Una fotografía convencional tomada desde el espacio.</li>
+<li>Una matriz de colores RGB que representa la temperatura de la
+atmósfera.</li>
+<li>Una matriz de valores numéricos que representan la energía reflejada
+por cada unidad de superficie.</li>
+</ol></div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Mostrar la solución </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<ol start="3" style="list-style-type: decimal"><li>Una matriz de valores numéricos que representan la energía reflejada
+por cada unidad de superficie.</li>
+</ol><p>Una imagen satelital no es simplemente una fotografía, sino una
+representación digital de datos captados por sensores remotos montados
+en satélites u otras plataformas. Cada imagen está compuesta por una
+matriz de píxeles, donde cada píxel contiene un valor numérico que
+representa la cantidad de energía electromagnética reflejada o emitida
+por una pequeña porción de la superficie terrestre en una determinada
+longitud de onda (o banda espectral). Estos valores numéricos no son
+colores en sí mismos, sino medidas cuantitativas de radiancia o
+reflectancia, que luego pueden visualizarse en escala de grises (una
+sola banda) o combinarse en falsas composiciones de color (por ejemplo,
+usando el infrarrojo cercano, el rojo y el verde). Por eso decimos que
+una imagen satelital es, en esencia, un conjunto de datos científicos
+que describe el estado físico de la superficie terrestre (como la
+vegetación, el agua, el suelo o las construcciones) en función de cómo
+interactúa con la radiación solar. Este tipo de información es clave
+para monitorear cambios ambientales, realizar mapas temáticos y detectar
+fenómenos como deforestación, incendios, inundaciones o
+urbanización.</p>
+</div>
+</div>
+</div>
+</div>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
+</div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Capítulo previo y siguiente"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previo</a>
-        <a class="chapter-link float-end" href="../instructor/sensores.html">Siguiente<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/sistemas_de_coordenadas.html">Siguiente<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -407,8 +593,8 @@ any links that you are not going to use.
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Inicio
         </a>
-        <a class="chapter-link float-end" href="../instructor/sensores.html" rel="next">
-          Siguiente: Sensores,...
+        <a class="chapter-link float-end" href="../instructor/sistemas_de_coordenadas.html" rel="next">
+          Siguiente: Sistemas de...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>

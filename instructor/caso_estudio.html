@@ -108,11 +108,11 @@
   Introducción al uso de datos Nasa Earthdata cloud
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 71%" class="percentage">
-    71%
+<aside class="col-md-12 lesson-progress"><div style="width: 72%" class="percentage">
+    72%
   </div>
   <div class="progress metadocencia">
-    <div class="progress-bar metadocencia" role="progressbar" style="width: 71%" aria-valuenow="71" aria-label="Progreso de la lección" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar metadocencia" role="progressbar" style="width: 72%" aria-valuenow="72" aria-label="Progreso de la lección" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -232,21 +232,12 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         5. Caso de estudio
         </span>
-      </button>
+      
     </div><!--/div.accordion-header-->
-
-    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
-      <div class="accordion-body">
-        <ul><li><a href="#introducci%C3%B3n">Introducción</a></li>
-<li><a href="#figuras">Figuras</a></li>
-<li><a href="#matem%C3%A1tica">Matemática</a></li>
-        </ul></div><!--/div.accordion-body-->
-    </div><!--/div.accordion-collapse-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -311,11 +302,11 @@
         <h1>Caso de estudio</h1>
         <p>Última actualización: 2025-08-07 |
 
-        <a href="https://metadocencia.github.io/NASA-Earthdata-Cloud/edit/main/episodes/caso_estudio.Rmd" class="external-link">Mejora esta página <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://metadocencia.github.io/NASA-Earthdata-Cloud/edit/main/episodes/caso_estudio.md" class="external-link">Mejora esta página <i aria-hidden="true" data-feather="edit"></i></a></p>
 
 
 
-        <p>Tiempo estimado: <i aria-hidden="true" data-feather="clock"></i> 52 minutos</p>
+        <p>Tiempo estimado: <i aria-hidden="true" data-feather="clock"></i> 50 minutos</p>
 
         <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Mostrar todas las soluciones " data-collapse="Cerrar todas las soluciones "> Mostrar todas las soluciones <i aria-hidden="true" data-feather="plus"></i></button>
@@ -323,174 +314,538 @@
 
         
 
-<div class="overview card">
-<h2 class="card-header">Hoja de ruta</h2>
-<div class="row g-0">
-<div class="col-md-4">
-<div class="card-body">
-<div class="inner">
-<h3 class="card-title">Preguntas</h3>
-<ul><li>¿Cómo se escribe una lección usando R Markdown y
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
-</ul></div>
+<div class="section level1">
+<h1 id="deforestación-en-maranhão">Deforestación en Maranhão<a class="anchor" aria-label="anchor" href="#deforestaci%C3%B3n-en-maranh%C3%A3o"></a></h1>
+<!-- #region jupyter={"source_hidden": true} -->
+<p>La Amazonía es una de las regiones más biodiversas del planeta y un
+componente clave del sistema climático global que además sostiene
+múltiples comunidades indígenas. En particular el estado de Maranhão, en
+Brasil, es uno de los focos más críticos de deforestación en el país. Se
+estima que el 76 % de la cobertura original de bosque amazónico en este
+estado ha sido destruida. Según Global Forest Watch, Maranhão ha
+registrado una de las tasas más altas de pérdida de cobertura boscosa en
+Brasil en los últimos años, impulsada por incendios, expansión
+agropecuaria y tala ilegal. Estos procesos están estrechamente ligados a
+la fragmentación ecológica, la pérdida de biodiversidad y la violencia
+hacia comunidades indígenas. Frente a este escenario, el monitoreo
+sistemático de los cambios en la cobertura vegetal es fundamental. Los
+productos OPERA DIST-HLS, derivados principalmente de Landsat
+(NASA/USGS) y Sentinel-2 (ESA), ofrecen una herramienta poderosa para
+detectar disturbios recientes y aportar evidencia clave para la
+conservación y la formulación de políticas públicas basadas en
+datos.</p>
+<figure style="text-align: center;"><img src="https://tse3.mm.bing.net/th/id/OIP.sSfdF5nBFUWbh3UImdbyVgHaE7?pid=Api" alt="Buriticupu - erosión" style="max-width: 100%; height: auto;" class="figure"><figcaption style="font-size: 0.9em; color: #555;">
+Foto: AFP / El País (2023)
+</figcaption></figure><!-- #endregion --><div class="section level2">
+<h2 id="section"><!-- #region jupyter={"source_hidden": false} --><a class="anchor" aria-label="anchor" href="#section"></a></h2>
+<!-- #endregion -->
+</div>
+<div class="section level2">
+<h2 id="ruta-de-trabajo">Ruta de trabajo<a class="anchor" aria-label="anchor" href="#ruta-de-trabajo"></a></h2>
+<!-- #region jupyter={"source_hidden": true} -->
+<p>Nuestro objetivo es evaluar la deforestación en un area cercana a la
+ciudad de Buriticupu en el estado Maranhao. Para eso en esta notebook
+vamos a :</p>
+<ol style="list-style-type: decimal"><li>Filtrar y seleccionar los productos OPERA DIST-ALERT desde la
+nube</li>
+<li>Visualizar y explorar los subproductos VEG_DIST_STATUS</li>
+<li>Gráficar la evolución del disturbio a lo largo del tiempo.</li>
+<li>Generar un mapa de disturbios</li>
+<li>Explorar subproducto VEG_DIST_DATE <!-- #endregion -->
+</li>
+</ol></div>
+<div class="section level2">
+<h2 id="section-1"><!-- #region jupyter={"source_hidden": false} --><a class="anchor" aria-label="anchor" href="#section-1"></a></h2>
+<!-- #endregion -->
+<div class="section level3">
+<h3 id="antes-de-empezar---importar-librerías-que-vamos-a-utilizar">Antes de empezar - Importar librerías que vamos a utilizar<a class="anchor" aria-label="anchor" href="#antes-de-empezar---importar-librer%C3%ADas-que-vamos-a-utilizar"></a></h3>
+<p><code>python jupyter={"source_hidden": true} #librerias para manipulación de datos from warnings import filterwarnings #suprime los warning filterwarnings('ignore') import numpy as np, pandas as pd, xarray as xr import rioxarray as rio import rasterio</code></p>
+<p><code>python jupyter={"source_hidden": true} #librerias para visualización import hvplot.pandas, hvplot.xarray import geoviews as gv from geoviews import opts gv.extension('bokeh')</code></p>
+<p><code>python jupyter={"source_hidden": true} #configuración de acceso a datos geoespaciales desde la nube from pystac_client import Client from osgeo import gdal gdal.SetConfigOption('GDAL_HTTP_COOKIEFILE','~/.cookies.txt') gdal.SetConfigOption('GDAL_HTTP_COOKIEJAR', '~/.cookies.txt') gdal.SetConfigOption('GDAL_DISABLE_READDIR_ON_OPEN','EMPTY_DIR') gdal.SetConfigOption('CPL_VSIL_CURL_ALLOWED_EXTENSIONS','TIF, TIFF')</code></p>
 </div>
 </div>
-<div class="col-md-8">
-<div class="card-body">
-<div class="inner bordered">
-<h3 class="card-title">Objetivos</h3>
-<ul><li>Explicar cómo usar markdown con la nueva plantilla de lección<br></li>
-<li>Demostrar cómo incluir fragmentos de código, figuras y bloques de
-actividades anidados</li>
-</ul></div>
+<div class="section level2">
+<h2 id="section-2"><!-- #region jupyter={"source_hidden": false} --><a class="anchor" aria-label="anchor" href="#section-2"></a></h2>
+<!-- #endregion -->
+<div class="section level3">
+<h3 id="filtrar-y-seleccionar-los-productos-opera-desde-la-nube">1. FILTRAR Y SELECCIONAR LOS PRODUCTOS OPERA DESDE LA NUBE<a class="anchor" aria-label="anchor" href="#filtrar-y-seleccionar-los-productos-opera-desde-la-nube"></a></h3>
+<!-- #region jupyter={"source_hidden": false} -->
+<div class="section level4">
+<h4 id="a-seleccionar-el-area-de-estudio">1.a Seleccionar el area de estudio<a class="anchor" aria-label="anchor" href="#a-seleccionar-el-area-de-estudio"></a></h4>
+<!-- #endregion -->
+<p><code>python jupyter={"source_hidden": true} # PASOS PARA SELECCIONAR EL ÁREA DE ESTUDIO (AOI)  # Usar la herramienta online: https://boundingbox.klokantech.com/ # 1. Buscar la zona de interés y dibujar un rectángulo sobre el mapa. # 2. En la sección "Copy &amp; Paste", seleccionar el formato "CSV". # 3. Copiar las coordenadas  # Estas coordenadas están en el orden correcto requerido por STAC: # bbox = [xmin, ymin, xmax, ymax] = [long_oeste, lat_sur, long_este, lat_norte]</code></p>
+<!-- #region jupyter={"source_hidden": true} -->
+<p>Coordenadas copiadas de boundingbox
+-46.52993,-4.383815,-46.363075,-4.243793 <!-- #endregion --></p>
+<p><code>python jupyter={"source_hidden": true} #Definir el AOI con las coordenadas  AOI = [-46.52993,-4.383815,-46.363075,-4.243793] rango_fechas = "2022-01-01/2024-03-31"</code></p>
+<!-- #region jupyter={"source_hidden": false} -->
 </div>
-</div>
-</div>
-</div>
-<section><h2 class="section-heading" id="introducción">Introducción<a class="anchor" aria-label="anchor" href="#introducci%C3%B3n"></a></h2>
-<hr class="half-width"><p>Esta es una lección creada mediante el template de Workbench adaptada
-por MetaDocencia, creada por The Carpentries. Está escrita en<br><a href="https://pandoc.org/MANUAL.html" class="external-link">Markdown con sintaxis de
-Pandoc</a> para archivos estáticos (con extensión <code>.md</code>)
-y<br><a href="https://rmarkdown.rstudio.com/" class="external-link">R Markdown</a> para archivos
-dinámicos que pueden renderizar código y mostrar el resultado<br>
-(con extensión <code>.Rmd</code>). Consultá la <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introducción a The
-Carpentries<br>
-Workbench</a> para ver la documentación completa.</p>
-<p>Hay tres secciones requeridas para una plantilla de lección
-válida:</p>
-<ol style="list-style-type: decimal"><li>
-<code>questions</code> se muestran al comienzo del episodio para
-preparar a la persona que aprenderá el contenido.<br></li>
-<li>
-<code>objectives</code> son los objetivos de aprendizaje del
-episodio y se muestran junto con las preguntas.<br></li>
-<li>
-<code>keypoints</code> se muestran al final del episodio para
-reforzar los objetivos.</li>
-</ol><div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
-  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Notas de la instructora </h3>
-</button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
-<div class="accordion-body">
-<p>Las notas para instructores en línea pueden ayudar a anticipar
-desafíos y almacenar notas de la persona oradora.<br>
-Aparecen en la “Vista para instructores”.</p>
-</div>
-</div>
-</div>
-</div>
-<div id="desafío-1-podés-hacerlo" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Desafío</span>
-<div id="desafío-1-podés-hacerlo" class="callout-inner">
-<h3 class="callout-title">Desafío 1: ¿Podés hacerlo?</h3>
-<div class="callout-content">
-<p>¿Cuál es el resultado de este comando?</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">paste</span><span class="op">(</span><span class="st">"Esta"</span>, <span class="st">"nueva"</span>, <span class="st">"lección"</span>, <span class="st">"luce"</span>, <span class="st">"bien"</span><span class="op">)</span></span></code></pre>
-</div>
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Salida </h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
-<div class="accordion-body">
-<div class="codewrapper">
-<h3 class="code-label">SALIDA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>[1] "Esta nueva lección luce bien"</code></pre>
+<div class="section level4">
+<h4 id="b-explorar-y-buscar-los-productos-opera-dist-alert">1.b Explorar y buscar los productos OPERA DIST-ALERT<a class="anchor" aria-label="anchor" href="#b-explorar-y-buscar-los-productos-opera-dist-alert"></a></h4>
+<!-- #endregion -->
+<p>```python jupyter={“source_hidden”: true} # Realizamos la búsqueda de
+productos OPERA DIST-ALERT para ver fechas disponibles from
+pystac_client import Client</p>
+<p>#parámetros de búsqueda search_params = { “bbox”: AOI, “datetime”:
+rango_fechas, “collections”: [“OPERA_L3_DIST-ALERT-HLS_V1_1”] }</p>
+<p>client = Client.open(“<a href="https://cmr.earthdata.nasa.gov/stac/LPCLOUD/" class="external-link uri">https://cmr.earthdata.nasa.gov/stac/LPCLOUD/</a>”) items =
+list(client.search(**search_params).get_items())</p>
 </div>
 </div>
 </div>
 </div>
-</div>
-<div id="desafío-2-cómo-anidar-soluciones-dentro-de-bloques-de-desafío" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Desafío</span>
-<div id="desafío-2-cómo-anidar-soluciones-dentro-de-bloques-de-desafío" class="callout-inner">
-<h3 class="callout-title">Desafío 2: ¿cómo anidar soluciones dentro de
-bloques de desafío?</h3>
-<div class="callout-content">
+<div class="section level1">
+<h1 id="extraemos-fechas-disponibles">Extraemos fechas disponibles<a class="anchor" aria-label="anchor" href="#extraemos-fechas-disponibles"></a></h1>
+<p>fechas = sorted({item.datetime.date() for item in items})
+print(f”Fechas disponibles ({len(fechas)}):“) print(fechas)</p>
+<pre><code>
+&lt;!-- #region jupyter={"source_hidden": false} --&gt;
+---
+&lt;!-- #endregion --&gt;
 
+&lt;!-- #region jupyter={"source_hidden": true} --&gt;
+**Cada item OPERA DIST-ALERT incluye varios assets `.tif`, y cada uno representa una capa de información distinta:**
+
+- **VEG-DIST-STATUS.tif**: detección de disturbio
+- **VEG-DIST-CONF.tif**: nivel de confianza de la detección
+- **VEG-DIST-DATE.tif**: fecha en que se detectó el disturbio
+- **VEG-ANOM.tif**: anomalía de la vegetación
+- **VEG-IND.tif**: índice de vegetación
+- **VEG-LAST-DATE.tif**: última fecha sin disturbio detectado
+- **VEG-DIST-DUR.tif**: duración acumulada del disturbio
+- **VEG-DIST-COUNT.tif**: número de disturbios detectados
+&lt;!-- #endregion --&gt;
+
+```python jupyter={"source_hidden": true}
+#Imprimimos los archivos que se encuentran dentro de 1 item
+item = items[0]
+
+print(f"Item - Fecha: {item.datetime.date()}")
+for asset_key, asset in item.assets.items():
+    print(f"  Asset: {asset_key} → {asset.href}")</code></pre>
+<div class="section level2">
+<h2 id="section-3"><!-- #region jupyter={"source_hidden": false} --><a class="anchor" aria-label="anchor" href="#section-3"></a></h2>
+<!-- #endregion -->
+<!-- #region jupyter={"source_hidden": false} -->
+<div class="section level4">
+<h4 id="c-filtramos-los-asset-veg_dist-status-con-baja-nubosidad">1.c Filtramos los asset VEG_DIST-STATUS con baja nubosidad<a class="anchor" aria-label="anchor" href="#c-filtramos-los-asset-veg_dist-status-con-baja-nubosidad"></a></h4>
+<!-- #endregion -->
+<p>```python jupyter={“source_hidden”: true} # Recorremos todos los
+productos encontrados y seleccionamos solo los archivos .tif #
+correspondientes al asset ‘VEG-DIST-STATUS’ # Guardamos la fecha del
+producto y el link al archivo</p>
+<p>veg_status_assets = []</p>
+<p>for item in items: for key, asset in item.assets.items(): if
+“VEG-DIST-STATUS” in key and asset.href.endswith(“.tif”):
+veg_status_assets.append({ “fecha”: item.datetime.date(), “url”:
+asset.href })</p>
+<p>print(f”Se encontraron {len(veg_status_assets)} archivos
+VEG-DIST-STATUS.”)</p>
+<p>#imprimimos los primeros 10 for registro in veg_status_assets[:10]:
+print(f” {registro[‘fecha’]} → {registro[‘url’]}“)</p>
+<pre><code>
+```python jupyter={"source_hidden": true}
+# Imprimimos cloud_cover de los items con asset VEG-DIST-STATUS
+for item in items:
+    if any("VEG-DIST-STATUS" in k for k in item.assets):
+        print(f"{item.datetime.date()} → Cloud cover: {item.properties.get('eo:cloud_cover', 'No disponible')}")</code></pre>
+<p>```python jupyter={“source_hidden”: true} filtrados = []</p>
+<p>for item in items: cloud = item.properties.get(‘eo:cloud_cover’,
+None) if cloud is not None and cloud &lt; 40: for key, asset in
+item.assets.items(): if ( “VEG-DIST-STATUS” in key and
+asset.href.endswith(“.tif”) and asset.href.startswith(“https”) ):
+filtrados.append({ “fecha”: item.datetime.date(), “url”: asset.href,
+“nubes”: cloud }) print(f”Se encontraron {len(filtrados)} archivos con
+menos de 40% de nubes.”) for registro in filtrados[:10]:
+print(f”{registro[‘fecha’]} → Cloud cover: {registro[‘nubes’]} →
+{registro[‘url’]}“)</p>
+<pre><code>
+&lt;!-- #region jupyter={"source_hidden": false} --&gt;
+---
+&lt;!-- #endregion --&gt;
+
+### 2. VISUALIZAR Y EXPLORAR Productos VEG_DIST_STATUS
+
+```python jupyter={"source_hidden": true}
+#Visualizar productos VEG_DIST_STATUS en el area de interes.
+
+#convertir a shp las coordenadas del area de interes (AOI)
+from shapely.geometry import box
+import geopandas as gpd
+
+# AOI definido como bounding box
+aoi_coords = [-46.78, -4.61, -46.58, -4.41]  # xmin, ymin, xmax, ymax
+aoi_geom = box(*aoi_coords)
+AOI = gpd.GeoDataFrame(geometry=[aoi_geom], crs="EPSG:4326")</code></pre>
+<p>```python jupyter={“source_hidden”: true} #Visualizar la primer y
+ultima fecha del los productos filtrados import matplotlib.pyplot as plt
+import matplotlib.colors as mcolors import geopandas as gpd import
+rioxarray</p>
 </div>
 </div>
 </div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Mostrar la solución </h4>
-</button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
-<div class="accordion-body">
-<p>Es posible gregar una línea con al menos tres dos puntos y la
-etiqueta <code>solution</code>.</p>
+<div class="section level1">
+<h1 id="crear-colormap-personalizado">Crear colormap personalizado<a class="anchor" aria-label="anchor" href="#crear-colormap-personalizado"></a></h1>
+<p>white_to_red =
+mcolors.LinearSegmentedColormap.from_list(“white_to_red”, [“white”,
+“red”])</p>
+</div>
+<div class="section level1">
+<h1 id="urls-de-los-dos-productos">URLs de los dos productos<a class="anchor" aria-label="anchor" href="#urls-de-los-dos-productos"></a></h1>
+<p>urls = [ (“2023/06/26”, “<a href="https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230626T133151Z_20231221T083621Z_S2A_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230626T133151Z_20231221T083621Z_S2A_30_v1_VEG-DIST-STATUS.tif" class="external-link uri">https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230626T133151Z_20231221T083621Z_S2A_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230626T133151Z_20231221T083621Z_S2A_30_v1_VEG-DIST-STATUS.tif</a>”),
+(“2023/09/18”, “<a href="https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1_VEG-DIST-STATUS.tif" class="external-link uri">https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1_VEG-DIST-STATUS.tif</a>”)]</p>
+</div>
+<div class="section level1">
+<h1 id="crear-figura">Crear figura<a class="anchor" aria-label="anchor" href="#crear-figura"></a></h1>
+<p>fig, axes = plt.subplots(1, 2, figsize=(12, 6),
+constrained_layout=True)</p>
+<p>for ax, (label, url) in zip(axes, urls): da =
+rioxarray.open_rasterio(url, masked=True).squeeze() # Reproyectar AOI al
+CRS del raster aoi_proj = AOI.to_crs(da.rio.crs) # Recorte da_clip =
+da.rio.clip(aoi_proj.geometry, aoi_proj.crs) # Plot img = da_clip.plot(
+ax=ax, cmap=white_to_red, vmin=0, vmax=8, add_colorbar=False )
+aoi_proj.boundary.plot(ax=ax, edgecolor=“black”, linewidth=0.5)
+ax.set_title(f”Disturbios detectados“) ax.axis(”off”)</p>
+</div>
+<div class="section level1">
+<h1 id="agregar-colorbar-común">Agregar colorbar común<a class="anchor" aria-label="anchor" href="#agregar-colorbar-com%C3%BAn"></a></h1>
+<p>cbar = fig.colorbar(img, ax=axes.ravel().tolist(), shrink=0.6,
+label=“Vegetation_disturbance_status”) plt.show()</p>
+<pre><code>
+&lt;!-- #region jupyter={"source_hidden": true} --&gt;
+Valores del producto `VEG-DIST-STATUS`:
+
+- **0:** Sin alteración
+- **1:** Primera detección de alteraciones con cambios en la cobertura vegetal &lt;50%
+- **2:** Detección provisional de alteraciones con cambios en la cobertura vegetal &lt;50%
+- **3:** Detección confirmada de alteraciones con cambios en la cobertura vegetal &lt; 50%
+- **4:** Primera detección de alteraciones con cambios en la cobertura vegetal ≥50%
+- **5:** Detección provisional de alteraciones con cambios en la cobertura vegetal ≥50%
+- **6:** Detección confirmada de alteraciones con cambios en la cobertura vegetal ≥50%
+- **7:** Detección finalizada de alteraciones con cambios en la cobertura vegetal &lt;50%
+- **8:** Detección finalizada de alteraciones con cambios en lacobertura vegetal ≥50%
+- **255** Datos faltantes
+&lt;!-- #endregion --&gt;
+
+
+
+```python jupyter={"source_hidden": true}
+#Graficar la distribución de los valores de disturbios en dos subproductos DIST-VEG-ALERT
+
+import matplotlib.pyplot as plt
+import numpy as np
+import rioxarray
+
+# URLs de los dos productos
+urls = [
+    ("2023/06/26", "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230626T133151Z_20231221T083621Z_S2A_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230626T133151Z_20231221T083621Z_S2A_30_v1_VEG-DIST-STATUS.tif"),
+    ("2023/09/18", "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1_VEG-DIST-STATUS.tif")
+]
+
+# Leer y calcular frecuencias primero
+frecuencias = []
+for label, url in urls:
+    da = rioxarray.open_rasterio(url, masked=True).squeeze()
+    aoi_proj = AOI.to_crs(da.rio.crs)
+    da_clip = da.rio.clip(aoi_proj.geometry, aoi_proj.crs)
+    vals = da_clip.values.flatten()
+    vals = vals[(vals &gt; 0) &amp; (~np.isnan(vals))]
+    hist, _ = np.histogram(vals, bins=np.arange(0.5, 9.5, 1))
+    frecuencias.append((label, hist))
+
+# Encontrar el máximo para escalar ambos plots
+ymax = max(hist.max() for _, hist in frecuencias)
+
+# Gráfico
+fig, axes = plt.subplots(1, 2, figsize=(12, 4), constrained_layout=True)
+for ax, (label, hist) in zip(axes, frecuencias):
+    ax.bar(range(1, 9), hist, color='crimson', edgecolor='black', alpha=0.7)
+    ax.set_xticks(range(1, 9))
+    ax.set_ylim(0, ymax + ymax * 0.1)
+    ax.set_title(f"Histograma - {label}")
+    ax.set_xlabel("Clase de disturbio")
+    ax.set_ylabel("Frecuencia")
+
+plt.suptitle("Distribución de clases de disturbio detectadas", fontsize=14)
+plt.show()</code></pre>
+<div class="section level2">
+<h2 id="section-4"><!-- #region jupyter={"source_hidden": false} --><a class="anchor" aria-label="anchor" href="#section-4"></a></h2>
+<!-- #endregion -->
+<div class="section level3">
+<h3 id="evolución-del-disturbio-a-lo-largo-del-tiempo">3. EVOLUCIÓN DEL DISTURBIO A LO LARGO DEL TIEMPO<a class="anchor" aria-label="anchor" href="#evoluci%C3%B3n-del-disturbio-a-lo-largo-del-tiempo"></a></h3>
+<p>```python jupyter={“source_hidden”: true} # Stack de los 12
+subproductos VEG-DIST-STATUS</p>
+<p>from rioxarray import open_rasterio import xarray as xr import numpy
+as np import pandas as pd</p>
 </div>
 </div>
 </div>
-</div>
-</section><section><h2 class="section-heading" id="figuras">Figuras<a class="anchor" aria-label="anchor" href="#figuras"></a></h2>
-<hr class="half-width"><p>Podés incluir figuras generadas desde R Markdown:</p>
-<div class="codewrapper sourceCode" id="cb3">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<div class="section level1">
+<h1 id="recortar-cada-raster-al-aoi-y-luego-apilar">Recortar cada raster al AOI y luego apilar<a class="anchor" aria-label="anchor" href="#recortar-cada-raster-al-aoi-y-luego-apilar"></a></h1>
+<p>raster_list = [] fechas = []</p>
+<p>for f in filtrados:<br>
+da = open_rasterio(f[“url”], masked=True).squeeze() aoi_proj =
+AOI.to_crs(da.rio.crs) da_clip = da.rio.clip(aoi_proj.geometry,
+aoi_proj.crs)</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">SH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">pie</span><span class="op">(</span></span>
-<span>  <span class="fu">c</span><span class="op">(</span>Sky <span class="op">=</span> <span class="fl">78</span>, <span class="st">"Lado soleado de la pirámide"</span> <span class="op">=</span> <span class="fl">17</span>, <span class="st">"Lado sombreado de la pirámide"</span> <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>, </span>
-<span>  init.angle <span class="op">=</span> <span class="fl">315</span>, </span>
-<span>  col <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"deepskyblue"</span>, <span class="st">"yellow"</span>, <span class="st">"yellow3"</span><span class="op">)</span>, </span>
-<span>  border <span class="op">=</span> <span class="cn">FALSE</span></span>
-<span><span class="op">)</span></span></code></pre>
-</div>
-<figure style="text-align: center"><img src="../fig/caso_estudio-rendered-pyramid-1.png" alt="ilusión de gráfico circular de una pirámide" class="figure mx-auto d-block"><figcaption>
-El sol sale cada mañana
-</figcaption></figure><p>O podés usar markdown de pandoc para figuras estáticas con la
-siguiente sintaxis:</p>
-<p><code>![subtítulo opcional que aparece debajo de la figura](url de la figura){alt='texto alternativo para accesibilidad'}</code></p>
-<figure><img src="https://raw.githubusercontent.com/MetaDocencia/varnish/main/inst/pkgdown/assets/assets/images/metadocencia-logo.svg" alt="Logo de MetaDocencia con una manzana y texto del nombre de la Organización." class="figure mx-auto d-block"><div class="figcaption">¡Estás participando de un curso de
-MetaDocencia!</div>
-</figure></section><section><h2 class="section-heading" id="matemática">Matemática<a class="anchor" aria-label="anchor" href="#matem%C3%A1tica"></a></h2>
-<hr class="half-width"><p>El contenido puede contener ecuaciones en <span class="math inline">\(\LaTeX\)</span> al describir cómo crear<br>
-informes dinámicos con {knitr}, por lo que usamos MathJax para
-mostrarlas así:</p>
-<p><code>$ lpha = \dfrac{1}{(1 - eta)^2}$</code> se convierte en: $ lpha
-= $</p>
-<p>¿Genial, no?</p>
-<div id="keypoints1" class="callout keypoints">
-<div class="callout-square">
-<i class="callout-icon" data-feather="key"></i>
-</div>
-<span class="callout-header">Puntos Clave</span>
-<div class="callout-inner">
-<div class="callout-content">
-<ul><li>Usá archivos <code>.md</code> para episodios con contenido
-estático<br></li>
-<li>Usá archivos <code>.Rmd</code> para episodios que necesiten generar
-salidas dinámicas<br></li>
-<li>Ejecutá <code>sandpaper::check_lesson()</code> para identificar
-problemas en tu lección<br></li>
-<li>Ejecutá <code>sandpaper::build_lesson()</code> para previsualizar tu
-lección localmente</li>
-</ul></div>
+<pre class="sourceCode sh" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">raster_list.append</span><span class="er">(</span><span class="ex">da_clip</span><span class="kw">)</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="ex">fechas.append</span><span class="er">(</span><span class="ex">pd.Timestamp</span><span class="er">(</span><span class="va">f</span><span class="op">[</span><span class="st">"fecha"</span><span class="op">]</span><span class="kw">))</span></span></code></pre>
 </div>
 </div>
+<div class="section level1">
+<h1 id="crear-el-stack-recortado">Crear el stack recortado<a class="anchor" aria-label="anchor" href="#crear-el-stack-recortado"></a></h1>
+<p>stack = xr.concat(raster_list, dim=“time”) stack[“time”] = fechas</p>
+<pre><code>
+```python jupyter={"source_hidden": true}
+stack</code></pre>
+<p>```python jupyter={“source_hidden”: true} #Graficar el area
+disturbada acumulada en el area de estudio</p>
+<p>import matplotlib.pyplot as plt</p>
+<p>#ordenaar el stack por fecha stack_sorted = stack.sortby(“time”)</p>
+</div>
+<div class="section level1">
+<h1 id="crear-máscara-booleana-donde-el-valor-sea-6-disturbio-confirmado">Crear máscara booleana donde el valor sea 6 (disturbio
+confirmado)<a class="anchor" aria-label="anchor" href="#crear-m%C3%A1scara-booleana-donde-el-valor-sea-6-disturbio-confirmado"></a></h1>
+<p>disturbios = stack_sorted == 6</p>
+</div>
+<div class="section level1">
+<h1 id="sumar-la-cantidad-de-píxeles-por-fecha">Sumar la cantidad de píxeles por fecha<a class="anchor" aria-label="anchor" href="#sumar-la-cantidad-de-p%C3%ADxeles-por-fecha"></a></h1>
+<p>pixeles_por_fecha = disturbios.sum(dim=[“x”, “y”])</p>
+</div>
+<div class="section level1">
+<h1 id="convertir-a-km²-cada-píxel-es-de-30m-x-30m-900-m²-0-0009-km²">Convertir a km² (cada píxel es de 30m x 30m = 900 m² = 0.0009
+km²)<a class="anchor" aria-label="anchor" href="#convertir-a-km%C2%B2-cada-p%C3%ADxel-es-de-30m-x-30m-900-m%C2%B2-0-0009-km%C2%B2"></a></h1>
+<p>km2_por_fecha = pixeles_por_fecha * 0.0009</p>
+</div>
+<div class="section level1">
+<h1 id="graficar">Graficar<a class="anchor" aria-label="anchor" href="#graficar"></a></h1>
+<p>plt.figure(figsize=(8, 5)) km2_por_fecha.to_series().plot(marker=‘o’)
+plt.title(“Evolución de disturbios confirmados (valor 6)”)
+plt.ylabel(“Área acumulada (km²)”) plt.xlabel(“Fecha”) plt.grid(True)
+plt.tight_layout() plt.show()</p>
+<pre><code>
+&lt;!-- #region jupyter={"source_hidden": true} --&gt;
+¿Hay algo raro en los graficos?
+&lt;!-- #endregion --&gt;
+
+```python jupyter={"source_hidden": true}
+# Convertir a DataFrame
+df_filtrados = pd.DataFrame(filtrados)
+df_filtrados["fecha"] = pd.to_datetime(df_filtrados["fecha"])
+
+# Ordenar por menor cobertura de nubes
+df_filtrados = df_filtrados.sort_values("nubes")
+#Seleccionar el producto con Sentinel
+
+# Eliminar duplicados dejando el que tiene menor nubosidad
+df_filtrados = df_filtrados.drop_duplicates(subset="fecha", keep="first")
+
+# Reconstruir la lista filtrada
+filtrados_unicos = df_filtrados.to_dict(orient="records")</code></pre>
+<p>```python jupyter={“source_hidden”: true} #VOLVEMOS A CORRER EL STACK
+USANDO filtrados_unicos</p>
+</div>
+<div class="section level1">
+<h1 id="stack-de-los-subproductos-veg-dist-status">Stack de los subproductos VEG-DIST-STATUS<a class="anchor" aria-label="anchor" href="#stack-de-los-subproductos-veg-dist-status"></a></h1>
+<p>from rioxarray import open_rasterio import xarray as xr import numpy
+as np import pandas as pd</p>
+</div>
+<div class="section level1">
+<h1 id="recortar-cada-raster-al-aoi-y-luego-apilar-1">Recortar cada raster al AOI y luego apilar<a class="anchor" aria-label="anchor" href="#recortar-cada-raster-al-aoi-y-luego-apilar-1"></a></h1>
+<p>raster_list = [] fechas = []</p>
+<p>for f in filtrados_unicos: da = open_rasterio(f[“url”],
+masked=True).squeeze() aoi_proj = AOI.to_crs(da.rio.crs) da_clip =
+da.rio.clip(aoi_proj.geometry, aoi_proj.crs)</p>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">SH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode sh" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="ex">raster_list.append</span><span class="er">(</span><span class="ex">da_clip</span><span class="kw">)</span></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="ex">fechas.append</span><span class="er">(</span><span class="ex">pd.Timestamp</span><span class="er">(</span><span class="va">f</span><span class="op">[</span><span class="st">"fecha"</span><span class="op">]</span><span class="kw">))</span></span></code></pre>
+</div>
+</div>
+<div class="section level1">
+<h1 id="crear-el-stack-recortado-1">Crear el stack recortado<a class="anchor" aria-label="anchor" href="#crear-el-stack-recortado-1"></a></h1>
+<p>stack = xr.concat(raster_list, dim=“time”) stack[“time”] = fechas</p>
+<pre><code>
+&lt;!-- #region jupyter={"source_hidden": false} --&gt;
+---
+&lt;!-- #endregion --&gt;
+
+### 4. GENERAR UN MAPA DE DISTUBIOS
+
+```python jupyter={"source_hidden": true}
+import hvplot.xarray
+import geoviews as gv
+import numpy as np
+
+# Enmascarar valores 0 para que sean transparentes
+stack_masked = stack.where(stack != 0)
+
+# Submuestreo para que no sea tan pesado
+stack_sub = stack_masked.isel(x=slice(0, None, 4), y=slice(0, None, 4))
+
+# Colormap rojo fuerte
+cmap = ["#fff5f5", "#fcbfbf", "#f78787", "#f25454", "#e93232", "#d40000", "#a50000", "#730000"]
+
+# Visualización interactiva
+hvplot_map = stack_sub.hvplot(
+    x='x',
+    y='y',
+    groupby='time',
+    cmap=cmap,
+    clim=(1, 8),
+    rasterize=True,
+    crs=stack.rio.crs,
+    tiles=gv.tile_sources.EsriImagery,
+    alpha=0.9,
+    frame_width=500,
+    frame_height=500,
+    title="Evolución de disturbios detectados",
+    widget_location='bottom',   # Deslizador de tiempo abajo
+    colorbar=True
+)
+
+hvplot_map</code></pre>
+<div class="section level2">
+<h2 id="section-5"><!-- #region jupyter={"source_hidden": false} --><a class="anchor" aria-label="anchor" href="#section-5"></a></h2>
+<!-- #endregion -->
+<div class="section level3">
+<h3 id="explorar-subproducto-veg_dist-date">5. EXPLORAR SUBPRODUCTO VEG_DIST-DATE<a class="anchor" aria-label="anchor" href="#explorar-subproducto-veg_dist-date"></a></h3>
+<p>```python jupyter={“source_hidden”: true} from pystac_client import
+Client import pandas as pd</p>
+</div>
+</div>
+</div>
+<div class="section level1">
+<h1 id="abrir-el-catálogo-stac-de-lp-daac">Abrir el catálogo STAC de LP DAAC<a class="anchor" aria-label="anchor" href="#abrir-el-cat%C3%A1logo-stac-de-lp-daac"></a></h1>
+<p>catalog = Client.open(“<a href="https://cmr.earthdata.nasa.gov/stac/LPCLOUD/" class="external-link uri">https://cmr.earthdata.nasa.gov/stac/LPCLOUD/</a>”)</p>
+</div>
+<div class="section level1">
+<h1 id="parámetros-de-búsqueda">Parámetros de búsqueda<a class="anchor" aria-label="anchor" href="#par%C3%A1metros-de-b%C3%BAsqueda"></a></h1>
+<p>search_params = { “bbox”: [-46.78, -4.61, -46.58, -4.41], # AOI
+“datetime”: “2025-01-01/2025-07-26”, # rango de fechas “collections”:
+[“OPERA_L3_DIST-ALERT-HLS_V1_1”] }</p>
+</div>
+<div class="section level1">
+<h1 id="buscar-items-en-el-catálogo">Buscar items en el catálogo<a class="anchor" aria-label="anchor" href="#buscar-items-en-el-cat%C3%A1logo"></a></h1>
+<p>items = list(catalog.search(**search_params).get_items())</p>
+</div>
+<div class="section level1">
+<h1 id="filtrar-solo-los-assets-veg-dist-date-accesibles-por-https">Filtrar solo los assets VEG-DIST-DATE accesibles por HTTPS<a class="anchor" aria-label="anchor" href="#filtrar-solo-los-assets-veg-dist-date-accesibles-por-https"></a></h1>
+<p>filtrado_date = []</p>
+<p>for item in items: for asset_key, asset in item.assets.items(): if
+“VEG-DIST-DATE” in asset_key and asset.href.startswith(“https”):
+filtrado_date.append({ “start_datetime”:
+item.properties.get(“start_datetime”), “end_datetime”:
+item.properties.get(“end_datetime”), “datetime”: item.datetime,
+“cloud_cover”: item.properties.get(“eo:cloud_cover”), “url”: asset.href
+})</p>
+</div>
+<div class="section level1">
+<h1 id="convertir-a-dataframe-para-explorar">Convertir a DataFrame para explorar<a class="anchor" aria-label="anchor" href="#convertir-a-dataframe-para-explorar"></a></h1>
+<p>df = pd.DataFrame(filtrado_date)</p>
+</div>
+<div class="section level1">
+<h1 id="mostrar-resumen">Mostrar resumen<a class="anchor" aria-label="anchor" href="#mostrar-resumen"></a></h1>
+<p>print(f”Se encontraron {len(df)} assets únicos con VEG-DIST-DATE vía
+HTTPS.”) df.head()</p>
+<pre><code>
+```python jupyter={"source_hidden": true}
+import matplotlib.pyplot as plt
+
+df["cloud_cover"] = pd.to_numeric(df["cloud_cover"], errors='coerce')
+df.plot(
+   #x="datetime",
+    y="cloud_cover",
+    kind="bar",
+    figsize=(10, 5),
+    color="skyblue",
+    title="Cobertura de nubes por escena"
+)
+# Ocultar etiquetas del eje X
+plt.xticks([])
+
+plt.tight_layout()
+plt.show()</code></pre>
+<p>```python jupyter={“source_hidden”: true} df_bajanubosidad =
+df[df[“cloud_cover”] &lt; 20]</p>
+<p>df_bajanubosidad.plot( #x=“datetime”, y=“cloud_cover”, kind=“bar”,
+figsize=(10, 5), color=“skyblue”, title=“Cobertura de nubes por fecha”
+);</p>
+<pre><code>
+```python jupyter={"source_hidden": true}
+# Asegurarse de que la columna de fechas esté como datetime
+df_bajanubosidad["end_datetime"] = pd.to_datetime(df_bajanubosidad["end_datetime"])
+
+# Ordenar por fecha final y seleccionar el más reciente
+más_reciente_baja_nubosidad = df_bajanubosidad.sort_values("end_datetime", ascending=False).iloc[0]
+
+# Mostrar resultado
+print("Producto más reciente con menos de 20% de nubosidad:")
+print(más_reciente_baja_nubosidad)</code></pre>
+<p><code>python jupyter={"source_hidden": true} #seleccionamos la url del producto mas reciente con nubosidad &lt; 20% url=más_reciente_baja_nubosidad["url"]</code></p>
+<p>```python jupyter={“source_hidden”: true} #Visualizar el subproducto
+VEG_DIST_DATE en comparación con el subproducto VEG_DIST_STATE</p>
+<p>import matplotlib.pyplot as plt import geopandas as gpd import
+rioxarray import numpy as np from shapely.geometry import box</p>
+</div>
+<div class="section level1">
+<h1 id="aoi">AOI<a class="anchor" aria-label="anchor" href="#aoi"></a></h1>
+<p>aoi_geom = gpd.GeoDataFrame(geometry=[box(-46.78, -4.61, -46.58,
+-4.41)], crs=“EPSG:4326”)</p>
+</div>
+<div class="section level1">
+<h1 id="subproducto-veg_dist_date">Subproducto VEG_DIST_DATE<a class="anchor" aria-label="anchor" href="#subproducto-veg_dist_date"></a></h1>
+<p>url1 = más_reciente_baja_nubosidad[“url”] da1 =
+rioxarray.open_rasterio(url1, masked=True).squeeze() aoi_proj =
+aoi_geom.to_crs(da1.rio.crs) da1_clip = da1.rio.clip(aoi_proj.geometry,
+aoi_proj.crs) masked1 = np.ma.masked_where(da1_clip &lt;= 0,
+da1_clip)</p>
+</div>
+<div class="section level1">
+<h1 id="subproducto-veg_dist_status">Subproducto VEG_DIST_STATUS<a class="anchor" aria-label="anchor" href="#subproducto-veg_dist_status"></a></h1>
+<p>url2= “<a href="https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1_VEG-DIST-STATUS.tif" class="external-link uri">https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1_VEG-DIST-STATUS.tif</a>”
+da2 = rioxarray.open_rasterio(url2, masked=True).squeeze() da2_clip =
+da2.rio.clip(aoi_proj.geometry, aoi_proj.crs) masked2 =
+np.ma.masked_where(da2_clip &lt;= 0, da2_clip)</p>
+</div>
+<div class="section level1">
+<h1 id="gráfico-de-los-2-subproductos">Gráfico de los 2 subproductos<a class="anchor" aria-label="anchor" href="#gr%C3%A1fico-de-los-2-subproductos"></a></h1>
+<p>fig, axes = plt.subplots(1, 2, figsize=(14, 6))</p>
+</div>
+<div class="section level1">
+<h1 id="mapa-1">Mapa 1<a class="anchor" aria-label="anchor" href="#mapa-1"></a></h1>
+<p>img1 = axes[0].imshow( masked1, cmap=“viridis”,
+extent=da1_clip.rio.bounds(), interpolation=“nearest” )
+axes[0].set_title(“VEG_DIST_DATE 17/07/2025”) axes[0].set_frame_on(True)
+cbar1 = plt.colorbar(img1, ax=axes[0], shrink=0.7) cbar1.set_label(“Día
+desde 2020-12-31”)</p>
+</div>
+<div class="section level1">
+<h1 id="colormap-personalizado">colormap personalizado<a class="anchor" aria-label="anchor" href="#colormap-personalizado"></a></h1>
+<p>white_to_red =
+mcolors.LinearSegmentedColormap.from_list(“white_to_red”, [“white”,
+“red”]) # Mapa 2 img2 = axes[1].imshow( masked2, cmap= white_to_red,
+extent=da2_clip.rio.bounds(), interpolation=“nearest” )
+axes[1].set_title(“VEG_DIST-STATUS 18/09/2023”)
+axes[1].set_frame_on(True) cbar2 = plt.colorbar(img2, ax=axes[1],
+shrink=0.7) cbar2.set_label(“Valor de disturbio”)</p>
+<p>plt.tight_layout() plt.show() ```</p>
+<div class="section level2">
+<h2 id="section-6"><!-- #region jupyter={"source_hidden": false} --><a class="anchor" aria-label="anchor" href="#section-6"></a></h2>
+<!-- #endregion -->
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></div> <!-- / div.lesson-content -->
+</div>
+</div>
+
+
+
+      </div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Capítulo previo y siguiente"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/OPERA_products.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previo</a>
         <a class="chapter-link float-end" href="../instructor/index.html">Siguiente<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>

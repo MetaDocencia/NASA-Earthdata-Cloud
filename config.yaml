@@ -73,6 +73,8 @@ contact: 'infraestructura@metadocencia.org'
 episodes: 
 - fundamentos.Rmd
 - sensores.Rmd
+- sistemas_de_coordenadas.Rmd
+- datos_geoespaciales.Rmd
 - OPERA_products.Rmd
 - caso_estudio.Rmd
 

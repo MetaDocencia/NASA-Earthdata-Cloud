@@ -1,7 +1,7 @@
 ---
 title: 'Modelos de datos geoespaciales'
-teaching: 50
-exercises: 0
+teaching: 20
+exercises: 1
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
@@ -179,3 +179,34 @@ Puedes consultar el [informe técnico de shapefile de ESRI (PDF)](https://www.es
 - `.cpg`: codificación de caracteres
 - `.sbn` y `.sbx`: índices espaciales para acelerar lectura
 
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Ejercicio 2 - Responde a la encuesta
+
+Q: ¿Cuál es la diferencia entre los formatos ráster y vectorial?
+
+1. El formato vectorial almacena imágenes en escala de grises, mientras que el ráster utiliza colores reales.
+2. El formato ráster divide el espacio en celdas con valores numéricos; el vectorial representa objetos mediante coordenadas como puntos, líneas y polígonos.
+3. El formato ráster divide el espacio en celdas; el vectorial representa el área mediante píxeles agrupados en formas.
+
+
+:::::::::::::::: solution
+
+La respuesta correcta es:
+
+2. El formato ráster divide el espacio en celdas con valores numéricos; el vectorial representa objetos mediante coordenadas como puntos, líneas y polígonos.
+
+Formato ráster:
+
+- Representa el espacio como una matriz de celdas (píxeles).
+- Cada celda tiene un valor numérico que puede representar, por ejemplo, la reflectancia en una banda espectral, la elevación, la temperatura, etc.
+- Es útil para datos continuos, como imágenes satelitales o modelos de elevación.
+
+Formato vectorial:
+
+- Representa elementos espaciales como puntos (ej. estaciones meteorológicas), líneas (ej. ríos o rutas) y polígonos (ej. lagos o parcelas).
+- Utiliza coordenadas geográficas para definir las ubicaciones exactas.
+- Es ideal para datos discretos con límites bien definidos.
+
+:::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::

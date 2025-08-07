@@ -54,7 +54,7 @@ Podés explorar estos códigos en el [registro EPSG](https://epsg.io/) que los d
 
 ## Sistema de Referencia de Cuadrículas Militares (MGRS)
 
-El [**MGRS (Military Grid Reference System)**](https://es.wikipedia.org/wiki/Sistema_de_referencia_de_cuadr%C3%ADculas_militares) es un estándar de coordenadas utilizado por organizaciones como la OTAN para identificar ubicaciones en la superficie terrestre. Se basa en el sistema UTM pero lo adapta con una notación más compacta y legible.
+El [**MGRS (Military Grid Reference System)**](https://en.wikipedia.org/wiki/Military_Grid_Reference_System) es un estándar de coordenadas utilizado por organizaciones como la OTAN para identificar ubicaciones en la superficie terrestre. Se basa en el sistema UTM pero lo adapta con una notación más compacta y legible.
 
 ![](fig/mgrs_tiles.png)
 

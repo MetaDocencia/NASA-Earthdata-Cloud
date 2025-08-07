@@ -72,7 +72,6 @@ contact: 'infraestructura@metadocencia.org'
 # Order of episodes in your lesson
 episodes: 
 - fundamentos.Rmd
-- sensores.Rmd
 - sistemas_de_coordenadas.Rmd
 - datos_geoespaciales.Rmd
 - OPERA_products.Rmd

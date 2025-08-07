@@ -233,9 +233,9 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#introducci%C3%B3n">Introducción</a></li>
-<li><a href="#figuras">Figuras</a></li>
-<li><a href="#matem%C3%A1tica">Matemática</a></li>
+        <ul><li><a href="#nasa-earthdata">NASA Earthdata</a></li>
+<li><a href="#productos-opera">Productos OPERA</a></li>
+<li><a href="#producto-opera-dist">Producto OPERA DIST</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -330,166 +330,142 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Preguntas</h3>
-<ul><li>¿Cómo se escribe una lección usando R Markdown y
-<a href="https://carpentries.github.io/sandpaper/" class="external-link">sandpaper</a>?</li>
-</ul></div>
+<ol style="list-style-type: decimal"><li>¿Cómo podemos acceder a productos satelitales de OPERA mediante la
+plataforma Earthdata?</li>
+<li>¿Qué tipo de información brindan los productos OPERA, en particular
+los productos DSWx?</li>
+<li>¿Cómo utilizar la API de PySTAC para automatizar búsquedas y
+análisis de datos geoespaciales?</li>
+</ol></div>
 </div>
 </div>
 <div class="col-md-8">
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objetivos</h3>
-<ul><li>Explicar cómo usar markdown con la nueva plantilla de lección<br></li>
-<li>Demostrar cómo incluir fragmentos de código, figuras y bloques de
-actividades anidados</li>
+<ul><li>Conocer las plataformas de la NASA para acceso a datos
+satelitales.</li>
+<li>Entender la estructura y contenido de los productos OPERA.</li>
+<li>Utilizar PySTAC para realizar búsquedas programáticas de datos
+espaciales y generar visualizaciones.</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introducción">Introducción<a class="anchor" aria-label="anchor" href="#introducci%C3%B3n"></a></h2>
-<hr class="half-width"><p>Esta es una lección creada mediante el template de Workbench adaptada
-por MetaDocencia, creada por The Carpentries. Está escrita en<br><a href="https://pandoc.org/MANUAL.html" class="external-link">Markdown con sintaxis de
-Pandoc</a> para archivos estáticos (con extensión <code>.md</code>)
-y<br><a href="https://rmarkdown.rstudio.com/" class="external-link">R Markdown</a> para archivos
-dinámicos que pueden renderizar código y mostrar el resultado<br>
-(con extensión <code>.Rmd</code>). Consultá la <a href="https://carpentries.github.io/sandpaper-docs/" class="external-link">Introducción a The
-Carpentries<br>
-Workbench</a> para ver la documentación completa.</p>
-<p>Hay tres secciones requeridas para una plantilla de lección
-válida:</p>
-<ol style="list-style-type: decimal"><li>
-<code>questions</code> se muestran al comienzo del episodio para
-preparar a la persona que aprenderá el contenido.<br></li>
+<section><h2 class="section-heading" id="nasa-earthdata">NASA Earthdata<a class="anchor" aria-label="anchor" href="#nasa-earthdata"></a></h2>
+<hr class="half-width"><p>La plataforma <a href="https://www.earthdata.nasa.gov/" class="external-link">NASA
+Earthdata</a> brinda acceso a una gran cantidad de datos de observación
+terrestre recolectados por la NASA. Abarca diversas disciplinas como
+atmósfera, criósfera, superficie terrestre, agua, suelos y más. Estos
+datos, en su mayoría abiertos y gratuitos, se pueden explorar en forma
+de productos generados a partir de sensores satelitales como MODIS,
+Landsat, y Sentinel.</p>
+<p>El sistema busca facilitar el acceso, visualización y análisis de
+datos para la comprensión del planeta. En este curso nos centraremos en
+un conjunto específico de productos derivados: los productos OPERA DIST,
+disponibles en la nube.</p>
+</section><section><h2 class="section-heading" id="productos-opera">Productos OPERA<a class="anchor" aria-label="anchor" href="#productos-opera"></a></h2>
+<hr class="half-width"><p>OPERA (Observational Products for End-Users from Remote Sensing
+Analysis) es una iniciativa de la NASA que genera productos de datos
+derivados de sensores ópticos y radar de satélites como Sentinel-1 A/B,
+Sentinel-2 A/B y Landsat-8/9. En lugar de ofrecer imágenes crudas, OPERA
+proporciona datos procesados que clasifican áreas del territorio según
+ciertas características físicas como presencia de agua, alteraciones en
+la vegetación o cambios en la superficie.</p>
+<p>Los productos se publican en formatos ráster y están organizados como
+mosaicos georreferenciados. Los productos OPERA relacionados con la
+superficie terrestre incluyen:</p>
+<ul><li>
+<strong>DIST</strong> (Land Surface Disturbance): registra
+alteraciones de la superficie terrestre.</li>
 <li>
-<code>objectives</code> son los objetivos de aprendizaje del
-episodio y se muestran junto con las preguntas.<br></li>
+<strong>DSWx</strong> (Dynamic Surface Water Extent): registra la
+extensión de cuerpos de agua.</li>
+</ul><p>En este tutorial nos enfocaremos en <strong>DIST ALERT</strong>,
+diseñada para detectar cambios recientes en la vegetación como los
+causados por deforestación o incendios.</p>
+</section><section><h2 class="section-heading" id="producto-opera-dist">Producto OPERA DIST<a class="anchor" aria-label="anchor" href="#producto-opera-dist"></a></h2>
+<hr class="half-width"><p>Los productos DIST mapean la <em>perturbación de la vegetación</em>
+(en concreto, la pérdida de cubierta vegetal por píxel HLS siempre que
+haya una disminución indicada) a partir de escenas armonizadas Landsat-8
+y Sentinel-2 A/B (HLS). Una de las aplicaciones de estos datos es
+cuantificar los daños causados por los <em>incendios forestales</em>. El
+producto DIST_ALERT se publica a intervalos regulares (al igual que las
+imágenes HLS, aproximadamente cada 12 días en un determinado
+mosaico/región). El producto DIST_ANN resume las mediciones de las
+alteraciones a lo largo de un año.</p>
+<p>Los productos DIST cuantifican los datos de reflectancia de la
+superficie (RS) (en inglés, Surface Reflectance, SR) adquiridos a partir
+de imágenes terrestres operacionales <em>Operational Land Imager</em>
+(OLI) (en español, Generador de Imágenes Terrestres Operacional) a bordo
+del satélite de teledetección Landsat-8 y del <em>Multi-Spectral
+Instrument</em> (MSI) (en español, Instrumento Multiespectral) a bordo
+del satélite de teledetección Sentinel-2 A/B. Los productos de datos HLS
+DIST son archivos de tipo ráster, cada uno de ellos asociado a mosaicos
+de la superficie terrestre. Cada mosaico se representa mediante
+coordenadas cartográficas proyectadas alineadas con el <a href="https://en.wikipedia.org/wiki/Military_Grid_Reference_System" class="external-link">Sistema
+de Referencia de Cuadrículas Militares (MGRS, por sus siglas en inglés
+de <em>Military Grid Reference System</em>)</a>. Cada mosaico se divide
+en 3,660 filas y 3,660 columnas con un espaciado de píxeles de 30 metros
+(así que un mosaico es de <span class="math inline">\(109.8\,\mathrm{km}\)</span> largo en cada lado).
+Los mosaicos vecinos se solapan 4.900 metros en cada dirección (los
+detalles se describen detalladamente en la <a href="https://d2pn8kiwq2w21t.cloudfront.net/documents/OPERA_DIST_HLS_Product_Specification_V1.pdf" class="external-link">especificación
+de producto DIST</a>).</p>
+<p>Los productos OPERA DIST se distribuyen como <a href="https://www.cogeo.org/" class="external-link">GeoTIFFs optimizados para la nube</a>; en
+la práctica, esto significa que las diferentes bandas se almacenan en
+archivos de formato TIFFs (TIFF, por sus siglas en inglés, <em>Tagged
+Image File Format</em>) distintos. La especificación TIFF permite el
+almacenamiento de matrices multidimensionales en un único archivo. El
+almacenamiento de bandas distintas en diferentes archivos TIFF permite
+que estos se descarguen de forma independiente.</p>
+<div class="section level3">
+<h3 id="bandas">Bandas<a class="anchor" aria-label="anchor" href="#bandas"></a></h3>
+<p>Los archivos DIST-ALERT contienen diferentes bandas, entre ellas:</p>
+<ul><li>
+<strong>VEG_ANOM_MAX</strong>: Para cada píxel, se trata de un valor
+entre 0% y 100% que representa la diferencia porcentual entre la
+cobertura vegetal que se observa actualmente y un valor de referencia
+histórico. Es decir, un valor de 100 corresponde a una pérdida total de
+vegetación en un píxel (100%) y un valor de 0 corresponde a que no hubo
+pérdida de vegetación. 255 representa un valor faltante.</li>
 <li>
-<code>keypoints</code> se muestran al final del episodio para
-reforzar los objetivos.</li>
-</ol><div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
-  <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Notas de la instructora </h3>
-</button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
-<div class="accordion-body">
-<p>Las notas para instructores en línea pueden ayudar a anticipar
-desafíos y almacenar notas de la persona oradora.<br>
-Aparecen en la “Vista para instructores”.</p>
-</div>
-</div>
-</div>
-</div>
-<div id="desafío-1-podés-hacerlo" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Desafío</span>
-<div id="desafío-1-podés-hacerlo" class="callout-inner">
-<h3 class="callout-title">Desafío 1: ¿Podés hacerlo?</h3>
-<div class="callout-content">
-<p>¿Cuál es el resultado de este comando?</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">paste</span><span class="op">(</span><span class="st">"Esta"</span>, <span class="st">"nueva"</span>, <span class="st">"lección"</span>, <span class="st">"luce"</span>, <span class="st">"bien"</span><span class="op">)</span></span></code></pre>
-</div>
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Salida </h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
-<div class="accordion-body">
-<div class="codewrapper">
-<h3 class="code-label">SALIDA<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>[1] "Esta nueva lección luce bien"</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="desafío-2-cómo-anidar-soluciones-dentro-de-bloques-de-desafío" class="callout challenge">
-<div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
-</div>
-<span class="callout-header">Desafío</span>
-<div id="desafío-2-cómo-anidar-soluciones-dentro-de-bloques-de-desafío" class="callout-inner">
-<h3 class="callout-title">Desafío 2: ¿cómo anidar soluciones dentro de
-bloques de desafío?</h3>
-<div class="callout-content">
-
-</div>
-</div>
-</div>
-<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2"> Mostrar la solución </h4>
-</button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
-<div class="accordion-body">
-<p>Es posible gregar una línea con al menos tres dos puntos y la
-etiqueta <code>solution</code>.</p>
-</div>
-</div>
-</div>
-</div>
-</section><section><h2 class="section-heading" id="figuras">Figuras<a class="anchor" aria-label="anchor" href="#figuras"></a></h2>
-<hr class="half-width"><p>Podés incluir figuras generadas desde R Markdown:</p>
-<div class="codewrapper sourceCode" id="cb3">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">pie</span><span class="op">(</span></span>
-<span>  <span class="fu">c</span><span class="op">(</span>Sky <span class="op">=</span> <span class="fl">78</span>, <span class="st">"Lado soleado de la pirámide"</span> <span class="op">=</span> <span class="fl">17</span>, <span class="st">"Lado sombreado de la pirámide"</span> <span class="op">=</span> <span class="fl">5</span><span class="op">)</span>, </span>
-<span>  init.angle <span class="op">=</span> <span class="fl">315</span>, </span>
-<span>  col <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"deepskyblue"</span>, <span class="st">"yellow"</span>, <span class="st">"yellow3"</span><span class="op">)</span>, </span>
-<span>  border <span class="op">=</span> <span class="cn">FALSE</span></span>
-<span><span class="op">)</span></span></code></pre>
-</div>
-<figure style="text-align: center"><img src="../fig/OPERA_products-rendered-pyramid-1.png" alt="ilusión de gráfico circular de una pirámide" class="figure mx-auto d-block"><figcaption>
-El sol sale cada mañana
-</figcaption></figure><p>O podés usar markdown de pandoc para figuras estáticas con la
-siguiente sintaxis:</p>
-<p><code>![subtítulo opcional que aparece debajo de la figura](url de la figura){alt='texto alternativo para accesibilidad'}</code></p>
-<figure><img src="https://raw.githubusercontent.com/MetaDocencia/varnish/main/inst/pkgdown/assets/assets/images/metadocencia-logo.svg" alt="Logo de MetaDocencia con una manzana y texto del nombre de la Organización." class="figure mx-auto d-block"><div class="figcaption">¡Estás participando de un curso de
-MetaDocencia!</div>
-</figure></section><section><h2 class="section-heading" id="matemática">Matemática<a class="anchor" aria-label="anchor" href="#matem%C3%A1tica"></a></h2>
-<hr class="half-width"><p>El contenido puede contener ecuaciones en <span class="math inline">\(\LaTeX\)</span> al describir cómo crear<br>
-informes dinámicos con {knitr}, por lo que usamos MathJax para
-mostrarlas así:</p>
-<p><code>$ lpha = \dfrac{1}{(1 - eta)^2}$</code> se convierte en: $ lpha
-= $</p>
-<p>¿Genial, no?</p>
-<div id="keypoints1" class="callout keypoints">
-<div class="callout-square">
-<i class="callout-icon" data-feather="key"></i>
-</div>
-<span class="callout-header">Puntos Clave</span>
-<div class="callout-inner">
-<div class="callout-content">
-<ul><li>Usá archivos <code>.md</code> para episodios con contenido
-estático<br></li>
-<li>Usá archivos <code>.Rmd</code> para episodios que necesiten generar
-salidas dinámicas<br></li>
-<li>Ejecutá <code>sandpaper::check_lesson()</code> para identificar
-problemas en tu lección<br></li>
-<li>Ejecutá <code>sandpaper::build_lesson()</code> para previsualizar tu
-lección localmente</li>
-</ul></div>
-</div>
-</div>
+<strong>VEG_DIST_DATE</strong>: Fecha (como número de días desde el
+31/12/2020) en que se detectó la primera alteración. Permite observar la
+progresión de un evento como un incendio. En esta banda en particular,
+el valor 0 indica que no ha habido alteraciones en el último año y -1 es
+un valor que indica que faltan datos. Cualquier valor positivo es el
+número de días desde el 31 de diciembre del 2020 en los que se midió la
+primera alteración en ese píxel.</li>
+<li>
+<strong>VEG_DIST_STATUS</strong>: Estado de la alteración en la
+vegetación:
+<ul><li>
+<strong>0:</strong> Sin alteración</li>
+<li>
+<strong>1:</strong> Alteración provisional (<strong>primera
+detección</strong>) con cambio en la cubierta vegetal &lt; 50%</li>
+<li>
+<strong>2:</strong> Alteración confirmada (<strong>detección
+recurrente</strong>) con cambio en la cubierta vegetal &lt; 50%</li>
+<li>
+<strong>3:</strong> Alteración provisional con cambio en la
+cobertura vegetal ≥ 50%</li>
+<li>
+<strong>4:</strong> Alteración confirmada con cambio en la cobertura
+vegetal ≥ 50%</li>
+<li>
+<strong>255</strong>: Datos no disponibles</li>
+</ul></li>
+</ul><p>Cada banda permite analizar diferentes aspectos del cambio en la
+cobertura vegetal, siendo útiles para estudios ambientales, evaluación
+de daños por incendios, y seguimiento de transformaciones del uso del
+suelo.</p>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
+</div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Capítulo previo y siguiente"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/datos_geoespaciales.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previo</a>

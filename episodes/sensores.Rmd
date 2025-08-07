@@ -78,11 +78,16 @@ La respuesta correcta es:
 
 3. Una matriz de valores numéricos que representan la energía reflejada por cada unidad de superficie.
 
+:::::::::::::::::::::::::::::::::
+
+::: {.callout-note}
 Una imagen satelital no es simplemente una fotografía, sino una representación digital de datos captados por sensores remotos montados en satélites u otras plataformas. Cada imagen está compuesta por una matriz de píxeles, donde cada píxel contiene un valor numérico que representa la cantidad de energía electromagnética reflejada o emitida por una pequeña porción de la superficie terrestre en una determinada longitud de onda (o banda espectral).
 Estos valores numéricos no son colores en sí mismos, sino medidas cuantitativas de radiancia o reflectancia, que luego pueden visualizarse en escala de grises (una sola banda) o combinarse en falsas composiciones de color (por ejemplo, usando el infrarrojo cercano, el rojo y el verde).
 Por eso decimos que una imagen satelital es, en esencia, un conjunto de datos científicos que describe el estado físico de la superficie terrestre (como la vegetación, el agua, el suelo o las construcciones) en función de cómo interactúa con la radiación solar.
 Este tipo de información es clave para monitorear cambios ambientales, realizar mapas temáticos y detectar fenómenos como deforestación, incendios, inundaciones o urbanización.
 
-:::::::::::::::::::::::::::::::::
+:::
+
+
 
 

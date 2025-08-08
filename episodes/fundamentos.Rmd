@@ -84,7 +84,7 @@ Los sensores pueden estar montados en diferentes **plataformas**, como satélite
 - **Sensores pasivos**: miden la energía radiante natural reflejada o emitida por la Tierra. Por ejemplo, los sensores ópticos que utilizan la luz solar como fuente.
 - **Sensores activos**: emiten su propia señal (como radar o láser) y miden el rebote de esa señal. Funcionan incluso de noche o con nubosidad.  Ejemplos: Sentinel-1 (radar), GPM GMI (microondas), Landsat OLI/TIRS (infrarrojo térmico).
 
-![Sensores pasivos y activos](sensores.jpg)
+![Sensores pasivos y activos](fig/sensores.jpg)
 
 ### Tipos de plataformas
 

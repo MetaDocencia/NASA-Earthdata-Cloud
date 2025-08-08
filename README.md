@@ -6,11 +6,11 @@ En este taller, se explorara cómo utilizar los datos satelitales de la platafor
 2. Utilización de preoductos OPERA de la NASA y plataforma NASA Earthdata.
 3. Caso de estudio: Deforestación en Maranhão.
 
-## Motivación para participar:
+## Motivación para participar
 
 Entender los cambios en la superficie terrestre y sus consecuencias es crucial para la gestión sostenible de los recursos naturales. En este contexto, los productos OPERA de la NASA ofrecen una poderosa herramienta para monitorear modificaciones en la vegetación, las precipitaciones, las aguas superficiales y el uso del suelo. A través de este taller, MetaDocencia busca capacitar a los participantes para que puedan analizar estos cambios de manera reproducible, a través de Jupyter Notebooks con código en Python, con el fin de aplicar los resultados en la toma de decisiones informadas para estudios ambientales y planificación territorial.
 
-## Objetivos de aprendizaje:
+## Objetivos de aprendizaje
 
 Quienes completen esta formación podrán:
 
@@ -31,7 +31,9 @@ Puedes encontrár más información de potenciales participantes en la sección 
 - Técnicas de modelado geoespacial o análisis predictivo.
 - Teoría avanzada de conceptos relacionados con los datos geoespaciales.
 
-## Duración: 3 horas
+## Duración 
+
+Se estima que este curso lleva un total de 3 horas, incluyendo 3 módulos de 50 minutos cada uno, 4 ejercicios (dos encuestas de opción múltiple y dos ejercicios prácticos), y dos pausas de entre 5 y 10 minutos. 
 
 
 ## Agradecimientos

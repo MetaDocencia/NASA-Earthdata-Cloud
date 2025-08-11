@@ -72,7 +72,7 @@ gdal.SetConfigOption('CPL_VSIL_CURL_ALLOWED_EXTENSIONS','TIF, TIFF')
 ````
 
 ### FILTRAR Y SELECCIONAR LOS PRODUCTOS OPERA DESDE LA NUBE
-------------------
+
 
 #### **1.a. Seleccionar el area de estudio** 
 
@@ -419,6 +419,7 @@ plt.show()
 
 ![](fig/output2.png)
 
+
 ### EVOLUCIÓN DEL DISTURBIO A LO LARGO DEL TIEMPO 
 
 
@@ -467,40 +468,254 @@ array([[[nan, nan, nan, ...,  0.,  0., nan],
         [nan, nan,  0., ...,  0.,  0.,  0.],
         [nan, nan,  0., ...,  0.,  0.,  0.]],
 
-       [[nan, nan, nan, ...,  2.,  0., nan],
-        [nan, nan, nan, ...,  2.,  2., nan],
-        [ 0.,  0.,  0., ...,  1.,  2., nan],
         ...,
-...
-        ...,
+        
         [nan, nan,  1., ...,  0.,  0.,  0.],
-        [nan, nan,  0., ...,  0.,  0.,  0.],
-        [nan, nan,  0., ...,  0.,  0.,  0.]],
-
-       [[nan, nan, nan, ...,  3.,  3., nan],
-        [nan, nan, nan, ...,  3.,  3., nan],
-        [ 0.,  0.,  0., ...,  3.,  3., nan],
-        ...,
-        [nan, nan,  2., ...,  0.,  0.,  0.],
-        [nan, nan,  1., ...,  0.,  0.,  0.],
-        [nan, nan,  0., ...,  0.,  0.,  0.]],
-
-       [[nan, nan, nan, ...,  3.,  3., nan],
-        [nan, nan, nan, ...,  3.,  3., nan],
-        [ 0.,  1.,  0., ...,  3.,  3., nan],
-        ...,
-        [nan, nan,  0., ...,  0.,  0.,  0.],
         [nan, nan,  0., ...,  0.,  0.,  0.],
         [nan, nan,  0., ...,  0.,  0.,  0.]]], dtype=float32)
         
         
+````python
 
-**Coordinates:**
+#Graficar el area disturbada acumulada en el area de estudio
 
-| band    | 0     | int64   | 1
-| x    | (x)     | float64   | 3.025e+05 3.025e+05 ... 3.247e+05
-| y    | (y)     | float64   | -4.876e+05 ... -5.097e+05
-| spatial_ref    | int64     | int64   | 0
-| time    | (time)    | datetime64[ns]   | 2023-06-26 ... 2023-10-14
+import matplotlib.pyplot as plt
+
+#ordenaar el stack por fecha
+stack_sorted = stack.sortby("time")
+
+# Crear máscara booleana donde el valor sea 6 (disturbio confirmado)
+disturbios = stack_sorted == 6
+
+# Sumar la cantidad de píxeles por fecha
+pixeles_por_fecha = disturbios.sum(dim=["x", "y"])
+
+# Convertir a km² (cada píxel es de 30m x 30m = 900 m² = 0.0009 km²)
+km2_por_fecha = pixeles_por_fecha * 0.0009
+
+# Graficar
+plt.figure(figsize=(8, 5))
+km2_por_fecha.to_series().plot(marker='o')
+plt.title("Evolución de disturbios confirmados (valor 6)")
+plt.ylabel("Área acumulada (km²)")
+plt.xlabel("Fecha")
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
+````
 
 
+![](fig/output3.png)
+
+
+¿Hay algo raro en los graficos?
+
+
+````python
+
+# Convertir a DataFrame 
+df_filtrados = pd.DataFrame(filtrados)
+df_filtrados["fecha"] = pd.to_datetime(df_filtrados["fecha"])
+
+# Ordenar por menor cobertura de nubes 
+df_filtrados = df_filtrados.sort_values("nubes")
+#Seleccionar el producto con Sentinel
+
+# Eliminar duplicados dejando el que tiene menor nubosidad
+df_filtrados = df_filtrados.drop_duplicates(subset="fecha", keep="first")
+
+# Reconstruir la lista filtrada
+filtrados_unicos = df_filtrados.to_dict(orient="records")
+
+#VOLVEMOS A CORRER EL STACK USANDO filtrados_unicos
+
+# Stack de los subproductos VEG-DIST-STATUS
+
+from rioxarray import open_rasterio
+import xarray as xr
+import numpy as np
+import pandas as pd
+
+# Recortar cada raster al AOI y luego apilar
+raster_list = []
+fechas = []
+
+for f in filtrados_unicos: 
+    da = open_rasterio(f["url"], masked=True).squeeze()
+    aoi_proj = AOI.to_crs(da.rio.crs)
+    da_clip = da.rio.clip(aoi_proj.geometry, aoi_proj.crs)
+    
+    raster_list.append(da_clip)
+    fechas.append(pd.Timestamp(f["fecha"]))
+
+# Crear el stack recortado
+stack = xr.concat(raster_list, dim="time")
+stack["time"] = fechas
+
+````
+
+### GENERAR UN MAPA DE DISTUBIOS
+
+
+
+````python
+
+import hvplot.xarray
+import geoviews as gv
+import numpy as np
+
+# Enmascarar valores 0 para que sean transparentes
+stack_masked = stack.where(stack != 0)
+
+# Submuestreo para que no sea tan pesado
+stack_sub = stack_masked.isel(x=slice(0, None, 4), y=slice(0, None, 4))
+
+# Colormap rojo fuerte
+cmap = ["#fff5f5", "#fcbfbf", "#f78787", "#f25454", "#e93232", "#d40000", "#a50000", "#730000"]
+
+# Visualización interactiva
+hvplot_map = stack_sub.hvplot(
+    x='x',
+    y='y',
+    groupby='time',
+    cmap=cmap,
+    clim=(1, 8),
+    rasterize=True,
+    crs=stack.rio.crs,
+    tiles=gv.tile_sources.EsriImagery,
+    alpha=0.9,
+    frame_width=500,    
+    frame_height=500,
+    title="Evolución de disturbios detectados",
+    widget_location='bottom',   # Deslizador de tiempo abajo
+    colorbar=True
+)
+
+hvplot_map
+
+````
+
+![](fig/output4.png)
+
+
+### EXPLORAR SUBPRODUCTO VEG_DIST-DATE
+
+````python
+
+from pystac_client import Client
+import pandas as pd
+
+# Abrir el catálogo STAC de LP DAAC
+catalog = Client.open("https://cmr.earthdata.nasa.gov/stac/LPCLOUD/")
+
+# Parámetros de búsqueda
+search_params = {
+    "bbox": [-46.78, -4.61, -46.58, -4.41],  # AOI
+    "datetime": "2025-01-01/2025-07-26",     # rango de fechas
+    "collections": ["OPERA_L3_DIST-ALERT-HLS_V1_1"]
+}
+
+# Buscar items en el catálogo
+items = list(catalog.search(**search_params).get_items())
+
+# Filtrar solo los assets VEG-DIST-DATE accesibles por HTTPS
+filtrado_date = []
+
+for item in items:
+    for asset_key, asset in item.assets.items():
+        if "VEG-DIST-DATE" in asset_key and asset.href.startswith("https"):
+            filtrado_date.append({
+                "start_datetime": item.properties.get("start_datetime"),
+                "end_datetime": item.properties.get("end_datetime"),
+                "datetime": item.datetime,
+                "cloud_cover": item.properties.get("eo:cloud_cover"),
+                "url": asset.href
+            })
+
+# Convertir a DataFrame para explorar
+df = pd.DataFrame(filtrado_date)
+
+# Mostrar resumen
+print(f"Se encontraron {len(df)} assets únicos con VEG-DIST-DATE vía HTTPS.")
+df.head()
+
+````
+
+Se encontraron 226 assets únicos con VEG-DIST-DATE vía HTTPS.
+
+
+| | start_datetime	| end_datetime	| datetime	| cloud_cover	| url
+0	| 2025-01-01T13:33:27.790Z	| 2025-01-01T13:33:27.790Z	| 2025-01-01 13:33:27.790000+00:00	| 88	| https://data.lpdaac.earthdatacloud.nasa.gov/lp...
+1	| 2025-01-01T13:33:30.822Z	| 2025-01-01T13:33:30.822Z	| 2025-01-01 13:33:30.822000+00:00	| 83	| https://data.lpdaac.earthdatacloud.nasa.gov/lp...
+2	| 2025-01-01T13:33:42.170Z	| 2025-01-01T13:33:42.170Z	| 2025-01-01 13:33:42.170000+00:00	| 92	| https://data.lpdaac.earthdatacloud.nasa.gov/lp...
+3	| 2025-01-01T13:33:45.292Z	| 2025-01-01T13:33:45.292Z	| 2025-01-01 13:33:45.292000+00:00	| 88	| https://data.lpdaac.earthdatacloud.nasa.gov/lp...
+4	| 2025-01-02T13:17:23.274Z	| 2025-01-02T13:17:47.190Z	| 2025-01-02 13:17:23.274000+00:00	| 83	| https://data.lpdaac.earthdatacloud.nasa.gov/lp..
+
+
+
+````python
+
+import matplotlib.pyplot as plt
+
+df["cloud_cover"] = pd.to_numeric(df["cloud_cover"], errors='coerce')
+df.plot(
+   #x="datetime", 
+    y="cloud_cover", 
+    kind="bar", 
+    figsize=(10, 5), 
+    color="skyblue", 
+    title="Cobertura de nubes por escena"
+)
+# Ocultar etiquetas del eje X
+plt.xticks([])
+
+plt.tight_layout()
+plt.show()
+
+````
+
+![](fig/output6.png)
+
+````python
+
+
+df_bajanubosidad = df[df["cloud_cover"] < 20]
+
+df_bajanubosidad.plot(
+   #x="datetime", 
+    y="cloud_cover", 
+    kind="bar", 
+    figsize=(10, 5), 
+    color="skyblue", 
+    title="Cobertura de nubes por fecha"
+)
+
+````
+
+<Axes: title={'center': 'Cobertura de nubes por fecha'}>
+
+![](fig/output7.png)
+
+
+````python
+
+# Asegurarse de que la columna de fechas esté como datetime
+df_bajanubosidad["end_datetime"] = pd.to_datetime(df_bajanubosidad["end_datetime"])
+
+# Ordenar por fecha final y seleccionar el más reciente
+más_reciente_baja_nubosidad = df_bajanubosidad.sort_values("end_datetime", ascending=False).iloc[0]
+
+# Mostrar resultado
+print("Producto más reciente con menos de 20% de nubosidad:")
+print(más_reciente_baja_nubosidad)
+
+````
+
+Producto más reciente con menos de 20% de nubosidad:
+start_datetime                             2025-07-17T13:34:04.242Z
+end_datetime                       2025-07-17 13:34:04.242000+00:00
+datetime                           2025-07-17 13:34:04.242000+00:00
+cloud_cover                                                       0
+url               https://data.lpdaac.earthdatacloud.nasa.gov/lp...
+Name: 218, dtype: object

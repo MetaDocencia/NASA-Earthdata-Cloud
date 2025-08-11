@@ -289,6 +289,7 @@ for registro in filtrados[:10]:
 
 
 Se encontraron 12 archivos con menos de 40% de nubes.
+
 2023-06-26 → Cloud cover: 9 → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230626T133151Z_20231221T083621Z_S2A_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230626T133151Z_20231221T083621Z_S2A_30_v1_VEG-DIST-STATUS.tif
 2023-07-06 → Cloud cover: 0 → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230706T133151Z_20231221T083820Z_S2A_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230706T133151Z_20231221T083820Z_S2A_30_v1_VEG-DIST-STATUS.tif
 2023-07-21 → Cloud cover: 0 → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230721T133149Z_20231221T084137Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230721T133149Z_20231221T084137Z_S2B_30_v1_VEG-DIST-STATUS.tif
@@ -301,3 +302,205 @@ Se encontraron 12 archivos con menos de 40% de nubes.
 2023-09-18 → Cloud cover: 21 → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1_VEG-DIST-STATUS.tif
 
 ### VISUALIZAR Y EXPLORAR Productos VEG_DIST_STATUS
+
+
+````python
+
+#Visualizar productos VEG_DIST_STATUS en el area de interes.
+
+#convertir a shp las coordenadas del area de interes (AOI)
+from shapely.geometry import box
+import geopandas as gpd
+
+# AOI definido como bounding box
+aoi_coords = [-46.78, -4.61, -46.58, -4.41]  # xmin, ymin, xmax, ymax
+aoi_geom = box(*aoi_coords)
+AOI = gpd.GeoDataFrame(geometry=[aoi_geom], crs="EPSG:4326")
+
+#Visualizar la primer y ultima fecha del los productos filtrados
+import matplotlib.pyplot as plt
+import matplotlib.colors as mcolors
+import geopandas as gpd
+import rioxarray
+
+# Crear colormap personalizado
+white_to_red = mcolors.LinearSegmentedColormap.from_list("white_to_red", ["white", "red"])
+
+# URLs de los dos productos
+urls = [
+    ("26/06/2023", "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230626T133151Z_20231221T083621Z_S2A_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230626T133151Z_20231221T083621Z_S2A_30_v1_VEG-DIST-STATUS.tif"),
+    ("18/09/2023", "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1_VEG-DIST-STATUS.tif")
+]
+
+# Crear figura
+fig, axes = plt.subplots(1, 2, figsize=(12, 6), constrained_layout=True)
+
+for ax, (label, url) in zip(axes, urls):
+    da = rioxarray.open_rasterio(url, masked=True).squeeze()
+    # Reproyectar AOI al CRS del raster
+    aoi_proj = AOI.to_crs(da.rio.crs)
+    # Recorte
+    da_clip = da.rio.clip(aoi_proj.geometry, aoi_proj.crs)
+    # Plot
+    img = da_clip.plot(
+        ax=ax,
+        cmap=white_to_red,
+        vmin=0,
+        vmax=8,
+        add_colorbar=False
+    )
+    aoi_proj.boundary.plot(ax=ax, edgecolor="black", linewidth=0.5)
+    ax.set_title(f"Disturbios detectados\n{label}")
+    ax.axis("off")
+
+# Agregar colorbar común
+cbar = fig.colorbar(img, ax=axes.ravel().tolist(), shrink=0.6, label="Vegetation_disturbance_status")
+plt.show()
+````
+
+![](fig/output1.png)
+
+
+Valores del producto `VEG-DIST-STATUS`:
+
+- **0:** Sin alteración
+- **1:** Primera detección de alteraciones con cambios en la cobertura vegetal <50%
+- **2:** Detección provisional de alteraciones con cambios en la cobertura vegetal <50%
+- **3:** Detección confirmada de alteraciones con cambios en la cobertura vegetal < 50%
+- **4:** Primera detección de alteraciones con cambios en la cobertura vegetal ≥50%
+- **5:** Detección provisional de alteraciones con cambios en la cobertura vegetal ≥50%
+- **6:** Detección confirmada de alteraciones con cambios en la cobertura vegetal ≥50%
+- **7:** Detección finalizada de alteraciones con cambios en la cobertura vegetal <50%
+- **8:** Detección finalizada de alteraciones con cambios en lacobertura vegetal ≥50%
+- **255** Datos faltantes
+
+````python
+
+#Graficar la distribución de los valores de disturbios en dos subproductos DIST-VEG-ALERT
+
+import matplotlib.pyplot as plt
+import numpy as np
+import rioxarray
+
+# URLs de los dos productos
+urls = [
+    ("26/06/2023", "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230626T133151Z_20231221T083621Z_S2A_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230626T133151Z_20231221T083621Z_S2A_30_v1_VEG-DIST-STATUS.tif"),
+    ("18/09/2023", "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1_VEG-DIST-STATUS.tif")
+]
+
+# Leer y calcular frecuencias primero
+frecuencias = []
+for label, url in urls:
+    da = rioxarray.open_rasterio(url, masked=True).squeeze()
+    aoi_proj = AOI.to_crs(da.rio.crs)
+    da_clip = da.rio.clip(aoi_proj.geometry, aoi_proj.crs)
+    vals = da_clip.values.flatten()
+    vals = vals[(vals > 0) & (~np.isnan(vals))]
+    hist, _ = np.histogram(vals, bins=np.arange(0.5, 9.5, 1))
+    frecuencias.append((label, hist))
+
+# Encontrar el máximo para escalar ambos plots
+ymax = max(hist.max() for _, hist in frecuencias)
+
+# Gráfico
+fig, axes = plt.subplots(1, 2, figsize=(12, 4), constrained_layout=True)
+for ax, (label, hist) in zip(axes, frecuencias):
+    ax.bar(range(1, 9), hist, color='crimson', edgecolor='black', alpha=0.7)
+    ax.set_xticks(range(1, 9))
+    ax.set_ylim(0, ymax + ymax * 0.1)
+    ax.set_title(f"Histograma - {label}")
+    ax.set_xlabel("Clase de disturbio")
+    ax.set_ylabel("Frecuencia")
+
+plt.suptitle("Distribución de clases de disturbio detectadas", fontsize=14)
+plt.show()
+
+````
+
+![](fig/output2.png)
+
+### EVOLUCIÓN DEL DISTURBIO A LO LARGO DEL TIEMPO 
+
+
+````python
+# Stack de los 12 subproductos VEG-DIST-STATUS
+
+from rioxarray import open_rasterio
+import xarray as xr
+import numpy as np
+import pandas as pd
+
+# Recortar cada raster al AOI y luego apilar
+raster_list = []
+fechas = []
+
+for f in filtrados:    
+    da = open_rasterio(f["url"], masked=True).squeeze()
+    aoi_proj = AOI.to_crs(da.rio.crs)
+    da_clip = da.rio.clip(aoi_proj.geometry, aoi_proj.crs)
+    
+    raster_list.append(da_clip)
+    fechas.append(pd.Timestamp(f["fecha"]))
+
+# Crear el stack recortado
+stack = xr.concat(raster_list, dim="time")
+stack["time"] = fechas
+
+stack
+````
+
+
+xarray.DataArraytime: 12y: 738x: 741
+array([[[nan, nan, nan, ...,  0.,  0., nan],
+        [nan, nan, nan, ...,  2.,  0., nan],
+        [ 0.,  0.,  0., ...,  0.,  1., nan],
+        ...,
+        [nan, nan,  0., ...,  0.,  0.,  0.],
+        [nan, nan,  0., ...,  0.,  0.,  0.],
+        [nan, nan,  0., ...,  0.,  0.,  0.]],
+
+       [[nan, nan, nan, ...,  1.,  0., nan],
+        [nan, nan, nan, ...,  2.,  1., nan],
+        [ 0.,  0.,  0., ...,  0.,  2., nan],
+        ...,
+        [nan, nan,  0., ...,  0.,  0.,  0.],
+        [nan, nan,  0., ...,  0.,  0.,  0.],
+        [nan, nan,  0., ...,  0.,  0.,  0.]],
+
+       [[nan, nan, nan, ...,  2.,  0., nan],
+        [nan, nan, nan, ...,  2.,  2., nan],
+        [ 0.,  0.,  0., ...,  1.,  2., nan],
+        ...,
+...
+        ...,
+        [nan, nan,  1., ...,  0.,  0.,  0.],
+        [nan, nan,  0., ...,  0.,  0.,  0.],
+        [nan, nan,  0., ...,  0.,  0.,  0.]],
+
+       [[nan, nan, nan, ...,  3.,  3., nan],
+        [nan, nan, nan, ...,  3.,  3., nan],
+        [ 0.,  0.,  0., ...,  3.,  3., nan],
+        ...,
+        [nan, nan,  2., ...,  0.,  0.,  0.],
+        [nan, nan,  1., ...,  0.,  0.,  0.],
+        [nan, nan,  0., ...,  0.,  0.,  0.]],
+
+       [[nan, nan, nan, ...,  3.,  3., nan],
+        [nan, nan, nan, ...,  3.,  3., nan],
+        [ 0.,  1.,  0., ...,  3.,  3., nan],
+        ...,
+        [nan, nan,  0., ...,  0.,  0.,  0.],
+        [nan, nan,  0., ...,  0.,  0.,  0.],
+        [nan, nan,  0., ...,  0.,  0.,  0.]]], dtype=float32)
+        
+        
+
+**Coordinates:**
+
+| band    | 0     | int64   | 1
+| x    | (x)     | float64   | 3.025e+05 3.025e+05 ... 3.247e+05
+| y    | (y)     | float64   | -4.876e+05 ... -5.097e+05
+| spatial_ref    | int64     | int64   | 0
+| time    | (time)    | datetime64[ns]   | 2023-06-26 ... 2023-10-14
+
+

@@ -1129,7 +1129,7 @@ representa el área mediante píxeles agrupados en formas.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Mostrar la solución </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>La respuesta correcta es:</p>
 <ol start="2" style="list-style-type: decimal">
@@ -2140,7 +2140,71 @@ cloud_cover | url</div>
 2025-07-17T13:34:04.242Z end_datetime 2025-07-17 13:34:04.242000+00:00
 datetime 2025-07-17 13:34:04.242000+00:00 cloud_cover 0 url <a href="https://data.lpdaac.earthdatacloud.nasa.gov/lp" class="external-link uri">https://data.lpdaac.earthdatacloud.nasa.gov/lp</a>… Name:
 218, dtype: object</p>
-<!--
+<div class="codewrapper sourceCode" id="cb19">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a></span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a><span class="co">#seleccionamos la url del producto mas reciente con nubosidad &lt; 20%</span></span>
+<span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a>url<span class="op">=</span>más_reciente_baja_nubosidad[<span class="st">"url"</span>]</span>
+<span id="cb19-4"><a href="#cb19-4" tabindex="-1"></a></span>
+<span id="cb19-5"><a href="#cb19-5" tabindex="-1"></a><span class="co">#Visualizar el subproducto VEG_DIST_DATE en comparación con el subproducto VEG_DIST_STATE</span></span>
+<span id="cb19-6"><a href="#cb19-6" tabindex="-1"></a></span>
+<span id="cb19-7"><a href="#cb19-7" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb19-8"><a href="#cb19-8" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
+<span id="cb19-9"><a href="#cb19-9" tabindex="-1"></a><span class="im">import</span> rioxarray</span>
+<span id="cb19-10"><a href="#cb19-10" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb19-11"><a href="#cb19-11" tabindex="-1"></a><span class="im">from</span> shapely.geometry <span class="im">import</span> box</span>
+<span id="cb19-12"><a href="#cb19-12" tabindex="-1"></a></span>
+<span id="cb19-13"><a href="#cb19-13" tabindex="-1"></a><span class="co"># AOI</span></span>
+<span id="cb19-14"><a href="#cb19-14" tabindex="-1"></a>aoi_geom <span class="op">=</span> gpd.GeoDataFrame(geometry<span class="op">=</span>[box(<span class="op">-</span><span class="fl">46.78</span>, <span class="op">-</span><span class="fl">4.61</span>, <span class="op">-</span><span class="fl">46.58</span>, <span class="op">-</span><span class="fl">4.41</span>)], crs<span class="op">=</span><span class="st">"EPSG:4326"</span>)</span>
+<span id="cb19-15"><a href="#cb19-15" tabindex="-1"></a></span>
+<span id="cb19-16"><a href="#cb19-16" tabindex="-1"></a><span class="co"># Subproducto VEG_DIST_DATE</span></span>
+<span id="cb19-17"><a href="#cb19-17" tabindex="-1"></a>url1 <span class="op">=</span> más_reciente_baja_nubosidad[<span class="st">"url"</span>]</span>
+<span id="cb19-18"><a href="#cb19-18" tabindex="-1"></a>da1 <span class="op">=</span> rioxarray.open_rasterio(url1, masked<span class="op">=</span><span class="va">True</span>).squeeze()</span>
+<span id="cb19-19"><a href="#cb19-19" tabindex="-1"></a>aoi_proj <span class="op">=</span> aoi_geom.to_crs(da1.rio.crs)</span>
+<span id="cb19-20"><a href="#cb19-20" tabindex="-1"></a>da1_clip <span class="op">=</span> da1.rio.clip(aoi_proj.geometry, aoi_proj.crs)</span>
+<span id="cb19-21"><a href="#cb19-21" tabindex="-1"></a>masked1 <span class="op">=</span> np.ma.masked_where(da1_clip <span class="op">&lt;=</span> <span class="dv">0</span>, da1_clip)</span>
+<span id="cb19-22"><a href="#cb19-22" tabindex="-1"></a></span>
+<span id="cb19-23"><a href="#cb19-23" tabindex="-1"></a><span class="co"># Subproducto VEG_DIST_STATUS</span></span>
+<span id="cb19-24"><a href="#cb19-24" tabindex="-1"></a>url2<span class="op">=</span> <span class="st">"https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1_VEG-DIST-STATUS.tif"</span></span>
+<span id="cb19-25"><a href="#cb19-25" tabindex="-1"></a>da2 <span class="op">=</span> rioxarray.open_rasterio(url2, masked<span class="op">=</span><span class="va">True</span>).squeeze()</span>
+<span id="cb19-26"><a href="#cb19-26" tabindex="-1"></a>da2_clip <span class="op">=</span> da2.rio.clip(aoi_proj.geometry, aoi_proj.crs)</span>
+<span id="cb19-27"><a href="#cb19-27" tabindex="-1"></a>masked2 <span class="op">=</span> np.ma.masked_where(da2_clip <span class="op">&lt;=</span> <span class="dv">0</span>, da2_clip)</span>
+<span id="cb19-28"><a href="#cb19-28" tabindex="-1"></a></span>
+<span id="cb19-29"><a href="#cb19-29" tabindex="-1"></a><span class="co"># Gráfico de los 2 subproductos</span></span>
+<span id="cb19-30"><a href="#cb19-30" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">14</span>, <span class="dv">6</span>))</span>
+<span id="cb19-31"><a href="#cb19-31" tabindex="-1"></a></span>
+<span id="cb19-32"><a href="#cb19-32" tabindex="-1"></a><span class="co"># Mapa 1</span></span>
+<span id="cb19-33"><a href="#cb19-33" tabindex="-1"></a>img1 <span class="op">=</span> axes[<span class="dv">0</span>].imshow(</span>
+<span id="cb19-34"><a href="#cb19-34" tabindex="-1"></a>    masked1,</span>
+<span id="cb19-35"><a href="#cb19-35" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">"viridis"</span>,</span>
+<span id="cb19-36"><a href="#cb19-36" tabindex="-1"></a>    extent<span class="op">=</span>da1_clip.rio.bounds(),</span>
+<span id="cb19-37"><a href="#cb19-37" tabindex="-1"></a>    interpolation<span class="op">=</span><span class="st">"nearest"</span></span>
+<span id="cb19-38"><a href="#cb19-38" tabindex="-1"></a>)</span>
+<span id="cb19-39"><a href="#cb19-39" tabindex="-1"></a>axes[<span class="dv">0</span>].set_title(<span class="st">"VEG_DIST_DATE 17/07/2025"</span>)</span>
+<span id="cb19-40"><a href="#cb19-40" tabindex="-1"></a>axes[<span class="dv">0</span>].set_frame_on(<span class="va">True</span>)</span>
+<span id="cb19-41"><a href="#cb19-41" tabindex="-1"></a>cbar1 <span class="op">=</span> plt.colorbar(img1, ax<span class="op">=</span>axes[<span class="dv">0</span>], shrink<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb19-42"><a href="#cb19-42" tabindex="-1"></a>cbar1.set_label(<span class="st">"Día desde 2020-12-31"</span>)</span>
+<span id="cb19-43"><a href="#cb19-43" tabindex="-1"></a></span>
+<span id="cb19-44"><a href="#cb19-44" tabindex="-1"></a><span class="co"># colormap personalizado</span></span>
+<span id="cb19-45"><a href="#cb19-45" tabindex="-1"></a>white_to_red <span class="op">=</span> mcolors.LinearSegmentedColormap.from_list(<span class="st">"white_to_red"</span>, [<span class="st">"white"</span>, <span class="st">"red"</span>])</span>
+<span id="cb19-46"><a href="#cb19-46" tabindex="-1"></a><span class="co"># Mapa 2</span></span>
+<span id="cb19-47"><a href="#cb19-47" tabindex="-1"></a>img2 <span class="op">=</span> axes[<span class="dv">1</span>].imshow(</span>
+<span id="cb19-48"><a href="#cb19-48" tabindex="-1"></a>    masked2,</span>
+<span id="cb19-49"><a href="#cb19-49" tabindex="-1"></a>    cmap<span class="op">=</span> white_to_red,</span>
+<span id="cb19-50"><a href="#cb19-50" tabindex="-1"></a>    extent<span class="op">=</span>da2_clip.rio.bounds(),</span>
+<span id="cb19-51"><a href="#cb19-51" tabindex="-1"></a>    interpolation<span class="op">=</span><span class="st">"nearest"</span></span>
+<span id="cb19-52"><a href="#cb19-52" tabindex="-1"></a>)</span>
+<span id="cb19-53"><a href="#cb19-53" tabindex="-1"></a>axes[<span class="dv">1</span>].set_title(<span class="st">"VEG_DIST-STATUS 18/09/2023"</span>)</span>
+<span id="cb19-54"><a href="#cb19-54" tabindex="-1"></a>axes[<span class="dv">1</span>].set_frame_on(<span class="va">True</span>)</span>
+<span id="cb19-55"><a href="#cb19-55" tabindex="-1"></a>cbar2 <span class="op">=</span> plt.colorbar(img2, ax<span class="op">=</span>axes[<span class="dv">1</span>], shrink<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb19-56"><a href="#cb19-56" tabindex="-1"></a>cbar2.set_label(<span class="st">"Valor de disturbio"</span>)</span>
+<span id="cb19-57"><a href="#cb19-57" tabindex="-1"></a></span>
+<span id="cb19-58"><a href="#cb19-58" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb19-59"><a href="#cb19-59" tabindex="-1"></a>plt.show()</span>
+<span id="cb19-60"><a href="#cb19-60" tabindex="-1"></a></span></code></pre>
+</div>
+<figure><img src="../fig/output8.png" class="figure mx-auto d-block"></figure><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->

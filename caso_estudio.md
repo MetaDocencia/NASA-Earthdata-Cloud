@@ -1,23 +1,24 @@
 ---
 title: 'Caso de Estudio'
 teaching: 20
-exercises: 1
+exercises: 0
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- ¿Qué son los modelos ráster y vectorial?
-- ¿Cuáles son las diferencias clave entre estos formatos?
-- ¿En qué situaciones conviene usar cada uno?
-
+- ¿Qué proporción del área de estudio presenta disturbios recientes en la cobertura vegetal según los datos VEG_DIST_STATUS filtrados por baja nubosidad?
+- ¿Cómo ha evolucionado la extensión de los disturbios a lo largo del período analizado en Buriticupu?
+- ¿En qué zonas y fechas específicas se detectaron los disturbios más intensos (≥50% de cambio en la cobertura vegetal)?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Comprender qué representan los modelos ráster y vectorial en el análisis geoespacial.
-- Diferenciar entre los formatos según su estructura de datos y aplicaciones.
-- Identificar casos de uso en los que se aplica cada modelo para resolver problemas ambientales.
+- Procesar y filtrar los productos OPERA DIST-ALERT para extraer información relevante del área de estudio en Maranhão.
+- Visualizar y analizar los cambios en la cobertura vegetal a lo largo del tiempo, identificando patrones de disturbio recientes.
+- Elaborar mapas y gráficos que sinteticen la información geoespacial, facilitando la interpretación y comunicación de los resultados para la toma de decisiones en conservación.
+
+
   
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -505,9 +506,15 @@ plt.show()
 
 ![](fig/output3.png)
 
+::: callout
 
-¿Hay algo raro en los graficos?
+**¿Hay algo raro en los gráficos?**
 
+Tal vez notes que una fecha tiene dos puntos. Eso es porque el producto OPERA usa imágenes SENTINEL y LANDSAT, y puede ocurrir que en alguna fecha haya dos productos. En ese caso, es necesario seleccionar alguno de ellos en base a algún criterio. 
+Debajo, seleccionamos la imagen con menos nubes y, de esa forma, cuando volvemos a ejecutar el código que genera el gráfico encontramos solo un producto por fecha. 
+
+
+:::
 
 ````python
 
@@ -672,7 +679,7 @@ plt.show()
 
 ````
 
-![](fig/output6.png)
+![](fig/output5.png)
 
 ````python
 

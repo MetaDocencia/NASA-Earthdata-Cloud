@@ -64,9 +64,16 @@ Puede tardar unos segundos, ¡así que paciencia! Si aparece un aviso de que la 
     - `ipynb/`
       - `00_Introduccion_Configuracion/`
         - `02_Configuración_y_Verificación_del_Entorno.md`
+        
+
+![](fig/hub_configuracion_1.png)
+
+![](fig/hub_configuracion.png)
 
 
-5. Te preguntará si quieres proceder a sobrescribir el archivo .netrc. Confirma que sí ingresando `Y` y presionando `enter`.
+5. Te preguntará si quieres proceder a sobrescribir el archivo .netrc. Confirma que sí ingresando `S` y presionando `enter`.
+
+![](fig/netrc.png)
 
 6. Ingresa tus credenciales de NASA Earthdata (usuario y contraseña). Si todo funcionó correctamente, se te indicará que el archivo .netrc con tus credenciales se configuró correctamente. 
 
@@ -78,4 +85,7 @@ Puede tardar unos segundos, ¡así que paciencia! Si aparece un aviso de que la 
     - `ipynb/`
       - `05_Casos_de_Estudio/`
         - `05_Deforestacion_en_Maranhão.md`
+        
+
+![](fig/defor.png)
 

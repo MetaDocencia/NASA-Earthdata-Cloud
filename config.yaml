@@ -70,22 +70,23 @@ contact: 'infraestructura@metadocencia.org'
 # - another-learner.md
 
 # Order of episodes in your lesson
-episodes: 
+episodes:
 - fundamentos.Rmd
 - sistemas_de_coordenadas.Rmd
 - datos_geoespaciales.Rmd
 - OPERA_products.Rmd
 - caso_estudio.md
+- diapositivas.Rmd
 
 
 # Information for Learners
-learners: 
+learners:
 
 # Information for Instructors
-instructors: 
+instructors:
 
 # Learner Profiles
-profiles: 
+profiles:
 - learner-profiles.Rmd
 # Customisation ---------------------------------------------
 #

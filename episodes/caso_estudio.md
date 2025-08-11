@@ -44,6 +44,8 @@ Para eso en esta notebook vamos a :
 4. Generar un mapa de disturbios
 5. Explorar subproducto VEG_DIST_DATE
 
+### Antes de empezar - Importar librerías que vamos a utilizar
+
 ````python
 
 #librerias para manipulación de datos
@@ -69,21 +71,31 @@ gdal.SetConfigOption('CPL_VSIL_CURL_ALLOWED_EXTENSIONS','TIF, TIFF')
 
 ````
 
-### 1. FILTRAR Y SELECCIONAR LOS PRODUCTOS OPERA DESDE LA NUBE
+### FILTRAR Y SELECCIONAR LOS PRODUCTOS OPERA DESDE LA NUBE
 
-#### 1.a Seleccionar el area de estudio 
+#### 1.a. Seleccionar el area de estudio 
 
-Usa la herramienta online: https://boundingbox.klokantech.com/
+Usa la herramienta [Bounding Box](https://boundingbox.klokantech.com/) para obtener las coordenadas geográficas (latitud y longitud) del área seleccionada.
 
-1. Busca la zona de interés y dibujar un rectángulo sobre el mapa.
-2. En la sección "Copy & Paste", selecciona el formato "CSV".
-3. Copia las coordenadas 
+Bounding Box es un selector visual de cajas geográficas (bounding boxes) que permite:
+
+- Dibujar un rectángulo o polígono directamente sobre un mapa interactivo para delimitar un área específica-
+- Obtener las coordenadas geográficas (latitud y longitud) del área seleccionada y copiarlas fácilmente en diversos formatos útiles como MARC, DublinCore, KML, GeoJSON, OGC WKT, CSV, FGDC, entre otros. 
+
+Sigue los siguientes pasos:
+
+1. Navega hasta la página https://boundingbox.klokantech.com/
+2. Busca la zona de interés y dibuja un rectángulo sobre el mapa.
+3. En la sección "Copy & Paste", selecciona el formato "CSV".
+4. Copia las coordenadas 
 
 Estas coordenadas están en el orden correcto requerido por STAC:
 
 `bbox = [xmin, ymin, xmax, ymax] = [long_oeste, lat_sur, long_este, lat_norte]`
 
-Coordenadas copiadas de boundingbox -46.52993,-4.383815,-43.363075,-4.243793
+El siguiente ejemplo supone que las coordenadas copiadas de boundingbox son **-46.52993,-4.383815,-43.363075,-4.243793**
+
+5. Define el area utilizando las coordenadas copiadas y define el rango de fechas de interés.
 
 ````python
 
@@ -92,14 +104,15 @@ AOI = [-46.52993,-4.383815,-46.363075,-4.243793]
 rango_fechas = "2022-01-01/2024-03-31"
 
 ````
-#### 1.b Explorar y buscar los productos OPERA DIST-ALERT
 
-````
+#### 1.b.  Explorar y buscar los productos OPERA DIST-ALERT
+
+````python
 
 # Realizamos la búsqueda de productos OPERA DIST-ALERT para ver fechas disponibles
 from pystac_client import Client
 
-#parámetros de búsqueda
+# Retomamos los parámetros de búsqueda definidos en el punto anterior
 search_params = {
     "bbox": AOI,
     "datetime": rango_fechas,
@@ -115,3 +128,179 @@ print(f"Fechas disponibles ({len(fechas)}):")
 print(fechas)
 
 ````
+
+Fechas disponibles (109):
+[datetime.date(2023, 1, 2), datetime.date(2023, 1, 5), datetime.date(2023, 1, 7), datetime.date(2023, 1, 12), datetime.date(2023, 1, 13), datetime.date(2023, 1, 17), datetime.date(2023, 1, 21), datetime.date(2023, 1, 22), datetime.date(2023, 1, 27), datetime.date(2023, 2, 1), datetime.date(2023, 2, 6), datetime.date(2023, 2, 11), datetime.date(2023, 2, 14), datetime.date(2023, 2, 16), datetime.date(2023, 2, 21), datetime.date(2023, 2, 26), datetime.date(2023, 3, 3), datetime.date(2023, 3, 8), datetime.date(2023, 3, 10), datetime.date(2023, 3, 18), datetime.date(2023, 3, 23), datetime.date(2023, 3, 26), datetime.date(2023, 3, 28), datetime.date(2023, 4, 2), datetime.date(2023, 4, 3), datetime.date(2023, 4, 7), datetime.date(2023, 4, 12), datetime.date(2023, 4, 17), datetime.date(2023, 4, 22), datetime.date(2023, 4, 27), datetime.date(2023, 5, 2), datetime.date(2023, 5, 5), datetime.date(2023, 5, 12), datetime.date(2023, 5, 17), datetime.date(2023, 5, 21), datetime.date(2023, 5, 22), datetime.date(2023, 5, 27), datetime.date(2023, 5, 29), datetime.date(2023, 6, 1), datetime.date(2023, 6, 6), datetime.date(2023, 6, 11), datetime.date(2023, 6, 14), datetime.date(2023, 6, 16), datetime.date(2023, 6, 21), datetime.date(2023, 6, 22), datetime.date(2023, 6, 26), datetime.date(2023, 6, 30), datetime.date(2023, 7, 1), datetime.date(2023, 7, 6), datetime.date(2023, 7, 8), datetime.date(2023, 7, 11), datetime.date(2023, 7, 16), datetime.date(2023, 7, 21), datetime.date(2023, 7, 24), datetime.date(2023, 7, 26), datetime.date(2023, 7, 31), datetime.date(2023, 8, 1), datetime.date(2023, 8, 5), datetime.date(2023, 8, 10), datetime.date(2023, 8, 15), datetime.date(2023, 8, 20), datetime.date(2023, 8, 25), datetime.date(2023, 8, 30), datetime.date(2023, 9, 2), datetime.date(2023, 9, 4), datetime.date(2023, 9, 9), datetime.date(2023, 9, 10), datetime.date(2023, 9, 14), datetime.date(2023, 9, 18), datetime.date(2023, 9, 19), datetime.date(2023, 9, 24), datetime.date(2023, 9, 26), datetime.date(2023, 9, 29), datetime.date(2023, 10, 4), datetime.date(2023, 10, 9), datetime.date(2023, 10, 12), datetime.date(2023, 10, 14), datetime.date(2023, 10, 19), datetime.date(2023, 10, 20), datetime.date(2023, 10, 28), datetime.date(2023, 11, 5), datetime.date(2023, 11, 13), datetime.date(2023, 11, 18), datetime.date(2023, 11, 21), datetime.date(2023, 11, 28), datetime.date(2023, 12, 8), datetime.date(2023, 12, 13), datetime.date(2023, 12, 18), datetime.date(2023, 12, 23), datetime.date(2023, 12, 28), datetime.date(2024, 1, 7), datetime.date(2024, 1, 8), datetime.date(2024, 1, 16), datetime.date(2024, 1, 17), datetime.date(2024, 1, 22), datetime.date(2024, 1, 27), datetime.date(2024, 2, 1), datetime.date(2024, 2, 6), datetime.date(2024, 2, 11), datetime.date(2024, 2, 16), datetime.date(2024, 2, 17), datetime.date(2024, 2, 21), datetime.date(2024, 2, 25), datetime.date(2024, 2, 26), datetime.date(2024, 3, 2), datetime.date(2024, 3, 12), datetime.date(2024, 3, 17), datetime.date(2024, 3, 27), datetime.date(2024, 3, 28)]
+
+**Cada item OPERA DIST-ALERT incluye varios assets `.tif`, y cada uno representa una capa de información distinta:**
+
+- **VEG-DIST-STATUS.tif**: detección de disturbio 
+- **VEG-DIST-CONF.tif**: nivel de confianza de la detección
+- **VEG-DIST-DATE.tif**: fecha en que se detectó el disturbio
+- **VEG-ANOM.tif**: anomalía de la vegetación
+- **VEG-IND.tif**: índice de vegetación
+- **VEG-LAST-DATE.tif**: última fecha sin disturbio detectado
+- **VEG-DIST-DUR.tif**: duración acumulada del disturbio
+- **VEG-DIST-COUNT.tif**: número de disturbios detectados
+
+````python
+
+#Imprimimos los archivos que se encuentran dentro de 1 item
+item = items[0]  
+
+print(f"Item - Fecha: {item.datetime.date()}")
+for asset_key, asset in item.assets.items():
+    print(f"  Asset: {asset_key} → {asset.href}")
+    
+
+````
+
+Item - Fecha: 2023-01-02
+  Asset: browse → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-public/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-DIST-STATUS.png
+  Asset: thumbnail_0 → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-public/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-DIST-STATUS.png
+  Asset: thumbnail_1 → s3://lp-prod-public/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-DIST-STATUS.png
+  Asset: gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-DIST-STATUS → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-DIST-STATUS.tif
+  Asset: gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-IND → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-IND.tif
+  Asset: gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-ANOM → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-ANOM.tif
+  Asset: gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-HIST → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-HIST.tif
+  Asset: gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-ANOM-MAX → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-ANOM-MAX.tif
+  Asset: gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-DIST-CONF → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-DIST-CONF.tif
+  Asset: gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-DIST-DATE → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-DIST-DATE.tif
+  Asset: gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-DIST-COUNT → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-DIST-COUNT.tif
+  Asset: gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-DIST-DUR → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-DIST-DUR.tif
+  Asset: gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-LAST-DATE → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-LAST-DATE.tif
+  Asset: gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_GEN-DIST-STATUS → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_GEN-DIST-STATUS.tif
+  Asset: gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_GEN-ANOM → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_GEN-ANOM.tif
+  Asset: gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_GEN-ANOM-MAX → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_GEN-ANOM-MAX.tif
+  Asset: gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_GEN-DIST-CONF → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_GEN-DIST-CONF.tif
+  Asset: gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_GEN-DIST-DATE → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_GEN-DIST-DATE.tif
+  Asset: gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_GEN-DIST-COUNT → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_GEN-DIST-COUNT.tif
+  Asset: gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_GEN-DIST-DUR → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_GEN-DIST-DUR.tif
+  Asset: gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_GEN-LAST-DATE → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_GEN-LAST-DATE.tif
+  Asset: gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_DATA-MASK → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_DATA-MASK.tif
+  Asset: s3_s3://lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-DIST-STATUS → s3://lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-DIST-STATUS.tif
+  Asset: s3_s3://lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-IND → s3://lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-IND.tif
+...
+  Asset: s3_s3://lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_GEN-DIST-DUR → s3://lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_GEN-DIST-DUR.tif
+  Asset: s3_s3://lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_GEN-LAST-DATE → s3://lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_GEN-LAST-DATE.tif
+  Asset: s3_s3://lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_DATA-MASK → s3://lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_DATA-MASK.tif
+  Asset: metadata → https://cmr.earthdata.nasa.gov/search/concepts/G2865237949-LPCLOUD.xml
+Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
+
+
+#### 1.c Filtramos los asset VEG_DIST-STATUS con baja nubosidad
+
+````python
+
+# Recorremos todos los productos encontrados y seleccionamos solo los archivos .tif
+# correspondientes al asset 'VEG-DIST-STATUS'
+# Guardamos la fecha del producto y el link al archivo 
+
+veg_status_assets = []
+
+for item in items:
+    for key, asset in item.assets.items():
+        if "VEG-DIST-STATUS" in key and asset.href.endswith(".tif"):
+            veg_status_assets.append({
+                "fecha": item.datetime.date(),
+                "url": asset.href
+            })
+
+print(f"Se encontraron {len(veg_status_assets)} archivos VEG-DIST-STATUS.")
+
+#imprimimos los primeros 10
+for registro in veg_status_assets[:10]:
+    print(f"  {registro['fecha']} → {registro['url']}")
+    
+````
+
+Se encontraron 234 archivos VEG-DIST-STATUS.
+2023-01-02 → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-DIST-STATUS.tif
+2023-01-02 → s3://lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-DIST-STATUS.tif
+2023-01-05 → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230105T131743Z_20231221T081050Z_L8_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230105T131743Z_20231221T081050Z_L8_30_v1_VEG-DIST-STATUS.tif
+2023-01-05 → s3://lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230105T131743Z_20231221T081050Z_L8_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230105T131743Z_20231221T081050Z_L8_30_v1_VEG-DIST-STATUS.tif
+2023-01-07 → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230107T133151Z_20231221T081127Z_S2A_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230107T133151Z_20231221T081127Z_S2A_30_v1_VEG-DIST-STATUS.tif
+2023-01-07 → s3://lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230107T133151Z_20231221T081127Z_S2A_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230107T133151Z_20231221T081127Z_S2A_30_v1_VEG-DIST-STATUS.tif
+2023-01-12 → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230112T133139Z_20231221T081146Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230112T133139Z_20231221T081146Z_S2B_30_v1_VEG-DIST-STATUS.tif
+2023-01-12 → s3://lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230112T133139Z_20231221T081146Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230112T133139Z_20231221T081146Z_S2B_30_v1_VEG-DIST-STATUS.tif
+2023-01-13 → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230113T131743Z_20231221T081204Z_L9_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230113T131743Z_20231221T081204Z_L9_30_v1_VEG-DIST-STATUS.tif
+2023-01-13 → s3://lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230113T131743Z_20231221T081204Z_L9_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230113T131743Z_20231221T081204Z_L9_30_v1_VEG-DIST-STATUS.tif
+  
+````python
+
+# Imprimimos cloud_cover de los items con asset VEG-DIST-STATUS
+for item in items:
+    if any("VEG-DIST-STATUS" in k for k in item.assets):
+        print(f"{item.datetime.date()} → Cloud cover: {item.properties.get('eo:cloud_cover', 'No disponible')}")
+
+````
+
+2023-01-02 → Cloud cover: 81
+2023-01-05 → Cloud cover: 79
+2023-01-07 → Cloud cover: 99
+2023-01-12 → Cloud cover: 80
+2023-01-13 → Cloud cover: 90
+2023-01-17 → Cloud cover: 81
+2023-01-21 → Cloud cover: 82
+2023-01-22 → Cloud cover: 79
+2023-01-27 → Cloud cover: 95
+2023-02-01 → Cloud cover: 99
+2023-02-06 → Cloud cover: 89
+2023-02-06 → Cloud cover: 89
+2023-02-11 → Cloud cover: 62
+2023-02-14 → Cloud cover: 100
+2023-02-16 → Cloud cover: 99
+2023-02-21 → Cloud cover: 60
+2023-02-26 → Cloud cover: 68
+2023-03-03 → Cloud cover: 99
+2023-03-08 → Cloud cover: 86
+2023-03-10 → Cloud cover: 100
+2023-03-18 → Cloud cover: 94
+2023-03-18 → Cloud cover: 93
+2023-03-23 → Cloud cover: 58
+2023-03-26 → Cloud cover: 83
+2023-03-28 → Cloud cover: 94
+...
+2024-03-12 → Cloud cover: 92
+2024-03-17 → Cloud cover: 99
+2024-03-27 → Cloud cover: 72
+2024-03-28 → Cloud cover: 89
+Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
+
+````python
+
+filtrados = []
+
+for item in items:
+    cloud = item.properties.get('eo:cloud_cover', None)
+    if cloud is not None and cloud < 40:
+        for key, asset in item.assets.items():
+            if (
+                "VEG-DIST-STATUS" in key and 
+                asset.href.endswith(".tif") and 
+                asset.href.startswith("https")
+            ):
+                filtrados.append({
+                    "fecha": item.datetime.date(),
+                    "url": asset.href,
+                    "nubes": cloud
+                })
+print(f"Se encontraron {len(filtrados)} archivos con menos de 40% de nubes.")
+for registro in filtrados[:10]:
+    print(f"{registro['fecha']} → Cloud cover: {registro['nubes']} → {registro['url']}")
+    
+````
+
+Se encontraron 12 archivos con menos de 40% de nubes.
+2023-06-26 → Cloud cover: 9 → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230626T133151Z_20231221T083621Z_S2A_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230626T133151Z_20231221T083621Z_S2A_30_v1_VEG-DIST-STATUS.tif
+2023-07-06 → Cloud cover: 0 → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230706T133151Z_20231221T083820Z_S2A_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230706T133151Z_20231221T083820Z_S2A_30_v1_VEG-DIST-STATUS.tif
+2023-07-21 → Cloud cover: 0 → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230721T133149Z_20231221T084137Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230721T133149Z_20231221T084137Z_S2B_30_v1_VEG-DIST-STATUS.tif
+2023-07-24 → Cloud cover: 26 → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230724T131653Z_20231221T084202Z_L9_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230724T131653Z_20231221T084202Z_L9_30_v1_VEG-DIST-STATUS.tif
+2023-08-01 → Cloud cover: 21 → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230801T131709Z_20231221T084344Z_L8_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230801T131709Z_20231221T084344Z_L8_30_v1_VEG-DIST-STATUS.tif
+2023-08-25 → Cloud cover: 21 → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230825T131712Z_20231221T084631Z_L9_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230825T131712Z_20231221T084631Z_L9_30_v1_VEG-DIST-STATUS.tif
+2023-08-25 → Cloud cover: 13 → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230825T133151Z_20231221T084657Z_S2A_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230825T133151Z_20231221T084657Z_S2A_30_v1_VEG-DIST-STATUS.tif
+2023-09-02 → Cloud cover: 26 → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230902T131718Z_20231221T084803Z_L8_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230902T131718Z_20231221T084803Z_L8_30_v1_VEG-DIST-STATUS.tif
+2023-09-04 → Cloud cover: 39 → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230904T133151Z_20231221T084849Z_S2A_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230904T133151Z_20231221T084849Z_S2A_30_v1_VEG-DIST-STATUS.tif
+2023-09-18 → Cloud cover: 21 → https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1_VEG-DIST-STATUS.tif
+
+### 2. VISUALIZAR Y EXPLORAR Productos VEG_DIST_STATUS

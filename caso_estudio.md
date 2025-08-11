@@ -716,3 +716,70 @@ datetime                           2025-07-17 13:34:04.242000+00:00
 cloud_cover                                                       0
 url               https://data.lpdaac.earthdatacloud.nasa.gov/lp...
 Name: 218, dtype: object
+
+````python
+
+#seleccionamos la url del producto mas reciente con nubosidad < 20%
+url=más_reciente_baja_nubosidad["url"]
+
+#Visualizar el subproducto VEG_DIST_DATE en comparación con el subproducto VEG_DIST_STATE
+
+import matplotlib.pyplot as plt
+import geopandas as gpd
+import rioxarray
+import numpy as np
+from shapely.geometry import box
+
+# AOI
+aoi_geom = gpd.GeoDataFrame(geometry=[box(-46.78, -4.61, -46.58, -4.41)], crs="EPSG:4326")
+
+# Subproducto VEG_DIST_DATE
+url1 = más_reciente_baja_nubosidad["url"]
+da1 = rioxarray.open_rasterio(url1, masked=True).squeeze()
+aoi_proj = aoi_geom.to_crs(da1.rio.crs)
+da1_clip = da1.rio.clip(aoi_proj.geometry, aoi_proj.crs)
+masked1 = np.ma.masked_where(da1_clip <= 0, da1_clip)
+
+# Subproducto VEG_DIST_STATUS
+url2= "https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1_VEG-DIST-STATUS.tif"
+da2 = rioxarray.open_rasterio(url2, masked=True).squeeze()
+da2_clip = da2.rio.clip(aoi_proj.geometry, aoi_proj.crs)
+masked2 = np.ma.masked_where(da2_clip <= 0, da2_clip)
+
+# Gráfico de los 2 subproductos
+fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+
+# Mapa 1
+img1 = axes[0].imshow(
+    masked1,
+    cmap="viridis",
+    extent=da1_clip.rio.bounds(),
+    interpolation="nearest"
+)
+axes[0].set_title("VEG_DIST_DATE 17/07/2025")
+axes[0].set_frame_on(True)
+cbar1 = plt.colorbar(img1, ax=axes[0], shrink=0.7)
+cbar1.set_label("Día desde 2020-12-31")
+
+# colormap personalizado
+white_to_red = mcolors.LinearSegmentedColormap.from_list("white_to_red", ["white", "red"])
+# Mapa 2
+img2 = axes[1].imshow(
+    masked2,
+    cmap= white_to_red,
+    extent=da2_clip.rio.bounds(),
+    interpolation="nearest"
+)
+axes[1].set_title("VEG_DIST-STATUS 18/09/2023")
+axes[1].set_frame_on(True)
+cbar2 = plt.colorbar(img2, ax=axes[1], shrink=0.7)
+cbar2.set_label("Valor de disturbio")
+
+plt.tight_layout()
+plt.show()
+
+
+````
+
+![](fig/output8.png)
+

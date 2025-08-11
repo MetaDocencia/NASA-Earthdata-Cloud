@@ -108,11 +108,11 @@
   Introducción al uso de datos Nasa Earthdata cloud
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 86%" class="percentage">
-    86%
+<aside class="col-md-12 lesson-progress"><div style="width: 87%" class="percentage">
+    87%
   </div>
   <div class="progress metadocencia">
-    <div class="progress-bar metadocencia" role="progressbar" style="width: 86%" aria-valuenow="86" aria-label="Progreso de la lección" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar metadocencia" role="progressbar" style="width: 87%" aria-valuenow="87" aria-label="Progreso de la lección" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -306,7 +306,7 @@
 
 
 
-        <p>Tiempo estimado: <i aria-hidden="true" data-feather="clock"></i> 21 minutos</p>
+        <p>Tiempo estimado: <i aria-hidden="true" data-feather="clock"></i> 20 minutos</p>
 
         <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Mostrar todas las soluciones " data-collapse="Cerrar todas las soluciones "> Mostrar todas las soluciones <i aria-hidden="true" data-feather="plus"></i></button>
@@ -321,9 +321,13 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Preguntas</h3>
-<ul><li>¿Qué son los modelos ráster y vectorial?</li>
-<li>¿Cuáles son las diferencias clave entre estos formatos?</li>
-<li>¿En qué situaciones conviene usar cada uno?</li>
+<ul><li>¿Qué proporción del área de estudio presenta disturbios recientes en
+la cobertura vegetal según los datos VEG_DIST_STATUS filtrados por baja
+nubosidad?</li>
+<li>¿Cómo ha evolucionado la extensión de los disturbios a lo largo del
+período analizado en Buriticupu?</li>
+<li>¿En qué zonas y fechas específicas se detectaron los disturbios más
+intensos (≥50% de cambio en la cobertura vegetal)?</li>
 </ul></div>
 </div>
 </div>
@@ -331,12 +335,13 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objetivos</h3>
-<ul><li>Comprender qué representan los modelos ráster y vectorial en el
-análisis geoespacial.</li>
-<li>Diferenciar entre los formatos según su estructura de datos y
-aplicaciones.</li>
-<li>Identificar casos de uso en los que se aplica cada modelo para
-resolver problemas ambientales.</li>
+<ul><li>Procesar y filtrar los productos OPERA DIST-ALERT para extraer
+información relevante del área de estudio en Maranhão.</li>
+<li>Visualizar y analizar los cambios en la cobertura vegetal a lo largo
+del tiempo, identificando patrones de disturbio recientes.</li>
+<li>Elaborar mapas y gráficos que sinteticen la información geoespacial,
+facilitando la interpretación y comunicación de los resultados para la
+toma de decisiones en conservación.</li>
 </ul></div>
 </div>
 </div>
@@ -880,7 +885,23 @@ nan], …, [nan, nan, 0., …, 0., 0., 0.], [nan, nan, 0., …, 0., 0., 0.],
 <span id="cb12-25"><a href="#cb12-25" tabindex="-1"></a>plt.tight_layout()</span>
 <span id="cb12-26"><a href="#cb12-26" tabindex="-1"></a>plt.show()</span></code></pre>
 </div>
-<figure><img src="../fig/output3.png" class="figure mx-auto d-block"></figure><p>¿Hay algo raro en los graficos?</p>
+<figure><img src="../fig/output3.png" class="figure mx-auto d-block"></figure><div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Aviso</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p><strong>¿Hay algo raro en los gráficos?</strong></p>
+<p>Tal vez notes que una fecha tiene dos puntos. Eso es porque el
+producto OPERA usa imágenes SENTINEL y LANDSAT, y puede ocurrir que en
+alguna fecha haya dos productos. En ese caso, es necesario seleccionar
+alguno de ellos en base a algún criterio. Debajo, seleccionamos la
+imagen con menos nubes y, de esa forma, cuando volvemos a ejecutar el
+código que genera el gráfico encontramos solo un producto por fecha.</p>
+</div>
+</div>
+</div>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1042,7 +1063,7 @@ cloud_cover | url</div>
 <span id="cb16-16"><a href="#cb16-16" tabindex="-1"></a>plt.tight_layout()</span>
 <span id="cb16-17"><a href="#cb16-17" tabindex="-1"></a>plt.show()</span></code></pre>
 </div>
-<figure><img src="../fig/output6.png" class="figure mx-auto d-block"></figure><div class="codewrapper sourceCode" id="cb17">
+<figure><img src="../fig/output5.png" class="figure mx-auto d-block"></figure><div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a></span>

@@ -17,7 +17,7 @@ carpentry: 'metadocencia'
 # carpentry_description: "Custom Carpentry"
 
 # Overall title for pages.
-title: 'Introducción al uso de datos Nasa Earthdata cloud'
+title: 'Introducción al uso de datos NASA Earthdata cloud'
 
 # Alt-text description of the lesson.
 carpentry_description: 'MetaDocencia'

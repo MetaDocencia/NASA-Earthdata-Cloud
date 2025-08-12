@@ -66,9 +66,9 @@ Puede tardar unos segundos, ¡así que paciencia! Si aparece un aviso de que la 
         - `02_Configuración_y_Verificación_del_Entorno.md`
         
 
-![](fig/hub_configuracion_1.png)
+![](fig/configuracion_1.png)
 
-![](fig/hub_configuracion.png)
+![](fig/configuracion.png)
 
 
 5. Te preguntará si quieres proceder a sobrescribir el archivo .netrc. Confirma que sí ingresando `S` y presionando `enter`.

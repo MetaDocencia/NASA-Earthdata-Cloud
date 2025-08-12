@@ -2,7 +2,7 @@
 site: sandpaper::sandpaper_site
 ---
 
-Les damos la bienvenida al curso **"Introducción al uso de datos Nasa Earthdata cloud para el monitoreo de cambios y disturbios ambientales"**, una adaptación del curso [«NASA TOPS-T Reproducibly Analyzing Wildfire, Drought, and Flood Risk with NASA Earthdata Cloud»](https://github.com/ScienceCore/climaterisk/tree/main) desarrollado por [2i2c](https://2i2c.org/) y [MetaDocencia](https://www.metadocencia.org/).
+Les damos la bienvenida al curso **"Introducción al uso de datos NASA Earthdata cloud para el monitoreo de cambios y disturbios ambientales"**, una adaptación del curso [«NASA TOPS-T Reproducibly Analyzing Wildfire, Drought, and Flood Risk with NASA Earthdata Cloud»](https://github.com/ScienceCore/climaterisk/tree/main) desarrollado por [2i2c](https://2i2c.org/) y [MetaDocencia](https://www.metadocencia.org/).
 
 En este taller, se explorara cómo utilizar los datos satelitales de la plataforma Earthdata Cloud de la NASA, específicamente los productos OPERA, para el monitoreo de cambios y disturbios ambientales. Se toma como caso de estudio los cambios en la cobertura vegetal en la región de Maranhão, Brasil, con el objetivo de identificar patrones de deforestación a través de Jupyter Notebooks con código en Python para trabajar de manera reproducible con los datos. 
 

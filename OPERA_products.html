@@ -235,7 +235,7 @@
       <div class="accordion-body">
         <ul><li><a href="#nasa-earthdata">NASA Earthdata</a></li>
 <li><a href="#productos-opera">Productos OPERA</a></li>
-<li><a href="#producto-opera-dist">Producto OPERA DIST</a></li>
+<li><a href="#producto-opera-dist-alert">Producto OPERA DIST-ALERT</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -318,7 +318,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>NASA Earthdata Cloud y productos OPERA</h1>
-        <p>Última actualización: 2025-08-12 |
+        <p>Última actualización: 2025-08-13 |
 
         <a href="https://metadocencia.github.io/NASA-Earthdata-Cloud/edit/main/episodes/OPERA_products.Rmd" class="external-link">Mejora esta página <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -392,25 +392,25 @@ extensión de cuerpos de agua.</li>
 </ul><p>En este tutorial nos enfocaremos en <strong>DIST ALERT</strong>,
 diseñada para detectar cambios recientes en la vegetación como los
 causados por deforestación o incendios.</p>
-</section><section><h2 class="section-heading" id="producto-opera-dist">Producto OPERA DIST<a class="anchor" aria-label="anchor" href="#producto-opera-dist"></a></h2>
-<hr class="half-width"><p>Los productos DIST mapean la <em>perturbación de la vegetación</em>
-(en concreto, la pérdida de cubierta vegetal por píxel HLS siempre que
-haya una disminución indicada) a partir de escenas armonizadas Landsat-8
-y Sentinel-2 A/B (HLS). Una de las aplicaciones de estos datos es
-cuantificar los daños causados por los <em>incendios forestales</em>. El
-producto DIST_ALERT se publica a intervalos regulares (al igual que las
-imágenes HLS, aproximadamente cada 12 días en un determinado
-mosaico/región). El producto DIST_ANN resume las mediciones de las
-alteraciones a lo largo de un año.</p>
-<p>Los productos DIST cuantifican los datos de reflectancia de la
+</section><section><h2 class="section-heading" id="producto-opera-dist-alert">Producto OPERA DIST-ALERT<a class="anchor" aria-label="anchor" href="#producto-opera-dist-alert"></a></h2>
+<hr class="half-width"><p>Los productos DIST-ALERT mapean la <em>perturbación de la
+vegetación</em> (en concreto, la pérdida de cubierta vegetal por píxel
+HLS siempre que haya una disminución indicada) a partir de escenas
+armonizadas Landsat-8 y Sentinel-2 A/B (HLS). Una de las aplicaciones de
+estos datos es cuantificar los daños causados por los <em>incendios
+forestales</em>. El producto DIST-ALERT_ALERT se publica a intervalos
+regulares (al igual que las imágenes HLS, aproximadamente cada 12 días
+en un determinado mosaico/región). El producto DIST-ALERT_ANN resume las
+mediciones de las alteraciones a lo largo de un año.</p>
+<p>Los productos DIST-ALERT cuantifican los datos de reflectancia de la
 superficie (RS) (en inglés, Surface Reflectance, SR) adquiridos a partir
 de imágenes terrestres operacionales <em>Operational Land Imager</em>
 (OLI) (en español, Generador de Imágenes Terrestres Operacional) a bordo
 del satélite de teledetección Landsat-8 y del <em>Multi-Spectral
 Instrument</em> (MSI) (en español, Instrumento Multiespectral) a bordo
 del satélite de teledetección Sentinel-2 A/B. Los productos de datos HLS
-DIST son archivos de tipo ráster, cada uno de ellos asociado a mosaicos
-de la superficie terrestre. Cada mosaico se representa mediante
+DIST-ALERT son archivos de tipo ráster, cada uno de ellos asociado a
+mosaicos de la superficie terrestre. Cada mosaico se representa mediante
 coordenadas cartográficas proyectadas alineadas con el <a href="https://en.wikipedia.org/wiki/Military_Grid_Reference_System" class="external-link">Sistema
 de Referencia de Cuadrículas Militares (MGRS, por sus siglas en inglés
 de <em>Military Grid Reference System</em>)</a>. Cada mosaico se divide
@@ -418,8 +418,8 @@ en 3,660 filas y 3,660 columnas con un espaciado de píxeles de 30 metros
 (así que un mosaico es de <span class="math inline">\(109.8\,\mathrm{km}\)</span> largo en cada lado).
 Los mosaicos vecinos se solapan 4.900 metros en cada dirección (los
 detalles se describen detalladamente en la <a href="https://d2pn8kiwq2w21t.cloudfront.net/documents/OPERA_DIST_HLS_Product_Specification_V1.pdf" class="external-link">especificación
-de producto DIST</a>).</p>
-<p>Los productos OPERA DIST se distribuyen como <a href="https://www.cogeo.org/" class="external-link">GeoTIFFs optimizados para la nube</a>; en
+de producto DIST-ALERT</a>).</p>
+<p>Los productos OPERA DIST-ALERT se distribuyen como <a href="https://www.cogeo.org/" class="external-link">GeoTIFFs optimizados para la nube</a>; en
 la práctica, esto significa que las diferentes bandas se almacenan en
 archivos de formato TIFFs (TIFF, por sus siglas en inglés, <em>Tagged
 Image File Format</em>) distintos. La especificación TIFF permite el

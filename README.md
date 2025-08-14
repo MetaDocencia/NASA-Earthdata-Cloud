@@ -56,6 +56,8 @@ El desarrollo de esta formación fue posible gracias al Grant NNH22ZDA001N-TOPST
 
 ¿Te vienen bien cualquiera de nuestros contenidos? ¡Sírvete sin culpa! Nuestros materiales están disponibles en forma gratuita bajo [licencia CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Es decir, puedes reusar o editar cualquier material que aparece encima de estas líneas, lo único que pedimos a cambio es que incluyas una referencia a esta página web o la referencia del material cuando el material tenga una forma explícita de referenciarlo. Para más información, por favor escríbenos a formacion@metadocencia.org.
 
+Cita sugerida: MetaDocencia. (2025, agosto 15). Introducción al uso de datos Nasa Earthdata cloud para el monitoreo de cambios y disturbios ambientales. Zenodo. https://doi.org/10.5281/zenodo.16879019
+
 ## Cómo contribuir
 
 Puedes seguir las instrucciones de como [contribuir](./CONTRIBUTING.md)

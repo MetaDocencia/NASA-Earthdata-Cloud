@@ -3,6 +3,25 @@ message: "Please cite this lesson using the information in this file when you re
 authors:
   - given-names: MetaDocencia
     family-names: MetaDocencia
+contributors:
+  - given-names: Jesica
+    family-names: Formoso
+    orcid: "https://orcid.org/0000-0003-3062-4036"
+  - given-names: Eliana
+    family-names: Gonzalez
+    orcid: "https://orcid.org/0000-0001-6846-9962"
+  - given-names: Maira
+    family-names: Gayol
+    orcid: "https://orcid.org/0000-0003-3236-7264"
+  - given-names: Mariela
+    family-names: Rajngewerc
+    orcid: "https://orcid.org/0000-0001-8268-3260"
+  - given-names: Patricia
+    family-names: Loto
+    orcid: "https://orcid.org/0000-0003-1849-6916"
+  - given-names: Nicolás
+    family-names: Palópoli
+    orcid: "https://orcid.org/0000-0001-7925-6436"
 abstract: Introducción al uso de datos Nasa Earthdata cloud para el monitoreo de cambios y disturbios ambientales.
 title:Introducción al uso de datos Nasa Earthdata cloud para el monitoreo de cambios y disturbios ambientales
 version: v1.0.0

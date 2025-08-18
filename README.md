@@ -1,32 +1,32 @@
-# Introducción al uso de datos Nasa Earthdata cloud para el monitoreo de cambios y disturbios ambientales
+# Introducción al uso de datos Nasa Earthdata Cloud para el monitoreo de cambios y disturbios ambientales
 
 En este taller, se explorara cómo utilizar los datos satelitales de la plataforma Earthdata Cloud de la NASA, específicamente los productos OPERA, para el monitoreo de cambios y disturbios ambientales. Se toma como caso de estudio los cambios en la cobertura vegetal en la región de Maranhão, Brasil, con el objetivo de identificar patrones de deforestación a través de Jupyter Notebooks con código en Python para trabajar de manera reproducible con los datos. El taller se organiza en tres modulos:
 
 1. Fundamentos de teledetección.
-2. Utilización de preoductos OPERA de la NASA y plataforma NASA Earthdata.
+2. Utilización de productos OPERA de la NASA y plataforma NASA Earthdata.
 3. Caso de estudio: Deforestación en Maranhão.
 
 ## Motivación para participar
 
-Entender los cambios en la superficie terrestre y sus consecuencias es crucial para la gestión sostenible de los recursos naturales. En este contexto, los productos OPERA de la NASA ofrecen una poderosa herramienta para monitorear modificaciones en la vegetación, las precipitaciones, las aguas superficiales y el uso del suelo. A través de este taller, MetaDocencia busca capacitar a los participantes para que puedan analizar estos cambios de manera reproducible, a través de Jupyter Notebooks con código en Python, con el fin de aplicar los resultados en la toma de decisiones informadas para estudios ambientales y planificación territorial.
+Entender los cambios en la superficie terrestre y sus consecuencias es crucial para la gestión sostenible de los recursos naturales. En este contexto, los productos OPERA de la NASA ofrecen una poderosa herramienta para monitorear modificaciones en la vegetación, las precipitaciones, las aguas superficiales y el uso del suelo. A través de este taller, MetaDocencia busca capacitar a quienes participen para que puedan analizar estos cambios de manera reproducible, a través de Jupyter Notebooks con código en Python, con el fin de aplicar los resultados en la toma de decisiones informadas para estudios ambientales y planificación territorial.
 
 ## Objetivos de aprendizaje
 
 Quienes completen esta formación podrán:
 
 - Acceder y visualizar los datos terrestres, disponibles a través de la plataforma Earthdata Cloud de la NASA, de una zona de interés específica.
-- Tener una primera aproximación al uso de los nuevos productos satelitales de NASA OPERA dist alert para la evaluación de disturbios en la cobertura vegetal y el análisis de alertas ambientales. 
+- Tener una primera aproximación al uso de los nuevos productos satelitales de NASA OPERA DIST-ALERT para la evaluación de disturbios en la cobertura vegetal y el análisis de alertas ambientales. 
 - Aplicar herramientas de código abierto para el análisis geoespacial utilizando flujos de trabajo reproducibles.  
 
 ## ¿Para quién está pensado el taller?
 
-Este curso está dirigido a profesionales que deseen aprender a utilizar productos derivados de imágenes satelitales para el análisis de problemáticas ambientales, como la detección de deforestación y el monitoreo de cambios en la cobertura del suelo. Es necesario contar con conocimientos básicos de programación en algún de programación para seguir los contenidos, ya que el análisis de los datos se realiza utilzando Python mediante Jupyter Notebooks.
+Este curso está dirigido a profesionales que deseen aprender a utilizar productos derivados de imágenes satelitales para el análisis de problemáticas ambientales, como la detección de deforestación y el monitoreo de cambios en la cobertura del suelo. Es necesario contar con conocimientos básicos de programación en algún lenguaje de programación para seguir los contenidos, ya que el análisis de los datos se realiza utilzando Python mediante Jupyter Notebooks.
 
-Puedes encontrár más información de potenciales participantes en la sección [**perfiles de participantes**](https://github.com/MetaDocencia/NASA-Earthdata-Cloud/blob/main/profiles/learner-profiles.md).
+Puedes encontrar más información de potenciales participantes en la sección [**perfiles de participantes**](https://github.com/MetaDocencia/NASA-Earthdata-Cloud/blob/main/profiles/learner-profiles.md).
 
 ## ¿Qué **no** incluye esta formación?
 
-- Fundamentos de programación en python.
+- Fundamentos de programación en Python.
 - Desarrollo extensivo de librerías de Python utilizadas a lo largo del tutorial.
 - Técnicas de modelado geoespacial o análisis predictivo.
 - Teoría avanzada de conceptos relacionados con los datos geoespaciales.
@@ -38,9 +38,9 @@ Se estima que este curso lleva un total de 3 horas, incluyendo 3 módulos de 50 
 
 ## Agradecimientos
 
-Esta formación es una adaptación al español de los materiales desarrollados por [2i2c](https://2i2c.org/) y [MetaDocencia](https://www.metadocencia.org/) para enseñar a usar los productos de la plataforma [NASA Earthdata Cloud](https://www.earthdata.nasa.gov/) para evaluar riesgo de incendios, sequías e inundaciones. Pueden encontrar los materiales originales aquí: [https://github.com/ScienceCore/climaterisk](https://github.com/ScienceCore/climaterisk). 
+Esta formación es una adaptación al español de los materiales desarrollados por [2i2c](https://2i2c.org/) y [MetaDocencia](https://www.metadocencia.org/) para enseñar a usar los productos de la plataforma [NASA Earthdata Cloud](https://www.earthdata.nasa.gov/) para evaluar riesgo de incendios, sequías e inundaciones. Puedes encontrar los materiales originales aquí: [https://github.com/ScienceCore/climaterisk](https://github.com/ScienceCore/climaterisk). 
 
-El desarrollo de esta formación fue posible gracias al Grant NNH22ZDA001N-TOPST otorgado por NASA TOPS [https://zenodo.org/records/8250979](https://zenodo.org/records/8250979) y gracias al Grant otorgado por la Chan Zuckerberg Initiative [https://zenodo.org/records/7386373](https://zenodo.org/records/7386373).
+El desarrollo de esta formación fue posible gracias al Grant NNH22ZDA001N-TOPST otorgado por NASA Open Science [https://zenodo.org/records/8250979](https://zenodo.org/records/8250979) y gracias a financiamiento otorgado por Chan Zuckerberg Initiative [https://zenodo.org/records/7386373](https://zenodo.org/records/7386373).
 
 
 ## Versión adaptada por:
@@ -54,13 +54,13 @@ El desarrollo de esta formación fue posible gracias al Grant NNH22ZDA001N-TOPST
 
 ## ¡Sirvete sin culpa!
 
-¿Te vienen bien cualquiera de nuestros contenidos? ¡Sírvete sin culpa! Nuestros materiales están disponibles en forma gratuita bajo [licencia CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Es decir, puedes reusar o editar cualquier material que aparece encima de estas líneas, lo único que pedimos a cambio es que incluyas una referencia a esta página web o la referencia del material cuando el material tenga una forma explícita de referenciarlo. Para más información, por favor escríbenos a formacion@metadocencia.org.
+¿Te vienen bien cualquiera de nuestros contenidos? ¡Sírvete sin culpa! Nuestros materiales están disponibles en forma gratuita bajo [licencia CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Es decir, puedes reusar o editar cualquier material que aparece en este repositorio, lo único que pedimos a cambio es que incluyas una referencia a esta página web o la referencia del material cuando el material tenga una forma explícita de referenciarlo. Para más información, por favor escríbenos a formacion@metadocencia.org.
 
-Cita sugerida: MetaDocencia. (2025, agosto 15). Introducción al uso de datos Nasa Earthdata cloud para el monitoreo de cambios y disturbios ambientales. Zenodo. https://doi.org/10.5281/zenodo.16879019
+Cita sugerida: MetaDocencia. (2025, agosto 15). Introducción al uso de datos NASA Earthdata Cloud para el monitoreo de cambios y disturbios ambientales. Zenodo. https://doi.org/10.5281/zenodo.16879019
 
 ## Cómo contribuir
 
-Puedes seguir las instrucciones de como [contribuir](./CONTRIBUTING.md)
+Puedes seguir las instrucciones de cómo [contribuir](./CONTRIBUTING.md)
 
 ## 📬 Contacto
 
@@ -74,46 +74,46 @@ Puedes encontrar más materiales y recursos en:
 
 # Plantilla de Lecciones Reproducibles de MetaDocencia
 
-Este repositorio es una **plantilla oficial de MetaDocencia** para crear lecciones reproducibles usando el [Carpentries Workbench](https://carpentries.github.io/sandpaper/), adaptada con nuestra configuración y estilo personalizado.
+Este repositorio es una **plantilla oficial de MetaDocencia** para crear lecciones reproducibles usando [Carpentries Workbench](https://carpentries.github.io/sandpaper/), adaptada con nuestra configuración y estilo personalizado.
 
-> Usá este repositorio como punto de partida para tus propias lecciones, directamente desde GitHub — no necesitás herramientas locales.
+> Usa este repositorio como punto de partida para tus propias lecciones, directamente desde GitHub — no necesitás herramientas locales.
 
 ## 🚀 Cómo comenzar una nueva lección
 
 ### 1. Crear un nuevo repositorio
 
-Ingresá directamente a:
+Ingresa directamente a:
 https://github.com/MetaDocencia/metadocencia-workbench-template/generate
 
-Elegí un nombre para tu nuevo repositorio (por ejemplo, `leccion-mi-tema`) y hacé clic en **Create repository**.
+Elige un nombre para tu nuevo repositorio (por ejemplo, `leccion-mi-tema`) y haz clic en **Create repository**.
 
 ### 2. Editar tu lección desde GitHub
 
-Una vez creado tu repositorio, podés editar todo directamente desde la interfaz web:
+Una vez creado tu repositorio, puedes editar todo directamente desde la interfaz web:
 
 1. Los episodios de la lección están en la carpeta `episodes/` (cada archivo `.md` es una sección).
 2. La página de inicio es `index.md`.
 3. La configuración general está en `config.yaml`.
 
-Usá el botón ✏️ **edit** en cada archivo para hacer cambios, y luego seleccioná **Commit changes** para guardar.
+Usa el botón ✏️ **edit** en cada archivo para hacer cambios, y luego selecciona **Commit changes** para guardar.
 
-No necesitás RStudio ni herramientas de línea de comandos.
+No necesitas RStudio ni herramientas de línea de comandos.
 
 ## Publicar el sitio con GitHub Pages
 
-Para habilitar la publicación automática del sitio web de la lección con GitHub Pages, seguí estos pasos:
+Para habilitar la publicación automática del sitio web de la lección con GitHub Pages, sigue estos pasos:
 
-1. Desde el repositorio, hacé clic en **Settings > Pages**.
+1. Desde el repositorio, haz clic en **Settings > Pages**.
 2. En la sección **"Source"**, configurá:
    - **Branch:** `gh-pages`
    - **Folder:** `/ (root)`
-3. Hacé clic en **“Save”**.
+3. Haz clic en **“Save”**.
 
 ### Verificar la publicación
 
-1. Editá cualquier archivo del repositorio de la lección (por ejemplo, un episodio).
+1. Edita cualquier archivo del repositorio de la lección (por ejemplo, un episodio).
 2. GitHub activará automáticamente el flujo de publicación.
-3. Podés seguir el proceso en la pestaña Actions.
+3. Puedes seguir el proceso en la pestaña Actions.
 4. Una vez que el flujo termine, el sitio estará disponible en:
 
 ``` 
@@ -123,10 +123,10 @@ Ejemplo:
 https://metadocencia.github.io/lesson-example/
 
 ## 📬 Contacto
-¿Tenés preguntas o sugerencias? Escribinos a:
+¿Tienes preguntas o sugerencias? Escríbenos a:
 📧 infraestructura@metadocencia.org
 
-## Explorá más de nuestros recursos:
+## Explora más de nuestros recursos:
 🌐 https://www.metadocencia.org
 
 ---

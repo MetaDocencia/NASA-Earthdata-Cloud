@@ -1,9 +1,9 @@
-# Introducción al uso de datos Nasa Earthdata Cloud para el monitoreo de cambios y disturbios ambientales
+# Introducción al uso de datos NASA Earthdata Cloud para el monitoreo de cambios y disturbios ambientales
 
-En este taller, se explorara cómo utilizar los datos satelitales de la plataforma Earthdata Cloud de la NASA, específicamente los productos OPERA, para el monitoreo de cambios y disturbios ambientales. Se toma como caso de estudio los cambios en la cobertura vegetal en la región de Maranhão, Brasil, con el objetivo de identificar patrones de deforestación a través de Jupyter Notebooks con código en Python para trabajar de manera reproducible con los datos. El taller se organiza en tres modulos:
+En este taller, se explorará cómo utilizar los datos satelitales de la plataforma Earthdata Cloud de la NASA, específicamente los productos OPERA, para el monitoreo de cambios y disturbios ambientales. Se tomarán como caso de estudio los cambios en la cobertura vegetal en la región de Maranhão, Brasil, con el objetivo de identificar patrones de deforestación a través de Jupyter Notebooks con código en Python para trabajar de manera reproducible con los datos. El taller se organiza en tres modulos:
 
 1. Fundamentos de teledetección.
-2. Utilización de productos OPERA de la NASA y plataforma NASA Earthdata.
+2. Utilización de productos OPERA de la NASA y la plataforma NASA Earthdata.
 3. Caso de estudio: Deforestación en Maranhão.
 
 ## Motivación para participar
@@ -20,7 +20,7 @@ Quienes completen esta formación podrán:
 
 ## ¿Para quién está pensado el taller?
 
-Este curso está dirigido a profesionales que deseen aprender a utilizar productos derivados de imágenes satelitales para el análisis de problemáticas ambientales, como la detección de deforestación y el monitoreo de cambios en la cobertura del suelo. Es necesario contar con conocimientos básicos de programación en algún lenguaje de programación para seguir los contenidos, ya que el análisis de los datos se realiza utilzando Python mediante Jupyter Notebooks.
+Este curso está dirigido a profesionales que deseen aprender a utilizar productos derivados de imágenes satelitales para el análisis de problemáticas ambientales, como la detección de deforestación y el monitoreo de cambios en la cobertura del suelo. Es necesario contar con conocimientos básicos de programación en algún lenguaje de programación para seguir los contenidos, ya que el análisis de los datos se realiza utilizando Python mediante Jupyter Notebooks.
 
 Puedes encontrar más información de potenciales participantes en la sección [**perfiles de participantes**](https://github.com/MetaDocencia/NASA-Earthdata-Cloud/blob/main/profiles/learner-profiles.md).
 
@@ -38,7 +38,7 @@ Se estima que este curso lleva un total de 3 horas, incluyendo 3 módulos de 50 
 
 ## Agradecimientos
 
-Esta formación es una adaptación al español de los materiales desarrollados por [2i2c](https://2i2c.org/) y [MetaDocencia](https://www.metadocencia.org/) para enseñar a usar los productos de la plataforma [NASA Earthdata Cloud](https://www.earthdata.nasa.gov/) para evaluar riesgo de incendios, sequías e inundaciones. Puedes encontrar los materiales originales aquí: [https://github.com/ScienceCore/climaterisk](https://github.com/ScienceCore/climaterisk). 
+Esta formación es una adaptación al español de los materiales desarrollados por [2i2c](https://2i2c.org/) y [MetaDocencia](https://www.metadocencia.org/) para enseñar a usar los productos de la plataforma [NASA Earthdata Cloud](https://www.earthdata.nasa.gov/) para evaluar el riesgo de incendios, sequías e inundaciones. Puedes encontrar los materiales originales aquí: [https://github.com/ScienceCore/climaterisk](https://github.com/ScienceCore/climaterisk). 
 
 El desarrollo de esta formación fue posible gracias al Grant NNH22ZDA001N-TOPST otorgado por NASA Open Science [https://zenodo.org/records/8250979](https://zenodo.org/records/8250979) y gracias a financiamiento otorgado por Chan Zuckerberg Initiative [https://zenodo.org/records/7386373](https://zenodo.org/records/7386373).
 

@@ -45,19 +45,8 @@ Al iniciar sesión en https://climaterisk.opensci.2i2c.cloud se clonará automá
 ![](fig/hub_startup.png)
 
 
-3. Ejecuta todas las celdas de la notebook `startup.ipynb`. Esto generará todas las notebooks que necesitas para poder seguir el tutorial. 
 
-
-![](fig/hub_startup2.png)
-
-::: callout
-
-Puede tardar unos segundos, ¡así que paciencia! Si aparece un aviso de que la notebook está ocupada, es normal.
-
-:::
-
-
-4. Vincula tu usuario de hub con tus credenciales de NASA Earthdata. Para eso debes acceder a la notebook 02_Configuración_y_Verificacion_del_Entorno y ejecutar todas las celdas. 
+3. Vincula tu usuario de hub con tus credenciales de NASA Earthdata. Para eso debes acceder a la notebook 02_Configuración_y_Verificacion_del_Entorno y ejecutar todas las celdas. 
 
 - `book/`
   - `es/`
@@ -71,13 +60,13 @@ Puede tardar unos segundos, ¡así que paciencia! Si aparece un aviso de que la 
 ![](fig/configuracion.png)
 
 
-5. Te preguntará si quieres proceder a sobrescribir el archivo .netrc. Confirma que sí ingresando `S` y presionando `enter`.
+4. Te preguntará si quieres proceder a sobrescribir el archivo .netrc. Confirma que sí ingresando `S` y presionando `enter`.
 
 ![](fig/netrc.png)
 
-6. Ingresa tus credenciales de NASA Earthdata (usuario y contraseña). Si todo funcionó correctamente, se te indicará que el archivo .netrc con tus credenciales se configuró correctamente. 
+5. Ingresa tus credenciales de NASA Earthdata (usuario y contraseña). Si todo funcionó correctamente, se te indicará que el archivo .netrc con tus credenciales se configuró correctamente. 
 
-7. Finalmente, ingresa a la notebook sobre la que estaremos trabajando:
+6. Finalmente, ingresa a la notebook sobre la que estaremos trabajando:
 
 
 - `book/`

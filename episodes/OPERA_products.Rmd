@@ -38,7 +38,7 @@ Los productos se publican en formatos ráster y están organizados como mosaicos
 - **DIST** (Land Surface Disturbance): registra alteraciones de la superficie terrestre.
 - **DSWx** (Dynamic Surface Water Extent): registra la extensión de cuerpos de agua.
 
-En este tutorial nos enfocaremos en **DIST ALERT**, diseñada para detectar cambios recientes en la vegetación como los causados por deforestación o incendios.
+En este tutorial nos enfocaremos en **DIST ALERT**, diseñada para detectar cambios recientes en la vegetación, como los causados por deforestación o incendios.
 
 
 
@@ -46,9 +46,9 @@ En este tutorial nos enfocaremos en **DIST ALERT**, diseñada para detectar camb
 
 Los productos DIST-ALERT mapean la _perturbación de la vegetación_ (en concreto, la pérdida de cubierta vegetal por píxel HLS siempre que haya una disminución indicada) a partir de escenas armonizadas Landsat-8 y Sentinel-2 A/B (HLS). Una de las aplicaciones de estos datos es cuantificar los daños causados por los _incendios forestales_. El producto DIST-ALERT_ALERT se publica a intervalos regulares (al igual que las imágenes HLS, aproximadamente cada 12 días en un determinado mosaico/región). El producto DIST-ALERT_ANN resume las mediciones de las alteraciones a lo largo de un año.
 
-Los productos DIST-ALERT cuantifican los datos de reflectancia de la superficie (RS) (en inglés, Surface Reflectance, SR) adquiridos a partir de imágenes terrestres operacionales _Operational Land Imager_ (OLI) (en español, Generador de Imágenes Terrestres Operacional) a bordo del satélite de teledetección Landsat-8 y del _Multi-Spectral Instrument_ (MSI) (en español, Instrumento Multiespectral) a bordo del satélite de teledetección Sentinel-2 A/B. Los productos de datos HLS DIST-ALERT son archivos de tipo ráster, cada uno de ellos asociado a mosaicos de la superficie terrestre. Cada mosaico se representa mediante coordenadas cartográficas proyectadas alineadas con el [Sistema de Referencia de Cuadrículas Militares (MGRS, por sus siglas en inglés de _Military Grid Reference System_)](https://en.wikipedia.org/wiki/Military_Grid_Reference_System). Cada mosaico se divide en 3,660 filas y 3,660 columnas con un espaciado de píxeles de 30 metros (así que un mosaico es de $109.8\,\mathrm{km}$ largo en cada lado). Los mosaicos vecinos se solapan 4.900 metros en cada dirección (los detalles se describen detalladamente en la [especificación de producto DIST-ALERT](https://d2pn8kiwq2w21t.cloudfront.net/documents/OPERA_DIST_HLS_Product_Specification_V1.pdf)).
+Los productos DIST-ALERT cuantifican los datos de reflectancia de la superficie (RS) (en inglés, Surface Reflectance, SR) adquiridos a partir de imágenes terrestres operacionales _Operational Land Imager_ (OLI) (en español, Generador de Imágenes Terrestres Operacional) a bordo del satélite de teledetección Landsat-8 y del _Multi-Spectral Instrument_ (MSI) (en español, Instrumento Multiespectral) a bordo del satélite de teledetección Sentinel-2 A/B. Los productos de datos HLS DIST-ALERT son archivos de tipo ráster, cada uno de ellos asociado a mosaicos de la superficie terrestre. Cada mosaico se representa mediante coordenadas cartográficas proyectadas alineadas con el [Sistema de Referencia de Cuadrículas Militares (MGRS, por las siglas en inglés de _Military Grid Reference System_)](https://en.wikipedia.org/wiki/Military_Grid_Reference_System). Cada mosaico se divide en 3,660 filas y 3,660 columnas con un espaciado de píxeles de 30 metros (así que un mosaico es de $109.8\,\mathrm{km}$ de largo en cada lado). Los mosaicos vecinos se solapan 4.900 metros en cada dirección (los detalles se describen en la [especificación de producto DIST-ALERT](https://d2pn8kiwq2w21t.cloudfront.net/documents/OPERA_DIST_HLS_Product_Specification_V1.pdf)).
 
-Los productos OPERA DIST-ALERT se distribuyen como [GeoTIFFs optimizados para la nube](https://www.cogeo.org/); en la práctica, esto significa que las diferentes bandas se almacenan en archivos de formato TIFFs (TIFF, por sus siglas en inglés, _Tagged Image File Format_) distintos. La especificación TIFF permite el almacenamiento de matrices multidimensionales en un único archivo. El almacenamiento de bandas distintas en diferentes archivos TIFF permite que estos se descarguen de forma independiente.
+Los productos OPERA DIST-ALERT se distribuyen como [GeoTIFFs optimizados para la nube](https://www.cogeo.org/); en la práctica, esto significa que las diferentes bandas se almacenan en archivos de formato TIFFs (TIFF, por sus siglas en inglés, _Tagged Image File Format_) distintos. La especificación TIFF permite el almacenamiento de matrices multidimensionales en un único archivo. El almacenamiento de bandas distintas en diferentes archivos TIFF permite que éstos se descarguen de forma independiente.
 
 ### Bandas
 
@@ -65,6 +65,6 @@ Los archivos DIST-ALERT contienen diferentes bandas, entre ellas:
     - **255**: Datos no disponibles
 
 
-Cada banda permite analizar diferentes aspectos del cambio en la cobertura vegetal, siendo útiles para estudios ambientales, evaluación de daños por incendios, y seguimiento de transformaciones del uso del suelo.
+Cada banda permite analizar diferentes aspectos del cambio en la cobertura vegetal, útiles para estudios ambientales, evaluación de daños por incendios, y seguimiento de transformaciones del uso del suelo.
 
 

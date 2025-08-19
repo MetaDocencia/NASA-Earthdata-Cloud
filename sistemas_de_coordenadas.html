@@ -358,20 +358,19 @@ satelitales.</li>
 </div>
 </div>
 </div>
-<p>Los cartógrafos y geógrafos prefieren trabajar con mapas en los que
-las distancias medidas entre los puntos del mapa sean aproximadamente
-proporcionales a las distancias reales. Este no es el caso cuando se
-usan directamente coordenadas de <strong>latitud</strong> y
-<strong>longitud</strong>, típicas de un <a href="https://es.wikipedia.org/wiki/Sistema_de_referencia_geod%C3%A9sico" class="external-link">sistema
+<p>Lss personas que se dedican a la cartografía o a ma geografía
+prefieren trabajar con mapas en los que las distancias medidas entre los
+puntos del mapa sean aproximadamente proporcionales a las distancias
+reales. Este no es el caso cuando se usan directamente coordenadas de
+<strong>latitud</strong> y <strong>longitud</strong>, típicas de un <a href="https://es.wikipedia.org/wiki/Sistema_de_referencia_geod%C3%A9sico" class="external-link">sistema
 de coordenadas geográficas (GCS)</a>.</p>
 <p>Un enfoque más práctico para representar el espacio terrestre es
 utilizar un <a href="https://es.wikipedia.org/wiki/Proyecci%C3%B3n_cartogr%C3%A1fica" class="external-link"><strong>sistema
-de referencia de coordenadas proyectado</strong></a>, es decir, un
-sistema que transforma la superficie curva de la Tierra en un plano
-bidimensional mediante una <strong>proyección cartográfica</strong>.
-Esto implica cierta distorsión, pero permite trabajar con unidades
-métricas (por ejemplo, metros) y realizar cálculos espaciales más
-precisos.</p>
+de referencia de coordenadas proyectado</strong></a>. Este sistema
+transforma la superficie curva de la Tierra en un plano bidimensional
+mediante una <strong>proyección cartográfica</strong>. Esto implica
+cierta distorsión, pero permite trabajar con unidades métricas (por
+ejemplo, metros) y realizar cálculos espaciales más precisos.</p>
 <figure><img src="fig/geographic_crs.png" class="figure mx-auto d-block"></figure><p>Distintas proyecciones preservan diferentes propiedades: forma, área,
 distancia o dirección. La elección de una proyección adecuada depende
 del tipo de análisis que se desea realizar.</p>
@@ -382,9 +381,9 @@ utilizados para trabajar con datos satelitales. Divide el mundo en 60
 zonas longitudinales de 6° de ancho cada una, numeradas del 1 al 60 de
 oeste a este, comenzando desde el meridiano 180°.</p>
 <figure><img src="fig/utm_zones.png" class="figure mx-auto d-block"></figure><p>Cada zona UTM tiene su propio sistema de coordenadas proyectadas
-basado en el modelo <a href="https://es.wikipedia.org/wiki/WGS84" class="external-link">WGS84</a>, y las coordenadas
-se expresan en metros, lo que permite ubicar con precisión cualquier
-punto dentro de esa zona.</p>
+basado en el modelo <a href="https://es.wikipedia.org/wiki/WGS84" class="external-link">WGS84</a>. Las coordenadas se
+expresan en metros, lo que permite ubicar con precisión cualquier punto
+dentro de esa zona.</p>
 <ul><li>Las coordenadas se llaman <strong>este (Easting)</strong> y
 <strong>norte (Northing)</strong>.</li>
 <li>El meridiano central tiene un <strong>falso este</strong> de 500,000
@@ -397,7 +396,7 @@ es la proyección <a href="https://en.wikipedia.org/wiki/Web_Mercator_projection
 Mercator</a>, usada en Google Maps. - <strong>EPSG:32610</strong>
 representa la zona 10N del sistema UTM. - <strong>EPSG:32710</strong>
 representa la misma zona 10 pero en el hemisferio sur.</p>
-<p>Podés explorar estos códigos en el <a href="https://epsg.io/" class="external-link">registro EPSG</a> que los documenta.</p>
+<p>Es posible explorar estos códigos en el <a href="https://epsg.io/" class="external-link">registro EPSG</a> que los documenta.</p>
 </section><section><h2 class="section-heading" id="sistema-de-referencia-de-cuadrículas-militares-mgrs">Sistema de Referencia de Cuadrículas Militares (MGRS)<a class="anchor" aria-label="anchor" href="#sistema-de-referencia-de-cuadr%C3%ADculas-militares-mgrs"></a></h2>
 <hr class="half-width"><p>El <a href="https://en.wikipedia.org/wiki/Military_Grid_Reference_System" class="external-link"><strong>MGRS
 (Military Grid Reference System)</strong></a> es un estándar de

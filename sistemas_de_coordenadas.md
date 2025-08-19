@@ -21,9 +21,9 @@ exercises: 0
 
 
 
-Los cartógrafos y geógrafos prefieren trabajar con mapas en los que las distancias medidas entre los puntos del mapa sean aproximadamente proporcionales a las distancias reales. Este no es el caso cuando se usan directamente coordenadas de **latitud** y **longitud**, típicas de un [sistema de coordenadas geográficas (GCS)](https://es.wikipedia.org/wiki/Sistema_de_referencia_geod%C3%A9sico).
+Lss personas que se dedican a la cartografía o a ma geografía prefieren trabajar con mapas en los que las distancias medidas entre los puntos del mapa sean aproximadamente proporcionales a las distancias reales. Este no es el caso cuando se usan directamente coordenadas de **latitud** y **longitud**, típicas de un [sistema de coordenadas geográficas (GCS)](https://es.wikipedia.org/wiki/Sistema_de_referencia_geod%C3%A9sico).
 
-Un enfoque más práctico para representar el espacio terrestre es utilizar un [**sistema de referencia de coordenadas proyectado**](https://es.wikipedia.org/wiki/Proyecci%C3%B3n_cartogr%C3%A1fica), es decir, un sistema que transforma la superficie curva de la Tierra en un plano bidimensional mediante una **proyección cartográfica**. Esto implica cierta distorsión, pero permite trabajar con unidades métricas (por ejemplo, metros) y realizar cálculos espaciales más precisos.
+Un enfoque más práctico para representar el espacio terrestre es utilizar un [**sistema de referencia de coordenadas proyectado**](https://es.wikipedia.org/wiki/Proyecci%C3%B3n_cartogr%C3%A1fica). Este sistema transforma la superficie curva de la Tierra en un plano bidimensional mediante una **proyección cartográfica**. Esto implica cierta distorsión, pero permite trabajar con unidades métricas (por ejemplo, metros) y realizar cálculos espaciales más precisos.
 
 ![](fig/geographic_crs.png)
 
@@ -37,7 +37,7 @@ El sistema de coordenadas [**UTM (Universal Transverse Mercator)**](https://es.w
 
 ![](fig/utm_zones.png)
 
-Cada zona UTM tiene su propio sistema de coordenadas proyectadas basado en el modelo [WGS84](https://es.wikipedia.org/wiki/WGS84), y las coordenadas se expresan en metros, lo que permite ubicar con precisión cualquier punto dentro de esa zona.
+Cada zona UTM tiene su propio sistema de coordenadas proyectadas basado en el modelo [WGS84](https://es.wikipedia.org/wiki/WGS84). Las coordenadas se expresan en metros, lo que permite ubicar con precisión cualquier punto dentro de esa zona.
 
 - Las coordenadas se llaman **este (Easting)** y **norte (Northing)**.
 - El meridiano central tiene un **falso este** de 500,000 m para evitar números negativos.
@@ -49,7 +49,7 @@ Por ejemplo:
 - **EPSG:32610** representa la zona 10N del sistema UTM.
 - **EPSG:32710** representa la misma zona 10 pero en el hemisferio sur.
 
-Podés explorar estos códigos en el [registro EPSG](https://epsg.io/) que los documenta.
+Es posible explorar estos códigos en el [registro EPSG](https://epsg.io/) que los documenta.
 
 
 ## Sistema de Referencia de Cuadrículas Militares (MGRS)

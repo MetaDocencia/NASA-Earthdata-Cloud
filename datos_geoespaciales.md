@@ -28,10 +28,6 @@ En teledetección y sistemas de información geográfica (SIG) (en inglés, *Geo
 
 ## Datos ráster
 
-De la [descripción de Wikipedia sobre las _imágenes ráster_](https://es.wikipedia.org/wiki/Imagen_de_mapa_de_bits):
-
-> En [computación gráfica](https://es.wikipedia.org/wiki/Computaci%C3%B3n_gr%C3%A1fica) y [fotografía digital](https://es.wikipedia.org/wiki/Fotograf%C3%ADa_digital), un gráfico rásterizado representa una imagen bidimensional como una matriz rectangular o rejilla de [píxeles](https://es.wikipedia.org/wiki/P%C3%ADxel), que puede visualizarse mediante una [pantalla de computadora](https://en.wikipedia.org/wiki/Computer_display), [_paper_](https://en.wikipedia.org/wiki/Paper), o cualquier otro medio de visualización.
-
 El término _"dato ráster"_ o _"ráster"_ proviene de los gráficos por computadora. En esencia, un ráster se refiere a una secuencia de valores numéricos dispuestos en una tabla rectangular (similar a una [matriz](https://es.wikipedia.org/wiki/Matriz_(matem%C3%A1tica)) de [álgebra lineal](https://es.wikipedia.org/wiki/%C3%81lgebra_lineal)).
 
 Los conjuntos de datos ráster son útiles para representar cantidades continuas, como presión, elevación, temperatura, clasificación de la cobertura terrestre, etc., muestreadas en una [teselación](https://es.wikipedia.org/wiki/Teselado), es decir, una cuadrícula discreta que divide una región bidimensional de extensión finita. En el contexto de los [Sistemas de Información Geográfica (GIS, por sus siglas en inglés)](https://en.wikipedia.org/wiki/Geographic_information_system), la región espacial es la proyección plana de una porción de la superficie terrestre.

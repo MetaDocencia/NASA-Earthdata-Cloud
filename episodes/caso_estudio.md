@@ -697,7 +697,6 @@ df_bajanubosidad.plot(
 
 ````
 
-<Axes: title={'center': 'Cobertura de nubes por fecha'}>
 
 ![](fig/output7.png)
 
@@ -717,11 +716,15 @@ print(más_reciente_baja_nubosidad)
 ````
 
 Producto más reciente con menos de 20% de nubosidad:
-start_datetime                             2025-07-17T13:34:04.242Z
-end_datetime                       2025-07-17 13:34:04.242000+00:00
-datetime                           2025-07-17 13:34:04.242000+00:00
-cloud_cover                                                       0
+
+|-------------------------------|----------------------------------:|
+|start_datetime                 |          2025-07-17T13:34:04.242Z |
+|end_datetime                   |  2025-07-17 13:34:04.242000+00:00 |
+|datetime                       |  2025-07-17 13:34:04.242000+00:00 |
+|cloud_cover                    |                                 0 |
+
 url               https://data.lpdaac.earthdatacloud.nasa.gov/lp...
+
 Name: 218, dtype: object
 
 ````python

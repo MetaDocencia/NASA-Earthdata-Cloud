@@ -12,6 +12,6 @@
 "episodes/diapositivas.Rmd" "21fc0aa3762aa1873a7c722dcbfa2ab0" "site/built/diapositivas.md" "2025-08-19"
 "instructors/instructor-notes.md" "a48b029e7de14365e02fd5629f270505" "site/built/instructor-notes.md" "2025-08-19"
 "learners/reference.md" "66fe564b1a66765aa0345018bde17684" "site/built/reference.md" "2025-08-19"
-"learners/setup.md" "9d7802e45ede87ac026f94a0dbf254b1" "site/built/setup.md" "2025-08-19"
+"learners/setup.md" "b10530cc200ae5be09a96fa7479e8dfb" "site/built/setup.md" "2025-08-19"
 "profiles/learner-profiles.Rmd" "3c987d386ad312cb9c56e0ab07dc271a" "site/built/learner-profiles.md" "2025-08-19"
 "renv/profiles/lesson-requirements/renv.lock" "782210906ee5e2f243fde78c288af9a5" "site/built/renv.lock" "2025-08-19"

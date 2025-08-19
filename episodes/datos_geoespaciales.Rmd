@@ -24,17 +24,17 @@ exercises: 1
 
 ## ¿Qué son los modelos de datos geoespaciales?
 
-En teledetección y sistemas de información geográfica (SIG) (en inglés, *Geographical Information System, GIS*), los datos espaciales se representan principalmente en dos formatos: **ráster** y **vectorial**.
+En teledetección y en los sistemas de información geográfica (SIG) (en inglés, *Geographical Information System, GIS*), los datos espaciales se representan principalmente en dos formatos: **ráster** y **vectorial**.
 
 ## Datos ráster
 
 De la [descripción de Wikipedia sobre las _imágenes ráster_](https://es.wikipedia.org/wiki/Imagen_de_mapa_de_bits):
 
-> En [computación gráfica](https://es.wikipedia.org/wiki/Computaci%C3%B3n_gr%C3%A1fica) y [fotografía digital](https://es.wikipedia.org/wiki/Fotograf%C3%ADa_digital), un gráfico rásterizado representa una imagen bidimensional como una matriz rectangular o rejilla de [píxeles](https://es.wikipedia.org/wiki/P%C3%ADxel), que puede visualizarse mediante una [pantalla de computadora](https://en.wikipedia.org/wiki/Computer_display), [_paper_](https://en.wikipedia.org/wiki/Paper), o cualquier otro medio de visualización.
+> En [computación gráfica](https://es.wikipedia.org/wiki/Computaci%C3%B3n_gr%C3%A1fica) y [fotografía digital](https://es.wikipedia.org/wiki/Fotograf%C3%ADa_digital), un gráfico rasterizado representa una imagen bidimensional como una matriz rectangular o rejilla de [píxeles](https://es.wikipedia.org/wiki/P%C3%ADxel), que puede visualizarse mediante una [pantalla de computadora](https://en.wikipedia.org/wiki/Computer_display), [_paper_](https://en.wikipedia.org/wiki/Paper), o cualquier otro medio de visualización.
 
 El término _"dato ráster"_ o _"ráster"_ proviene de los gráficos por computadora. En esencia, un ráster se refiere a una secuencia de valores numéricos dispuestos en una tabla rectangular (similar a una [matriz](https://es.wikipedia.org/wiki/Matriz_(matem%C3%A1tica)) de [álgebra lineal](https://es.wikipedia.org/wiki/%C3%81lgebra_lineal)).
 
-Los conjuntos de datos ráster son útiles para representar cantidades continuas, como presión, elevación, temperatura, clasificación de la cobertura terrestre, etc., muestreadas en una [teselación](https://es.wikipedia.org/wiki/Teselado), es decir, una cuadrícula discreta que divide una región bidimensional de extensión finita. En el contexto de los [Sistemas de Información Geográfica (GIS, por sus siglas en inglés)](https://en.wikipedia.org/wiki/Geographic_information_system), la región espacial es la proyección plana de una porción de la superficie terrestre.
+Los conjuntos de datos ráster son útiles para representar cantidades continuas, como presión, elevación, temperatura, clasificación de la cobertura terrestre, etc., muestreadas en una [teselación](https://es.wikipedia.org/wiki/Teselado), es decir, una cuadrícula discreta que divide una región bidimensional de extensión finita. En el contexto de los [Sistemas de Información Geográfica (GIS)](https://en.wikipedia.org/wiki/Geographic_information_system), la región espacial es la proyección plana de una porción de la superficie terrestre.
 
 Los rásters se aproximan a las distribuciones numéricas continuas almacenando valores individuales dentro de cada celda de la _cuadrícula_ o _píxel_. Los rásters pueden representar datos recopilados en varios tipos de celdas de cuadrícula no rectangulares (por ejemplo, hexágonos). Para nuestros fines, restringiremos nuestra atención a las cuadrículas en las que todos los píxeles son rectángulos que tienen el mismo ancho y alto.
 
@@ -73,18 +73,18 @@ La indexación desde cero no es universal. Por ejemplo, MATLAB utiliza indexaci�
 
 Esto puede causar confusión. Es importante verificar:
 
-- qué convenciones usan los datos ráster de una fuente,
-- y qué espera la herramienta GIS que estemos usando.
+- Qué convenciones usan los datos ráster de una fuente,
+- Qué espera la herramienta GIS que estemos usando.
 
 ### Conservación de los metadatos
 
 Los datos ráster usualmente incluyen _metadatos_, como:
 
-- _Sistema de Referencia de Coordenadas (SRC)_: ver [EPSG](https://en.wikipedia.org/wiki/EPSG_Geodetic_Parameter_Dataset), [WKT](https://en.wikipedia.org/wiki/Well-known_text_representation_of_coordinate_reference_systems)
+- _Sistema de Referencia de Coordenadas (SRC)_: ver [EPSG](https://en.wikipedia.org/wiki/EPSG_Geodetic_Parameter_Dataset), [WKT](https://en.wikipedia.org/wiki/Well-known_text_representation_of_coordinate_reference_systems).
 - _Valor NoData_: como `-1`, `255`, etc.
-- _Resolución espacial_: tamaño de cada píxel
-- _Límites espaciales_: extensión geográfica cubierta
-- _Fecha y hora de adquisición_: usualmente en [UTC](https://es.wikipedia.org/wiki/Tiempo_universal_coordinado)
+- _Resolución espacial_: tamaño de cada píxel.
+- _Límites espaciales_: extensión geográfica cubierta.
+- _Fecha y hora de adquisición_: usualmente en [UTC](https://es.wikipedia.org/wiki/Tiempo_universal_coordinado).
 
 Por ejemplo, los productos OPERA de NASA incluyen esta información en sus nombres de archivo:
 
@@ -113,7 +113,7 @@ El formato está documentado en el [estándar OGC GeoTIFF](https://www.ogc.org/s
 
 ## Datos vectoriales
 
-Ciertas propiedades físicas de interés para los SIG, no se capturan convenientemente mediante datos ráster en cuadrículas discretas. Por ejemplo, las características geométricas de un paisaje, como carreteras, ríos y límites entre regiones, se describen mejor utilizando líneas o curvas en un sistema de coordenadas proyectado de manera adecuada. En el contexto de los GIS, los *datos vectoriales* son representaciones geométricas de estos aspectos del paisaje.
+Ciertas propiedades físicas de interés para los SIG no se capturan convenientemente mediante datos ráster en cuadrículas discretas. Por ejemplo, las características geométricas de un paisaje, como carreteras, ríos y límites entre regiones, se describen mejor utilizando líneas o curvas en un sistema de coordenadas proyectado de manera adecuada. En el contexto de los GIS, los *datos vectoriales* son representaciones geométricas de estos aspectos del paisaje.
 
 
 ### Cómo comprender los datos vectoriales
@@ -156,13 +156,13 @@ Otras magnitudes geométricas, como la longitud de un río o la superficie de un
 Los detalles técnicos del formato GeoJSON se describen en el documento de estándares [RFC7946](https://datatracker.ietf.org/doc/html/rfc7946).
 
 
-### Uso de archivos Shapefiles
+### Uso de archivos Ssapefiles
 
 El estándar [*shapefile*](https://es.wikipedia.org/wiki/Shapefile) es un formato digital para distribuir datos vectoriales geoespaciales y sus atributos asociados. El estándar, desarrollado por [ESRI](https://es.wikipedia.org/wiki/Esri), es compatible con la mayoría de las herramientas de software SIG modernas. El nombre "shapefile" es un poco engañoso porque normalmente consiste en un conjunto de varios archivos (algunos obligatorios, otros opcionales) almacenados en un directorio común con un nombre de archivo común.
 
-> El formato shapefile almacena la geometría como formas geométricas primitivas como puntos, líneas y polígonos. Estas formas, junto con los atributos de datos vinculados a cada una de ellas, crean la representación de los datos geográficos. Los tres archivos obligatorios tienen las extensiones de archivo `.shp`, `.shx` y `.dbf`. El *shapefile* real se refiere específicamente al archivo `.shp`, pero por sí solo está incompleto para su distribución.
+> El formato shapefile almacena la geometría como formas geométricas primitivas (puntos, líneas, polígonos). Estas formas, junto con los atributos de datos vinculados a cada una de ellas, crean la representación de los datos geográficos. Los tres archivos obligatorios tienen las extensiones de archivo `.shp`, `.shx` y `.dbf`. El *shapefile* real se refiere específicamente al archivo `.shp`, pero por sí solo está incompleto para su distribución.
 
-Los *shapefiles* utilizan el formato [*Well-known Binary* (WKB)](https://libgeos.org/specifications/wkb/) para codificar las geometrías. Algunas limitaciones incluyen la restricción de los nombres en los campos de los atributos a 10 caracteres o menos y la escasa compatibilidad con Unicode.
+Los *shapefiles* utilizan el formato [*Well-Known Binary* (WKB)](https://libgeos.org/specifications/wkb/) para codificar las geometrías. Algunas limitaciones incluyen la restricción de los nombres en los campos de los atributos a 10 caracteres o menos y la escasa compatibilidad con Unicode.
 
 Puedes consultar el [informe técnico de shapefile de ESRI (PDF)](https://www.esri.com/content/dam/esrisites/sitecore-archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf) para obtener más información.
 

@@ -677,11 +677,10 @@ ejecutar notebooks (archivos con extensión .ipynb).</li>
 </ul><p>En otras palabras, Anaconda te da todo lo que necesitas para ejecutar
 notebooks como las que se utilizan durante el curso en el hub de 2i2c,
 pero ahora en tu propia computadora.</p>
-<p>Pasos a seguir</p>
-<ol style="list-style-type: decimal"><li>Ingresa a la página de descarga: <a href="https://www.anaconda.com/download" class="external-link uri">https://www.anaconda.com/download</a>
-</li>
-<li>Elige Anaconda Distribution (Distribution Installers). En la página
-de Anaconda vas a ver dos opciones principales:</li>
+<p><strong>Pasos a seguir</strong></p>
+<ol style="list-style-type: decimal"><li><p>Ingresa a la página de descarga: <a href="https://www.anaconda.com/download" class="external-link uri">https://www.anaconda.com/download</a></p></li>
+<li><p>En la página de Anaconda vas a ver dos opciones
+principales:</p></li>
 </ol><ul><li>Anaconda Distribution (Distribution Installers): Es la versión
 completa. Trae Python + Conda (un gestor de paquetes de software) +
 muchas librerías de ciencia de datos + Jupyter + Spyder + herramientas
@@ -692,10 +691,11 @@ instalarlas manualmente o a través de la configuración de los archivos
 environment.yml. Pesa muy poco y es más flexible para usuarios
 avanzados.</li>
 </ul><p>👉 Para este curso, si todavía no lo tienes instalado, lo más
-sencillo es que instales Anaconda Distribution.</p>
-<ol start="3" style="list-style-type: decimal"><li>Selecciona el instalador según tu sistema operativo.</li>
-<li>Descarga la versión recomendada. Para algunos sistemas operativos se
-muestran distintas versiones:</li>
+sencillo es que instales <strong>Anaconda Distribution (Distribution
+Installers)</strong>.</p>
+<ol start="3" style="list-style-type: decimal"><li><p>Selecciona el instalador según tu sistema operativo.</p></li>
+<li><p>Descarga la versión recomendada. Para algunos sistemas operativos
+se muestran distintas versiones:</p></li>
 </ol><ul><li>64-Bit (Graphical Installer): es la más fácil, porque abre un
 instalador con ventanas gráficas (opción recomendada).</li>
 <li>64-Bit (Command Line Installer): es solo para gente que prefiere
@@ -710,11 +710,13 @@ notebook del repositorio.</p>
 <div class="section level3">
 <h3 id="clonar-el-repositorio-climaterisk">Clonar el repositorio climaterisk<a class="anchor" aria-label="anchor" href="#clonar-el-repositorio-climaterisk"></a></h3>
 <ol style="list-style-type: decimal"><li>Abre la terminal o línea de comandos.</li>
-</ol><p>Dependiendo de tu sistema operativo: - Windows: busca y abre el
-programa Anaconda Prompt (viene instalado con Anaconda). - Mac: abre la
-aplicación Terminal (la encontrarás en Aplicaciones &gt; Utilidades). -
-Linux: abre la aplicación Terminal desde el menú.</p>
-<ol start="2" style="list-style-type: decimal"><li>Clona el repositorio climaterisk</li>
+</ol><p>Dependiendo de tu sistema operativo:</p>
+<ul><li>Windows: busca y abre el programa Anaconda Prompt (viene instalado
+con Anaconda).</li>
+<li>Mac: abre la aplicación Terminal (la encontrarás en Aplicaciones
+&gt; Utilidades).</li>
+<li>Linux: abre la aplicación Terminal desde el menú.</li>
+</ul><ol start="2" style="list-style-type: decimal"><li>Clona el repositorio climaterisk:</li>
 </ol><ul><li>Navega a la carpeta en la que quieres descargarlo (asegúrate de
 tener permisos de escritura en esa carpeta).</li>
 <li>En la terminal, escribe:</li>
@@ -742,10 +744,20 @@ tener permisos de escritura en esa carpeta).</li>
 <p>Esto va a: - Leer el archivo environment.yml que está en el
 repositorio. - Instalar todas las librerías necesarias según se
 especifica en ese archivo. - Crear un entorno llamado: climaterisk.</p>
+<div id="callout2" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Aviso</span>
+<div class="callout-inner">
+<div class="callout-content">
 <p>👉 El proceso utiliza mucha memoria RAM y podría tardar varios
 minutos. Para facilitar el proceso, intenta no tener muchas pestañas del
 navegador abiertas y cierra las aplicaciones pesadas que estés
 usando.</p>
+</div>
+</div>
+</div>
 <ol start="3" style="list-style-type: decimal"><li>Una vez que termine, activa el entorno escribiendo:</li>
 </ol><div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -754,11 +766,65 @@ usando.</p>
 </div>
 <p>Vas a notar que el nombre (climaterisk) aparece al principio de la
 línea en tu terminal: eso indica que ya estás dentro del entorno.</p>
-<!--
+</div>
+<div class="section level3">
+<h3 id="abrir-jupyterlab">Abrir JupyterLab<a class="anchor" aria-label="anchor" href="#abrir-jupyterlab"></a></h3>
+<p>Por último, escribí:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="ex">jupyter</span> lab</span></code></pre>
+</div>
+<p>Esto abrirá tu navegador web y mostrará la interfaz de JupyterLab,
+donde verás la carpeta del repositorio.</p>
+<p>Allí debes navegar hasta la notebook <code>startup.ipynb</code>
+utilizando la vista de archivos que se encuentra a la izquierda para
+ingresar a la carpeta <code>book/</code>.</p>
+</div>
+<div class="section level3">
+<h3 id="vincular-tus-credenciales-de-nasa-earthdata">Vincular tus credenciales de NASA Earthdata<a class="anchor" aria-label="anchor" href="#vincular-tus-credenciales-de-nasa-earthdata"></a></h3>
+<ol style="list-style-type: decimal"><li>Debes acceder a la notebook
+<code>02_Configuración_y_Verificacion_del_Entorno</code> y ejecutar
+todas las celdas.</li>
+</ol><ul><li>
+<code>book/</code>
+<ul><li>
+<code>es/</code>
+<ul><li>
+<code>ipynb/</code>
+<ul><li>
+<code>00_Introduccion_Configuracion/</code>
+<ul><li><code>02_Configuración_y_Verificación_del_Entorno.md</code></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul><figure><img src="../fig/configuracion_1.png" class="figure mx-auto d-block"></figure><figure><img src="../fig/configuracion.png" class="figure mx-auto d-block"></figure><ol start="2" style="list-style-type: decimal"><li>Te preguntará si quieres proceder a sobrescribir el archivo .netrc.
+Confirma que sí ingresando <code>S</code> y presionando
+<code>enter</code>.</li>
+</ol><figure><img src="../fig/netrc.png" class="figure mx-auto d-block"></figure><ol start="3" style="list-style-type: decimal"><li><p>Ingresa tus credenciales de NASA Earthdata (usuario y
+contraseña). Si todo funcionó correctamente, se te indicará que el
+archivo .netrc con tus credenciales se configuró correctamente.</p></li>
+<li><p>Finalmente, ingresa a la notebook sobre la que estaremos
+trabajando:</p></li>
+</ol><ul><li>
+<code>book/</code>
+<ul><li>
+<code>es/</code>
+<ul><li>
+<code>ipynb/</code>
+<ul><li>
+<code>05_Casos_de_Estudio/</code>
+<ul><li><code>05_Deforestacion_en_Maranhão.md</code></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul><figure><img src="../fig/defor.png" class="figure mx-auto d-block"></figure><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- -->
-</div>
+ --></div>
 </section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Capítulo Siguiente"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link float-end" href="../instructor/fundamentos.html">Siguiente<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>

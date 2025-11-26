@@ -228,7 +228,8 @@ Se encontraron 234 archivos VEG-DIST-STATUS.
 
 ````python
 
-# Imprimimos cloud_cover de los items con asset VEG-DIST-STATUS
+# Imprimimos cloud_cover (la fracción del cielo cubierta por nubes)
+# de los items con asset VEG-DIST-STATUS
 for item in items:
     if any("VEG-DIST-STATUS" in k for k in item.assets):
         print(f"{item.datetime.date()} → Cloud cover: {item.properties.get('eo:cloud_cover', 'No disponible')}")

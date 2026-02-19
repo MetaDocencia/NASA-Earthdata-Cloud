@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/1033258997.svg)](https://doi.org/10.5281/zenodo.16879018)
+
 # Introducción al uso de datos Nasa Earthdata Cloud para el monitoreo de cambios y disturbios ambientales
 
 En este taller, se explorara cómo utilizar los datos satelitales de la plataforma Earthdata Cloud de la NASA, específicamente los productos OPERA, para el monitoreo de cambios y disturbios ambientales. Se toma como caso de estudio los cambios en la cobertura vegetal en la región de Maranhão, Brasil, con el objetivo de identificar patrones de deforestación a través de Jupyter Notebooks con código en Python para trabajar de manera reproducible con los datos. El taller se organiza en tres modulos:

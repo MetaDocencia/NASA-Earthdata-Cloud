@@ -1,29 +1,44 @@
-cff-version: 1.0.0
-message: "Please cite this lesson using the information in this file when you refer to it in publications, and/or if you re-use, adapt, or expand on the content in your own training material."
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  Introducción al uso de datos Nasa Earthdata cloud para el
+  monitoreo de cambios y disturbios ambientales
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
 authors:
-  - given-names: MetaDocencia
-    family-names: MetaDocencia
-contributors:
   - given-names: Jesica
     family-names: Formoso
-    orcid: "https://orcid.org/0000-0003-3062-4036"
+    orcid: 'https://orcid.org/0000-0003-3062-4036'
   - given-names: Eliana
     family-names: Gonzalez
-    orcid: "https://orcid.org/0000-0001-6846-9962"
+    orcid: 'https://orcid.org/0000-0001-6846-9962'
   - given-names: Maira
     family-names: Gayol
-    orcid: "https://orcid.org/0000-0003-3236-7264"
+    orcid: 'https://orcid.org/0000-0003-3236-7264'
   - given-names: Mariela
     family-names: Rajngewerc
-    orcid: "https://orcid.org/0000-0001-8268-3260"
+    orcid: 'https://orcid.org/0000-0001-8268-3260'
   - given-names: Patricia
     family-names: Loto
-    orcid: "https://orcid.org/0000-0003-1849-6916"
+    orcid: 'https://orcid.org/0000-0003-1849-6916'
   - given-names: Nicolás
     family-names: Palópoli
-    orcid: "https://orcid.org/0000-0001-7925-6436"
-abstract: Introducción al uso de datos Nasa Earthdata cloud para el monitoreo de cambios y disturbios ambientales.
-title:Introducción al uso de datos Nasa Earthdata cloud para el monitoreo de cambios y disturbios ambientales
-version: v1.0.0
+    orcid: 'https://orcid.org/0000-0001-7925-6436'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.16879019
+repository-code: 'https://github.com/MetaDocencia/NASA-Earthdata-Cloud'
+url: 'https://metadocencia.github.io/NASA-Earthdata-Cloud/'
+abstract: |+
+
+keywords:
+  - NASA Earthdata Cloud
+  - Monitoreo de cambios y disturbios ambientales
+  - Análisis reproducible
 license: CC-BY-4.0
-date-released: 2025-08-14
+version: V1.0.0
+date-released: '2025-08-14'

@@ -25,7 +25,7 @@ exercises: 0
 
 # Deforestación en Maranhão
 
-La Amazonía es una de las regiones más biodiversas del planeta y un componente clave del sistema climático global que además sostiene múltiples comunidades indígenas. En particular el estado de Maranhão, en Brasil, es uno de los focos más críticos de deforestación en el país. Se estima que el 76 % de la cobertura original de bosque amazónico en este estado ha sido destruida. Según Global Forest Watch, Maranhão ha registrado una de las tasas más altas de pérdida de cobertura boscosa en Brasil en los últimos años, impulsada por incendios, expansión agropecuaria y tala ilegal. Estos procesos están estrechamente ligados a la fragmentación ecológica, la pérdida de biodiversidad y la violencia hacia comunidades indígenas. Frente a este escenario, el monitoreo sistemático de los cambios en la cobertura vegetal es fundamental. Los productos OPERA DIST-HLS, derivados principalmente de Landsat (NASA/USGS) y Sentinel-2 (ESA), ofrecen una herramienta poderosa para detectar disturbios recientes y aportar evidencia clave para la conservación y la formulación de políticas públicas basadas en datos.
+La Amazonía es una de las regiones más biodiversas del planeta y un componente clave del sistema climático global, que además sostiene múltiples comunidades indígenas. En particular, el estado de Maranhão, en Brasil, es uno de los focos más críticos de deforestación en el país. Se estima que el 76 % de la cobertura original de bosque amazónico en este estado ha sido destruida. Según Global Forest Watch, Maranhão ha registrado una de las tasas más altas de pérdida de cobertura boscosa en Brasil en los últimos años, impulsada por incendios, expansión agropecuaria y tala ilegal. Estos procesos están estrechamente ligados a la fragmentación ecológica, la pérdida de biodiversidad y la violencia hacia comunidades indígenas. Frente a este escenario, el monitoreo sistemático de los cambios en la cobertura vegetal es fundamental. Los productos OPERA DIST-HLS, derivados principalmente de Landsat (NASA/USGS) y Sentinel-2 (ESA), ofrecen una herramienta poderosa para detectar disturbios recientes y aportar evidencia clave para la conservación y la formulación de políticas públicas basadas en datos.
 
 <figure style="text-align: center;">
   <img src="https://tse3.mm.bing.net/th/id/OIP.sSfdF5nBFUWbh3UImdbyVgHaE7?pid=Api" alt="Buriticupu - erosión" style="max-width: 100%; height: auto;">
@@ -36,21 +36,21 @@ La Amazonía es una de las regiones más biodiversas del planeta y un componente
 
 ## Ruta de trabajo
 
-Nuestro objetivo es evaluar la deforestación en un area cercana a la ciudad de Buriticupu en el estado Maranhao. 
-Para eso en esta notebook vamos a :
+Nuestro objetivo es evaluar la deforestación en un área cercana a la ciudad de Buriticupu en el estado de Maranhão. 
+Para eso en esta notebook vamos a:
 
-1. Filtrar y seleccionar los productos OPERA DIST-ALERT desde la nube
-2. Visualizar y explorar los subproductos VEG_DIST_STATUS
+1. Filtrar y seleccionar los productos OPERA DIST-ALERT desde la nube.
+2. Visualizar y explorar los subproductos VEG_DIST_STATUS.
 3. Gráficar la evolución del disturbio a lo largo del tiempo.
-4. Generar un mapa de disturbios
-5. Explorar subproducto VEG_DIST_DATE
+4. Generar un mapa de disturbios.
+5. Explorar el subproducto VEG_DIST_DATE.
 
 ### Antes de empezar - Importar librerías que vamos a utilizar
 
 ````python
 
 #librerias para manipulación de datos
-from warnings import filterwarnings #suprime los warning
+from warnings import filterwarnings #suprime los warnings
 filterwarnings('ignore')
 import numpy as np, pandas as pd, xarray as xr
 import rioxarray as rio
@@ -72,24 +72,24 @@ gdal.SetConfigOption('CPL_VSIL_CURL_ALLOWED_EXTENSIONS','TIF, TIFF')
 
 ````
 
-### FILTRAR Y SELECCIONAR LOS PRODUCTOS OPERA DESDE LA NUBE
+### Filtrar y seleccionar los productos OPERA desde la nube
 
 
-#### **1.a. Seleccionar el area de estudio** 
+#### **1.a. Seleccionar el área de estudio** 
 
 Usa la herramienta [Bounding Box](https://boundingbox.klokantech.com/) para obtener las coordenadas geográficas (latitud y longitud) del área seleccionada.
 
 Bounding Box es un selector visual de cajas geográficas (bounding boxes) que permite:
 
-- Dibujar un rectángulo o polígono directamente sobre un mapa interactivo para delimitar un área específica-
+- Dibujar un rectángulo o polígono directamente sobre un mapa interactivo para delimitar un área específica.
 - Obtener las coordenadas geográficas (latitud y longitud) del área seleccionada y copiarlas fácilmente en diversos formatos útiles como MARC, DublinCore, KML, GeoJSON, OGC WKT, CSV, FGDC, entre otros. 
 
-Sigue los siguientes pasos:
+Sigue estos pasos:
 
 1. Navega hasta la página https://boundingbox.klokantech.com/
 2. Busca la zona de interés y dibuja un rectángulo sobre el mapa.
 3. En la sección "Copy & Paste", selecciona el formato "CSV".
-4. Copia las coordenadas 
+4. Copia las coordenadas.
 
 Estas coordenadas están en el orden correcto requerido por STAC:
 
@@ -97,7 +97,7 @@ Estas coordenadas están en el orden correcto requerido por STAC:
 
 El siguiente ejemplo supone que las coordenadas copiadas de boundingbox son **-46.52993,-4.383815,-43.363075,-4.243793**
 
-5. Define el area utilizando las coordenadas copiadas y define el rango de fechas de interés.
+5. Define el área de interés (AOI, por Area of Interest en inglés) utilizando las coordenadas copiadas y define el rango de fechas de interés.
 
 ````python
 
@@ -126,7 +126,7 @@ search_params = {
 client = Client.open("https://cmr.earthdata.nasa.gov/stac/LPCLOUD/")
 items = list(client.search(**search_params).get_items())
 
-# Extraemos fechas disponibles
+# Extraemos las fechas disponibles
 fechas = sorted({item.datetime.date() for item in items})
 print(f"Fechas disponibles ({len(fechas)}):")
 print(fechas)
@@ -188,8 +188,9 @@ Output is truncated. View as a scrollable element or open in a text editor. Adju
 
 ````python
 
-# Recorremos todos los productos encontrados y seleccionamos solo los archivos .tif
-# correspondientes al asset 'VEG-DIST-STATUS'
+# Recorremos todos los productos encontrados
+# y seleccionamos solo los archivos .tif
+# correspondientes al asset 'VEG-DIST-STATUS'.
 # Guardamos la fecha del producto y el link al archivo 
 
 veg_status_assets = []
@@ -299,14 +300,14 @@ Se encontraron 12 archivos con menos de 40% de nubes.
 ...
 
 
-### VISUALIZAR Y EXPLORAR Productos VEG_DIST_STATUS
+### Visualizar y explorar productos VEG_DIST_STATUS
 
 
 ````python
 
-#Visualizar productos VEG_DIST_STATUS en el area de interes.
+#Visualizar productos VEG_DIST_STATUS en el área de interés.
 
-#convertir a shp las coordenadas del area de interes (AOI)
+#convertir a shp las coordenadas del AOI
 from shapely.geometry import box
 import geopandas as gpd
 
@@ -315,7 +316,7 @@ aoi_coords = [-46.78, -4.61, -46.58, -4.41]  # xmin, ymin, xmax, ymax
 aoi_geom = box(*aoi_coords)
 AOI = gpd.GeoDataFrame(geometry=[aoi_geom], crs="EPSG:4326")
 
-#Visualizar la primer y ultima fecha del los productos filtrados
+#Visualizar primera y ultima fechas de los productos filtrados
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 import geopandas as gpd
@@ -364,7 +365,7 @@ Valores del producto `VEG-DIST-STATUS`:
 - **0:** Sin alteración
 - **1:** Primera detección de alteraciones con cambios en la cobertura vegetal <50%
 - **2:** Detección provisional de alteraciones con cambios en la cobertura vegetal <50%
-- **3:** Detección confirmada de alteraciones con cambios en la cobertura vegetal < 50%
+- **3:** Detección confirmada de alteraciones con cambios en la cobertura vegetal <50%
 - **4:** Primera detección de alteraciones con cambios en la cobertura vegetal ≥50%
 - **5:** Detección provisional de alteraciones con cambios en la cobertura vegetal ≥50%
 - **6:** Detección confirmada de alteraciones con cambios en la cobertura vegetal ≥50%
@@ -418,7 +419,7 @@ plt.show()
 ![](fig/output2.png)
 
 
-### EVOLUCIÓN DEL DISTURBIO A LO LARGO DEL TIEMPO 
+### Evolución del disturbio a lo largo del tiempo
 
 
 ````python
@@ -510,8 +511,8 @@ plt.show()
 
 **¿Hay algo raro en los gráficos?**
 
-Tal vez notes que una fecha tiene dos puntos. Eso es porque el producto OPERA usa imágenes SENTINEL y LANDSAT, y puede ocurrir que en alguna fecha haya dos productos. En ese caso, es necesario seleccionar alguno de ellos en base a algún criterio. 
-Debajo, seleccionamos la imagen con menos nubes y, de esa forma, cuando volvemos a ejecutar el código que genera el gráfico encontramos solo un producto por fecha. 
+Tal vez notes que una fecha tiene dos puntos. Eso es porque el producto OPERA usa imágenes SENTINEL y LANDSAT, y puede ocurrir que en alguna fecha haya dos productos. En ese caso, es necesario seleccionar alguno de ellos sobre la base de algún criterio. 
+Debajo, seleccionamos la imagen con menos nubes y, de esa forma, cuando volvemos a ejecutar el código que genera el gráfico, encontramos solo un producto por fecha. 
 
 
 :::
@@ -532,7 +533,7 @@ df_filtrados = df_filtrados.drop_duplicates(subset="fecha", keep="first")
 # Reconstruir la lista filtrada
 filtrados_unicos = df_filtrados.to_dict(orient="records")
 
-#VOLVEMOS A CORRER EL STACK USANDO filtrados_unicos
+# VOLVEMOS A CORRER EL STACK USANDO filtrados_unicos
 
 # Stack de los subproductos VEG-DIST-STATUS
 
@@ -559,7 +560,7 @@ stack["time"] = fechas
 
 ````
 
-### GENERAR UN MAPA DE DISTUBIOS
+### Generar un mapa de disturbios
 
 
 
@@ -603,7 +604,7 @@ hvplot_map
 ![](fig/output4.png)
 
 
-### EXPLORAR SUBPRODUCTO VEG_DIST-DATE
+### Explorar subproducto VEG_DIST-DATE
 
 ````python
 
@@ -620,7 +621,7 @@ search_params = {
     "collections": ["OPERA_L3_DIST-ALERT-HLS_V1_1"]
 }
 
-# Buscar items en el catálogo
+# Buscar ítems en el catálogo
 items = list(catalog.search(**search_params).get_items())
 
 # Filtrar solo los assets VEG-DIST-DATE accesibles por HTTPS

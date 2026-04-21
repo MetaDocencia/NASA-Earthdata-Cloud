@@ -350,11 +350,11 @@
         <!-- START: inst/pkgdown/templates/content-extra.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
     <main id="main-content" class="main-content"><div class="container lesson-content">
-        
+        <h1>Todo en una sola página</h1>
         
 <section id="aio-fundamentos"><p>Content from <a href="fundamentos.html">Fundamentos de teledetección</a></p>
 <hr>
-<p>Última actualización: 2026-04-14 |
+<p>Última actualización: 2026-04-21 |
 
         <a href="https://metadocencia.github.io/NASA-Earthdata-Cloud/edit/main/episodes/fundamentos.Rmd" class="external-link">Mejora esta página <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Tiempo estimado: <i aria-hidden="true" data-feather="clock"></i> 41 minutos</p>
@@ -638,7 +638,7 @@ por cada unidad de superficie.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Mostrar la solución </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ol start="3" style="list-style-type: decimal">
 <li>Una matriz de valores numéricos que representan la energía reflejada
@@ -673,7 +673,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-sistemas_de_coordenadas"><p>Content from <a href="sistemas_de_coordenadas.html">Sistemas de coordenadas</a></p>
 <hr>
-<p>Última actualización: 2026-04-14 |
+<p>Última actualización: 2026-04-21 |
 
         <a href="https://metadocencia.github.io/NASA-Earthdata-Cloud/edit/main/episodes/sistemas_de_coordenadas.Rmd" class="external-link">Mejora esta página <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Tiempo estimado: <i aria-hidden="true" data-feather="clock"></i> 15 minutos</p>
@@ -782,7 +782,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-datos_geoespaciales"><p>Content from <a href="datos_geoespaciales.html">Modelos de datos geoespaciales</a></p>
 <hr>
-<p>Última actualización: 2026-04-14 |
+<p>Última actualización: 2026-04-21 |
 
         <a href="https://metadocencia.github.io/NASA-Earthdata-Cloud/edit/main/episodes/datos_geoespaciales.Rmd" class="external-link">Mejora esta página <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Tiempo estimado: <i aria-hidden="true" data-feather="clock"></i> 21 minutos</p>
@@ -1122,7 +1122,7 @@ representa el área mediante píxeles agrupados en formas.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Mostrar la solución </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>La respuesta correcta es:</p>
 <ol start="2" style="list-style-type: decimal">
@@ -1160,7 +1160,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-OPERA_products"><p>Content from <a href="OPERA_products.html">NASA Earthdata Cloud y productos OPERA</a></p>
 <hr>
-<p>Última actualización: 2026-04-14 |
+<p>Última actualización: 2026-04-21 |
 
         <a href="https://metadocencia.github.io/NASA-Earthdata-Cloud/edit/main/episodes/OPERA_products.Rmd" class="external-link">Mejora esta página <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Tiempo estimado: <i aria-hidden="true" data-feather="clock"></i> 52 minutos</p>
@@ -1329,7 +1329,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-caso_estudio"><p>Content from <a href="caso_estudio.html">Caso de Estudio</a></p>
 <hr>
-<p>Última actualización: 2026-04-14 |
+<p>Última actualización: 2026-04-21 |
 
         <a href="https://metadocencia.github.io/NASA-Earthdata-Cloud/edit/main/episodes/caso_estudio.md" class="external-link">Mejora esta página <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Tiempo estimado: <i aria-hidden="true" data-feather="clock"></i> 20 minutos</p>
@@ -1415,27 +1415,27 @@ nube</li>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a></span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="co">#librerias para manipulación de datos</span></span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="im">from</span> warnings <span class="im">import</span> filterwarnings <span class="co">#suprime los warning</span></span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>filterwarnings(<span class="st">'ignore'</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd, xarray <span class="im">as</span> xr</span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="im">import</span> rioxarray <span class="im">as</span> rio</span>
-<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="im">import</span> rasterio</span>
-<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="co">#librerias para visualización</span></span>
-<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a><span class="im">import</span> hvplot.pandas, hvplot.xarray</span>
-<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a><span class="im">import</span> geoviews <span class="im">as</span> gv</span>
-<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a><span class="im">from</span> geoviews <span class="im">import</span> opts</span>
-<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a>gv.extension(<span class="st">'bokeh'</span>)</span>
-<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a><span class="co">#configuración de acceso a datos geoespaciales desde la nube</span></span>
-<span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a><span class="im">from</span> pystac_client <span class="im">import</span> Client</span>
-<span id="cb1-17"><a href="#cb1-17" tabindex="-1"></a><span class="im">from</span> osgeo <span class="im">import</span> gdal</span>
-<span id="cb1-18"><a href="#cb1-18" tabindex="-1"></a>gdal.SetConfigOption(<span class="st">'GDAL_HTTP_COOKIEFILE'</span>,<span class="st">'~/.cookies.txt'</span>)</span>
-<span id="cb1-19"><a href="#cb1-19" tabindex="-1"></a>gdal.SetConfigOption(<span class="st">'GDAL_HTTP_COOKIEJAR'</span>, <span class="st">'~/.cookies.txt'</span>)</span>
-<span id="cb1-20"><a href="#cb1-20" tabindex="-1"></a>gdal.SetConfigOption(<span class="st">'GDAL_DISABLE_READDIR_ON_OPEN'</span>,<span class="st">'EMPTY_DIR'</span>)</span>
-<span id="cb1-21"><a href="#cb1-21" tabindex="-1"></a>gdal.SetConfigOption(<span class="st">'CPL_VSIL_CURL_ALLOWED_EXTENSIONS'</span>,<span class="st">'TIF, TIFF'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a><span class="co">#librerias para manipulación de datos</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a><span class="im">from</span> warnings <span class="im">import</span> filterwarnings <span class="co">#suprime los warning</span></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a>filterwarnings(<span class="st">'ignore'</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1" aria-label="code-block-1-5"></a><span class="im">import</span> numpy <span class="im">as</span> np, pandas <span class="im">as</span> pd, xarray <span class="im">as</span> xr</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1" aria-label="code-block-1-6"></a><span class="im">import</span> rioxarray <span class="im">as</span> rio</span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1" aria-label="code-block-1-7"></a><span class="im">import</span> rasterio</span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1" aria-label="code-block-1-8"></a></span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1" aria-label="code-block-1-9"></a><span class="co">#librerias para visualización</span></span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1" aria-label="code-block-1-10"></a><span class="im">import</span> hvplot.pandas, hvplot.xarray</span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1" aria-label="code-block-1-11"></a><span class="im">import</span> geoviews <span class="im">as</span> gv</span>
+<span id="cb1-12"><a href="#cb1-12" tabindex="-1" aria-label="code-block-1-12"></a><span class="im">from</span> geoviews <span class="im">import</span> opts</span>
+<span id="cb1-13"><a href="#cb1-13" tabindex="-1" aria-label="code-block-1-13"></a>gv.extension(<span class="st">'bokeh'</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" tabindex="-1" aria-label="code-block-1-14"></a></span>
+<span id="cb1-15"><a href="#cb1-15" tabindex="-1" aria-label="code-block-1-15"></a><span class="co">#configuración de acceso a datos geoespaciales desde la nube</span></span>
+<span id="cb1-16"><a href="#cb1-16" tabindex="-1" aria-label="code-block-1-16"></a><span class="im">from</span> pystac_client <span class="im">import</span> Client</span>
+<span id="cb1-17"><a href="#cb1-17" tabindex="-1" aria-label="code-block-1-17"></a><span class="im">from</span> osgeo <span class="im">import</span> gdal</span>
+<span id="cb1-18"><a href="#cb1-18" tabindex="-1" aria-label="code-block-1-18"></a>gdal.SetConfigOption(<span class="st">'GDAL_HTTP_COOKIEFILE'</span>,<span class="st">'~/.cookies.txt'</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" tabindex="-1" aria-label="code-block-1-19"></a>gdal.SetConfigOption(<span class="st">'GDAL_HTTP_COOKIEJAR'</span>, <span class="st">'~/.cookies.txt'</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" tabindex="-1" aria-label="code-block-1-20"></a>gdal.SetConfigOption(<span class="st">'GDAL_DISABLE_READDIR_ON_OPEN'</span>,<span class="st">'EMPTY_DIR'</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" tabindex="-1" aria-label="code-block-1-21"></a>gdal.SetConfigOption(<span class="st">'CPL_VSIL_CURL_ALLOWED_EXTENSIONS'</span>,<span class="st">'TIF, TIFF'</span>)</span></code></pre>
 </div>
 </div>
 <div class="section level3">
@@ -1477,10 +1477,10 @@ de fechas de interés.</li>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a></span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="co">#Definir el AOI con las coordenadas </span></span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>AOI <span class="op">=</span> [<span class="op">-</span><span class="fl">46.52993</span>,<span class="op">-</span><span class="fl">4.383815</span>,<span class="op">-</span><span class="fl">46.363075</span>,<span class="op">-</span><span class="fl">4.243793</span>]</span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>rango_fechas <span class="op">=</span> <span class="st">"2022-01-01/2024-03-31"</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a><span class="co">#Definir el AOI con las coordenadas </span></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a>AOI <span class="op">=</span> [<span class="op">-</span><span class="fl">46.52993</span>,<span class="op">-</span><span class="fl">4.383815</span>,<span class="op">-</span><span class="fl">46.363075</span>,<span class="op">-</span><span class="fl">4.243793</span>]</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1" aria-label="code-block-2-4"></a>rango_fechas <span class="op">=</span> <span class="st">"2022-01-01/2024-03-31"</span></span></code></pre>
 </div>
 <hr>
 </div>
@@ -1492,24 +1492,24 @@ DIST-ALERT</strong><a class="anchor" aria-label="anchor" href="#b--explorar-y-bu
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a></span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="co"># Realizamos la búsqueda de productos OPERA DIST-</span><span class="al">ALERT</span><span class="co"> para ver fechas disponibles</span></span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="im">from</span> pystac_client <span class="im">import</span> Client</span>
-<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="co"># Retomamos los parámetros de búsqueda definidos en el punto anterior</span></span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>search_params <span class="op">=</span> {</span>
-<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a>    <span class="st">"bbox"</span>: AOI,</span>
-<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a>    <span class="st">"datetime"</span>: rango_fechas,</span>
-<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a>    <span class="st">"collections"</span>: [<span class="st">"OPERA_L3_DIST-ALERT-HLS_V1_1"</span>]</span>
-<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a>}</span>
-<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a></span>
-<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a>client <span class="op">=</span> Client.<span class="bu">open</span>(<span class="st">"https://cmr.earthdata.nasa.gov/stac/LPCLOUD/"</span>)</span>
-<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a>items <span class="op">=</span> <span class="bu">list</span>(client.search(<span class="op">**</span>search_params).get_items())</span>
-<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a></span>
-<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a><span class="co"># Extraemos fechas disponibles</span></span>
-<span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a>fechas <span class="op">=</span> <span class="bu">sorted</span>({item.datetime.date() <span class="cf">for</span> item <span class="kw">in</span> items})</span>
-<span id="cb3-17"><a href="#cb3-17" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Fechas disponibles (</span><span class="sc">{</span><span class="bu">len</span>(fechas)<span class="sc">}</span><span class="ss">):"</span>)</span>
-<span id="cb3-18"><a href="#cb3-18" tabindex="-1"></a><span class="bu">print</span>(fechas)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a><span class="co"># Realizamos la búsqueda de productos OPERA DIST-</span><span class="al">ALERT</span><span class="co"> para ver fechas disponibles</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1" aria-label="code-block-3-3"></a><span class="im">from</span> pystac_client <span class="im">import</span> Client</span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1" aria-label="code-block-3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1" aria-label="code-block-3-5"></a><span class="co"># Retomamos los parámetros de búsqueda definidos en el punto anterior</span></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1" aria-label="code-block-3-6"></a>search_params <span class="op">=</span> {</span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1" aria-label="code-block-3-7"></a>    <span class="st">"bbox"</span>: AOI,</span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1" aria-label="code-block-3-8"></a>    <span class="st">"datetime"</span>: rango_fechas,</span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1" aria-label="code-block-3-9"></a>    <span class="st">"collections"</span>: [<span class="st">"OPERA_L3_DIST-ALERT-HLS_V1_1"</span>]</span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1" aria-label="code-block-3-10"></a>}</span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1" aria-label="code-block-3-11"></a></span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1" aria-label="code-block-3-12"></a>client <span class="op">=</span> Client.<span class="bu">open</span>(<span class="st">"https://cmr.earthdata.nasa.gov/stac/LPCLOUD/"</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1" aria-label="code-block-3-13"></a>items <span class="op">=</span> <span class="bu">list</span>(client.search(<span class="op">**</span>search_params).get_items())</span>
+<span id="cb3-14"><a href="#cb3-14" tabindex="-1" aria-label="code-block-3-14"></a></span>
+<span id="cb3-15"><a href="#cb3-15" tabindex="-1" aria-label="code-block-3-15"></a><span class="co"># Extraemos fechas disponibles</span></span>
+<span id="cb3-16"><a href="#cb3-16" tabindex="-1" aria-label="code-block-3-16"></a>fechas <span class="op">=</span> <span class="bu">sorted</span>({item.datetime.date() <span class="cf">for</span> item <span class="kw">in</span> items})</span>
+<span id="cb3-17"><a href="#cb3-17" tabindex="-1" aria-label="code-block-3-17"></a><span class="bu">print</span>(<span class="ss">f"Fechas disponibles (</span><span class="sc">{</span><span class="bu">len</span>(fechas)<span class="sc">}</span><span class="ss">):"</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" tabindex="-1" aria-label="code-block-3-18"></a><span class="bu">print</span>(fechas)</span></code></pre>
 </div>
 <p>Fechas disponibles (109):</p>
 <p>[datetime.date(2023, 1, 2), datetime.date(2023, 1, 5),
@@ -1596,14 +1596,14 @@ detectados</li>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a></span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="co">#Imprimimos los archivos que se encuentran dentro de 1 item</span></span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>item <span class="op">=</span> items[<span class="dv">0</span>]  </span>
-<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Item - Fecha: </span><span class="sc">{</span>item<span class="sc">.</span>datetime<span class="sc">.</span>date()<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a><span class="cf">for</span> asset_key, asset <span class="kw">in</span> item.assets.items():</span>
-<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  Asset: </span><span class="sc">{</span>asset_key<span class="sc">}</span><span class="ss"> → </span><span class="sc">{</span>asset<span class="sc">.</span>href<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a>    </span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a><span class="co">#Imprimimos los archivos que se encuentran dentro de 1 item</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1" aria-label="code-block-4-3"></a>item <span class="op">=</span> items[<span class="dv">0</span>]  </span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1" aria-label="code-block-4-4"></a></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1" aria-label="code-block-4-5"></a><span class="bu">print</span>(<span class="ss">f"Item - Fecha: </span><span class="sc">{</span>item<span class="sc">.</span>datetime<span class="sc">.</span>date()<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1" aria-label="code-block-4-6"></a><span class="cf">for</span> asset_key, asset <span class="kw">in</span> item.assets.items():</span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1" aria-label="code-block-4-7"></a>    <span class="bu">print</span>(<span class="ss">f"  Asset: </span><span class="sc">{</span>asset_key<span class="sc">}</span><span class="ss"> → </span><span class="sc">{</span>asset<span class="sc">.</span>href<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1" aria-label="code-block-4-8"></a>    </span></code></pre>
 </div>
 <p>Item - Fecha: 2023-01-02</p>
 <p>Asset: browse → <a href="https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-public/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-DIST-STATUS.png" class="external-link uri">https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-public/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-DIST-STATUS.png</a></p>
@@ -1634,27 +1634,27 @@ nubosidad</strong><a class="anchor" aria-label="anchor" href="#c-filtramos-los-a
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a></span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="co"># Recorremos todos los productos encontrados y seleccionamos solo los archivos .tif</span></span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="co"># correspondientes al asset 'VEG-DIST-STATUS'</span></span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="co"># Guardamos la fecha del producto y el link al archivo </span></span>
-<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>veg_status_assets <span class="op">=</span> []</span>
-<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> items:</span>
-<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a>    <span class="cf">for</span> key, asset <span class="kw">in</span> item.assets.items():</span>
-<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a>        <span class="cf">if</span> <span class="st">"VEG-DIST-STATUS"</span> <span class="kw">in</span> key <span class="kw">and</span> asset.href.endswith(<span class="st">".tif"</span>):</span>
-<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a>            veg_status_assets.append({</span>
-<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a>                <span class="st">"fecha"</span>: item.datetime.date(),</span>
-<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a>                <span class="st">"url"</span>: asset.href</span>
-<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a>            })</span>
-<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a></span>
-<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Se encontraron </span><span class="sc">{</span><span class="bu">len</span>(veg_status_assets)<span class="sc">}</span><span class="ss"> archivos VEG-DIST-STATUS."</span>)</span>
-<span id="cb5-17"><a href="#cb5-17" tabindex="-1"></a></span>
-<span id="cb5-18"><a href="#cb5-18" tabindex="-1"></a><span class="co">#imprimimos los primeros 10</span></span>
-<span id="cb5-19"><a href="#cb5-19" tabindex="-1"></a><span class="cf">for</span> registro <span class="kw">in</span> veg_status_assets[:<span class="dv">10</span>]:</span>
-<span id="cb5-20"><a href="#cb5-20" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  </span><span class="sc">{</span>registro[<span class="st">'fecha'</span>]<span class="sc">}</span><span class="ss"> → </span><span class="sc">{</span>registro[<span class="st">'url'</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb5-21"><a href="#cb5-21" tabindex="-1"></a>    </span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1" aria-label="code-block-5-2"></a><span class="co"># Recorremos todos los productos encontrados y seleccionamos solo los archivos .tif</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1" aria-label="code-block-5-3"></a><span class="co"># correspondientes al asset 'VEG-DIST-STATUS'</span></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1" aria-label="code-block-5-4"></a><span class="co"># Guardamos la fecha del producto y el link al archivo </span></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1" aria-label="code-block-5-5"></a></span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1" aria-label="code-block-5-6"></a>veg_status_assets <span class="op">=</span> []</span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1" aria-label="code-block-5-7"></a></span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1" aria-label="code-block-5-8"></a><span class="cf">for</span> item <span class="kw">in</span> items:</span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1" aria-label="code-block-5-9"></a>    <span class="cf">for</span> key, asset <span class="kw">in</span> item.assets.items():</span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1" aria-label="code-block-5-10"></a>        <span class="cf">if</span> <span class="st">"VEG-DIST-STATUS"</span> <span class="kw">in</span> key <span class="kw">and</span> asset.href.endswith(<span class="st">".tif"</span>):</span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1" aria-label="code-block-5-11"></a>            veg_status_assets.append({</span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1" aria-label="code-block-5-12"></a>                <span class="st">"fecha"</span>: item.datetime.date(),</span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1" aria-label="code-block-5-13"></a>                <span class="st">"url"</span>: asset.href</span>
+<span id="cb5-14"><a href="#cb5-14" tabindex="-1" aria-label="code-block-5-14"></a>            })</span>
+<span id="cb5-15"><a href="#cb5-15" tabindex="-1" aria-label="code-block-5-15"></a></span>
+<span id="cb5-16"><a href="#cb5-16" tabindex="-1" aria-label="code-block-5-16"></a><span class="bu">print</span>(<span class="ss">f"Se encontraron </span><span class="sc">{</span><span class="bu">len</span>(veg_status_assets)<span class="sc">}</span><span class="ss"> archivos VEG-DIST-STATUS."</span>)</span>
+<span id="cb5-17"><a href="#cb5-17" tabindex="-1" aria-label="code-block-5-17"></a></span>
+<span id="cb5-18"><a href="#cb5-18" tabindex="-1" aria-label="code-block-5-18"></a><span class="co">#imprimimos los primeros 10</span></span>
+<span id="cb5-19"><a href="#cb5-19" tabindex="-1" aria-label="code-block-5-19"></a><span class="cf">for</span> registro <span class="kw">in</span> veg_status_assets[:<span class="dv">10</span>]:</span>
+<span id="cb5-20"><a href="#cb5-20" tabindex="-1" aria-label="code-block-5-20"></a>    <span class="bu">print</span>(<span class="ss">f"  </span><span class="sc">{</span>registro[<span class="st">'fecha'</span>]<span class="sc">}</span><span class="ss"> → </span><span class="sc">{</span>registro[<span class="st">'url'</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb5-21"><a href="#cb5-21" tabindex="-1" aria-label="code-block-5-21"></a>    </span></code></pre>
 </div>
 <p>Se encontraron 234 archivos VEG-DIST-STATUS.</p>
 <p>2023-01-02 → <a href="https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-DIST-STATUS.tif" class="external-link uri">https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230102T133149Z_20231221T081031Z_S2B_30_v1_VEG-DIST-STATUS.tif</a></p>
@@ -1668,11 +1668,11 @@ s3://lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a></span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="co"># Imprimimos cloud_cover de los items con asset VEG-DIST-STATUS</span></span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> items:</span>
-<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">any</span>(<span class="st">"VEG-DIST-STATUS"</span> <span class="kw">in</span> k <span class="cf">for</span> k <span class="kw">in</span> item.assets):</span>
-<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>item<span class="sc">.</span>datetime<span class="sc">.</span>date()<span class="sc">}</span><span class="ss"> → Cloud cover: </span><span class="sc">{</span>item<span class="sc">.</span>properties<span class="sc">.</span>get(<span class="st">'eo:cloud_cover'</span>, <span class="st">'No disponible'</span>)<span class="sc">}</span><span class="ss">"</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1" aria-label="code-block-6-2"></a><span class="co"># Imprimimos cloud_cover de los items con asset VEG-DIST-STATUS</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1" aria-label="code-block-6-3"></a><span class="cf">for</span> item <span class="kw">in</span> items:</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1" aria-label="code-block-6-4"></a>    <span class="cf">if</span> <span class="bu">any</span>(<span class="st">"VEG-DIST-STATUS"</span> <span class="kw">in</span> k <span class="cf">for</span> k <span class="kw">in</span> item.assets):</span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1" aria-label="code-block-6-5"></a>        <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>item<span class="sc">.</span>datetime<span class="sc">.</span>date()<span class="sc">}</span><span class="ss"> → Cloud cover: </span><span class="sc">{</span>item<span class="sc">.</span>properties<span class="sc">.</span>get(<span class="st">'eo:cloud_cover'</span>, <span class="st">'No disponible'</span>)<span class="sc">}</span><span class="ss">"</span>)</span></code></pre>
 </div>
 <p>2023-01-02 → Cloud cover: 81</p>
 <p>2023-01-05 → Cloud cover: 79</p>
@@ -1690,27 +1690,27 @@ editor. Adjust cell output settings…</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a></span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>filtrados <span class="op">=</span> []</span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> items:</span>
-<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>    cloud <span class="op">=</span> item.properties.get(<span class="st">'eo:cloud_cover'</span>, <span class="va">None</span>)</span>
-<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>    <span class="cf">if</span> cloud <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span> <span class="kw">and</span> cloud <span class="op">&lt;</span> <span class="dv">40</span>:</span>
-<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>        <span class="cf">for</span> key, asset <span class="kw">in</span> item.assets.items():</span>
-<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>            <span class="cf">if</span> (</span>
-<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>                <span class="st">"VEG-DIST-STATUS"</span> <span class="kw">in</span> key <span class="kw">and</span> </span>
-<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>                asset.href.endswith(<span class="st">".tif"</span>) <span class="kw">and</span> </span>
-<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a>                asset.href.startswith(<span class="st">"https"</span>)</span>
-<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a>            ):</span>
-<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a>                filtrados.append({</span>
-<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a>                    <span class="st">"fecha"</span>: item.datetime.date(),</span>
-<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a>                    <span class="st">"url"</span>: asset.href,</span>
-<span id="cb7-16"><a href="#cb7-16" tabindex="-1"></a>                    <span class="st">"nubes"</span>: cloud</span>
-<span id="cb7-17"><a href="#cb7-17" tabindex="-1"></a>                })</span>
-<span id="cb7-18"><a href="#cb7-18" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Se encontraron </span><span class="sc">{</span><span class="bu">len</span>(filtrados)<span class="sc">}</span><span class="ss"> archivos con menos de 40% de nubes."</span>)</span>
-<span id="cb7-19"><a href="#cb7-19" tabindex="-1"></a><span class="cf">for</span> registro <span class="kw">in</span> filtrados[:<span class="dv">10</span>]:</span>
-<span id="cb7-20"><a href="#cb7-20" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>registro[<span class="st">'fecha'</span>]<span class="sc">}</span><span class="ss"> → Cloud cover: </span><span class="sc">{</span>registro[<span class="st">'nubes'</span>]<span class="sc">}</span><span class="ss"> → </span><span class="sc">{</span>registro[<span class="st">'url'</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb7-21"><a href="#cb7-21" tabindex="-1"></a>    </span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1" aria-label="code-block-7-2"></a>filtrados <span class="op">=</span> []</span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1" aria-label="code-block-7-3"></a></span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1" aria-label="code-block-7-4"></a><span class="cf">for</span> item <span class="kw">in</span> items:</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1" aria-label="code-block-7-5"></a>    cloud <span class="op">=</span> item.properties.get(<span class="st">'eo:cloud_cover'</span>, <span class="va">None</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1" aria-label="code-block-7-6"></a>    <span class="cf">if</span> cloud <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span> <span class="kw">and</span> cloud <span class="op">&lt;</span> <span class="dv">40</span>:</span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1" aria-label="code-block-7-7"></a>        <span class="cf">for</span> key, asset <span class="kw">in</span> item.assets.items():</span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1" aria-label="code-block-7-8"></a>            <span class="cf">if</span> (</span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1" aria-label="code-block-7-9"></a>                <span class="st">"VEG-DIST-STATUS"</span> <span class="kw">in</span> key <span class="kw">and</span> </span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1" aria-label="code-block-7-10"></a>                asset.href.endswith(<span class="st">".tif"</span>) <span class="kw">and</span> </span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1" aria-label="code-block-7-11"></a>                asset.href.startswith(<span class="st">"https"</span>)</span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1" aria-label="code-block-7-12"></a>            ):</span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1" aria-label="code-block-7-13"></a>                filtrados.append({</span>
+<span id="cb7-14"><a href="#cb7-14" tabindex="-1" aria-label="code-block-7-14"></a>                    <span class="st">"fecha"</span>: item.datetime.date(),</span>
+<span id="cb7-15"><a href="#cb7-15" tabindex="-1" aria-label="code-block-7-15"></a>                    <span class="st">"url"</span>: asset.href,</span>
+<span id="cb7-16"><a href="#cb7-16" tabindex="-1" aria-label="code-block-7-16"></a>                    <span class="st">"nubes"</span>: cloud</span>
+<span id="cb7-17"><a href="#cb7-17" tabindex="-1" aria-label="code-block-7-17"></a>                })</span>
+<span id="cb7-18"><a href="#cb7-18" tabindex="-1" aria-label="code-block-7-18"></a><span class="bu">print</span>(<span class="ss">f"Se encontraron </span><span class="sc">{</span><span class="bu">len</span>(filtrados)<span class="sc">}</span><span class="ss"> archivos con menos de 40% de nubes."</span>)</span>
+<span id="cb7-19"><a href="#cb7-19" tabindex="-1" aria-label="code-block-7-19"></a><span class="cf">for</span> registro <span class="kw">in</span> filtrados[:<span class="dv">10</span>]:</span>
+<span id="cb7-20"><a href="#cb7-20" tabindex="-1" aria-label="code-block-7-20"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>registro[<span class="st">'fecha'</span>]<span class="sc">}</span><span class="ss"> → Cloud cover: </span><span class="sc">{</span>registro[<span class="st">'nubes'</span>]<span class="sc">}</span><span class="ss"> → </span><span class="sc">{</span>registro[<span class="st">'url'</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb7-21"><a href="#cb7-21" tabindex="-1" aria-label="code-block-7-21"></a>    </span></code></pre>
 </div>
 <p>Se encontraron 12 archivos con menos de 40% de nubes.</p>
 <p>2023-06-26 → Cloud cover: 9 → <a href="https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230626T133151Z_20231221T083621Z_S2A_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230626T133151Z_20231221T083621Z_S2A_30_v1_VEG-DIST-STATUS.tif" class="external-link uri">https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230626T133151Z_20231221T083621Z_S2A_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230626T133151Z_20231221T083621Z_S2A_30_v1_VEG-DIST-STATUS.tif</a></p>
@@ -1726,57 +1726,57 @@ editor. Adjust cell output settings…</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a></span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="co">#Visualizar productos VEG_DIST_STATUS en el area de interes.</span></span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a><span class="co">#convertir a shp las coordenadas del area de interes (AOI)</span></span>
-<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a><span class="im">from</span> shapely.geometry <span class="im">import</span> box</span>
-<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
-<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a></span>
-<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a><span class="co"># AOI definido como bounding box</span></span>
-<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a>aoi_coords <span class="op">=</span> [<span class="op">-</span><span class="fl">46.78</span>, <span class="op">-</span><span class="fl">4.61</span>, <span class="op">-</span><span class="fl">46.58</span>, <span class="op">-</span><span class="fl">4.41</span>]  <span class="co"># xmin, ymin, xmax, ymax</span></span>
-<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a>aoi_geom <span class="op">=</span> box(<span class="op">*</span>aoi_coords)</span>
-<span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a>AOI <span class="op">=</span> gpd.GeoDataFrame(geometry<span class="op">=</span>[aoi_geom], crs<span class="op">=</span><span class="st">"EPSG:4326"</span>)</span>
-<span id="cb8-12"><a href="#cb8-12" tabindex="-1"></a></span>
-<span id="cb8-13"><a href="#cb8-13" tabindex="-1"></a><span class="co">#Visualizar la primer y ultima fecha del los productos filtrados</span></span>
-<span id="cb8-14"><a href="#cb8-14" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb8-15"><a href="#cb8-15" tabindex="-1"></a><span class="im">import</span> matplotlib.colors <span class="im">as</span> mcolors</span>
-<span id="cb8-16"><a href="#cb8-16" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
-<span id="cb8-17"><a href="#cb8-17" tabindex="-1"></a><span class="im">import</span> rioxarray</span>
-<span id="cb8-18"><a href="#cb8-18" tabindex="-1"></a></span>
-<span id="cb8-19"><a href="#cb8-19" tabindex="-1"></a><span class="co"># Crear colormap personalizado</span></span>
-<span id="cb8-20"><a href="#cb8-20" tabindex="-1"></a>white_to_red <span class="op">=</span> mcolors.LinearSegmentedColormap.from_list(<span class="st">"white_to_red"</span>, [<span class="st">"white"</span>, <span class="st">"red"</span>])</span>
-<span id="cb8-21"><a href="#cb8-21" tabindex="-1"></a></span>
-<span id="cb8-22"><a href="#cb8-22" tabindex="-1"></a><span class="co"># URLs de los dos productos</span></span>
-<span id="cb8-23"><a href="#cb8-23" tabindex="-1"></a>urls <span class="op">=</span> [</span>
-<span id="cb8-24"><a href="#cb8-24" tabindex="-1"></a>    (<span class="st">"26/06/2023"</span>, <span class="st">"https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230626T133151Z_20231221T083621Z_S2A_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230626T133151Z_20231221T083621Z_S2A_30_v1_VEG-DIST-STATUS.tif"</span>),</span>
-<span id="cb8-25"><a href="#cb8-25" tabindex="-1"></a>    (<span class="st">"18/09/2023"</span>, <span class="st">"https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1_VEG-DIST-STATUS.tif"</span>)</span>
-<span id="cb8-26"><a href="#cb8-26" tabindex="-1"></a>]</span>
-<span id="cb8-27"><a href="#cb8-27" tabindex="-1"></a></span>
-<span id="cb8-28"><a href="#cb8-28" tabindex="-1"></a><span class="co"># Crear figura</span></span>
-<span id="cb8-29"><a href="#cb8-29" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>), constrained_layout<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb8-30"><a href="#cb8-30" tabindex="-1"></a></span>
-<span id="cb8-31"><a href="#cb8-31" tabindex="-1"></a><span class="cf">for</span> ax, (label, url) <span class="kw">in</span> <span class="bu">zip</span>(axes, urls):</span>
-<span id="cb8-32"><a href="#cb8-32" tabindex="-1"></a>    da <span class="op">=</span> rioxarray.open_rasterio(url, masked<span class="op">=</span><span class="va">True</span>).squeeze()</span>
-<span id="cb8-33"><a href="#cb8-33" tabindex="-1"></a>    <span class="co"># Reproyectar AOI al CRS del raster</span></span>
-<span id="cb8-34"><a href="#cb8-34" tabindex="-1"></a>    aoi_proj <span class="op">=</span> AOI.to_crs(da.rio.crs)</span>
-<span id="cb8-35"><a href="#cb8-35" tabindex="-1"></a>    <span class="co"># Recorte</span></span>
-<span id="cb8-36"><a href="#cb8-36" tabindex="-1"></a>    da_clip <span class="op">=</span> da.rio.clip(aoi_proj.geometry, aoi_proj.crs)</span>
-<span id="cb8-37"><a href="#cb8-37" tabindex="-1"></a>    <span class="co"># Plot</span></span>
-<span id="cb8-38"><a href="#cb8-38" tabindex="-1"></a>    img <span class="op">=</span> da_clip.plot(</span>
-<span id="cb8-39"><a href="#cb8-39" tabindex="-1"></a>        ax<span class="op">=</span>ax,</span>
-<span id="cb8-40"><a href="#cb8-40" tabindex="-1"></a>        cmap<span class="op">=</span>white_to_red,</span>
-<span id="cb8-41"><a href="#cb8-41" tabindex="-1"></a>        vmin<span class="op">=</span><span class="dv">0</span>,</span>
-<span id="cb8-42"><a href="#cb8-42" tabindex="-1"></a>        vmax<span class="op">=</span><span class="dv">8</span>,</span>
-<span id="cb8-43"><a href="#cb8-43" tabindex="-1"></a>        add_colorbar<span class="op">=</span><span class="va">False</span></span>
-<span id="cb8-44"><a href="#cb8-44" tabindex="-1"></a>    )</span>
-<span id="cb8-45"><a href="#cb8-45" tabindex="-1"></a>    aoi_proj.boundary.plot(ax<span class="op">=</span>ax, edgecolor<span class="op">=</span><span class="st">"black"</span>, linewidth<span class="op">=</span><span class="fl">0.5</span>)</span>
-<span id="cb8-46"><a href="#cb8-46" tabindex="-1"></a>    ax.set_title(<span class="ss">f"Disturbios detectados</span><span class="ch">\n</span><span class="sc">{</span>label<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb8-47"><a href="#cb8-47" tabindex="-1"></a>    ax.axis(<span class="st">"off"</span>)</span>
-<span id="cb8-48"><a href="#cb8-48" tabindex="-1"></a></span>
-<span id="cb8-49"><a href="#cb8-49" tabindex="-1"></a><span class="co"># Agregar colorbar común</span></span>
-<span id="cb8-50"><a href="#cb8-50" tabindex="-1"></a>cbar <span class="op">=</span> fig.colorbar(img, ax<span class="op">=</span>axes.ravel().tolist(), shrink<span class="op">=</span><span class="fl">0.6</span>, label<span class="op">=</span><span class="st">"Vegetation_disturbance_status"</span>)</span>
-<span id="cb8-51"><a href="#cb8-51" tabindex="-1"></a>plt.show()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1" aria-label="code-block-8-2"></a><span class="co">#Visualizar productos VEG_DIST_STATUS en el area de interes.</span></span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1" aria-label="code-block-8-3"></a></span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1" aria-label="code-block-8-4"></a><span class="co">#convertir a shp las coordenadas del area de interes (AOI)</span></span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1" aria-label="code-block-8-5"></a><span class="im">from</span> shapely.geometry <span class="im">import</span> box</span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1" aria-label="code-block-8-6"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1" aria-label="code-block-8-7"></a></span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1" aria-label="code-block-8-8"></a><span class="co"># AOI definido como bounding box</span></span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1" aria-label="code-block-8-9"></a>aoi_coords <span class="op">=</span> [<span class="op">-</span><span class="fl">46.78</span>, <span class="op">-</span><span class="fl">4.61</span>, <span class="op">-</span><span class="fl">46.58</span>, <span class="op">-</span><span class="fl">4.41</span>]  <span class="co"># xmin, ymin, xmax, ymax</span></span>
+<span id="cb8-10"><a href="#cb8-10" tabindex="-1" aria-label="code-block-8-10"></a>aoi_geom <span class="op">=</span> box(<span class="op">*</span>aoi_coords)</span>
+<span id="cb8-11"><a href="#cb8-11" tabindex="-1" aria-label="code-block-8-11"></a>AOI <span class="op">=</span> gpd.GeoDataFrame(geometry<span class="op">=</span>[aoi_geom], crs<span class="op">=</span><span class="st">"EPSG:4326"</span>)</span>
+<span id="cb8-12"><a href="#cb8-12" tabindex="-1" aria-label="code-block-8-12"></a></span>
+<span id="cb8-13"><a href="#cb8-13" tabindex="-1" aria-label="code-block-8-13"></a><span class="co">#Visualizar la primer y ultima fecha del los productos filtrados</span></span>
+<span id="cb8-14"><a href="#cb8-14" tabindex="-1" aria-label="code-block-8-14"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb8-15"><a href="#cb8-15" tabindex="-1" aria-label="code-block-8-15"></a><span class="im">import</span> matplotlib.colors <span class="im">as</span> mcolors</span>
+<span id="cb8-16"><a href="#cb8-16" tabindex="-1" aria-label="code-block-8-16"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
+<span id="cb8-17"><a href="#cb8-17" tabindex="-1" aria-label="code-block-8-17"></a><span class="im">import</span> rioxarray</span>
+<span id="cb8-18"><a href="#cb8-18" tabindex="-1" aria-label="code-block-8-18"></a></span>
+<span id="cb8-19"><a href="#cb8-19" tabindex="-1" aria-label="code-block-8-19"></a><span class="co"># Crear colormap personalizado</span></span>
+<span id="cb8-20"><a href="#cb8-20" tabindex="-1" aria-label="code-block-8-20"></a>white_to_red <span class="op">=</span> mcolors.LinearSegmentedColormap.from_list(<span class="st">"white_to_red"</span>, [<span class="st">"white"</span>, <span class="st">"red"</span>])</span>
+<span id="cb8-21"><a href="#cb8-21" tabindex="-1" aria-label="code-block-8-21"></a></span>
+<span id="cb8-22"><a href="#cb8-22" tabindex="-1" aria-label="code-block-8-22"></a><span class="co"># URLs de los dos productos</span></span>
+<span id="cb8-23"><a href="#cb8-23" tabindex="-1" aria-label="code-block-8-23"></a>urls <span class="op">=</span> [</span>
+<span id="cb8-24"><a href="#cb8-24" tabindex="-1" aria-label="code-block-8-24"></a>    (<span class="st">"26/06/2023"</span>, <span class="st">"https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230626T133151Z_20231221T083621Z_S2A_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230626T133151Z_20231221T083621Z_S2A_30_v1_VEG-DIST-STATUS.tif"</span>),</span>
+<span id="cb8-25"><a href="#cb8-25" tabindex="-1" aria-label="code-block-8-25"></a>    (<span class="st">"18/09/2023"</span>, <span class="st">"https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1_VEG-DIST-STATUS.tif"</span>)</span>
+<span id="cb8-26"><a href="#cb8-26" tabindex="-1" aria-label="code-block-8-26"></a>]</span>
+<span id="cb8-27"><a href="#cb8-27" tabindex="-1" aria-label="code-block-8-27"></a></span>
+<span id="cb8-28"><a href="#cb8-28" tabindex="-1" aria-label="code-block-8-28"></a><span class="co"># Crear figura</span></span>
+<span id="cb8-29"><a href="#cb8-29" tabindex="-1" aria-label="code-block-8-29"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>), constrained_layout<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb8-30"><a href="#cb8-30" tabindex="-1" aria-label="code-block-8-30"></a></span>
+<span id="cb8-31"><a href="#cb8-31" tabindex="-1" aria-label="code-block-8-31"></a><span class="cf">for</span> ax, (label, url) <span class="kw">in</span> <span class="bu">zip</span>(axes, urls):</span>
+<span id="cb8-32"><a href="#cb8-32" tabindex="-1" aria-label="code-block-8-32"></a>    da <span class="op">=</span> rioxarray.open_rasterio(url, masked<span class="op">=</span><span class="va">True</span>).squeeze()</span>
+<span id="cb8-33"><a href="#cb8-33" tabindex="-1" aria-label="code-block-8-33"></a>    <span class="co"># Reproyectar AOI al CRS del raster</span></span>
+<span id="cb8-34"><a href="#cb8-34" tabindex="-1" aria-label="code-block-8-34"></a>    aoi_proj <span class="op">=</span> AOI.to_crs(da.rio.crs)</span>
+<span id="cb8-35"><a href="#cb8-35" tabindex="-1" aria-label="code-block-8-35"></a>    <span class="co"># Recorte</span></span>
+<span id="cb8-36"><a href="#cb8-36" tabindex="-1" aria-label="code-block-8-36"></a>    da_clip <span class="op">=</span> da.rio.clip(aoi_proj.geometry, aoi_proj.crs)</span>
+<span id="cb8-37"><a href="#cb8-37" tabindex="-1" aria-label="code-block-8-37"></a>    <span class="co"># Plot</span></span>
+<span id="cb8-38"><a href="#cb8-38" tabindex="-1" aria-label="code-block-8-38"></a>    img <span class="op">=</span> da_clip.plot(</span>
+<span id="cb8-39"><a href="#cb8-39" tabindex="-1" aria-label="code-block-8-39"></a>        ax<span class="op">=</span>ax,</span>
+<span id="cb8-40"><a href="#cb8-40" tabindex="-1" aria-label="code-block-8-40"></a>        cmap<span class="op">=</span>white_to_red,</span>
+<span id="cb8-41"><a href="#cb8-41" tabindex="-1" aria-label="code-block-8-41"></a>        vmin<span class="op">=</span><span class="dv">0</span>,</span>
+<span id="cb8-42"><a href="#cb8-42" tabindex="-1" aria-label="code-block-8-42"></a>        vmax<span class="op">=</span><span class="dv">8</span>,</span>
+<span id="cb8-43"><a href="#cb8-43" tabindex="-1" aria-label="code-block-8-43"></a>        add_colorbar<span class="op">=</span><span class="va">False</span></span>
+<span id="cb8-44"><a href="#cb8-44" tabindex="-1" aria-label="code-block-8-44"></a>    )</span>
+<span id="cb8-45"><a href="#cb8-45" tabindex="-1" aria-label="code-block-8-45"></a>    aoi_proj.boundary.plot(ax<span class="op">=</span>ax, edgecolor<span class="op">=</span><span class="st">"black"</span>, linewidth<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb8-46"><a href="#cb8-46" tabindex="-1" aria-label="code-block-8-46"></a>    ax.set_title(<span class="ss">f"Disturbios detectados</span><span class="ch">\n</span><span class="sc">{</span>label<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb8-47"><a href="#cb8-47" tabindex="-1" aria-label="code-block-8-47"></a>    ax.axis(<span class="st">"off"</span>)</span>
+<span id="cb8-48"><a href="#cb8-48" tabindex="-1" aria-label="code-block-8-48"></a></span>
+<span id="cb8-49"><a href="#cb8-49" tabindex="-1" aria-label="code-block-8-49"></a><span class="co"># Agregar colorbar común</span></span>
+<span id="cb8-50"><a href="#cb8-50" tabindex="-1" aria-label="code-block-8-50"></a>cbar <span class="op">=</span> fig.colorbar(img, ax<span class="op">=</span>axes.ravel().tolist(), shrink<span class="op">=</span><span class="fl">0.6</span>, label<span class="op">=</span><span class="st">"Vegetation_disturbance_status"</span>)</span>
+<span id="cb8-51"><a href="#cb8-51" tabindex="-1" aria-label="code-block-8-51"></a>plt.show()</span></code></pre>
 </div>
 <figure><img src="../fig/output1.png" class="figure mx-auto d-block"></figure><p>Valores del producto <code>VEG-DIST-STATUS</code>:</p>
 <ul>
@@ -1812,45 +1812,45 @@ en lacobertura vegetal ≥50%</li>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a></span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="co">#Graficar la distribución de los valores de disturbios en dos subproductos DIST-VEG-</span><span class="al">ALERT</span></span>
-<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a><span class="im">import</span> rioxarray</span>
-<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a></span>
-<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a><span class="co"># URLs de los dos productos</span></span>
-<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a>urls <span class="op">=</span> [</span>
-<span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a>    (<span class="st">"26/06/2023"</span>, <span class="st">"https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230626T133151Z_20231221T083621Z_S2A_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230626T133151Z_20231221T083621Z_S2A_30_v1_VEG-DIST-STATUS.tif"</span>),</span>
-<span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a>    (<span class="st">"18/09/2023"</span>, <span class="st">"https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1_VEG-DIST-STATUS.tif"</span>)</span>
-<span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a>]</span>
-<span id="cb9-13"><a href="#cb9-13" tabindex="-1"></a></span>
-<span id="cb9-14"><a href="#cb9-14" tabindex="-1"></a><span class="co"># Leer y calcular frecuencias primero</span></span>
-<span id="cb9-15"><a href="#cb9-15" tabindex="-1"></a>frecuencias <span class="op">=</span> []</span>
-<span id="cb9-16"><a href="#cb9-16" tabindex="-1"></a><span class="cf">for</span> label, url <span class="kw">in</span> urls:</span>
-<span id="cb9-17"><a href="#cb9-17" tabindex="-1"></a>    da <span class="op">=</span> rioxarray.open_rasterio(url, masked<span class="op">=</span><span class="va">True</span>).squeeze()</span>
-<span id="cb9-18"><a href="#cb9-18" tabindex="-1"></a>    aoi_proj <span class="op">=</span> AOI.to_crs(da.rio.crs)</span>
-<span id="cb9-19"><a href="#cb9-19" tabindex="-1"></a>    da_clip <span class="op">=</span> da.rio.clip(aoi_proj.geometry, aoi_proj.crs)</span>
-<span id="cb9-20"><a href="#cb9-20" tabindex="-1"></a>    vals <span class="op">=</span> da_clip.values.flatten()</span>
-<span id="cb9-21"><a href="#cb9-21" tabindex="-1"></a>    vals <span class="op">=</span> vals[(vals <span class="op">&gt;</span> <span class="dv">0</span>) <span class="op">&amp;</span> (<span class="op">~</span>np.isnan(vals))]</span>
-<span id="cb9-22"><a href="#cb9-22" tabindex="-1"></a>    hist, _ <span class="op">=</span> np.histogram(vals, bins<span class="op">=</span>np.arange(<span class="fl">0.5</span>, <span class="fl">9.5</span>, <span class="dv">1</span>))</span>
-<span id="cb9-23"><a href="#cb9-23" tabindex="-1"></a>    frecuencias.append((label, hist))</span>
-<span id="cb9-24"><a href="#cb9-24" tabindex="-1"></a></span>
-<span id="cb9-25"><a href="#cb9-25" tabindex="-1"></a><span class="co"># Encontrar el máximo para escalar ambos plots</span></span>
-<span id="cb9-26"><a href="#cb9-26" tabindex="-1"></a>ymax <span class="op">=</span> <span class="bu">max</span>(hist.<span class="bu">max</span>() <span class="cf">for</span> _, hist <span class="kw">in</span> frecuencias)</span>
-<span id="cb9-27"><a href="#cb9-27" tabindex="-1"></a></span>
-<span id="cb9-28"><a href="#cb9-28" tabindex="-1"></a><span class="co"># Gráfico</span></span>
-<span id="cb9-29"><a href="#cb9-29" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">4</span>), constrained_layout<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb9-30"><a href="#cb9-30" tabindex="-1"></a><span class="cf">for</span> ax, (label, hist) <span class="kw">in</span> <span class="bu">zip</span>(axes, frecuencias):</span>
-<span id="cb9-31"><a href="#cb9-31" tabindex="-1"></a>    ax.bar(<span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">9</span>), hist, color<span class="op">=</span><span class="st">'crimson'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb9-32"><a href="#cb9-32" tabindex="-1"></a>    ax.set_xticks(<span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">9</span>))</span>
-<span id="cb9-33"><a href="#cb9-33" tabindex="-1"></a>    ax.set_ylim(<span class="dv">0</span>, ymax <span class="op">+</span> ymax <span class="op">*</span> <span class="fl">0.1</span>)</span>
-<span id="cb9-34"><a href="#cb9-34" tabindex="-1"></a>    ax.set_title(<span class="ss">f"Histograma - </span><span class="sc">{</span>label<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb9-35"><a href="#cb9-35" tabindex="-1"></a>    ax.set_xlabel(<span class="st">"Clase de disturbio"</span>)</span>
-<span id="cb9-36"><a href="#cb9-36" tabindex="-1"></a>    ax.set_ylabel(<span class="st">"Frecuencia"</span>)</span>
-<span id="cb9-37"><a href="#cb9-37" tabindex="-1"></a></span>
-<span id="cb9-38"><a href="#cb9-38" tabindex="-1"></a>plt.suptitle(<span class="st">"Distribución de clases de disturbio detectadas"</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
-<span id="cb9-39"><a href="#cb9-39" tabindex="-1"></a>plt.show()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1" aria-label="code-block-9-2"></a><span class="co">#Graficar la distribución de los valores de disturbios en dos subproductos DIST-VEG-</span><span class="al">ALERT</span></span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1" aria-label="code-block-9-3"></a></span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1" aria-label="code-block-9-4"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1" aria-label="code-block-9-5"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1" aria-label="code-block-9-6"></a><span class="im">import</span> rioxarray</span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1" aria-label="code-block-9-7"></a></span>
+<span id="cb9-8"><a href="#cb9-8" tabindex="-1" aria-label="code-block-9-8"></a><span class="co"># URLs de los dos productos</span></span>
+<span id="cb9-9"><a href="#cb9-9" tabindex="-1" aria-label="code-block-9-9"></a>urls <span class="op">=</span> [</span>
+<span id="cb9-10"><a href="#cb9-10" tabindex="-1" aria-label="code-block-9-10"></a>    (<span class="st">"26/06/2023"</span>, <span class="st">"https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230626T133151Z_20231221T083621Z_S2A_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230626T133151Z_20231221T083621Z_S2A_30_v1_VEG-DIST-STATUS.tif"</span>),</span>
+<span id="cb9-11"><a href="#cb9-11" tabindex="-1" aria-label="code-block-9-11"></a>    (<span class="st">"18/09/2023"</span>, <span class="st">"https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1_VEG-DIST-STATUS.tif"</span>)</span>
+<span id="cb9-12"><a href="#cb9-12" tabindex="-1" aria-label="code-block-9-12"></a>]</span>
+<span id="cb9-13"><a href="#cb9-13" tabindex="-1" aria-label="code-block-9-13"></a></span>
+<span id="cb9-14"><a href="#cb9-14" tabindex="-1" aria-label="code-block-9-14"></a><span class="co"># Leer y calcular frecuencias primero</span></span>
+<span id="cb9-15"><a href="#cb9-15" tabindex="-1" aria-label="code-block-9-15"></a>frecuencias <span class="op">=</span> []</span>
+<span id="cb9-16"><a href="#cb9-16" tabindex="-1" aria-label="code-block-9-16"></a><span class="cf">for</span> label, url <span class="kw">in</span> urls:</span>
+<span id="cb9-17"><a href="#cb9-17" tabindex="-1" aria-label="code-block-9-17"></a>    da <span class="op">=</span> rioxarray.open_rasterio(url, masked<span class="op">=</span><span class="va">True</span>).squeeze()</span>
+<span id="cb9-18"><a href="#cb9-18" tabindex="-1" aria-label="code-block-9-18"></a>    aoi_proj <span class="op">=</span> AOI.to_crs(da.rio.crs)</span>
+<span id="cb9-19"><a href="#cb9-19" tabindex="-1" aria-label="code-block-9-19"></a>    da_clip <span class="op">=</span> da.rio.clip(aoi_proj.geometry, aoi_proj.crs)</span>
+<span id="cb9-20"><a href="#cb9-20" tabindex="-1" aria-label="code-block-9-20"></a>    vals <span class="op">=</span> da_clip.values.flatten()</span>
+<span id="cb9-21"><a href="#cb9-21" tabindex="-1" aria-label="code-block-9-21"></a>    vals <span class="op">=</span> vals[(vals <span class="op">&gt;</span> <span class="dv">0</span>) <span class="op">&amp;</span> (<span class="op">~</span>np.isnan(vals))]</span>
+<span id="cb9-22"><a href="#cb9-22" tabindex="-1" aria-label="code-block-9-22"></a>    hist, _ <span class="op">=</span> np.histogram(vals, bins<span class="op">=</span>np.arange(<span class="fl">0.5</span>, <span class="fl">9.5</span>, <span class="dv">1</span>))</span>
+<span id="cb9-23"><a href="#cb9-23" tabindex="-1" aria-label="code-block-9-23"></a>    frecuencias.append((label, hist))</span>
+<span id="cb9-24"><a href="#cb9-24" tabindex="-1" aria-label="code-block-9-24"></a></span>
+<span id="cb9-25"><a href="#cb9-25" tabindex="-1" aria-label="code-block-9-25"></a><span class="co"># Encontrar el máximo para escalar ambos plots</span></span>
+<span id="cb9-26"><a href="#cb9-26" tabindex="-1" aria-label="code-block-9-26"></a>ymax <span class="op">=</span> <span class="bu">max</span>(hist.<span class="bu">max</span>() <span class="cf">for</span> _, hist <span class="kw">in</span> frecuencias)</span>
+<span id="cb9-27"><a href="#cb9-27" tabindex="-1" aria-label="code-block-9-27"></a></span>
+<span id="cb9-28"><a href="#cb9-28" tabindex="-1" aria-label="code-block-9-28"></a><span class="co"># Gráfico</span></span>
+<span id="cb9-29"><a href="#cb9-29" tabindex="-1" aria-label="code-block-9-29"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">4</span>), constrained_layout<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb9-30"><a href="#cb9-30" tabindex="-1" aria-label="code-block-9-30"></a><span class="cf">for</span> ax, (label, hist) <span class="kw">in</span> <span class="bu">zip</span>(axes, frecuencias):</span>
+<span id="cb9-31"><a href="#cb9-31" tabindex="-1" aria-label="code-block-9-31"></a>    ax.bar(<span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">9</span>), hist, color<span class="op">=</span><span class="st">'crimson'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb9-32"><a href="#cb9-32" tabindex="-1" aria-label="code-block-9-32"></a>    ax.set_xticks(<span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">9</span>))</span>
+<span id="cb9-33"><a href="#cb9-33" tabindex="-1" aria-label="code-block-9-33"></a>    ax.set_ylim(<span class="dv">0</span>, ymax <span class="op">+</span> ymax <span class="op">*</span> <span class="fl">0.1</span>)</span>
+<span id="cb9-34"><a href="#cb9-34" tabindex="-1" aria-label="code-block-9-34"></a>    ax.set_title(<span class="ss">f"Histograma - </span><span class="sc">{</span>label<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-35"><a href="#cb9-35" tabindex="-1" aria-label="code-block-9-35"></a>    ax.set_xlabel(<span class="st">"Clase de disturbio"</span>)</span>
+<span id="cb9-36"><a href="#cb9-36" tabindex="-1" aria-label="code-block-9-36"></a>    ax.set_ylabel(<span class="st">"Frecuencia"</span>)</span>
+<span id="cb9-37"><a href="#cb9-37" tabindex="-1" aria-label="code-block-9-37"></a></span>
+<span id="cb9-38"><a href="#cb9-38" tabindex="-1" aria-label="code-block-9-38"></a>plt.suptitle(<span class="st">"Distribución de clases de disturbio detectadas"</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb9-39"><a href="#cb9-39" tabindex="-1" aria-label="code-block-9-39"></a>plt.show()</span></code></pre>
 </div>
 <figure><img src="../fig/output2.png" class="figure mx-auto d-block"></figure>
 </div>
@@ -1860,30 +1860,30 @@ en lacobertura vegetal ≥50%</li>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="co"># Stack de los 12 subproductos VEG-DIST-STATUS</span></span>
-<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a></span>
-<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a><span class="im">from</span> rioxarray <span class="im">import</span> open_rasterio</span>
-<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a><span class="im">import</span> xarray <span class="im">as</span> xr</span>
-<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a></span>
-<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a><span class="co"># Recortar cada raster al AOI y luego apilar</span></span>
-<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a>raster_list <span class="op">=</span> []</span>
-<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a>fechas <span class="op">=</span> []</span>
-<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a></span>
-<span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a><span class="cf">for</span> f <span class="kw">in</span> filtrados:    </span>
-<span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a>    da <span class="op">=</span> open_rasterio(f[<span class="st">"url"</span>], masked<span class="op">=</span><span class="va">True</span>).squeeze()</span>
-<span id="cb10-14"><a href="#cb10-14" tabindex="-1"></a>    aoi_proj <span class="op">=</span> AOI.to_crs(da.rio.crs)</span>
-<span id="cb10-15"><a href="#cb10-15" tabindex="-1"></a>    da_clip <span class="op">=</span> da.rio.clip(aoi_proj.geometry, aoi_proj.crs)</span>
-<span id="cb10-16"><a href="#cb10-16" tabindex="-1"></a>    </span>
-<span id="cb10-17"><a href="#cb10-17" tabindex="-1"></a>    raster_list.append(da_clip)</span>
-<span id="cb10-18"><a href="#cb10-18" tabindex="-1"></a>    fechas.append(pd.Timestamp(f[<span class="st">"fecha"</span>]))</span>
-<span id="cb10-19"><a href="#cb10-19" tabindex="-1"></a></span>
-<span id="cb10-20"><a href="#cb10-20" tabindex="-1"></a><span class="co"># Crear el stack recortado</span></span>
-<span id="cb10-21"><a href="#cb10-21" tabindex="-1"></a>stack <span class="op">=</span> xr.concat(raster_list, dim<span class="op">=</span><span class="st">"time"</span>)</span>
-<span id="cb10-22"><a href="#cb10-22" tabindex="-1"></a>stack[<span class="st">"time"</span>] <span class="op">=</span> fechas</span>
-<span id="cb10-23"><a href="#cb10-23" tabindex="-1"></a></span>
-<span id="cb10-24"><a href="#cb10-24" tabindex="-1"></a>stack</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a><span class="co"># Stack de los 12 subproductos VEG-DIST-STATUS</span></span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1" aria-label="code-block-10-2"></a></span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1" aria-label="code-block-10-3"></a><span class="im">from</span> rioxarray <span class="im">import</span> open_rasterio</span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1" aria-label="code-block-10-4"></a><span class="im">import</span> xarray <span class="im">as</span> xr</span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1" aria-label="code-block-10-5"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1" aria-label="code-block-10-6"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1" aria-label="code-block-10-7"></a></span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1" aria-label="code-block-10-8"></a><span class="co"># Recortar cada raster al AOI y luego apilar</span></span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1" aria-label="code-block-10-9"></a>raster_list <span class="op">=</span> []</span>
+<span id="cb10-10"><a href="#cb10-10" tabindex="-1" aria-label="code-block-10-10"></a>fechas <span class="op">=</span> []</span>
+<span id="cb10-11"><a href="#cb10-11" tabindex="-1" aria-label="code-block-10-11"></a></span>
+<span id="cb10-12"><a href="#cb10-12" tabindex="-1" aria-label="code-block-10-12"></a><span class="cf">for</span> f <span class="kw">in</span> filtrados:    </span>
+<span id="cb10-13"><a href="#cb10-13" tabindex="-1" aria-label="code-block-10-13"></a>    da <span class="op">=</span> open_rasterio(f[<span class="st">"url"</span>], masked<span class="op">=</span><span class="va">True</span>).squeeze()</span>
+<span id="cb10-14"><a href="#cb10-14" tabindex="-1" aria-label="code-block-10-14"></a>    aoi_proj <span class="op">=</span> AOI.to_crs(da.rio.crs)</span>
+<span id="cb10-15"><a href="#cb10-15" tabindex="-1" aria-label="code-block-10-15"></a>    da_clip <span class="op">=</span> da.rio.clip(aoi_proj.geometry, aoi_proj.crs)</span>
+<span id="cb10-16"><a href="#cb10-16" tabindex="-1" aria-label="code-block-10-16"></a>    </span>
+<span id="cb10-17"><a href="#cb10-17" tabindex="-1" aria-label="code-block-10-17"></a>    raster_list.append(da_clip)</span>
+<span id="cb10-18"><a href="#cb10-18" tabindex="-1" aria-label="code-block-10-18"></a>    fechas.append(pd.Timestamp(f[<span class="st">"fecha"</span>]))</span>
+<span id="cb10-19"><a href="#cb10-19" tabindex="-1" aria-label="code-block-10-19"></a></span>
+<span id="cb10-20"><a href="#cb10-20" tabindex="-1" aria-label="code-block-10-20"></a><span class="co"># Crear el stack recortado</span></span>
+<span id="cb10-21"><a href="#cb10-21" tabindex="-1" aria-label="code-block-10-21"></a>stack <span class="op">=</span> xr.concat(raster_list, dim<span class="op">=</span><span class="st">"time"</span>)</span>
+<span id="cb10-22"><a href="#cb10-22" tabindex="-1" aria-label="code-block-10-22"></a>stack[<span class="st">"time"</span>] <span class="op">=</span> fechas</span>
+<span id="cb10-23"><a href="#cb10-23" tabindex="-1" aria-label="code-block-10-23"></a></span>
+<span id="cb10-24"><a href="#cb10-24" tabindex="-1" aria-label="code-block-10-24"></a>stack</span></code></pre>
 </div>
 <p>xarray.DataArraytime: 12y: 738x: 741 array([[[nan, nan, nan, …, 0.,
 0., nan], [nan, nan, nan, …, 2., 0., nan], [ 0., 0., 0., …, 0., 1.,
@@ -1892,51 +1892,51 @@ nan], …, [nan, nan, 0., …, 0., 0., 0.], [nan, nan, 0., …, 0., 0., 0.],
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">SH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode sh" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a>   <span class="ex">[[nan,</span> nan, nan, ...,  1.,  0., nan],</span>
-<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>    <span class="ex">[nan,</span> nan, nan, ...,  2.,  1., nan],</span>
-<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a>    <span class="bu">[</span> 0.,  0.,  0., <span class="er">...,</span>  <span class="ex">0.,</span>  2., nan],</span>
-<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a>    <span class="ex">...,</span></span>
-<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a>    <span class="ex">[nan,</span> nan,  0., ...,  0.,  0.,  0.],</span>
-<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a>    <span class="ex">[nan,</span> nan,  0., ...,  0.,  0.,  0.],</span>
-<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a>    <span class="ex">[nan,</span> nan,  0., ...,  0.,  0.,  0.]],</span>
-<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a></span>
-<span id="cb11-9"><a href="#cb11-9" tabindex="-1"></a>    <span class="ex">...,</span></span>
-<span id="cb11-10"><a href="#cb11-10" tabindex="-1"></a>    </span>
-<span id="cb11-11"><a href="#cb11-11" tabindex="-1"></a>    <span class="ex">[nan,</span> nan,  1., ...,  0.,  0.,  0.],</span>
-<span id="cb11-12"><a href="#cb11-12" tabindex="-1"></a>    <span class="ex">[nan,</span> nan,  0., ...,  0.,  0.,  0.],</span>
-<span id="cb11-13"><a href="#cb11-13" tabindex="-1"></a>    <span class="ex">[nan,</span> nan,  0., ...,  0.,  0.,  0.]]], dtype=float32<span class="er">)</span></span>
-<span id="cb11-14"><a href="#cb11-14" tabindex="-1"></a>    </span>
-<span id="cb11-15"><a href="#cb11-15" tabindex="-1"></a>    </span></code></pre>
+<pre class="sourceCode sh" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a>   <span class="ex">[[nan,</span> nan, nan, ...,  1.,  0., nan],</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1" aria-label="code-block-11-2"></a>    <span class="ex">[nan,</span> nan, nan, ...,  2.,  1., nan],</span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1" aria-label="code-block-11-3"></a>    <span class="bu">[</span> 0.,  0.,  0., <span class="er">...,</span>  <span class="ex">0.,</span>  2., nan],</span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1" aria-label="code-block-11-4"></a>    <span class="ex">...,</span></span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1" aria-label="code-block-11-5"></a>    <span class="ex">[nan,</span> nan,  0., ...,  0.,  0.,  0.],</span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1" aria-label="code-block-11-6"></a>    <span class="ex">[nan,</span> nan,  0., ...,  0.,  0.,  0.],</span>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1" aria-label="code-block-11-7"></a>    <span class="ex">[nan,</span> nan,  0., ...,  0.,  0.,  0.]],</span>
+<span id="cb11-8"><a href="#cb11-8" tabindex="-1" aria-label="code-block-11-8"></a></span>
+<span id="cb11-9"><a href="#cb11-9" tabindex="-1" aria-label="code-block-11-9"></a>    <span class="ex">...,</span></span>
+<span id="cb11-10"><a href="#cb11-10" tabindex="-1" aria-label="code-block-11-10"></a>    </span>
+<span id="cb11-11"><a href="#cb11-11" tabindex="-1" aria-label="code-block-11-11"></a>    <span class="ex">[nan,</span> nan,  1., ...,  0.,  0.,  0.],</span>
+<span id="cb11-12"><a href="#cb11-12" tabindex="-1" aria-label="code-block-11-12"></a>    <span class="ex">[nan,</span> nan,  0., ...,  0.,  0.,  0.],</span>
+<span id="cb11-13"><a href="#cb11-13" tabindex="-1" aria-label="code-block-11-13"></a>    <span class="ex">[nan,</span> nan,  0., ...,  0.,  0.,  0.]]], dtype=float32<span class="er">)</span></span>
+<span id="cb11-14"><a href="#cb11-14" tabindex="-1" aria-label="code-block-11-14"></a>    </span>
+<span id="cb11-15"><a href="#cb11-15" tabindex="-1" aria-label="code-block-11-15"></a>    </span></code></pre>
 </div>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a></span>
-<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="co">#Graficar el area disturbada acumulada en el area de estudio</span></span>
-<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a></span>
-<span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a><span class="co">#ordenaar el stack por fecha</span></span>
-<span id="cb12-7"><a href="#cb12-7" tabindex="-1"></a>stack_sorted <span class="op">=</span> stack.sortby(<span class="st">"time"</span>)</span>
-<span id="cb12-8"><a href="#cb12-8" tabindex="-1"></a></span>
-<span id="cb12-9"><a href="#cb12-9" tabindex="-1"></a><span class="co"># Crear máscara booleana donde el valor sea 6 (disturbio confirmado)</span></span>
-<span id="cb12-10"><a href="#cb12-10" tabindex="-1"></a>disturbios <span class="op">=</span> stack_sorted <span class="op">==</span> <span class="dv">6</span></span>
-<span id="cb12-11"><a href="#cb12-11" tabindex="-1"></a></span>
-<span id="cb12-12"><a href="#cb12-12" tabindex="-1"></a><span class="co"># Sumar la cantidad de píxeles por fecha</span></span>
-<span id="cb12-13"><a href="#cb12-13" tabindex="-1"></a>pixeles_por_fecha <span class="op">=</span> disturbios.<span class="bu">sum</span>(dim<span class="op">=</span>[<span class="st">"x"</span>, <span class="st">"y"</span>])</span>
-<span id="cb12-14"><a href="#cb12-14" tabindex="-1"></a></span>
-<span id="cb12-15"><a href="#cb12-15" tabindex="-1"></a><span class="co"># Convertir a km² (cada píxel es de 30m x 30m = 900 m² = 0.0009 km²)</span></span>
-<span id="cb12-16"><a href="#cb12-16" tabindex="-1"></a>km2_por_fecha <span class="op">=</span> pixeles_por_fecha <span class="op">*</span> <span class="fl">0.0009</span></span>
-<span id="cb12-17"><a href="#cb12-17" tabindex="-1"></a></span>
-<span id="cb12-18"><a href="#cb12-18" tabindex="-1"></a><span class="co"># Graficar</span></span>
-<span id="cb12-19"><a href="#cb12-19" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
-<span id="cb12-20"><a href="#cb12-20" tabindex="-1"></a>km2_por_fecha.to_series().plot(marker<span class="op">=</span><span class="st">'o'</span>)</span>
-<span id="cb12-21"><a href="#cb12-21" tabindex="-1"></a>plt.title(<span class="st">"Evolución de disturbios confirmados (valor 6)"</span>)</span>
-<span id="cb12-22"><a href="#cb12-22" tabindex="-1"></a>plt.ylabel(<span class="st">"Área acumulada (km²)"</span>)</span>
-<span id="cb12-23"><a href="#cb12-23" tabindex="-1"></a>plt.xlabel(<span class="st">"Fecha"</span>)</span>
-<span id="cb12-24"><a href="#cb12-24" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
-<span id="cb12-25"><a href="#cb12-25" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb12-26"><a href="#cb12-26" tabindex="-1"></a>plt.show()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1" aria-label="code-block-12-2"></a><span class="co">#Graficar el area disturbada acumulada en el area de estudio</span></span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1" aria-label="code-block-12-3"></a></span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1" aria-label="code-block-12-4"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb12-5"><a href="#cb12-5" tabindex="-1" aria-label="code-block-12-5"></a></span>
+<span id="cb12-6"><a href="#cb12-6" tabindex="-1" aria-label="code-block-12-6"></a><span class="co">#ordenaar el stack por fecha</span></span>
+<span id="cb12-7"><a href="#cb12-7" tabindex="-1" aria-label="code-block-12-7"></a>stack_sorted <span class="op">=</span> stack.sortby(<span class="st">"time"</span>)</span>
+<span id="cb12-8"><a href="#cb12-8" tabindex="-1" aria-label="code-block-12-8"></a></span>
+<span id="cb12-9"><a href="#cb12-9" tabindex="-1" aria-label="code-block-12-9"></a><span class="co"># Crear máscara booleana donde el valor sea 6 (disturbio confirmado)</span></span>
+<span id="cb12-10"><a href="#cb12-10" tabindex="-1" aria-label="code-block-12-10"></a>disturbios <span class="op">=</span> stack_sorted <span class="op">==</span> <span class="dv">6</span></span>
+<span id="cb12-11"><a href="#cb12-11" tabindex="-1" aria-label="code-block-12-11"></a></span>
+<span id="cb12-12"><a href="#cb12-12" tabindex="-1" aria-label="code-block-12-12"></a><span class="co"># Sumar la cantidad de píxeles por fecha</span></span>
+<span id="cb12-13"><a href="#cb12-13" tabindex="-1" aria-label="code-block-12-13"></a>pixeles_por_fecha <span class="op">=</span> disturbios.<span class="bu">sum</span>(dim<span class="op">=</span>[<span class="st">"x"</span>, <span class="st">"y"</span>])</span>
+<span id="cb12-14"><a href="#cb12-14" tabindex="-1" aria-label="code-block-12-14"></a></span>
+<span id="cb12-15"><a href="#cb12-15" tabindex="-1" aria-label="code-block-12-15"></a><span class="co"># Convertir a km² (cada píxel es de 30m x 30m = 900 m² = 0.0009 km²)</span></span>
+<span id="cb12-16"><a href="#cb12-16" tabindex="-1" aria-label="code-block-12-16"></a>km2_por_fecha <span class="op">=</span> pixeles_por_fecha <span class="op">*</span> <span class="fl">0.0009</span></span>
+<span id="cb12-17"><a href="#cb12-17" tabindex="-1" aria-label="code-block-12-17"></a></span>
+<span id="cb12-18"><a href="#cb12-18" tabindex="-1" aria-label="code-block-12-18"></a><span class="co"># Graficar</span></span>
+<span id="cb12-19"><a href="#cb12-19" tabindex="-1" aria-label="code-block-12-19"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
+<span id="cb12-20"><a href="#cb12-20" tabindex="-1" aria-label="code-block-12-20"></a>km2_por_fecha.to_series().plot(marker<span class="op">=</span><span class="st">'o'</span>)</span>
+<span id="cb12-21"><a href="#cb12-21" tabindex="-1" aria-label="code-block-12-21"></a>plt.title(<span class="st">"Evolución de disturbios confirmados (valor 6)"</span>)</span>
+<span id="cb12-22"><a href="#cb12-22" tabindex="-1" aria-label="code-block-12-22"></a>plt.ylabel(<span class="st">"Área acumulada (km²)"</span>)</span>
+<span id="cb12-23"><a href="#cb12-23" tabindex="-1" aria-label="code-block-12-23"></a>plt.xlabel(<span class="st">"Fecha"</span>)</span>
+<span id="cb12-24"><a href="#cb12-24" tabindex="-1" aria-label="code-block-12-24"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb12-25"><a href="#cb12-25" tabindex="-1" aria-label="code-block-12-25"></a>plt.tight_layout()</span>
+<span id="cb12-26"><a href="#cb12-26" tabindex="-1" aria-label="code-block-12-26"></a>plt.show()</span></code></pre>
 </div>
 <figure><img src="../fig/output3.png" class="figure mx-auto d-block"></figure><div id="callout1" class="callout">
 <div class="callout-square">
@@ -1958,45 +1958,45 @@ código que genera el gráfico encontramos solo un producto por fecha.</p>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a></span>
-<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="co"># Convertir a DataFrame </span></span>
-<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>df_filtrados <span class="op">=</span> pd.DataFrame(filtrados)</span>
-<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a>df_filtrados[<span class="st">"fecha"</span>] <span class="op">=</span> pd.to_datetime(df_filtrados[<span class="st">"fecha"</span>])</span>
-<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a></span>
-<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a><span class="co"># Ordenar por menor cobertura de nubes </span></span>
-<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a>df_filtrados <span class="op">=</span> df_filtrados.sort_values(<span class="st">"nubes"</span>)</span>
-<span id="cb13-8"><a href="#cb13-8" tabindex="-1"></a><span class="co">#Seleccionar el producto con Sentinel</span></span>
-<span id="cb13-9"><a href="#cb13-9" tabindex="-1"></a></span>
-<span id="cb13-10"><a href="#cb13-10" tabindex="-1"></a><span class="co"># Eliminar duplicados dejando el que tiene menor nubosidad</span></span>
-<span id="cb13-11"><a href="#cb13-11" tabindex="-1"></a>df_filtrados <span class="op">=</span> df_filtrados.drop_duplicates(subset<span class="op">=</span><span class="st">"fecha"</span>, keep<span class="op">=</span><span class="st">"first"</span>)</span>
-<span id="cb13-12"><a href="#cb13-12" tabindex="-1"></a></span>
-<span id="cb13-13"><a href="#cb13-13" tabindex="-1"></a><span class="co"># Reconstruir la lista filtrada</span></span>
-<span id="cb13-14"><a href="#cb13-14" tabindex="-1"></a>filtrados_unicos <span class="op">=</span> df_filtrados.to_dict(orient<span class="op">=</span><span class="st">"records"</span>)</span>
-<span id="cb13-15"><a href="#cb13-15" tabindex="-1"></a></span>
-<span id="cb13-16"><a href="#cb13-16" tabindex="-1"></a><span class="co">#VOLVEMOS A CORRER EL STACK USANDO filtrados_unicos</span></span>
-<span id="cb13-17"><a href="#cb13-17" tabindex="-1"></a></span>
-<span id="cb13-18"><a href="#cb13-18" tabindex="-1"></a><span class="co"># Stack de los subproductos VEG-DIST-STATUS</span></span>
-<span id="cb13-19"><a href="#cb13-19" tabindex="-1"></a></span>
-<span id="cb13-20"><a href="#cb13-20" tabindex="-1"></a><span class="im">from</span> rioxarray <span class="im">import</span> open_rasterio</span>
-<span id="cb13-21"><a href="#cb13-21" tabindex="-1"></a><span class="im">import</span> xarray <span class="im">as</span> xr</span>
-<span id="cb13-22"><a href="#cb13-22" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb13-23"><a href="#cb13-23" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb13-24"><a href="#cb13-24" tabindex="-1"></a></span>
-<span id="cb13-25"><a href="#cb13-25" tabindex="-1"></a><span class="co"># Recortar cada raster al AOI y luego apilar</span></span>
-<span id="cb13-26"><a href="#cb13-26" tabindex="-1"></a>raster_list <span class="op">=</span> []</span>
-<span id="cb13-27"><a href="#cb13-27" tabindex="-1"></a>fechas <span class="op">=</span> []</span>
-<span id="cb13-28"><a href="#cb13-28" tabindex="-1"></a></span>
-<span id="cb13-29"><a href="#cb13-29" tabindex="-1"></a><span class="cf">for</span> f <span class="kw">in</span> filtrados_unicos: </span>
-<span id="cb13-30"><a href="#cb13-30" tabindex="-1"></a>    da <span class="op">=</span> open_rasterio(f[<span class="st">"url"</span>], masked<span class="op">=</span><span class="va">True</span>).squeeze()</span>
-<span id="cb13-31"><a href="#cb13-31" tabindex="-1"></a>    aoi_proj <span class="op">=</span> AOI.to_crs(da.rio.crs)</span>
-<span id="cb13-32"><a href="#cb13-32" tabindex="-1"></a>    da_clip <span class="op">=</span> da.rio.clip(aoi_proj.geometry, aoi_proj.crs)</span>
-<span id="cb13-33"><a href="#cb13-33" tabindex="-1"></a>    </span>
-<span id="cb13-34"><a href="#cb13-34" tabindex="-1"></a>    raster_list.append(da_clip)</span>
-<span id="cb13-35"><a href="#cb13-35" tabindex="-1"></a>    fechas.append(pd.Timestamp(f[<span class="st">"fecha"</span>]))</span>
-<span id="cb13-36"><a href="#cb13-36" tabindex="-1"></a></span>
-<span id="cb13-37"><a href="#cb13-37" tabindex="-1"></a><span class="co"># Crear el stack recortado</span></span>
-<span id="cb13-38"><a href="#cb13-38" tabindex="-1"></a>stack <span class="op">=</span> xr.concat(raster_list, dim<span class="op">=</span><span class="st">"time"</span>)</span>
-<span id="cb13-39"><a href="#cb13-39" tabindex="-1"></a>stack[<span class="st">"time"</span>] <span class="op">=</span> fechas</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a></span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1" aria-label="code-block-13-2"></a><span class="co"># Convertir a DataFrame </span></span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1" aria-label="code-block-13-3"></a>df_filtrados <span class="op">=</span> pd.DataFrame(filtrados)</span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1" aria-label="code-block-13-4"></a>df_filtrados[<span class="st">"fecha"</span>] <span class="op">=</span> pd.to_datetime(df_filtrados[<span class="st">"fecha"</span>])</span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1" aria-label="code-block-13-5"></a></span>
+<span id="cb13-6"><a href="#cb13-6" tabindex="-1" aria-label="code-block-13-6"></a><span class="co"># Ordenar por menor cobertura de nubes </span></span>
+<span id="cb13-7"><a href="#cb13-7" tabindex="-1" aria-label="code-block-13-7"></a>df_filtrados <span class="op">=</span> df_filtrados.sort_values(<span class="st">"nubes"</span>)</span>
+<span id="cb13-8"><a href="#cb13-8" tabindex="-1" aria-label="code-block-13-8"></a><span class="co">#Seleccionar el producto con Sentinel</span></span>
+<span id="cb13-9"><a href="#cb13-9" tabindex="-1" aria-label="code-block-13-9"></a></span>
+<span id="cb13-10"><a href="#cb13-10" tabindex="-1" aria-label="code-block-13-10"></a><span class="co"># Eliminar duplicados dejando el que tiene menor nubosidad</span></span>
+<span id="cb13-11"><a href="#cb13-11" tabindex="-1" aria-label="code-block-13-11"></a>df_filtrados <span class="op">=</span> df_filtrados.drop_duplicates(subset<span class="op">=</span><span class="st">"fecha"</span>, keep<span class="op">=</span><span class="st">"first"</span>)</span>
+<span id="cb13-12"><a href="#cb13-12" tabindex="-1" aria-label="code-block-13-12"></a></span>
+<span id="cb13-13"><a href="#cb13-13" tabindex="-1" aria-label="code-block-13-13"></a><span class="co"># Reconstruir la lista filtrada</span></span>
+<span id="cb13-14"><a href="#cb13-14" tabindex="-1" aria-label="code-block-13-14"></a>filtrados_unicos <span class="op">=</span> df_filtrados.to_dict(orient<span class="op">=</span><span class="st">"records"</span>)</span>
+<span id="cb13-15"><a href="#cb13-15" tabindex="-1" aria-label="code-block-13-15"></a></span>
+<span id="cb13-16"><a href="#cb13-16" tabindex="-1" aria-label="code-block-13-16"></a><span class="co">#VOLVEMOS A CORRER EL STACK USANDO filtrados_unicos</span></span>
+<span id="cb13-17"><a href="#cb13-17" tabindex="-1" aria-label="code-block-13-17"></a></span>
+<span id="cb13-18"><a href="#cb13-18" tabindex="-1" aria-label="code-block-13-18"></a><span class="co"># Stack de los subproductos VEG-DIST-STATUS</span></span>
+<span id="cb13-19"><a href="#cb13-19" tabindex="-1" aria-label="code-block-13-19"></a></span>
+<span id="cb13-20"><a href="#cb13-20" tabindex="-1" aria-label="code-block-13-20"></a><span class="im">from</span> rioxarray <span class="im">import</span> open_rasterio</span>
+<span id="cb13-21"><a href="#cb13-21" tabindex="-1" aria-label="code-block-13-21"></a><span class="im">import</span> xarray <span class="im">as</span> xr</span>
+<span id="cb13-22"><a href="#cb13-22" tabindex="-1" aria-label="code-block-13-22"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb13-23"><a href="#cb13-23" tabindex="-1" aria-label="code-block-13-23"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb13-24"><a href="#cb13-24" tabindex="-1" aria-label="code-block-13-24"></a></span>
+<span id="cb13-25"><a href="#cb13-25" tabindex="-1" aria-label="code-block-13-25"></a><span class="co"># Recortar cada raster al AOI y luego apilar</span></span>
+<span id="cb13-26"><a href="#cb13-26" tabindex="-1" aria-label="code-block-13-26"></a>raster_list <span class="op">=</span> []</span>
+<span id="cb13-27"><a href="#cb13-27" tabindex="-1" aria-label="code-block-13-27"></a>fechas <span class="op">=</span> []</span>
+<span id="cb13-28"><a href="#cb13-28" tabindex="-1" aria-label="code-block-13-28"></a></span>
+<span id="cb13-29"><a href="#cb13-29" tabindex="-1" aria-label="code-block-13-29"></a><span class="cf">for</span> f <span class="kw">in</span> filtrados_unicos: </span>
+<span id="cb13-30"><a href="#cb13-30" tabindex="-1" aria-label="code-block-13-30"></a>    da <span class="op">=</span> open_rasterio(f[<span class="st">"url"</span>], masked<span class="op">=</span><span class="va">True</span>).squeeze()</span>
+<span id="cb13-31"><a href="#cb13-31" tabindex="-1" aria-label="code-block-13-31"></a>    aoi_proj <span class="op">=</span> AOI.to_crs(da.rio.crs)</span>
+<span id="cb13-32"><a href="#cb13-32" tabindex="-1" aria-label="code-block-13-32"></a>    da_clip <span class="op">=</span> da.rio.clip(aoi_proj.geometry, aoi_proj.crs)</span>
+<span id="cb13-33"><a href="#cb13-33" tabindex="-1" aria-label="code-block-13-33"></a>    </span>
+<span id="cb13-34"><a href="#cb13-34" tabindex="-1" aria-label="code-block-13-34"></a>    raster_list.append(da_clip)</span>
+<span id="cb13-35"><a href="#cb13-35" tabindex="-1" aria-label="code-block-13-35"></a>    fechas.append(pd.Timestamp(f[<span class="st">"fecha"</span>]))</span>
+<span id="cb13-36"><a href="#cb13-36" tabindex="-1" aria-label="code-block-13-36"></a></span>
+<span id="cb13-37"><a href="#cb13-37" tabindex="-1" aria-label="code-block-13-37"></a><span class="co"># Crear el stack recortado</span></span>
+<span id="cb13-38"><a href="#cb13-38" tabindex="-1" aria-label="code-block-13-38"></a>stack <span class="op">=</span> xr.concat(raster_list, dim<span class="op">=</span><span class="st">"time"</span>)</span>
+<span id="cb13-39"><a href="#cb13-39" tabindex="-1" aria-label="code-block-13-39"></a>stack[<span class="st">"time"</span>] <span class="op">=</span> fechas</span></code></pre>
 </div>
 </div>
 <div class="section level3">
@@ -2005,39 +2005,39 @@ código que genera el gráfico encontramos solo un producto por fecha.</p>
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a></span>
-<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a><span class="im">import</span> hvplot.xarray</span>
-<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a><span class="im">import</span> geoviews <span class="im">as</span> gv</span>
-<span id="cb14-4"><a href="#cb14-4" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb14-5"><a href="#cb14-5" tabindex="-1"></a></span>
-<span id="cb14-6"><a href="#cb14-6" tabindex="-1"></a><span class="co"># Enmascarar valores 0 para que sean transparentes</span></span>
-<span id="cb14-7"><a href="#cb14-7" tabindex="-1"></a>stack_masked <span class="op">=</span> stack.where(stack <span class="op">!=</span> <span class="dv">0</span>)</span>
-<span id="cb14-8"><a href="#cb14-8" tabindex="-1"></a></span>
-<span id="cb14-9"><a href="#cb14-9" tabindex="-1"></a><span class="co"># Submuestreo para que no sea tan pesado</span></span>
-<span id="cb14-10"><a href="#cb14-10" tabindex="-1"></a>stack_sub <span class="op">=</span> stack_masked.isel(x<span class="op">=</span><span class="bu">slice</span>(<span class="dv">0</span>, <span class="va">None</span>, <span class="dv">4</span>), y<span class="op">=</span><span class="bu">slice</span>(<span class="dv">0</span>, <span class="va">None</span>, <span class="dv">4</span>))</span>
-<span id="cb14-11"><a href="#cb14-11" tabindex="-1"></a></span>
-<span id="cb14-12"><a href="#cb14-12" tabindex="-1"></a><span class="co"># Colormap rojo fuerte</span></span>
-<span id="cb14-13"><a href="#cb14-13" tabindex="-1"></a>cmap <span class="op">=</span> [<span class="st">"#fff5f5"</span>, <span class="st">"#fcbfbf"</span>, <span class="st">"#f78787"</span>, <span class="st">"#f25454"</span>, <span class="st">"#e93232"</span>, <span class="st">"#d40000"</span>, <span class="st">"#a50000"</span>, <span class="st">"#730000"</span>]</span>
-<span id="cb14-14"><a href="#cb14-14" tabindex="-1"></a></span>
-<span id="cb14-15"><a href="#cb14-15" tabindex="-1"></a><span class="co"># Visualización interactiva</span></span>
-<span id="cb14-16"><a href="#cb14-16" tabindex="-1"></a>hvplot_map <span class="op">=</span> stack_sub.hvplot(</span>
-<span id="cb14-17"><a href="#cb14-17" tabindex="-1"></a>    x<span class="op">=</span><span class="st">'x'</span>,</span>
-<span id="cb14-18"><a href="#cb14-18" tabindex="-1"></a>    y<span class="op">=</span><span class="st">'y'</span>,</span>
-<span id="cb14-19"><a href="#cb14-19" tabindex="-1"></a>    groupby<span class="op">=</span><span class="st">'time'</span>,</span>
-<span id="cb14-20"><a href="#cb14-20" tabindex="-1"></a>    cmap<span class="op">=</span>cmap,</span>
-<span id="cb14-21"><a href="#cb14-21" tabindex="-1"></a>    clim<span class="op">=</span>(<span class="dv">1</span>, <span class="dv">8</span>),</span>
-<span id="cb14-22"><a href="#cb14-22" tabindex="-1"></a>    rasterize<span class="op">=</span><span class="va">True</span>,</span>
-<span id="cb14-23"><a href="#cb14-23" tabindex="-1"></a>    crs<span class="op">=</span>stack.rio.crs,</span>
-<span id="cb14-24"><a href="#cb14-24" tabindex="-1"></a>    tiles<span class="op">=</span>gv.tile_sources.EsriImagery,</span>
-<span id="cb14-25"><a href="#cb14-25" tabindex="-1"></a>    alpha<span class="op">=</span><span class="fl">0.9</span>,</span>
-<span id="cb14-26"><a href="#cb14-26" tabindex="-1"></a>    frame_width<span class="op">=</span><span class="dv">500</span>,    </span>
-<span id="cb14-27"><a href="#cb14-27" tabindex="-1"></a>    frame_height<span class="op">=</span><span class="dv">500</span>,</span>
-<span id="cb14-28"><a href="#cb14-28" tabindex="-1"></a>    title<span class="op">=</span><span class="st">"Evolución de disturbios detectados"</span>,</span>
-<span id="cb14-29"><a href="#cb14-29" tabindex="-1"></a>    widget_location<span class="op">=</span><span class="st">'bottom'</span>,   <span class="co"># Deslizador de tiempo abajo</span></span>
-<span id="cb14-30"><a href="#cb14-30" tabindex="-1"></a>    colorbar<span class="op">=</span><span class="va">True</span></span>
-<span id="cb14-31"><a href="#cb14-31" tabindex="-1"></a>)</span>
-<span id="cb14-32"><a href="#cb14-32" tabindex="-1"></a></span>
-<span id="cb14-33"><a href="#cb14-33" tabindex="-1"></a>hvplot_map</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a></span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1" aria-label="code-block-14-2"></a><span class="im">import</span> hvplot.xarray</span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1" aria-label="code-block-14-3"></a><span class="im">import</span> geoviews <span class="im">as</span> gv</span>
+<span id="cb14-4"><a href="#cb14-4" tabindex="-1" aria-label="code-block-14-4"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb14-5"><a href="#cb14-5" tabindex="-1" aria-label="code-block-14-5"></a></span>
+<span id="cb14-6"><a href="#cb14-6" tabindex="-1" aria-label="code-block-14-6"></a><span class="co"># Enmascarar valores 0 para que sean transparentes</span></span>
+<span id="cb14-7"><a href="#cb14-7" tabindex="-1" aria-label="code-block-14-7"></a>stack_masked <span class="op">=</span> stack.where(stack <span class="op">!=</span> <span class="dv">0</span>)</span>
+<span id="cb14-8"><a href="#cb14-8" tabindex="-1" aria-label="code-block-14-8"></a></span>
+<span id="cb14-9"><a href="#cb14-9" tabindex="-1" aria-label="code-block-14-9"></a><span class="co"># Submuestreo para que no sea tan pesado</span></span>
+<span id="cb14-10"><a href="#cb14-10" tabindex="-1" aria-label="code-block-14-10"></a>stack_sub <span class="op">=</span> stack_masked.isel(x<span class="op">=</span><span class="bu">slice</span>(<span class="dv">0</span>, <span class="va">None</span>, <span class="dv">4</span>), y<span class="op">=</span><span class="bu">slice</span>(<span class="dv">0</span>, <span class="va">None</span>, <span class="dv">4</span>))</span>
+<span id="cb14-11"><a href="#cb14-11" tabindex="-1" aria-label="code-block-14-11"></a></span>
+<span id="cb14-12"><a href="#cb14-12" tabindex="-1" aria-label="code-block-14-12"></a><span class="co"># Colormap rojo fuerte</span></span>
+<span id="cb14-13"><a href="#cb14-13" tabindex="-1" aria-label="code-block-14-13"></a>cmap <span class="op">=</span> [<span class="st">"#fff5f5"</span>, <span class="st">"#fcbfbf"</span>, <span class="st">"#f78787"</span>, <span class="st">"#f25454"</span>, <span class="st">"#e93232"</span>, <span class="st">"#d40000"</span>, <span class="st">"#a50000"</span>, <span class="st">"#730000"</span>]</span>
+<span id="cb14-14"><a href="#cb14-14" tabindex="-1" aria-label="code-block-14-14"></a></span>
+<span id="cb14-15"><a href="#cb14-15" tabindex="-1" aria-label="code-block-14-15"></a><span class="co"># Visualización interactiva</span></span>
+<span id="cb14-16"><a href="#cb14-16" tabindex="-1" aria-label="code-block-14-16"></a>hvplot_map <span class="op">=</span> stack_sub.hvplot(</span>
+<span id="cb14-17"><a href="#cb14-17" tabindex="-1" aria-label="code-block-14-17"></a>    x<span class="op">=</span><span class="st">'x'</span>,</span>
+<span id="cb14-18"><a href="#cb14-18" tabindex="-1" aria-label="code-block-14-18"></a>    y<span class="op">=</span><span class="st">'y'</span>,</span>
+<span id="cb14-19"><a href="#cb14-19" tabindex="-1" aria-label="code-block-14-19"></a>    groupby<span class="op">=</span><span class="st">'time'</span>,</span>
+<span id="cb14-20"><a href="#cb14-20" tabindex="-1" aria-label="code-block-14-20"></a>    cmap<span class="op">=</span>cmap,</span>
+<span id="cb14-21"><a href="#cb14-21" tabindex="-1" aria-label="code-block-14-21"></a>    clim<span class="op">=</span>(<span class="dv">1</span>, <span class="dv">8</span>),</span>
+<span id="cb14-22"><a href="#cb14-22" tabindex="-1" aria-label="code-block-14-22"></a>    rasterize<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb14-23"><a href="#cb14-23" tabindex="-1" aria-label="code-block-14-23"></a>    crs<span class="op">=</span>stack.rio.crs,</span>
+<span id="cb14-24"><a href="#cb14-24" tabindex="-1" aria-label="code-block-14-24"></a>    tiles<span class="op">=</span>gv.tile_sources.EsriImagery,</span>
+<span id="cb14-25"><a href="#cb14-25" tabindex="-1" aria-label="code-block-14-25"></a>    alpha<span class="op">=</span><span class="fl">0.9</span>,</span>
+<span id="cb14-26"><a href="#cb14-26" tabindex="-1" aria-label="code-block-14-26"></a>    frame_width<span class="op">=</span><span class="dv">500</span>,    </span>
+<span id="cb14-27"><a href="#cb14-27" tabindex="-1" aria-label="code-block-14-27"></a>    frame_height<span class="op">=</span><span class="dv">500</span>,</span>
+<span id="cb14-28"><a href="#cb14-28" tabindex="-1" aria-label="code-block-14-28"></a>    title<span class="op">=</span><span class="st">"Evolución de disturbios detectados"</span>,</span>
+<span id="cb14-29"><a href="#cb14-29" tabindex="-1" aria-label="code-block-14-29"></a>    widget_location<span class="op">=</span><span class="st">'bottom'</span>,   <span class="co"># Deslizador de tiempo abajo</span></span>
+<span id="cb14-30"><a href="#cb14-30" tabindex="-1" aria-label="code-block-14-30"></a>    colorbar<span class="op">=</span><span class="va">True</span></span>
+<span id="cb14-31"><a href="#cb14-31" tabindex="-1" aria-label="code-block-14-31"></a>)</span>
+<span id="cb14-32"><a href="#cb14-32" tabindex="-1" aria-label="code-block-14-32"></a></span>
+<span id="cb14-33"><a href="#cb14-33" tabindex="-1" aria-label="code-block-14-33"></a>hvplot_map</span></code></pre>
 </div>
 <figure><img src="../fig/output4.png" class="figure mx-auto d-block"></figure>
 </div>
@@ -2047,43 +2047,43 @@ código que genera el gráfico encontramos solo un producto por fecha.</p>
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a></span>
-<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a><span class="im">from</span> pystac_client <span class="im">import</span> Client</span>
-<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a></span>
-<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a><span class="co"># Abrir el catálogo STAC de LP DAAC</span></span>
-<span id="cb15-6"><a href="#cb15-6" tabindex="-1"></a>catalog <span class="op">=</span> Client.<span class="bu">open</span>(<span class="st">"https://cmr.earthdata.nasa.gov/stac/LPCLOUD/"</span>)</span>
-<span id="cb15-7"><a href="#cb15-7" tabindex="-1"></a></span>
-<span id="cb15-8"><a href="#cb15-8" tabindex="-1"></a><span class="co"># Parámetros de búsqueda</span></span>
-<span id="cb15-9"><a href="#cb15-9" tabindex="-1"></a>search_params <span class="op">=</span> {</span>
-<span id="cb15-10"><a href="#cb15-10" tabindex="-1"></a>    <span class="st">"bbox"</span>: [<span class="op">-</span><span class="fl">46.78</span>, <span class="op">-</span><span class="fl">4.61</span>, <span class="op">-</span><span class="fl">46.58</span>, <span class="op">-</span><span class="fl">4.41</span>],  <span class="co"># AOI</span></span>
-<span id="cb15-11"><a href="#cb15-11" tabindex="-1"></a>    <span class="st">"datetime"</span>: <span class="st">"2025-01-01/2025-07-26"</span>,     <span class="co"># rango de fechas</span></span>
-<span id="cb15-12"><a href="#cb15-12" tabindex="-1"></a>    <span class="st">"collections"</span>: [<span class="st">"OPERA_L3_DIST-ALERT-HLS_V1_1"</span>]</span>
-<span id="cb15-13"><a href="#cb15-13" tabindex="-1"></a>}</span>
-<span id="cb15-14"><a href="#cb15-14" tabindex="-1"></a></span>
-<span id="cb15-15"><a href="#cb15-15" tabindex="-1"></a><span class="co"># Buscar items en el catálogo</span></span>
-<span id="cb15-16"><a href="#cb15-16" tabindex="-1"></a>items <span class="op">=</span> <span class="bu">list</span>(catalog.search(<span class="op">**</span>search_params).get_items())</span>
-<span id="cb15-17"><a href="#cb15-17" tabindex="-1"></a></span>
-<span id="cb15-18"><a href="#cb15-18" tabindex="-1"></a><span class="co"># Filtrar solo los assets VEG-DIST-DATE accesibles por HTTPS</span></span>
-<span id="cb15-19"><a href="#cb15-19" tabindex="-1"></a>filtrado_date <span class="op">=</span> []</span>
-<span id="cb15-20"><a href="#cb15-20" tabindex="-1"></a></span>
-<span id="cb15-21"><a href="#cb15-21" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> items:</span>
-<span id="cb15-22"><a href="#cb15-22" tabindex="-1"></a>    <span class="cf">for</span> asset_key, asset <span class="kw">in</span> item.assets.items():</span>
-<span id="cb15-23"><a href="#cb15-23" tabindex="-1"></a>        <span class="cf">if</span> <span class="st">"VEG-DIST-DATE"</span> <span class="kw">in</span> asset_key <span class="kw">and</span> asset.href.startswith(<span class="st">"https"</span>):</span>
-<span id="cb15-24"><a href="#cb15-24" tabindex="-1"></a>            filtrado_date.append({</span>
-<span id="cb15-25"><a href="#cb15-25" tabindex="-1"></a>                <span class="st">"start_datetime"</span>: item.properties.get(<span class="st">"start_datetime"</span>),</span>
-<span id="cb15-26"><a href="#cb15-26" tabindex="-1"></a>                <span class="st">"end_datetime"</span>: item.properties.get(<span class="st">"end_datetime"</span>),</span>
-<span id="cb15-27"><a href="#cb15-27" tabindex="-1"></a>                <span class="st">"datetime"</span>: item.datetime,</span>
-<span id="cb15-28"><a href="#cb15-28" tabindex="-1"></a>                <span class="st">"cloud_cover"</span>: item.properties.get(<span class="st">"eo:cloud_cover"</span>),</span>
-<span id="cb15-29"><a href="#cb15-29" tabindex="-1"></a>                <span class="st">"url"</span>: asset.href</span>
-<span id="cb15-30"><a href="#cb15-30" tabindex="-1"></a>            })</span>
-<span id="cb15-31"><a href="#cb15-31" tabindex="-1"></a></span>
-<span id="cb15-32"><a href="#cb15-32" tabindex="-1"></a><span class="co"># Convertir a DataFrame para explorar</span></span>
-<span id="cb15-33"><a href="#cb15-33" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(filtrado_date)</span>
-<span id="cb15-34"><a href="#cb15-34" tabindex="-1"></a></span>
-<span id="cb15-35"><a href="#cb15-35" tabindex="-1"></a><span class="co"># Mostrar resumen</span></span>
-<span id="cb15-36"><a href="#cb15-36" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Se encontraron </span><span class="sc">{</span><span class="bu">len</span>(df)<span class="sc">}</span><span class="ss"> assets únicos con VEG-DIST-DATE vía HTTPS."</span>)</span>
-<span id="cb15-37"><a href="#cb15-37" tabindex="-1"></a>df.head()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a></span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1" aria-label="code-block-15-2"></a><span class="im">from</span> pystac_client <span class="im">import</span> Client</span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1" aria-label="code-block-15-3"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb15-4"><a href="#cb15-4" tabindex="-1" aria-label="code-block-15-4"></a></span>
+<span id="cb15-5"><a href="#cb15-5" tabindex="-1" aria-label="code-block-15-5"></a><span class="co"># Abrir el catálogo STAC de LP DAAC</span></span>
+<span id="cb15-6"><a href="#cb15-6" tabindex="-1" aria-label="code-block-15-6"></a>catalog <span class="op">=</span> Client.<span class="bu">open</span>(<span class="st">"https://cmr.earthdata.nasa.gov/stac/LPCLOUD/"</span>)</span>
+<span id="cb15-7"><a href="#cb15-7" tabindex="-1" aria-label="code-block-15-7"></a></span>
+<span id="cb15-8"><a href="#cb15-8" tabindex="-1" aria-label="code-block-15-8"></a><span class="co"># Parámetros de búsqueda</span></span>
+<span id="cb15-9"><a href="#cb15-9" tabindex="-1" aria-label="code-block-15-9"></a>search_params <span class="op">=</span> {</span>
+<span id="cb15-10"><a href="#cb15-10" tabindex="-1" aria-label="code-block-15-10"></a>    <span class="st">"bbox"</span>: [<span class="op">-</span><span class="fl">46.78</span>, <span class="op">-</span><span class="fl">4.61</span>, <span class="op">-</span><span class="fl">46.58</span>, <span class="op">-</span><span class="fl">4.41</span>],  <span class="co"># AOI</span></span>
+<span id="cb15-11"><a href="#cb15-11" tabindex="-1" aria-label="code-block-15-11"></a>    <span class="st">"datetime"</span>: <span class="st">"2025-01-01/2025-07-26"</span>,     <span class="co"># rango de fechas</span></span>
+<span id="cb15-12"><a href="#cb15-12" tabindex="-1" aria-label="code-block-15-12"></a>    <span class="st">"collections"</span>: [<span class="st">"OPERA_L3_DIST-ALERT-HLS_V1_1"</span>]</span>
+<span id="cb15-13"><a href="#cb15-13" tabindex="-1" aria-label="code-block-15-13"></a>}</span>
+<span id="cb15-14"><a href="#cb15-14" tabindex="-1" aria-label="code-block-15-14"></a></span>
+<span id="cb15-15"><a href="#cb15-15" tabindex="-1" aria-label="code-block-15-15"></a><span class="co"># Buscar items en el catálogo</span></span>
+<span id="cb15-16"><a href="#cb15-16" tabindex="-1" aria-label="code-block-15-16"></a>items <span class="op">=</span> <span class="bu">list</span>(catalog.search(<span class="op">**</span>search_params).get_items())</span>
+<span id="cb15-17"><a href="#cb15-17" tabindex="-1" aria-label="code-block-15-17"></a></span>
+<span id="cb15-18"><a href="#cb15-18" tabindex="-1" aria-label="code-block-15-18"></a><span class="co"># Filtrar solo los assets VEG-DIST-DATE accesibles por HTTPS</span></span>
+<span id="cb15-19"><a href="#cb15-19" tabindex="-1" aria-label="code-block-15-19"></a>filtrado_date <span class="op">=</span> []</span>
+<span id="cb15-20"><a href="#cb15-20" tabindex="-1" aria-label="code-block-15-20"></a></span>
+<span id="cb15-21"><a href="#cb15-21" tabindex="-1" aria-label="code-block-15-21"></a><span class="cf">for</span> item <span class="kw">in</span> items:</span>
+<span id="cb15-22"><a href="#cb15-22" tabindex="-1" aria-label="code-block-15-22"></a>    <span class="cf">for</span> asset_key, asset <span class="kw">in</span> item.assets.items():</span>
+<span id="cb15-23"><a href="#cb15-23" tabindex="-1" aria-label="code-block-15-23"></a>        <span class="cf">if</span> <span class="st">"VEG-DIST-DATE"</span> <span class="kw">in</span> asset_key <span class="kw">and</span> asset.href.startswith(<span class="st">"https"</span>):</span>
+<span id="cb15-24"><a href="#cb15-24" tabindex="-1" aria-label="code-block-15-24"></a>            filtrado_date.append({</span>
+<span id="cb15-25"><a href="#cb15-25" tabindex="-1" aria-label="code-block-15-25"></a>                <span class="st">"start_datetime"</span>: item.properties.get(<span class="st">"start_datetime"</span>),</span>
+<span id="cb15-26"><a href="#cb15-26" tabindex="-1" aria-label="code-block-15-26"></a>                <span class="st">"end_datetime"</span>: item.properties.get(<span class="st">"end_datetime"</span>),</span>
+<span id="cb15-27"><a href="#cb15-27" tabindex="-1" aria-label="code-block-15-27"></a>                <span class="st">"datetime"</span>: item.datetime,</span>
+<span id="cb15-28"><a href="#cb15-28" tabindex="-1" aria-label="code-block-15-28"></a>                <span class="st">"cloud_cover"</span>: item.properties.get(<span class="st">"eo:cloud_cover"</span>),</span>
+<span id="cb15-29"><a href="#cb15-29" tabindex="-1" aria-label="code-block-15-29"></a>                <span class="st">"url"</span>: asset.href</span>
+<span id="cb15-30"><a href="#cb15-30" tabindex="-1" aria-label="code-block-15-30"></a>            })</span>
+<span id="cb15-31"><a href="#cb15-31" tabindex="-1" aria-label="code-block-15-31"></a></span>
+<span id="cb15-32"><a href="#cb15-32" tabindex="-1" aria-label="code-block-15-32"></a><span class="co"># Convertir a DataFrame para explorar</span></span>
+<span id="cb15-33"><a href="#cb15-33" tabindex="-1" aria-label="code-block-15-33"></a>df <span class="op">=</span> pd.DataFrame(filtrado_date)</span>
+<span id="cb15-34"><a href="#cb15-34" tabindex="-1" aria-label="code-block-15-34"></a></span>
+<span id="cb15-35"><a href="#cb15-35" tabindex="-1" aria-label="code-block-15-35"></a><span class="co"># Mostrar resumen</span></span>
+<span id="cb15-36"><a href="#cb15-36" tabindex="-1" aria-label="code-block-15-36"></a><span class="bu">print</span>(<span class="ss">f"Se encontraron </span><span class="sc">{</span><span class="bu">len</span>(df)<span class="sc">}</span><span class="ss"> assets únicos con VEG-DIST-DATE vía HTTPS."</span>)</span>
+<span id="cb15-37"><a href="#cb15-37" tabindex="-1" aria-label="code-block-15-37"></a>df.head()</span></code></pre>
 </div>
 <p>Se encontraron 226 assets únicos con VEG-DIST-DATE vía HTTPS.</p>
 <div class="line-block">| start_datetime | end_datetime | datetime |
@@ -2101,53 +2101,53 @@ cloud_cover | url</div>
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a></span>
-<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a></span>
-<span id="cb16-4"><a href="#cb16-4" tabindex="-1"></a>df[<span class="st">"cloud_cover"</span>] <span class="op">=</span> pd.to_numeric(df[<span class="st">"cloud_cover"</span>], errors<span class="op">=</span><span class="st">'coerce'</span>)</span>
-<span id="cb16-5"><a href="#cb16-5" tabindex="-1"></a>df.plot(</span>
-<span id="cb16-6"><a href="#cb16-6" tabindex="-1"></a>   <span class="co">#x="datetime", </span></span>
-<span id="cb16-7"><a href="#cb16-7" tabindex="-1"></a>    y<span class="op">=</span><span class="st">"cloud_cover"</span>, </span>
-<span id="cb16-8"><a href="#cb16-8" tabindex="-1"></a>    kind<span class="op">=</span><span class="st">"bar"</span>, </span>
-<span id="cb16-9"><a href="#cb16-9" tabindex="-1"></a>    figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>), </span>
-<span id="cb16-10"><a href="#cb16-10" tabindex="-1"></a>    color<span class="op">=</span><span class="st">"skyblue"</span>, </span>
-<span id="cb16-11"><a href="#cb16-11" tabindex="-1"></a>    title<span class="op">=</span><span class="st">"Cobertura de nubes por escena"</span></span>
-<span id="cb16-12"><a href="#cb16-12" tabindex="-1"></a>)</span>
-<span id="cb16-13"><a href="#cb16-13" tabindex="-1"></a><span class="co"># Ocultar etiquetas del eje X</span></span>
-<span id="cb16-14"><a href="#cb16-14" tabindex="-1"></a>plt.xticks([])</span>
-<span id="cb16-15"><a href="#cb16-15" tabindex="-1"></a></span>
-<span id="cb16-16"><a href="#cb16-16" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb16-17"><a href="#cb16-17" tabindex="-1"></a>plt.show()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" tabindex="-1" aria-label="code-block-16-1"></a></span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1" aria-label="code-block-16-2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb16-3"><a href="#cb16-3" tabindex="-1" aria-label="code-block-16-3"></a></span>
+<span id="cb16-4"><a href="#cb16-4" tabindex="-1" aria-label="code-block-16-4"></a>df[<span class="st">"cloud_cover"</span>] <span class="op">=</span> pd.to_numeric(df[<span class="st">"cloud_cover"</span>], errors<span class="op">=</span><span class="st">'coerce'</span>)</span>
+<span id="cb16-5"><a href="#cb16-5" tabindex="-1" aria-label="code-block-16-5"></a>df.plot(</span>
+<span id="cb16-6"><a href="#cb16-6" tabindex="-1" aria-label="code-block-16-6"></a>   <span class="co">#x="datetime", </span></span>
+<span id="cb16-7"><a href="#cb16-7" tabindex="-1" aria-label="code-block-16-7"></a>    y<span class="op">=</span><span class="st">"cloud_cover"</span>, </span>
+<span id="cb16-8"><a href="#cb16-8" tabindex="-1" aria-label="code-block-16-8"></a>    kind<span class="op">=</span><span class="st">"bar"</span>, </span>
+<span id="cb16-9"><a href="#cb16-9" tabindex="-1" aria-label="code-block-16-9"></a>    figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>), </span>
+<span id="cb16-10"><a href="#cb16-10" tabindex="-1" aria-label="code-block-16-10"></a>    color<span class="op">=</span><span class="st">"skyblue"</span>, </span>
+<span id="cb16-11"><a href="#cb16-11" tabindex="-1" aria-label="code-block-16-11"></a>    title<span class="op">=</span><span class="st">"Cobertura de nubes por escena"</span></span>
+<span id="cb16-12"><a href="#cb16-12" tabindex="-1" aria-label="code-block-16-12"></a>)</span>
+<span id="cb16-13"><a href="#cb16-13" tabindex="-1" aria-label="code-block-16-13"></a><span class="co"># Ocultar etiquetas del eje X</span></span>
+<span id="cb16-14"><a href="#cb16-14" tabindex="-1" aria-label="code-block-16-14"></a>plt.xticks([])</span>
+<span id="cb16-15"><a href="#cb16-15" tabindex="-1" aria-label="code-block-16-15"></a></span>
+<span id="cb16-16"><a href="#cb16-16" tabindex="-1" aria-label="code-block-16-16"></a>plt.tight_layout()</span>
+<span id="cb16-17"><a href="#cb16-17" tabindex="-1" aria-label="code-block-16-17"></a>plt.show()</span></code></pre>
 </div>
 <figure><img src="../fig/output5.png" class="figure mx-auto d-block"></figure><div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a></span>
-<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a>df_bajanubosidad <span class="op">=</span> df[df[<span class="st">"cloud_cover"</span>] <span class="op">&lt;</span> <span class="dv">20</span>]</span>
-<span id="cb17-4"><a href="#cb17-4" tabindex="-1"></a></span>
-<span id="cb17-5"><a href="#cb17-5" tabindex="-1"></a>df_bajanubosidad.plot(</span>
-<span id="cb17-6"><a href="#cb17-6" tabindex="-1"></a>   <span class="co">#x="datetime", </span></span>
-<span id="cb17-7"><a href="#cb17-7" tabindex="-1"></a>    y<span class="op">=</span><span class="st">"cloud_cover"</span>, </span>
-<span id="cb17-8"><a href="#cb17-8" tabindex="-1"></a>    kind<span class="op">=</span><span class="st">"bar"</span>, </span>
-<span id="cb17-9"><a href="#cb17-9" tabindex="-1"></a>    figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>), </span>
-<span id="cb17-10"><a href="#cb17-10" tabindex="-1"></a>    color<span class="op">=</span><span class="st">"skyblue"</span>, </span>
-<span id="cb17-11"><a href="#cb17-11" tabindex="-1"></a>    title<span class="op">=</span><span class="st">"Cobertura de nubes por fecha"</span></span>
-<span id="cb17-12"><a href="#cb17-12" tabindex="-1"></a>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1" aria-label="code-block-17-1"></a></span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1" aria-label="code-block-17-2"></a></span>
+<span id="cb17-3"><a href="#cb17-3" tabindex="-1" aria-label="code-block-17-3"></a>df_bajanubosidad <span class="op">=</span> df[df[<span class="st">"cloud_cover"</span>] <span class="op">&lt;</span> <span class="dv">20</span>]</span>
+<span id="cb17-4"><a href="#cb17-4" tabindex="-1" aria-label="code-block-17-4"></a></span>
+<span id="cb17-5"><a href="#cb17-5" tabindex="-1" aria-label="code-block-17-5"></a>df_bajanubosidad.plot(</span>
+<span id="cb17-6"><a href="#cb17-6" tabindex="-1" aria-label="code-block-17-6"></a>   <span class="co">#x="datetime", </span></span>
+<span id="cb17-7"><a href="#cb17-7" tabindex="-1" aria-label="code-block-17-7"></a>    y<span class="op">=</span><span class="st">"cloud_cover"</span>, </span>
+<span id="cb17-8"><a href="#cb17-8" tabindex="-1" aria-label="code-block-17-8"></a>    kind<span class="op">=</span><span class="st">"bar"</span>, </span>
+<span id="cb17-9"><a href="#cb17-9" tabindex="-1" aria-label="code-block-17-9"></a>    figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>), </span>
+<span id="cb17-10"><a href="#cb17-10" tabindex="-1" aria-label="code-block-17-10"></a>    color<span class="op">=</span><span class="st">"skyblue"</span>, </span>
+<span id="cb17-11"><a href="#cb17-11" tabindex="-1" aria-label="code-block-17-11"></a>    title<span class="op">=</span><span class="st">"Cobertura de nubes por fecha"</span></span>
+<span id="cb17-12"><a href="#cb17-12" tabindex="-1" aria-label="code-block-17-12"></a>)</span></code></pre>
 </div>
 <figure><img src="../fig/output7.png" class="figure mx-auto d-block"></figure><div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a></span>
-<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a><span class="co"># Asegurarse de que la columna de fechas esté como datetime</span></span>
-<span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a>df_bajanubosidad[<span class="st">"end_datetime"</span>] <span class="op">=</span> pd.to_datetime(df_bajanubosidad[<span class="st">"end_datetime"</span>])</span>
-<span id="cb18-4"><a href="#cb18-4" tabindex="-1"></a></span>
-<span id="cb18-5"><a href="#cb18-5" tabindex="-1"></a><span class="co"># Ordenar por fecha final y seleccionar el más reciente</span></span>
-<span id="cb18-6"><a href="#cb18-6" tabindex="-1"></a>más_reciente_baja_nubosidad <span class="op">=</span> df_bajanubosidad.sort_values(<span class="st">"end_datetime"</span>, ascending<span class="op">=</span><span class="va">False</span>).iloc[<span class="dv">0</span>]</span>
-<span id="cb18-7"><a href="#cb18-7" tabindex="-1"></a></span>
-<span id="cb18-8"><a href="#cb18-8" tabindex="-1"></a><span class="co"># Mostrar resultado</span></span>
-<span id="cb18-9"><a href="#cb18-9" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Producto más reciente con menos de 20</span><span class="sc">% d</span><span class="st">e nubosidad:"</span>)</span>
-<span id="cb18-10"><a href="#cb18-10" tabindex="-1"></a><span class="bu">print</span>(más_reciente_baja_nubosidad)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1" aria-label="code-block-18-1"></a></span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1" aria-label="code-block-18-2"></a><span class="co"># Asegurarse de que la columna de fechas esté como datetime</span></span>
+<span id="cb18-3"><a href="#cb18-3" tabindex="-1" aria-label="code-block-18-3"></a>df_bajanubosidad[<span class="st">"end_datetime"</span>] <span class="op">=</span> pd.to_datetime(df_bajanubosidad[<span class="st">"end_datetime"</span>])</span>
+<span id="cb18-4"><a href="#cb18-4" tabindex="-1" aria-label="code-block-18-4"></a></span>
+<span id="cb18-5"><a href="#cb18-5" tabindex="-1" aria-label="code-block-18-5"></a><span class="co"># Ordenar por fecha final y seleccionar el más reciente</span></span>
+<span id="cb18-6"><a href="#cb18-6" tabindex="-1" aria-label="code-block-18-6"></a>más_reciente_baja_nubosidad <span class="op">=</span> df_bajanubosidad.sort_values(<span class="st">"end_datetime"</span>, ascending<span class="op">=</span><span class="va">False</span>).iloc[<span class="dv">0</span>]</span>
+<span id="cb18-7"><a href="#cb18-7" tabindex="-1" aria-label="code-block-18-7"></a></span>
+<span id="cb18-8"><a href="#cb18-8" tabindex="-1" aria-label="code-block-18-8"></a><span class="co"># Mostrar resultado</span></span>
+<span id="cb18-9"><a href="#cb18-9" tabindex="-1" aria-label="code-block-18-9"></a><span class="bu">print</span>(<span class="st">"Producto más reciente con menos de 20</span><span class="sc">% d</span><span class="st">e nubosidad:"</span>)</span>
+<span id="cb18-10"><a href="#cb18-10" tabindex="-1" aria-label="code-block-18-10"></a><span class="bu">print</span>(más_reciente_baja_nubosidad)</span></code></pre>
 </div>
 <p>Producto más reciente con menos de 20% de nubosidad:</p>
 <p>|——————————-|———————————-:| |start_datetime |
@@ -2159,66 +2159,66 @@ cloud_cover | url</div>
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a></span>
-<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a><span class="co">#seleccionamos la url del producto mas reciente con nubosidad &lt; 20%</span></span>
-<span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a>url<span class="op">=</span>más_reciente_baja_nubosidad[<span class="st">"url"</span>]</span>
-<span id="cb19-4"><a href="#cb19-4" tabindex="-1"></a></span>
-<span id="cb19-5"><a href="#cb19-5" tabindex="-1"></a><span class="co">#Visualizar el subproducto VEG_DIST_DATE en comparación con el subproducto VEG_DIST_STATE</span></span>
-<span id="cb19-6"><a href="#cb19-6" tabindex="-1"></a></span>
-<span id="cb19-7"><a href="#cb19-7" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb19-8"><a href="#cb19-8" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
-<span id="cb19-9"><a href="#cb19-9" tabindex="-1"></a><span class="im">import</span> rioxarray</span>
-<span id="cb19-10"><a href="#cb19-10" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb19-11"><a href="#cb19-11" tabindex="-1"></a><span class="im">from</span> shapely.geometry <span class="im">import</span> box</span>
-<span id="cb19-12"><a href="#cb19-12" tabindex="-1"></a></span>
-<span id="cb19-13"><a href="#cb19-13" tabindex="-1"></a><span class="co"># AOI</span></span>
-<span id="cb19-14"><a href="#cb19-14" tabindex="-1"></a>aoi_geom <span class="op">=</span> gpd.GeoDataFrame(geometry<span class="op">=</span>[box(<span class="op">-</span><span class="fl">46.78</span>, <span class="op">-</span><span class="fl">4.61</span>, <span class="op">-</span><span class="fl">46.58</span>, <span class="op">-</span><span class="fl">4.41</span>)], crs<span class="op">=</span><span class="st">"EPSG:4326"</span>)</span>
-<span id="cb19-15"><a href="#cb19-15" tabindex="-1"></a></span>
-<span id="cb19-16"><a href="#cb19-16" tabindex="-1"></a><span class="co"># Subproducto VEG_DIST_DATE</span></span>
-<span id="cb19-17"><a href="#cb19-17" tabindex="-1"></a>url1 <span class="op">=</span> más_reciente_baja_nubosidad[<span class="st">"url"</span>]</span>
-<span id="cb19-18"><a href="#cb19-18" tabindex="-1"></a>da1 <span class="op">=</span> rioxarray.open_rasterio(url1, masked<span class="op">=</span><span class="va">True</span>).squeeze()</span>
-<span id="cb19-19"><a href="#cb19-19" tabindex="-1"></a>aoi_proj <span class="op">=</span> aoi_geom.to_crs(da1.rio.crs)</span>
-<span id="cb19-20"><a href="#cb19-20" tabindex="-1"></a>da1_clip <span class="op">=</span> da1.rio.clip(aoi_proj.geometry, aoi_proj.crs)</span>
-<span id="cb19-21"><a href="#cb19-21" tabindex="-1"></a>masked1 <span class="op">=</span> np.ma.masked_where(da1_clip <span class="op">&lt;=</span> <span class="dv">0</span>, da1_clip)</span>
-<span id="cb19-22"><a href="#cb19-22" tabindex="-1"></a></span>
-<span id="cb19-23"><a href="#cb19-23" tabindex="-1"></a><span class="co"># Subproducto VEG_DIST_STATUS</span></span>
-<span id="cb19-24"><a href="#cb19-24" tabindex="-1"></a>url2<span class="op">=</span> <span class="st">"https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1_VEG-DIST-STATUS.tif"</span></span>
-<span id="cb19-25"><a href="#cb19-25" tabindex="-1"></a>da2 <span class="op">=</span> rioxarray.open_rasterio(url2, masked<span class="op">=</span><span class="va">True</span>).squeeze()</span>
-<span id="cb19-26"><a href="#cb19-26" tabindex="-1"></a>da2_clip <span class="op">=</span> da2.rio.clip(aoi_proj.geometry, aoi_proj.crs)</span>
-<span id="cb19-27"><a href="#cb19-27" tabindex="-1"></a>masked2 <span class="op">=</span> np.ma.masked_where(da2_clip <span class="op">&lt;=</span> <span class="dv">0</span>, da2_clip)</span>
-<span id="cb19-28"><a href="#cb19-28" tabindex="-1"></a></span>
-<span id="cb19-29"><a href="#cb19-29" tabindex="-1"></a><span class="co"># Gráfico de los 2 subproductos</span></span>
-<span id="cb19-30"><a href="#cb19-30" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">14</span>, <span class="dv">6</span>))</span>
-<span id="cb19-31"><a href="#cb19-31" tabindex="-1"></a></span>
-<span id="cb19-32"><a href="#cb19-32" tabindex="-1"></a><span class="co"># Mapa 1</span></span>
-<span id="cb19-33"><a href="#cb19-33" tabindex="-1"></a>img1 <span class="op">=</span> axes[<span class="dv">0</span>].imshow(</span>
-<span id="cb19-34"><a href="#cb19-34" tabindex="-1"></a>    masked1,</span>
-<span id="cb19-35"><a href="#cb19-35" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">"viridis"</span>,</span>
-<span id="cb19-36"><a href="#cb19-36" tabindex="-1"></a>    extent<span class="op">=</span>da1_clip.rio.bounds(),</span>
-<span id="cb19-37"><a href="#cb19-37" tabindex="-1"></a>    interpolation<span class="op">=</span><span class="st">"nearest"</span></span>
-<span id="cb19-38"><a href="#cb19-38" tabindex="-1"></a>)</span>
-<span id="cb19-39"><a href="#cb19-39" tabindex="-1"></a>axes[<span class="dv">0</span>].set_title(<span class="st">"VEG_DIST_DATE 17/07/2025"</span>)</span>
-<span id="cb19-40"><a href="#cb19-40" tabindex="-1"></a>axes[<span class="dv">0</span>].set_frame_on(<span class="va">True</span>)</span>
-<span id="cb19-41"><a href="#cb19-41" tabindex="-1"></a>cbar1 <span class="op">=</span> plt.colorbar(img1, ax<span class="op">=</span>axes[<span class="dv">0</span>], shrink<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb19-42"><a href="#cb19-42" tabindex="-1"></a>cbar1.set_label(<span class="st">"Día desde 2020-12-31"</span>)</span>
-<span id="cb19-43"><a href="#cb19-43" tabindex="-1"></a></span>
-<span id="cb19-44"><a href="#cb19-44" tabindex="-1"></a><span class="co"># colormap personalizado</span></span>
-<span id="cb19-45"><a href="#cb19-45" tabindex="-1"></a>white_to_red <span class="op">=</span> mcolors.LinearSegmentedColormap.from_list(<span class="st">"white_to_red"</span>, [<span class="st">"white"</span>, <span class="st">"red"</span>])</span>
-<span id="cb19-46"><a href="#cb19-46" tabindex="-1"></a><span class="co"># Mapa 2</span></span>
-<span id="cb19-47"><a href="#cb19-47" tabindex="-1"></a>img2 <span class="op">=</span> axes[<span class="dv">1</span>].imshow(</span>
-<span id="cb19-48"><a href="#cb19-48" tabindex="-1"></a>    masked2,</span>
-<span id="cb19-49"><a href="#cb19-49" tabindex="-1"></a>    cmap<span class="op">=</span> white_to_red,</span>
-<span id="cb19-50"><a href="#cb19-50" tabindex="-1"></a>    extent<span class="op">=</span>da2_clip.rio.bounds(),</span>
-<span id="cb19-51"><a href="#cb19-51" tabindex="-1"></a>    interpolation<span class="op">=</span><span class="st">"nearest"</span></span>
-<span id="cb19-52"><a href="#cb19-52" tabindex="-1"></a>)</span>
-<span id="cb19-53"><a href="#cb19-53" tabindex="-1"></a>axes[<span class="dv">1</span>].set_title(<span class="st">"VEG_DIST-STATUS 18/09/2023"</span>)</span>
-<span id="cb19-54"><a href="#cb19-54" tabindex="-1"></a>axes[<span class="dv">1</span>].set_frame_on(<span class="va">True</span>)</span>
-<span id="cb19-55"><a href="#cb19-55" tabindex="-1"></a>cbar2 <span class="op">=</span> plt.colorbar(img2, ax<span class="op">=</span>axes[<span class="dv">1</span>], shrink<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb19-56"><a href="#cb19-56" tabindex="-1"></a>cbar2.set_label(<span class="st">"Valor de disturbio"</span>)</span>
-<span id="cb19-57"><a href="#cb19-57" tabindex="-1"></a></span>
-<span id="cb19-58"><a href="#cb19-58" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb19-59"><a href="#cb19-59" tabindex="-1"></a>plt.show()</span>
-<span id="cb19-60"><a href="#cb19-60" tabindex="-1"></a></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" tabindex="-1" aria-label="code-block-19-1"></a></span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1" aria-label="code-block-19-2"></a><span class="co">#seleccionamos la url del producto mas reciente con nubosidad &lt; 20%</span></span>
+<span id="cb19-3"><a href="#cb19-3" tabindex="-1" aria-label="code-block-19-3"></a>url<span class="op">=</span>más_reciente_baja_nubosidad[<span class="st">"url"</span>]</span>
+<span id="cb19-4"><a href="#cb19-4" tabindex="-1" aria-label="code-block-19-4"></a></span>
+<span id="cb19-5"><a href="#cb19-5" tabindex="-1" aria-label="code-block-19-5"></a><span class="co">#Visualizar el subproducto VEG_DIST_DATE en comparación con el subproducto VEG_DIST_STATE</span></span>
+<span id="cb19-6"><a href="#cb19-6" tabindex="-1" aria-label="code-block-19-6"></a></span>
+<span id="cb19-7"><a href="#cb19-7" tabindex="-1" aria-label="code-block-19-7"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb19-8"><a href="#cb19-8" tabindex="-1" aria-label="code-block-19-8"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
+<span id="cb19-9"><a href="#cb19-9" tabindex="-1" aria-label="code-block-19-9"></a><span class="im">import</span> rioxarray</span>
+<span id="cb19-10"><a href="#cb19-10" tabindex="-1" aria-label="code-block-19-10"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb19-11"><a href="#cb19-11" tabindex="-1" aria-label="code-block-19-11"></a><span class="im">from</span> shapely.geometry <span class="im">import</span> box</span>
+<span id="cb19-12"><a href="#cb19-12" tabindex="-1" aria-label="code-block-19-12"></a></span>
+<span id="cb19-13"><a href="#cb19-13" tabindex="-1" aria-label="code-block-19-13"></a><span class="co"># AOI</span></span>
+<span id="cb19-14"><a href="#cb19-14" tabindex="-1" aria-label="code-block-19-14"></a>aoi_geom <span class="op">=</span> gpd.GeoDataFrame(geometry<span class="op">=</span>[box(<span class="op">-</span><span class="fl">46.78</span>, <span class="op">-</span><span class="fl">4.61</span>, <span class="op">-</span><span class="fl">46.58</span>, <span class="op">-</span><span class="fl">4.41</span>)], crs<span class="op">=</span><span class="st">"EPSG:4326"</span>)</span>
+<span id="cb19-15"><a href="#cb19-15" tabindex="-1" aria-label="code-block-19-15"></a></span>
+<span id="cb19-16"><a href="#cb19-16" tabindex="-1" aria-label="code-block-19-16"></a><span class="co"># Subproducto VEG_DIST_DATE</span></span>
+<span id="cb19-17"><a href="#cb19-17" tabindex="-1" aria-label="code-block-19-17"></a>url1 <span class="op">=</span> más_reciente_baja_nubosidad[<span class="st">"url"</span>]</span>
+<span id="cb19-18"><a href="#cb19-18" tabindex="-1" aria-label="code-block-19-18"></a>da1 <span class="op">=</span> rioxarray.open_rasterio(url1, masked<span class="op">=</span><span class="va">True</span>).squeeze()</span>
+<span id="cb19-19"><a href="#cb19-19" tabindex="-1" aria-label="code-block-19-19"></a>aoi_proj <span class="op">=</span> aoi_geom.to_crs(da1.rio.crs)</span>
+<span id="cb19-20"><a href="#cb19-20" tabindex="-1" aria-label="code-block-19-20"></a>da1_clip <span class="op">=</span> da1.rio.clip(aoi_proj.geometry, aoi_proj.crs)</span>
+<span id="cb19-21"><a href="#cb19-21" tabindex="-1" aria-label="code-block-19-21"></a>masked1 <span class="op">=</span> np.ma.masked_where(da1_clip <span class="op">&lt;=</span> <span class="dv">0</span>, da1_clip)</span>
+<span id="cb19-22"><a href="#cb19-22" tabindex="-1" aria-label="code-block-19-22"></a></span>
+<span id="cb19-23"><a href="#cb19-23" tabindex="-1" aria-label="code-block-19-23"></a><span class="co"># Subproducto VEG_DIST_STATUS</span></span>
+<span id="cb19-24"><a href="#cb19-24" tabindex="-1" aria-label="code-block-19-24"></a>url2<span class="op">=</span> <span class="st">"https://data.lpdaac.earthdatacloud.nasa.gov/lp-prod-protected/OPERA_L3_DIST-ALERT-HLS_V1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1/OPERA_L3_DIST-ALERT-HLS_T23MLR_20230918T131723Z_20231221T085043Z_L8_30_v1_VEG-DIST-STATUS.tif"</span></span>
+<span id="cb19-25"><a href="#cb19-25" tabindex="-1" aria-label="code-block-19-25"></a>da2 <span class="op">=</span> rioxarray.open_rasterio(url2, masked<span class="op">=</span><span class="va">True</span>).squeeze()</span>
+<span id="cb19-26"><a href="#cb19-26" tabindex="-1" aria-label="code-block-19-26"></a>da2_clip <span class="op">=</span> da2.rio.clip(aoi_proj.geometry, aoi_proj.crs)</span>
+<span id="cb19-27"><a href="#cb19-27" tabindex="-1" aria-label="code-block-19-27"></a>masked2 <span class="op">=</span> np.ma.masked_where(da2_clip <span class="op">&lt;=</span> <span class="dv">0</span>, da2_clip)</span>
+<span id="cb19-28"><a href="#cb19-28" tabindex="-1" aria-label="code-block-19-28"></a></span>
+<span id="cb19-29"><a href="#cb19-29" tabindex="-1" aria-label="code-block-19-29"></a><span class="co"># Gráfico de los 2 subproductos</span></span>
+<span id="cb19-30"><a href="#cb19-30" tabindex="-1" aria-label="code-block-19-30"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">14</span>, <span class="dv">6</span>))</span>
+<span id="cb19-31"><a href="#cb19-31" tabindex="-1" aria-label="code-block-19-31"></a></span>
+<span id="cb19-32"><a href="#cb19-32" tabindex="-1" aria-label="code-block-19-32"></a><span class="co"># Mapa 1</span></span>
+<span id="cb19-33"><a href="#cb19-33" tabindex="-1" aria-label="code-block-19-33"></a>img1 <span class="op">=</span> axes[<span class="dv">0</span>].imshow(</span>
+<span id="cb19-34"><a href="#cb19-34" tabindex="-1" aria-label="code-block-19-34"></a>    masked1,</span>
+<span id="cb19-35"><a href="#cb19-35" tabindex="-1" aria-label="code-block-19-35"></a>    cmap<span class="op">=</span><span class="st">"viridis"</span>,</span>
+<span id="cb19-36"><a href="#cb19-36" tabindex="-1" aria-label="code-block-19-36"></a>    extent<span class="op">=</span>da1_clip.rio.bounds(),</span>
+<span id="cb19-37"><a href="#cb19-37" tabindex="-1" aria-label="code-block-19-37"></a>    interpolation<span class="op">=</span><span class="st">"nearest"</span></span>
+<span id="cb19-38"><a href="#cb19-38" tabindex="-1" aria-label="code-block-19-38"></a>)</span>
+<span id="cb19-39"><a href="#cb19-39" tabindex="-1" aria-label="code-block-19-39"></a>axes[<span class="dv">0</span>].set_title(<span class="st">"VEG_DIST_DATE 17/07/2025"</span>)</span>
+<span id="cb19-40"><a href="#cb19-40" tabindex="-1" aria-label="code-block-19-40"></a>axes[<span class="dv">0</span>].set_frame_on(<span class="va">True</span>)</span>
+<span id="cb19-41"><a href="#cb19-41" tabindex="-1" aria-label="code-block-19-41"></a>cbar1 <span class="op">=</span> plt.colorbar(img1, ax<span class="op">=</span>axes[<span class="dv">0</span>], shrink<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb19-42"><a href="#cb19-42" tabindex="-1" aria-label="code-block-19-42"></a>cbar1.set_label(<span class="st">"Día desde 2020-12-31"</span>)</span>
+<span id="cb19-43"><a href="#cb19-43" tabindex="-1" aria-label="code-block-19-43"></a></span>
+<span id="cb19-44"><a href="#cb19-44" tabindex="-1" aria-label="code-block-19-44"></a><span class="co"># colormap personalizado</span></span>
+<span id="cb19-45"><a href="#cb19-45" tabindex="-1" aria-label="code-block-19-45"></a>white_to_red <span class="op">=</span> mcolors.LinearSegmentedColormap.from_list(<span class="st">"white_to_red"</span>, [<span class="st">"white"</span>, <span class="st">"red"</span>])</span>
+<span id="cb19-46"><a href="#cb19-46" tabindex="-1" aria-label="code-block-19-46"></a><span class="co"># Mapa 2</span></span>
+<span id="cb19-47"><a href="#cb19-47" tabindex="-1" aria-label="code-block-19-47"></a>img2 <span class="op">=</span> axes[<span class="dv">1</span>].imshow(</span>
+<span id="cb19-48"><a href="#cb19-48" tabindex="-1" aria-label="code-block-19-48"></a>    masked2,</span>
+<span id="cb19-49"><a href="#cb19-49" tabindex="-1" aria-label="code-block-19-49"></a>    cmap<span class="op">=</span> white_to_red,</span>
+<span id="cb19-50"><a href="#cb19-50" tabindex="-1" aria-label="code-block-19-50"></a>    extent<span class="op">=</span>da2_clip.rio.bounds(),</span>
+<span id="cb19-51"><a href="#cb19-51" tabindex="-1" aria-label="code-block-19-51"></a>    interpolation<span class="op">=</span><span class="st">"nearest"</span></span>
+<span id="cb19-52"><a href="#cb19-52" tabindex="-1" aria-label="code-block-19-52"></a>)</span>
+<span id="cb19-53"><a href="#cb19-53" tabindex="-1" aria-label="code-block-19-53"></a>axes[<span class="dv">1</span>].set_title(<span class="st">"VEG_DIST-STATUS 18/09/2023"</span>)</span>
+<span id="cb19-54"><a href="#cb19-54" tabindex="-1" aria-label="code-block-19-54"></a>axes[<span class="dv">1</span>].set_frame_on(<span class="va">True</span>)</span>
+<span id="cb19-55"><a href="#cb19-55" tabindex="-1" aria-label="code-block-19-55"></a>cbar2 <span class="op">=</span> plt.colorbar(img2, ax<span class="op">=</span>axes[<span class="dv">1</span>], shrink<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb19-56"><a href="#cb19-56" tabindex="-1" aria-label="code-block-19-56"></a>cbar2.set_label(<span class="st">"Valor de disturbio"</span>)</span>
+<span id="cb19-57"><a href="#cb19-57" tabindex="-1" aria-label="code-block-19-57"></a></span>
+<span id="cb19-58"><a href="#cb19-58" tabindex="-1" aria-label="code-block-19-58"></a>plt.tight_layout()</span>
+<span id="cb19-59"><a href="#cb19-59" tabindex="-1" aria-label="code-block-19-59"></a>plt.show()</span>
+<span id="cb19-60"><a href="#cb19-60" tabindex="-1" aria-label="code-block-19-60"></a></span></code></pre>
 </div>
 <figure><img src="../fig/output8.png" class="figure mx-auto d-block"></figure><!--
 Place links that you need to refer to multiple times across pages here. Delete
@@ -2228,7 +2228,7 @@ any links that you are not going to use.
 </div>
 </div></section><section id="aio-diapositivas"><p>Content from <a href="diapositivas.html">Diapositivas</a></p>
 <hr>
-<p>Última actualización: 2026-04-14 |
+<p>Última actualización: 2026-04-21 |
 
         <a href="https://metadocencia.github.io/NASA-Earthdata-Cloud/edit/main/episodes/diapositivas.Rmd" class="external-link">Mejora esta página <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
